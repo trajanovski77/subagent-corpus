@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: >-
+  If you use this corpus, the oracles or the analysis code, please cite the paper
+  below (preferred-citation) and this repository.
+type: dataset
+title: "subagent-corpus: 50,011 subagent specifications from 3,008 public repositories, with oracles, analysis and linter"
+version: 1.0.0
+date-released: 2026-08-28
+repository-code: https://github.com/trajanovski77/subagent-corpus
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - agentic software engineering
+  - AI teammates
+  - mining software repositories
+  - configuration defects
+  - least privilege
+  - Claude Code
+authors:
+  - family-names: Trajanovski
+    given-names: Stefan
+    affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
+  - family-names: Petrov
+    given-names: Marko
+    affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
+  - family-names: Pandilova
+    given-names: Ema
+    affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
+  - family-names: Chorbev
+    given-names: Ivan
+    affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
+  - family-names: Gjorgjevikj
+    given-names: Dejan
+    affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
+preferred-citation:
+  type: article
+  status: submitted
+  title: "Specifying the Machine Team: An Empirical Study of Subagent Definitions in Agentic Software Development"
+  year: 2026
+  authors:
+    - family-names: Trajanovski
+      given-names: Stefan
+    - family-names: Petrov
+      given-names: Marko
+    - family-names: Pandilova
+      given-names: Ema
+    - family-names: Chorbev
+      given-names: Ivan
+    - family-names: Gjorgjevikj
+      given-names: Dejan
+  notes: Manuscript under review.

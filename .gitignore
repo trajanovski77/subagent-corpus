@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# LaTeX build products; the PDF is not tracked, build it with paper/build.sh
+paper/main.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.xdv
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Uncompressed outputs of a fresh collection run; the archived snapshot is gzipped
+data/agents.jsonl
+data/trees.jsonl

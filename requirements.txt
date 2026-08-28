@@ -1,0 +1,2 @@
+pyyaml       # frontmatter parsing (needed by analyze.py and collect.py)
+matplotlib   # figures only
