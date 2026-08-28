@@ -1,0 +1,143 @@
+
+====================================================================================
+CORPUS
+====================================================================================
+files under .claude/agents/**.md : 67,927
+specifications                   : 50,011 in 3,008 repositories
+share of files that are specs    : 73.6%
+concentration                    : top repo 4.2%, top 10 11.0%
+
+====================================================================================
+CAPABILITY
+====================================================================================
+  omits `tools:` (inherits full pool)    33.4%  95% CI [31.8,35.0]  n= 3008 repos   (pooled  43.7%)
+                                         omission is the MOST permissive choice, not a neutral default
+  read-only (explicit lists only)        17.2%  95% CI [16.0,18.4]  n= 2226 repos   (pooled  15.0%)
+
+====================================================================================
+CAPABILITY BY ROLE  (unconditional: omission counts as holding it)
+====================================================================================
+  role            specs          can write files           write or shell
+  reviewer        3,970             49.2% [47,51]            85.6% [84,87]
+  security          543             68.5% [64,73]            87.6% [84,91]
+  docs            1,035             88.5% [86,91]            92.1% [90,94]
+  tester          2,007             76.1% [74,78]            95.3% [94,96]
+  implementer     2,118             96.0% [95,97]            97.6% [97,98]
+  debugger          686             85.5% [82,89]            98.1% [97,99]
+  architect       1,717             74.1% [71,77]            84.3% [82,87]
+  planner         2,079             74.6% [72,77]            84.3% [82,87]
+  paired contrast file-write      +30.7 pts CI [+27.9,+33.6]  n=924 repos  <-- CI excludes 0
+  paired contrast write-or-shell   +9.2 pts CI [ +7.5,+10.9]  n=924 repos  <-- CI excludes 0
+
+====================================================================================
+MECHANISM: how the restriction is undone
+====================================================================================
+  inspection specs with an explicit list : 3,988
+  withhold file-writing tools            : 2,313 (58.0%)
+  ...of those, granted unrestricted Bash : 1,530 (66.1%)
+  genuinely read-only                    : 783 (19.6%)
+  Bash grants scoped as Bash(...)        : 58/2,801 (2.1%)
+
+====================================================================================
+WHAT DEVELOPERS POPULATE
+====================================================================================
+  declares `model`                      64.4%  95% CI [62.8,66.0]  n= 3008 repos   (pooled  51.9%)
+  declares `color` [cosmetic]           21.8%  95% CI [20.4,23.2]  n= 3008 repos   (pooled  30.2%)
+  declares `memory`                      7.6%  95% CI [ 6.7, 8.5]  n= 3008 repos   (pooled   5.9%)
+  declares `maxTurns`                    5.1%  95% CI [ 4.3, 5.8]  n= 3008 repos   (pooled   5.0%)
+  declares `permissionMode`              4.1%  95% CI [ 3.5, 4.8]  n= 3008 repos   (pooled   3.5%)
+  declares `hooks`                       1.8%  95% CI [ 1.5, 2.2]  n= 3008 repos   (pooled   7.8%)
+  declares `disallowedTools`             2.2%  95% CI [ 1.8, 2.6]  n= 3008 repos   (pooled   2.0%)
+  declares `isolation`                   0.7%  95% CI [ 0.5, 0.9]  n= 3008 repos   (pooled   0.5%)
+  declares `background`                  0.5%  95% CI [ 0.3, 0.7]  n= 3008 repos   (pooled   0.4%)
+
+====================================================================================
+DEFECT CENSUS
+====================================================================================
+  D2  names an unrecognised tool        11.6%  95% CI [10.4,12.7]  n= 2226 repos   (pooled  14.0%)
+  D2a   ...a removed legacy tool         6.9%  95% CI [ 6.0, 7.8]  n= 2226 repos   (pooled  10.1%)
+  D2b   ...a never-valid name            5.5%  95% CI [ 4.7, 6.4]  n= 2226 repos   (pooled   4.5%)
+  D3  names no recognised tool at all    2.0%  95% CI [ 1.4, 2.5]  n= 2226 repos   (pooled   2.2%)
+  D4  sets permissionMode                4.1%  95% CI [ 3.5, 4.8]  n= 3008 repos   (pooled   3.5%)
+  D5  unrecognised model value           0.8%  95% CI [ 0.5, 1.1]  n= 2112 repos   (pooled   0.8%)
+      uses a non-schema field           10.7%  95% CI [ 9.7,11.7]  n= 3008 repos   (pooled  28.7%)
+  D6  shadowed by a duplicate name     2,936 specs in 144 repos (4.8% of repositories)
+
+  most common unrecognised tool names: {'MultiEdit': 1860, 'LS': 1158, 'TodoRead': 383, 'TaskUpdate': 200, 'TaskCreate': 191, 'TaskList': 163, 'All': 147, 'tools': 146}
+
+====================================================================================
+CLUSTERING
+====================================================================================
+  write/exec outcome: 27,747 specs in 1,980 repositories
+  ICC 0.411   design effect 6.34   effective n 4373 (not 27,747)
+  => treating specifications as independent would understate uncertainty ~6-fold
+
+====================================================================================
+TEAM SIZE AND GRANT SIZE
+====================================================================================
+  specifications per repository: mean 16.6   median 7   max 2,088
+  single-specification repositories: 250 (8.3%)   repositories with >=100 specifications: 70
+  explicit tool lists: 27,993   median grant 6 tools   mean 6.14
+
+====================================================================================
+NON-SCHEMA FIELDS AND THE allowed-tools NEAR MISS
+====================================================================================
+  most common non-schema fields, by repositories using them (specifications in brackets):
+    version            99 repos   ( 3,391 specs)
+    category           83 repos   ( 1,737 specs)
+    type               70 repos   ( 3,838 specs)
+    allowed-tools      62 repos   ( 2,017 specs)
+    priority           53 repos   ( 2,671 specs)
+    capabilities       50 repos   ( 3,229 specs)
+    author             44 repos   ( 2,146 specs)
+    metadata           38 repos   (   698 specs)
+    triggers           36 repos   (   602 specs)
+    sparc_phase        35 repos   (   176 specs)
+  near-miss field present and `tools:` omitted: 2,120 specs (4.2% pooled) in 73 repos; repository-weighted 1.6% [1.2,2.0]; the five largest of those repos hold 1,703 of them
+
+====================================================================================
+UNRECOGNISED TOOL NAMES  (repositories; occurrences)
+====================================================================================
+  D2a removed legacy names : MultiEdit (222; 1,860), LS (148; 1,158), TodoRead (39; 383), NotebookRead (11; 26), SlashCommand (4; 19)
+  D2b never-valid names    : TaskCreate (56; 191), TaskUpdate (56; 200), TaskList (49; 163), TaskGet (33; 124), LSP (27; 59), ListMcpResourcesTool (24; 41), ReadMcpResourceTool (24; 41), read (15; 130)
+
+====================================================================================
+ROBUSTNESS: REPOSITORY STRATA  (omits tools: | grants Bash among explicit lists)
+====================================================================================
+  metadata for 3,008 repos: median stars 0, 51.0% with no stars, 1,510 licensed, 0 forks
+  all repositories               repos 3,008   omits 33.4% [32,35]   Bash 70.8% [69,72]
+  >=1 star                       repos 1,474   omits 34.3% [32,37]   Bash 71.6% [70,74]
+  >=10 stars                     repos   665   omits 35.4% [32,39]   Bash 72.0% [69,75]
+  >=50 stars                     repos   265   omits 38.8% [33,44]   Bash 69.4% [64,75]
+  licensed, non-fork             repos 1,510   omits 33.8% [32,36]   Bash 71.8% [70,74]
+  excluding repos >=100 specs    repos 2,938   omits 32.9% [31,35]   Bash 70.7% [69,72]
+  repositories created in the 18 months before collection (since 2025-03): 2,654 of 3,008 (88.2%)
+
+====================================================================================
+ROBUSTNESS: AT MOST ONE SPECIFICATION PER REPOSITORY PER ROLE  (first in path order)
+====================================================================================
+  deduplicated sample: 6,871 specifications
+  paired contrast file-write      +28.9 pts CI [+25.9,+31.9]  n=924 repos
+  paired contrast write-or-shell   +8.9 pts CI [ +7.0,+10.7]  n=924 repos
+  lowest write-or-shell share across roles on this sample: 85.0%
+  ICC 0.274   design effect 1.64  (was 6.34 on the full corpus)
+
+====================================================================================
+TRUNCATION CHECK: SPEARMAN CORRELATION WITH FILE SIZE
+====================================================================================
+  bytes ~ number of tools granted (explicit lists): rho = 0.32
+  bytes ~ omits `tools:` (all specifications)      : rho = 0.004
+
+====================================================================================
+O1 ACCEPTANCE ORACLE: RECONCILIATION WITH THE PARSER
+====================================================================================
+  repositories probed: 1,591
+  names listed by the tool but absent from our declared set: 1,404 in 271 repos; in every such repo the count is covered by files our parser could not read: True
+  parseable specifications listed by the tool: 23,871/23,947 (99.7%)
+    top-level 15,657/15,722 (99.6%)   nested sub-directories 8,214/8,225 (99.9%)
+  not listed: 76 specifications in 18 repos (largest: [('Kensan196948G/Construction-LegalOps-DX', 23), ('ApantallateMX/mercado-libre-dashboard', 19), ('dukk/hdc', 7)])
+
+====================================================================================
+CROSS-REPOSITORY DUPLICATION
+====================================================================================
+  specifications byte-identical to a file in another repository: 15,446 (30.9%)
