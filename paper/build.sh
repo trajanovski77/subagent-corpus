@@ -1,0 +1,16 @@
+#!/bin/bash
+# Build main.pdf with Springer's svjour3 class (svjour3.cls, svglov3.clo, spbasic.bst ship in this folder).
+# Usage: ./build.sh
+# Overleaf: upload this folder as-is, set main.tex as the main document, compiler pdfLaTeX.
+cd "$(dirname "$0")"
+if command -v latexmk >/dev/null 2>&1; then
+  latexmk -pdf -bibtex -interaction=nonstopmode main.tex 2>&1 | tail -20
+elif command -v pdflatex >/dev/null 2>&1; then
+  pdflatex -interaction=nonstopmode main.tex >/dev/null && bibtex main >/dev/null && \
+  pdflatex -interaction=nonstopmode main.tex >/dev/null && pdflatex -interaction=nonstopmode main.tex | tail -20
+elif command -v tectonic >/dev/null 2>&1; then
+  tectonic -X compile main.tex --keep-logs --synctex 2>&1 | tail -20
+else
+  echo "No LaTeX engine found. Install TeX Live (pdflatex) or tectonic (brew install tectonic), or upload to Overleaf."; exit 1
+fi
+[ -f main.pdf ] && echo "OK  main.pdf  $(du -h main.pdf | cut -f1)"
