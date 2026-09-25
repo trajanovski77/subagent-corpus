@@ -13,8 +13,8 @@ discovery, and how the design addresses them, are mapped in Table~\ref{tab:peril
 
 \paragraph{Intended mode.} The construct behind the RQ2 contrast is the \emph{intended mode} of a delegate, annotated by
 a language model from the \code{name} and \code{description} only; the body is not seen, so its construct validity
-rests on the description stating the purpose. Agreement between the two model raters is \alphaRoleModels{} for the
-role and \alphaModeModels{} for the mode, both below Krippendorff's threshold for tentative conclusions, and a human
+rests on the description stating the purpose. Agreement between the two model raters is below Krippendorff's threshold for
+tentative conclusions on both the role and the mode (\S\ref{sec:annotation}), and a human
 validation of \nHumanSample{} items is \authornote{authors to complete: report human--human and human--model $\alpha$,
 and discard or qualify per Krippendorff's thresholds}. A third model rater on the \nOpusItems{} validation items
 (\S\ref{sec:annotation}) agrees with Sonnet more than with Haiku, on the mode (\alphaOpusModeSonnet{} against
@@ -35,8 +35,8 @@ The dominance measures do not use the mode labels.
 including ALL, which uses no README classification (\S\ref{sec:res-rq3}). E2 depends on codebook P (one model rater; the third model agrees with it at
 \alphaOpusEngHaiku{} on engineered against not, and among the \nEngKit{} sampled repositories calls \nEngOpusOnly{}
 engineered that Haiku excluded and \nEngHaikuOnly{} the reverse, so the screen errs towards exclusion),
-and the prose-restriction and shell-use results on codebooks S and B. The role labels mix two sources: the 400 pilot
-items keep Sonnet's labels under codebook R v1.0, and every other item has Haiku's under v1.1. Codebook K was applied
+and the prose-restriction and shell-use results on codebooks S and B. The role labels mix two raters and two codebook
+versions (\S\ref{sec:annotation}). Codebook K was applied
 by Sonnet, which is also one of the models whose answers it judges; every positive and ambiguous label was re-read by the first author
 against the answer (\S\ref{sec:res-rq5}).
 
@@ -45,15 +45,15 @@ field's value, which is re-emitted verbatim into a probe file and resolved by th
 frontmatter extraction. The measure is still one of \emph{permission}; authority is argued analytically
 (\S\ref{sec:capmodel}) and tested by execution (\S\ref{sec:res-rq5}). Whether it is realised depends on the
 session's permission mode and user-level settings, which are unobservable. Deny rules and hooks in committed settings
-can block matching commands; we did not evaluate which writes they block. Where commands run without approval, the
-scoped shells (which did not restrict commands in our test) and the capability classes the model omits (egress, MCP tools, delegation, confidentiality)
-make our authority measures lower bounds.
+can block matching commands; we did not evaluate which writes they block. Counting scoped shells as non-dominating
+and omitting capability classes (egress, MCP tools, delegation, confidentiality) make our authority measures lower
+bounds.
 
 \paragraph{Prose restrictions and shell use.} Directive sentences are detected by a published lexicon that also counts
 weaker negative markers as prohibitions (\S\ref{sec:nlp}); non-Latin bodies (\pctNonLatin{}) are excluded from that
 stage, and restrictions stated without a deontic marker are missed, so topic shares describe explicit directives only.
-Whether a specification is read-only is judged from its whole text instead (codebook S; second-rater agreement
-\alphaSpecFull{}). Codebook B's agreement is \alphaShellUse{} between Haiku and Sonnet; the third model agrees with Haiku at
+Whether a specification is read-only is judged from its whole text instead (codebook S). Codebook B's agreement
+between Haiku and Sonnet is below the threshold (\S\ref{sec:annotation}); the third model agrees with Haiku at
 \alphaOpusShellHaiku{} (\alphaOpusShellChangeHaiku{} for change against the rest), and on codebook S at
 \alphaOpusRestrHaiku{} for read-only against not. Codebook B's categories depend on what the text
 mentions: a specification may need commands it does not name. Long bodies are truncated for annotation. The
@@ -65,20 +65,17 @@ annotators read untrusted repository text; we did not check it for instructions 
 \subsection{Internal validity}
 
 \paragraph{Version conditionality.} Every resolution, admission and defect label is relative to one build (v2.1.233,
-macOS arm64); \nRemovedNames{} names that earlier releases accepted no longer resolve, \code{PowerShell} resolves only
-on Windows, and the \code{Grep}/\code{Glob} behaviour is that of native builds from v2.1.160 onward; we did not re-run
+macOS arm64); \nRemovedNames{} names that earlier releases accepted no longer resolve, and the \code{Grep}/\code{Glob} behaviour is that of native builds from v2.1.160 onward; we did not re-run
 the oracles on the later experiment builds.
 
 \paragraph{Experiment.} The experiment establishes what a configuration permits in a controlled setting, not what
 happens in production. It ran in \code{auto} mode, so the results for configurations with a shell are conditional on
-commands running without per-command approval. The restrictive prompt is one explicit wording and the requests are
-direct, a best case for prompts; indirect requests through content the agent reads were not tested. The tasks are
+commands running without per-command approval. Indirect requests through content the agent reads were not tested. The tasks are
 simple and benign and the fixtures synthetic. The system prompt includes the harness note, which asks for a concise,
 literal final answer and may affect how answers are phrased, including the completion claims. The runs span three
 builds and two orchestrating sessions whose context is not part of the stimulus but is not independent across runs
 within a session; we detect no difference between builds, but with \ExpBuildCellSizes{} runs per cell and build only
-large differences were detectable (\S\ref{sec:res-rq5}). The report-only extension uses one small fixture, two tasks
-and no adversarial content (\S\ref{sec:res-rq5}). The scoped-shell probe ran in \code{auto} mode only; whether a
+large differences were detectable (\S\ref{sec:res-rq5}). The scoped-shell probe ran in \code{auto} mode only; whether a
 command pattern in the \code{tools} field acts as a pre-approval that leaves other commands to prompt in
 \code{default} mode was not tested.
 
@@ -124,16 +121,17 @@ In \nReposEng{} engineered repositories developers define \nSpecsEng{} delegates
 to inspect receive file-writing tools far less often than agents meant to change things. But in the average
 repository \RQthreeIncoherentEng{} of explicit grants that withhold every file-writing tool keep an unscoped shell, and
 the text of most of these specifications asks the shell for at most reading or verification (\ShellUseNoChangeNeed{}
-never ask for a change by command; on the double-coded subsample, \ShellNoChangeSonnetRel{} under the second rater). Where shell commands run
-without approval and without a sandbox, such grants withhold permission, not authority.
+never ask for a change by command). Such grants withhold permission, not authority, wherever shell commands run
+unapproved and unsandboxed.
 
 Repeated execution separates what a grant permits from what agents do. In \code{auto} mode, with the most common
 inspection grant and no prompt restriction, requested changes succeeded in \ExpCtwoRate{} of runs, and without a shell
 in \ExpCfourRate{}. In the realistic inspection configuration a prompt restriction held for Sonnet and Opus but not
 reliably for Haiku (\ExpCthreeRange{} across models). On one fixture with report-only tasks, no agent changed a file.
-Within these limits, the practical risk is a change that is requested and not refused.
+Within these limits, the risk we observed came from changes that were requested and not refused, not from agents
+acting unasked.
 
-The artifact receives no feedback. \RQsixUnresolvedRepos{} of the repositories that list tools name a tool the runtime
+Developers also get no feedback on these files: \RQsixUnresolvedRepos{} of the repositories that list tools name a tool the runtime
 does not resolve, most files naming a removed tool were committed after its removal, and duplicate names discard
 \RQsixShadowed{} specifications without a message. Future work should test whether command-scoped shells in a subagent's \code{tools}
 field restrict anything outside auto mode, how the results change under other permission modes and under prompt injection, whether the pattern

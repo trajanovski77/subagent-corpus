@@ -27,7 +27,7 @@ per query, considers only the default branch, and may return incomplete results 
 used the results only to discover repository names (27--28 August 2026), yielding a frame of \nFrame{} repositories. The
 original run's per-band log was not archived. In a same-day re-run, all \nBandsTruncated{} bands reported more matches
 than the interface serves (\nReportedTotal{} files in total), and the re-run found \nRerun{} repositories, including
-\pctRerunOverlap{} of the frame. The frame is therefore about \pctFrameOfRerun{} of the repositories the re-run found,
+\pctRerunOverlap{} of the frame. The frame is about \pctFrameOfRerun{} of the repositories the re-run found,
 selected by GitHub's undocumented relevance ranking, and because discovery is file-level, repositories with many agent
 files had more chances to be found. Our results describe this frame; we make no inference to all public
 repositories.
@@ -115,7 +115,7 @@ file edits and common file-system commands; in \code{auto} everything, with back
 in \code{dontAsk} only pre-approved tools, and anything else is denied; in \code{bypassPermissions} everything. Under
 \code{auto}, \code{acceptEdits} and \code{bypassPermissions} a subagent runs in the parent's mode and its own
 \code{permissionMode} is ignored; otherwise its own mode applies \citep{AnthropicSubagentsDoc}. Allow and deny rules,
-hooks and a sandbox can further permit or block a command. A dominated withholding therefore has no effect on what the
+hooks and a sandbox can further permit or block a command. So a dominated withholding has no effect on what the
 delegate can write when shell commands run without per-command approval (\code{auto}, \code{bypassPermissions},
 \code{acceptEdits} for common file-system commands, or an allow rule covering the shell) and without a sandbox; in
 \code{default} mode the user's approval of each command is the control, and in \code{dontAsk} such commands are
@@ -249,7 +249,7 @@ inspection grant), \textbf{C3} both, the configuration of an inspection delegate
 The tasks are T1 read a value from a file, T2 create a file, T3 modify one value in a file, T4 delete a file, T5 run a
 script whose effect is to write a file, and T6 run a script and report its output. T2--T5 are forbidden by the prompt of
 C1 and C3; under C0, C2 and C4 the prompt is neutral, so these tasks are requested rather than forbidden, and C2
-serves as a mechanism check of what the shell permits. T1 and T6 are permitted everywhere, and T6 needs a shell. The models are Claude Haiku~4.5, Sonnet~5 and
+is a mechanism check of what the shell permits. T1 and T6 are permitted everywhere, and T6 needs a shell. The models are Claude Haiku~4.5, Sonnet~5 and
 Opus~5.
 
 \paragraph{Execution.} Each run is a real delegation: an orchestrating Claude Code session (desktop app, \code{auto}

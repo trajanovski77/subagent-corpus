@@ -16,9 +16,10 @@ of the difference concerns which tool names appear in a list, not what the deleg
 to permissions, and a tool allowlist enumerates permissions,
 not authority. Because a shell carries the process's ambient file-system authority \citep{miller2003capability},
 removing the file-writing tools $W=\{\code{Write},\code{Edit},\code{NotebookEdit}\}$ from a grant $T$ that retains an
-unsandboxed \code{Bash} leaves its authority over files unchanged, $A(T \setminus W) = A(T)$, whenever shell commands run without per-command
-approval. In that context the set $\{\code{Read}, \code{Grep}, \code{Glob}, \code{Bash}\}$ looks like a reader and acts
-like a read--write agent; in \code{default} mode the user's approval of each command stands between the two.
+unsandboxed \code{Bash} leaves its authority over files unchanged, $A(T \setminus W) = A(T)$, in the execution contexts
+of \S\ref{sec:capmodel}. In that context the grant $\{\code{Read}, \code{Grep}, \code{Glob}, \code{Bash}\}$, which reads like a reviewer's,
+gives the same access to files as a read--write grant; in \code{default} mode only the user's approval of each command
+keeps the two apart.
 
 A retained shell is not always a mistake. Some write-withholding specifications ask for builds and tests, and a
 minority ask for state-changing commands, but most need at most read-only commands or none (\S\ref{sec:res-rq3}). For
@@ -43,18 +44,18 @@ should not be read as an effect. It does show that conventional access-control d
 dominated withholdings.
 
 \paragraph{Why the abstraction invites the error.}
-\emph{Objects at different levels.} Lampson's access matrix treats each object as an independent column whose rights
-are granted separately \citep{lampson1974protection}; the \code{tools} field mixes resource operations (\code{Read},
-\code{Write}, \code{Edit}) with an interpreter (\code{Bash}) that can perform any of them.
-\emph{Direct paths are guarded, indirect paths are not.} Tools tend to guard the obvious interface and miss indirect
-routes to the same resource \citep[\S4.2]{garfinkel2003traps}; file-editing deny rules do not cover subprocesses that
-write files indirectly \citep{AnthropicPermissionsDoc}.
-\emph{Fail-safe defaults are inverted.} Omitting \code{tools} grants everything, so the least deliberate configuration
-is the most privileged one, contrary to basing access on permission rather than exclusion
-\citep{saltzer1975protection}; \RQtwoImplicitEng{} of specifications omit the field.
-\emph{The resolver steers delegates to the shell.} It removes \code{Grep} and \code{Glob} whenever \code{Bash}
-resolves, for no documented reason we know of, which moves routine search onto the shell, and leaves \code{Write} and
-\code{Edit} in place without a warning.
+Four features of the \code{tools} field make the error easy to make. First, it puts objects at different levels in one
+list. Lampson's access matrix treats each object as an independent column whose rights are granted separately
+\citep{lampson1974protection}, but the field mixes resource operations (\code{Read}, \code{Write}, \code{Edit}) with an
+interpreter (\code{Bash}) that can perform any of them. Second, it guards the direct path and not the indirect one.
+Tools tend to protect the obvious interface and miss indirect routes to the same resource
+\citep[\S4.2]{garfinkel2003traps}, and file-editing deny rules do not cover subprocesses that write files indirectly
+\citep{AnthropicPermissionsDoc}. Third, its default is the opposite of fail-safe: omitting \code{tools} grants
+everything, so the least deliberate configuration is the most privileged one, contrary to basing access on permission
+rather than exclusion \citep{saltzer1975protection}, and \RQtwoImplicitEng{} of specifications omit the field.
+Fourth, the resolver pushes delegates towards the shell. It removes \code{Grep} and \code{Glob} whenever \code{Bash}
+resolves, for no documented reason we know of, so routine search moves onto the shell, while \code{Write} and
+\code{Edit} stay in place without a warning.
 
 \subsection{An agent-configuration security smell}
 \label{sec:disc-smell}
@@ -70,19 +71,19 @@ hooks, and neither the smell nor the linter's precision has been validated with 
 
 \input{draft_smells_table}
 
-\subsection{Prompts are interpreted, grants are enforced}
+\subsection{Prompt restrictions and enforced grants}
 \label{sec:disc-prompts}
 
-That an agent with a shell can write when asked and commands are approved automatically is expected, and the
-mechanism check confirms it. Three results matter more for practice. First, in the realistic inspection configuration
-the prompt restriction worked for Sonnet and Opus and left Haiku completing \ExpCthreeHaiku{} of the changes it
+That an agent with a shell can write when asked, with commands approved automatically, is expected, and the
+mechanism check confirms it. What happened when the prompt forbade the change is more useful for practice. In the
+realistic inspection configuration the prompt restriction worked for Sonnet and Opus and left Haiku completing \ExpCthreeHaiku{} of the changes it
 forbids. The restriction was one explicit wording, stronger than most real restrictions, against direct requests, so
 these rates are a best case for prompts and say nothing about adaptive attacks. A restriction that holds or fails with
 the model is a property of the model, not of the configuration, and \RQfiveNoModelPooled{} of specifications (pooled;
-repository mean \RQfiveNoModel{}) do not name the model that will read them. Second, the channels fail differently: a
+repository mean \RQfiveNoModel{}) do not name the model that will read them. The two channels also fail differently: a
 missing tool produces an error the parent can see, an unheeded prompt a completed change, and Haiku's false claims
-show that the delegate's report is not a reliable record either. Third, on one fixture with explicitly report-only tasks, no agent
-changed files under any grant. This bounds the per-configuration rate of unrequested changes only for benign,
+show that the delegate's report is not a reliable record either. Finally, on one fixture with explicitly report-only
+tasks, no agent changed files under any grant. This bounds the per-configuration rate of unrequested changes only for benign,
 explicitly report-only tasks (one small fixture, two tasks, \nOverRepsFinal{} repetitions per cell, no adversarial
 content), not for ambiguous requests such as ``fix if needed'', longer sessions or prompt injection. It agrees with
 \citet{qu2026overeager}, who observe no over-eager actions by Claude Code when the prompt declares the authorised scope
@@ -114,46 +115,42 @@ into the enforced one.
 Most files naming a removed tool were committed after the removal (\S\ref{sec:res-rq6}), so they were already
 unresolvable on current builds when committed rather than overtaken by the runtime later; users of older builds may
 still resolve them. Because most of the corpus was itself committed after these removals, the share dates the
-staleness, not its source. Stale names thus enter at authoring time, which is consistent with the reuse we measure
+staleness, not its source. This places the staleness at authoring time, which is consistent with the reuse we measure
 (\S\ref{sec:res-rq1}) and with copy-based reuse of skills and editor rules
 \citep{Destefanis2026GitSkills,Jiang2026CursorRules}. The feedback is asymmetric: the settings layer warns about a deny
 rule that matches no tool, while the subagent resolver says nothing about a dropped name, a collision or a file it
-does not load. Revalidation alone does not address this; a resolver that reports what it dropped does.
+does not load. Periodic revalidation would not prevent it, since the names are already stale when written; a resolver that
+reports what it dropped would.
 
 \subsection{Implications}
 \label{sec:disc-implications}
 
 \paragraph{For practitioners.} Omitting \code{tools} grants everything. An agent that holds an unscoped shell is not
 read-only, whatever its prompt says, unless each shell command needs approval or runs in a sandbox. Where the text asks
-only to read, restrict the shell with Bash deny rules in settings, which the documentation says apply to
-subagents \citep{AnthropicSubagentsDoc}, but such rules match command text and can be bypassed \citep{Chen2026Denylist}. A command pattern in
-a subagent's \code{tools} field is not a restriction: in our test it granted the whole shell (\S\ref{sec:res-rq3}).
-Where the restriction must hold, or the text asks to build or
-test, use a sandbox or a writable scratch directory. Do not treat a prompt restriction as a security control; if one matters, pin the model and
+only to read, restrict the shell with Bash deny rules in settings, which can be bypassed \citep{Chen2026Denylist}, not
+with a command pattern in the \code{tools} field; where the restriction must hold, or the text asks to build or test,
+use a sandbox (\S\ref{sec:disc-leastpriv}). Do not treat a prompt restriction as a security control; if one matters, pin the model and
 test it. Check that tool names resolve on the release you run and that every \code{name} in an agent directory is
 unique. The linter released with this paper reports all of these and exits non-zero on dominated withholdings,
 ignored files and duplicate names.
 
-\paragraph{For tool builders.} \emph{Report what was dropped}: the settings layer warns about a deny rule that matches
-no tool, while the frontmatter resolver says nothing about a discarded name, a name collision or a file it does not
-load. \emph{Warn on dominated withholding}: a specification that withholds file-writing tools and grants an unscoped
-shell may not be what its author intended. \emph{Make read-only an execution-environment property}, enforced where every subprocess is covered, by a sandbox
-or capability mode \citep{watson2010capsicum}. \emph{Make grants typed and attenuable}: a shell grant should carry a
-file-system and network scope \citep{moore2014shill}, and policies should inspect arguments rather than tool names
-\citep{shi2025progent}, outside the model \citep{debenedetti2025defeating}. Where a narrow tool
+\paragraph{For tool builders.} The resolver should report what it drops (\S\ref{sec:disc-drift}) and warn on a
+dominated withholding, which may not be what its author intended. Read-only should be a property of the execution
+environment, enforced where every subprocess is covered, by a sandbox or a capability mode \citep{watson2010capsicum}.
+Grants should be typed and attenuable: a shell grant should carry a file-system and network scope
+\citep{moore2014shill}, and policies should inspect arguments rather than tool names \citep{shi2025progent}, outside
+the model \citep{debenedetti2025defeating}. Where a narrow tool
 can replace the shell, ship the narrow tool \citep{beurerkellner2025design}. The common principle is to separate the
 interpreter from the resource operations: file-system, network and process authority should be properties of the
 execution environment a delegate runs in, not names in a list that sits beside an interpreter able to exercise them
 all.
 
-\paragraph{For researchers.} \emph{Measure the effective configuration by executing its consumer.} Resolution
+\paragraph{For researchers.} The effective configuration should be measured by executing its consumer. Resolution
 depends on the build (\nRemovedNames{} names that earlier releases accepted no longer resolve), and parsing the files
 would have missed the dropped search tools, the silently discarded names and the shadowed files; pin the build and
-release the oracle with the data. \emph{Report permission and authority separately}, and explicit grants separately
-from inheritance, since the two measures lead to different conclusions (\S\ref{sec:res-rq2}). \emph{Test behavioural
-claims by repeated execution and per model}, including tasks that do not ask for the behaviour: a single run shows
-what is possible, not how often it happens, and prompt compliance differed by model. \emph{Treat intent as a construct
-to validate, not a label to trust}: agreement between model raters was lowest on the intended mode, the construct
-least privilege is judged against, so studies of over-privilege need human-validated intent. Open questions include
-behaviour under other permission modes and under prompt injection, the same measurements in other harnesses, and
-whether warnings change what developers write; the corpus and oracles are released for longitudinal replication.
+release the oracle with the data. Permission and authority should be reported separately, as should explicit
+grants and inheritance, since the measures lead to different conclusions (\S\ref{sec:res-rq2}). Behavioural claims
+need repeated execution, reported per model and including tasks that do not ask for the behaviour: a single run shows
+what is possible, not how often it happens, and prompt compliance differed by model. Intent needs validating as a
+construct rather than trusting as a label: agreement between model raters was lowest on the intended mode, the construct
+least privilege is judged against, so studies of over-privilege need human-validated intent. The corpus and oracles are released for longitudinal replication.

@@ -10,12 +10,11 @@ v2.1.233, \S\ref{sec:oracles}). ``Without a diagnostic'' means that nothing is p
 admission & a file whose \code{name} is not a string, or that lacks \code{description}, is not loaded, without a diagnostic \\
 duplicate names & with two files declaring the same name under one root, exactly one loads, and which one is not predictable from the file names; when the session starts in a sub-project, its file wins over the parent project's \\
 location & any depth of nesting under \code{.claude/agents/} loads; a sub-project's \code{.claude/agents} is not loaded from the repository root \\
-omitted \code{tools}, \code{"*"} & the full tool pool \\
+\code{tools: "*"} & the full tool pool, as when the field is omitted \\
 aliases & \code{Agent}$\to$\code{Task}, \code{KillShell}$\to$\code{TaskStop}, \code{BashOutput}$\to$\code{TaskOutput} \\
 unresolved names & dropped without a diagnostic; matching is case-sensitive (\code{read} resolves to nothing) \\
 command patterns & \code{Bash(\ldots)} resolves to \code{Bash} \\
 search tools & \code{Grep} and \code{Glob} are dropped whenever \code{Bash} is granted \\
-\code{disallowedTools} & removed from the inherited or listed set \\
 \bottomrule
 \end{tabular}
 \end{table}

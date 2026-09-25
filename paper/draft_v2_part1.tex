@@ -9,12 +9,11 @@ Agentic coding tools such as Claude Code, GitHub Copilot, Cursor, Gemini CLI and
 language model plans, calls tools, observes the results and continues until a goal is met
 \citep{Galster2026Harness,he2025lmase}. What the model sees and may do is assembled by the tool's harness from files
 that developers commit alongside their code; Galster et al.\ catalogue eight such configuration mechanisms across five
-tools \citep{Galster2026Configuring,Galster2026Harness}. One of them, the \emph{subagent}, turns configuration into
-organisation. A subagent is a named delegate: a Markdown file whose YAML frontmatter declares when the parent agent
+tools \citep{Galster2026Configuring,Galster2026Harness}. One of them is the \emph{subagent}, a named delegate: a Markdown file whose YAML frontmatter declares when the parent agent
 should hand it work (\code{description}), which tools it may call (\code{tools}) and which model runs it, and whose
 body becomes its system prompt \citep{AnthropicSubagentsDoc}. The parent delegates a task, the subagent works in its
 own context window, and only its result comes back \citep{hua2025contextengineering2,Liu2026DiveClaudeCode}. Each
-file therefore combines two kinds of control: a role description that a model interprets, and a tool allowlist that
+file holds two kinds of control: a role description that a model interprets, and a tool allowlist that
 the runtime enforces.
 
 \paragraph{Permission and authority.}
@@ -34,13 +33,12 @@ Adoption studies count configuration artifacts across repositories and tools
 what developers write in context files and editor rules \citep{Chatlatanagulchai2026AgentREADMEs,Jiang2026CursorRules};
 security studies examine denylists, skills, MCP servers and the security rules written into context files
 \citep{Chen2026Denylist,Liu2026SkillsInTheWild,Hasan2026MCP,Yan2026DoNotDeny}. The adoption studies count subagents
-as one mechanism among eight, reporting 450 subagents in 131 repositories \citep{Galster2026Harness} and 997 subagent
-files in 273 repositories \citep{Galster2026Dataset}, but none analyses what they grant; a static defect scan of
+as one mechanism among eight but do not analyse what they grant; a static defect scan of
 agent configurations does not resolve subagents' tool grants \citep{Kapner2026ScanningHarness}. No study
 has measured, at scale, (i) what subagent specifications grant once the runtime has resolved them, (ii) how often a
 withholding coexists with a retained capability that subsumes it, (iii) whether restrictions stated in prose agree
-with the enforced grant, or (iv) how agents behave, over repeated runs, under each combination. Our contribution is
-this measurement and the method that makes it possible, not the mechanism, which follows from what a shell is.
+with the enforced grant, or (iv) how agents behave, over repeated runs, under each combination. The mechanism
+itself follows from what a shell is; our contribution is the measurement and the method that makes it possible.
 
 \paragraph{Approach.}
 We study \nSpecsEng{} specifications in \nReposEng{} engineered GitHub repositories, reconstructed at a snapshot by git
@@ -53,14 +51,8 @@ annotation of what the specifications say and a controlled experiment of what ag
 
 \paragraph{Findings in brief.}
 In the average engineered repository \RQthreeIncoherentEng{} of explicit grants that withhold every file-writing tool
-keep an unscoped shell. Specifications meant to inspect (a model-annotated label) hold file-writing tools
-\RQtwoRoleGapWrite{} less often than those meant to change code, but the gap shrinks to \RQtwoRoleGapAuthority{} once
-the shell is counted. That a shell permits a requested change when commands are approved automatically is expected,
-and our mechanism check confirms it (\ExpCtwoRate{} under the most common inspection grant and a neutral prompt).
-Three results are less obvious. A prompt restriction on the same grant, the realistic inspection configuration, holds
-for Sonnet and Opus but not reliably for Haiku. In a small report-only extension, no agent changed a file it was not
-asked to change. And the text of most write-withholding specifications that keep a shell gives no reason to change
-anything by command. We also observed that Haiku without a shell sometimes reports a change it did not make.
+keep an unscoped shell, and the text of most such specifications gives no reason to change anything by command. Under
+the most common inspection grant, a prompt restriction held for Sonnet and Opus but not reliably for Haiku.
 
 \paragraph{Research questions.}
 \begin{description}\itemsep1pt
@@ -107,8 +99,7 @@ file verified against its hash, curated to \nSpecsEng{} specifications in \nRepo
 (2) Executable oracles that make the coding tool report what it loads and grants.
 (3) Model annotations, with published codebooks, of every specification's role and intended mode, of the write
 restriction a specification's text states, and of what the text asks a retained shell to do. (4) The measurement of \emph{dominated withholding}: explicit grants that omit every
-file-writing tool but keep an unscoped shell, which leaves the withholding without effect wherever shell commands run
-without approval and without a sandbox. (5) A controlled experiment of
+file-writing tool but keep an unscoped shell. (5) A controlled experiment of
 \nExpRuns{} scored delegations, and an extension of \nOverRuns{} report-only delegations, separating what a grant
 permits from what agents do. (6) A candidate security smell for agent configuration, guidance for frameworks and a
 linter.
@@ -132,9 +123,8 @@ accessible tools, communication protocol, termination conditions and constraints
 \citep[\S3.1]{qian-etal-2024-chatdev}; AutoGen configures conversable agents with model, tool and human capabilities
 \citep[\S2.1]{wu2024autogen}. In production the dominant pattern is orchestrator--worker: a lead agent spawns
 subagents, each with its own context window, and synthesises their results, and each subagent needs an objective, an
-output format, guidance on tools and sources, and task boundaries \citep{anthropic2025multiagentresearch}. How agents
-are specified matters: system-design issues are one of the three categories of a taxonomy of multi-agent failures
-\citep{cemri2025mast}. Hassan et al.\ expect agentic software engineering to rest on versioned, human-authored
+output format, guidance on tools and sources, and task boundaries \citep{anthropic2025multiagentresearch}. In a taxonomy of
+multi-agent failures, system-design issues form one of the three categories \citep{cemri2025mast}. Hassan et al.\ expect agentic software engineering to rest on versioned, human-authored
 artefacts that brief and constrain agents, and read files such as \code{CLAUDE.md} as an early grassroots form of them
 \citep[\S5.3]{hassan2025sase}. A subagent specification is the practitioner's version of a handcrafted agent profile,
 committed to version control next to the code it works on.
@@ -150,14 +140,14 @@ Context is a finite resource. Accuracy falls when relevant information sits in t
 \citep{liu2024lost}, most models degrade well before their advertised context length \citep{hsieh2024ruler}, the
 degradation is steeper when the question shares little vocabulary with the relevant passage
 \citep{modarressi2025nolima}, and performance grows less reliable with input length even on simple, controlled tasks
-\citep{hong2025contextrot}. Delegation therefore doubles as \emph{context isolation}: a subagent works in a fresh
+\citep{hong2025contextrot}. Delegation doubles as \emph{context isolation}: a subagent works in a fresh
 context window with its own system prompt and tool set, and only a condensed result returns to the parent
 \citep{anthropic2025contextengineering}\citep[\S5.3.2]{hua2025contextengineering2}. Hua et al.\ name Claude Code's
 subagents, with their restricted tool permissions, as an instance and recommend giving each unit only the permissions
 it needs \citep[\S5.3.2]{hua2025contextengineering2}, and running reusable skills as subagents outperforms loading them
 into the main context when their inputs and outputs are clearly specified \citep{piriyakulkij2026subagents}.
 
-A subagent specification is therefore a context-engineering artefact, and it acts along two channels. The
+Seen this way, a subagent specification is a context-engineering artefact. It acts along two channels. The
 \emph{interpretive channel} (context files, rules, a subagent's description and body) is text loaded into the model's
 context, which the model may or may not follow \citep{AnthropicMemoryDoc}. The \emph{enforcement channel} (tool
 allowlists, permission rules, hooks, sandboxes) is applied by the harness regardless of what the model intends
@@ -165,7 +155,7 @@ allowlists, permission rules, hooks, sandboxes) is applied by the harness regard
 
 \subsection{Configuration mechanisms across agentic coding tools}
 \label{sec:bg-mechanisms}
-Table~\ref{tab:mechanisms} summarises the mechanisms that frame our study. Context files dominate adoption, appearing
+Context files dominate adoption, appearing
 in 90.6\% of configured repositories, while skills and subagents are adopted far more shallowly
 \citep[\S6.1--6.3]{Galster2026Harness}. The tools expose the same mechanisms but enforce different parts of them.
 \emph{Claude Code} loads \code{CLAUDE.md} and \code{.claude/rules} into the context at session start and treats them as
@@ -183,30 +173,10 @@ field defaults to all tools and ignores names it does not recognise \citep{GitHu
 GitHubCustomAgentsDoc}. \emph{Codex} concatenates the \code{AGENTS.md} files from the project root down to the working
 directory \citep{OpenAICodexAgentsMdDoc} and defines custom agents as TOML files in \code{.codex/agents}, which may set a
 sandbox mode and otherwise inherit the session's sandbox policy \citep{OpenAICodexSubagentsDoc}; \code{AGENTS.md} is an
-open format that several of these tools read \citep{AgentsMdSpec}. Subagent formats have thus converged on a named,
+open format that several of these tools read \citep{AgentsMdSpec}. Subagent formats have converged on a named,
 described profile whose body is a prompt, while differing in the restriction they enforce: a tool allowlist (Claude
 Code, Copilot), a read-only flag (Cursor) or a sandbox mode (Codex). Because Cursor also reads
 \code{.claude/agents}, a file in our corpus may be consumed by more than one tool.
-
-\begin{table}[t]
-\caption{Configuration mechanisms relevant to subagents, by the channel through which they alter agent behaviour.
-Sources: vendor documentation accessed September 2026 and \citet{Galster2026Harness}.}
-\label{tab:mechanisms}
-\footnotesize
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{6.9cm}@{}}
-\toprule
-\textbf{Mechanism} & \textbf{Channel} & \textbf{How it alters behaviour at run time} \\
-\midrule
-Context files & interpretive & loaded into the context at session start; \code{AGENTS.md} read by Codex, Copilot, Cursor; \code{CLAUDE.md} by Claude Code \\
-Rules & interpretive & included at the start of the context when their globs or description match (Cursor, Claude Code \code{.claude/rules}) \\
-Skills, commands & interpretive & instructions loaded on invocation or when the model selects them \\
-\textbf{Subagents} & \textbf{both} & body and description are interpreted; the tool allowlist, model and permission fields are applied by the harness \\
-Settings & enforcement & permission rules evaluated deny, then ask, then allow, outside the model \\
-Hooks & enforcement & scripts at lifecycle events that can block a tool call \\
-MCP servers & enforcement & external tools added to the pool when the server is configured \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \subsection{The Claude Code subagent artifact}
 \label{sec:bg-artifact}
@@ -214,9 +184,9 @@ A subagent is a Markdown file under \code{.claude/agents/} of a project or of th
 frontmatter must declare \code{name} and \code{description} \citep{AnthropicSubagentsDoc}. Table~\ref{tab:schema}
 lists the fields and their documented semantics; what the runtime does with them on the build we study is established
 by our probes and reported with the results (\S\ref{sec:res-rq6}, Table~\ref{tab:semantics}). Each subagent runs in its
-own context window with its own tool access, and only its result returns to the parent. One documented property
-carries the study: \textbf{omission is inheritance}. A specification without \code{tools} receives every tool
-available to subagents, so omitting the field is the most permissive choice \citep{AnthropicSubagentsDoc}.
+own context window with its own tool access, and only its result returns to the parent. The study relies on one
+documented property: a specification without \code{tools} inherits every tool available to subagents, so omitting the
+field is the most permissive choice \citep{AnthropicSubagentsDoc}.
 
 \input{draft_schema_table}
 

@@ -813,11 +813,9 @@ def experiment_table(runs: list[dict]) -> None:
     models = ("haiku", "sonnet", "opus")
     lines = [
         "\\begin{table}[t]",
-        "\\caption{Experiment outcomes: runs in which the task's objective held afterwards (T2--T5 verified on the file",
-        "system, T1 and T6 from the reported value), out of scored runs. T2--T5 (create, modify, delete, run a file-writing",
-        "script) are forbidden by the prompts of C1 and C3; T1 (read a value) and T6 (run a script and report its output)",
-        "are permitted everywhere, and T6 needs a shell. C2 and C3 resolve to \\code{Read, Bash}, because the resolver",
-        "drops \\code{Grep} and \\code{Glob} next to \\code{Bash}.}",
+        "\\caption{Experiment outcomes: runs in which the task's objective held afterwards, out of scored runs (tasks and",
+        "configurations in \\S\\ref{sec:experiment}). C2 and C3 resolve to \\code{Read, Bash}, because the resolver drops",
+        "\\code{Grep} and \\code{Glob} next to \\code{Bash}.}",
         "\\label{tab:experiment}",
         "\\footnotesize",
         "\\setlength{\\tabcolsep}{4pt}",
