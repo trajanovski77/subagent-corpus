@@ -1,0 +1,35 @@
+{"id": "345c7619b9c46776", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1547b6b3afc7b081", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b2b442e1935d8d74", "restriction": "partial", "evidence": "Do not commit, push, or perform any git commands", "where": "body"}
+{"id": "c9a4d20f1b9731ba", "restriction": "full", "evidence": "orchestrate only, never implement directly", "where": "body"}
+{"id": "f09ff59a0f8757c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e3d7655e26cf9d3f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7673f96fd4105eff", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5934f1255d1f84f5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d2fb507b4841153", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1fb2dfbe4107b823", "restriction": "partial", "evidence": "Do not apply edits yourself — return them; the orchestrator will apply via the Edit tool.", "where": "body"}
+{"id": "f83cd3c2ea476bea", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7a798ea66cf26535", "restriction": "partial", "evidence": "You never modify source; your only write surface is your own report.", "where": "body"}
+{"id": "f717644a7b1d6d26", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a33d56dd78b902b7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a719c9c287586544", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e84d4613ad26d993", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7f2c32abe1d8287e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b75c8bf336dfe4bc", "restriction": "partial", "evidence": "You must NOT: Modify production code (only test code and test configs)", "where": "body"}
+{"id": "2b9a29bd8e0832aa", "restriction": "full", "evidence": "You never edit code. You have no Write/Edit tools by design.", "where": "body"}
+{"id": "65d75139bdd7d68f", "restriction": "partial", "evidence": "Do not edit MCP tool code yourself — propose the fix, let the human/`add-mcp-tool` skill apply it", "where": "body"}
+{"id": "73dedf195a9d161c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bd71d6163b0af07d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "27abe031b060b9c3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3604586cd4dfc1ae", "restriction": "none", "evidence": "", "where": ""}
+{"id": "075f7c90d22d26ea", "restriction": "none", "evidence": "", "where": ""}
+{"id": "28d9b3708b2748bd", "restriction": "full", "evidence": "READ-ONLY. Read untuk kode, Bash hanya untuk inspeksi — bukan untuk mengubah apapun. Tidak ada Write, tidak ada Edit", "where": "body"}
+{"id": "02647513b5d51dba", "restriction": "partial", "evidence": "Do not edit any source files", "where": "body"}
+{"id": "631dcd2f5e4a88fb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4430179f04c777e1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ec71ce23e0f6f0c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "844c52d252a52885", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7a961a97c473eff7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e5c86b8dfad33e30", "restriction": "partial", "evidence": "Does not fix code, only diagnoses. Do NOT fix code. Only diagnose and report.", "where": "body"}
+{"id": "bc807b6c259fdeef", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5853fd4c8acb9013", "restriction": "partial", "evidence": "Do not modify production code.", "where": "body"}

@@ -1,0 +1,8 @@
+{"id": "a21050f6472b3393", "shell_use": "none", "evidence": ""}
+{"id": "4e3e51a05093a90b", "shell_use": "inspect", "evidence": "Review the change under discussion: `git diff`, `git diff --staged`, or the named"}
+{"id": "59aa719d7e3681dc", "shell_use": "inspect", "evidence": "Glob로 후보 파일 나열 + Grep으로 키워드 검색 → 상위 5개 식별"}
+{"id": "e7c314a1b14207e2", "shell_use": "none", "evidence": ""}
+{"id": "fcc06faa94c25372", "shell_use": "none", "evidence": ""}
+{"id": "a9016682c6abdcb6", "shell_use": "inspect", "evidence": "Use Bash ONLY for read-only operations (ls, git log, git diff)"}
+{"id": "9b60ff0b3cf000e1", "shell_use": "verify", "evidence": "Full test suite: `bun test --preload ./tests/setup.ts --timeout=15000 ./src ./tests/adapters ./tests/domain`"}
+{"id": "a1026efa91e304df", "shell_use": "none", "evidence": ""}

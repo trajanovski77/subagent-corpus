@@ -1,0 +1,38 @@
+{"id": "7df07caaf70b97ef", "restriction": "partial", "evidence": "on-disk codification (living doc / ADR / knowledge entry) only when the orchestrator's brief explicitly asks AND the user has approved the choice", "where": "both"}
+{"id": "f4f8d26b4ca7f235", "restriction": "partial", "evidence": "**Implementation files are READ-ONLY.** Only create/modify: SECURITY.md.", "where": "body"}
+{"id": "7222752d58dd171d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "99e54af5d6fe62b0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "572f999febbf8004", "restriction": "partial", "evidence": "You NEVER write code. Read only.", "where": "body"}
+{"id": "234275724478c8d9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "88dbe3bbdc4d8dfa", "restriction": "partial", "evidence": "You never introduce new features, never change APIs, and never alter what the code does from the outside — only how it does it.", "where": "body"}
+{"id": "10422d41f2cbd0e7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ce9c9f13ca341d4f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "72321e07c483c9ab", "restriction": "none", "evidence": "", "where": ""}
+{"id": "30dfee93b89facae", "restriction": "full", "evidence": "You do not write test code — the requester writes all code (source and tests).", "where": "body"}
+{"id": "02969a2c439e76d6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2f514ba37f6dee90", "restriction": "none", "evidence": "", "where": ""}
+{"id": "87f3375cc180eac9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c3cff20d6c580247", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1b295de5c1d64f95", "restriction": "none", "evidence": "", "where": ""}
+{"id": "586c58bac25ec728", "restriction": "partial", "evidence": "You may edit files in the working copy for mechanical fixes, but you do NOT deploy", "where": "body"}
+{"id": "1fc83f4a77f42efe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8ab11f4537cb866d", "restriction": "full", "evidence": "You have read-only access plus Bash for running tests.", "where": "body"}
+{"id": "6379d3f2e7cb081e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e270c728fb65359c", "restriction": "partial", "evidence": "Never write `.aim/state.json`, advance a gate, or accept an Epic or increment.", "where": "body"}
+{"id": "fb78a9ce0478dd09", "restriction": "full", "evidence": "You NEVER modify code — no Edit/Write.", "where": "body"}
+{"id": "195a554448bf1dc5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c5e9b8b0aa4cf58d", "restriction": "partial", "evidence": "Delete the temporary test file when done. Never 'fix' output by post-processing SVG", "where": "body"}
+{"id": "4a03c459649c23f8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "62dfb663b24b471f", "restriction": "partial", "evidence": "You do not write code. You do not modify implementation files.", "where": "body"}
+{"id": "f8bb226913fdfc77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ec60df30ad915d45", "restriction": "partial", "evidence": "Do not touch code, tests, or non-doc files.", "where": "body"}
+{"id": "02122f621a2d6bbb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a14c14bef0e99dec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e5321deef34989f3", "restriction": "full", "evidence": "Work read-only. ... No file edits, no command execution.", "where": "body"}
+{"id": "02c51c5f2a017e9e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2bed689e9e612955", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3b333ee906955cf6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "18a947e4de5cfca2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "edb4845f89d962a8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9af6d15ef56cc3d4", "restriction": "full", "evidence": "You are **read-only**: analyze and report, never edit.", "where": "body"}
+{"id": "ab8ed94a99474683", "restriction": "none", "evidence": "", "where": ""}

@@ -1,0 +1,42 @@
+{"id": "90f6b4e7ae1fbda9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "26fe0e336cdd000d", "restriction": "full", "evidence": "Cannot apply edits — reports findings only.", "where": "description"}
+{"id": "51d525ccaac6ba9e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e2319d01070a1c7f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ffbe5555b5d02520", "restriction": "none", "evidence": "", "where": ""}
+{"id": "391c9e0a23606030", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0f178c2228b18f83", "restriction": "none", "evidence": "", "where": ""}
+{"id": "45c1dbbf8817391e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8b32dfb4a7e6d508", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9a3e27ff221dda6b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b4a002dc4639f1a2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2b58dc7a43d3bf20", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b953aa969316e827", "restriction": "full", "evidence": "Read-only: Write and Edit tools are blocked", "where": "body"}
+{"id": "d6ab2eae24908cc4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d8c8f32038bcf928", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2a2431c2b46613f8", "restriction": "partial", "evidence": "Được Write/Edit vào file PO (`overview.md`, `roadmap.md`, `project/ROADMAP.md`, `CLAUDE.md`). **KHÔNG** sửa `lib/`/rules/functions", "where": "body"}
+{"id": "78206e72500b2cc2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ce1fa4fadd04e63f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "30da184299801292", "restriction": "none", "evidence": "", "where": ""}
+{"id": "098c05968d5a49d5", "restriction": "full", "evidence": "Review or recommend; do not modify code.", "where": "body"}
+{"id": "a0a637769cc20a9d", "restriction": "full", "evidence": "Do not edit files, run implementation commands, or change the approved experience.", "where": "body"}
+{"id": "4761cc50e3ef26f4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ce2e43f25a01566", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3571265863c96ffb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cb49e78f7cd2b107", "restriction": "none", "evidence": "", "where": ""}
+{"id": "497b126bf9b9bfc6", "restriction": "partial", "evidence": "Do not commit, push, or file issues. Artifacts and reports only.", "where": "body"}
+{"id": "25750edd776ec97f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a5f174725461251c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "10e1dfad0d7b80d8", "restriction": "partial", "evidence": "Read/Write: `specs/legal/` (privacy policy, ToS, store listings), `specs/phase-{N}/compliance-{feature}.md` ... Read-only: `apps/backend/src/`", "where": "body"}
+{"id": "28b240eab912bcca", "restriction": "none", "evidence": "", "where": ""}
+{"id": "37eaee2eea9bf507", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d914c274a7dc5583", "restriction": "full", "evidence": "읽기전용. 코드 수정·머지·설계 안 함 — 분류 전담.", "where": "body"}
+{"id": "fc24eb0f9e90adfe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cab32ee1161902de", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7732d58f6c37059d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "21bb197bd4d2efb3", "restriction": "full", "evidence": "You review; you do not fix.", "where": "body"}
+{"id": "a5b5f3f90a43067d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6e171f69d4b0b958", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7c2149085f72d1b8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "185b0d180e7f4a56", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3d94d34b3fb3aff2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "692eac37f86baebf", "restriction": "partial", "evidence": "Never run mutation commands (`create`, `delete`, `insert`, `run`, `schedule`, …) without explicit user approval", "where": "body"}

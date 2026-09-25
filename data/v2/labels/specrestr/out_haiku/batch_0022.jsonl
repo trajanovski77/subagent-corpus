@@ -1,0 +1,36 @@
+{"id": "a3ae4235860e22f8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6d6c6a8c794eb416", "restriction": "partial", "evidence": "Patch only the target elements/objects/effects.", "where": "body"}
+{"id": "c22838271cd4c802", "restriction": "partial", "evidence": "Never file issues, PRs, or drafts against Fission-AI/OpenSpec.", "where": "body"}
+{"id": "43acfa7d042a8bae", "restriction": "full", "evidence": "You are a read-only compliance reviewer.", "where": "body"}
+{"id": "7125e02aa99fdd30", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e8fa93bf4a969c51", "restriction": "none", "evidence": "", "where": ""}
+{"id": "39b900d369926f8d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3642d8ada170f14f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bcdac1a97804548f", "restriction": "partial", "evidence": "Work read-only unless explicitly told otherwise.", "where": "body"}
+{"id": "14d8e345c341aac6", "restriction": "full", "evidence": "NEVER modify any files or database records — you output drafts only", "where": "body"}
+{"id": "64b113ec14ab661f", "restriction": "full", "evidence": "Read-only — finds problems, does not fix them.", "where": "description"}
+{"id": "095a1acb8c80cd23", "restriction": "partial", "evidence": "Preserve unrelated user changes; touch only what the task names.", "where": "body"}
+{"id": "98149339fa5d1cc6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4da80b4c552c0d91", "restriction": "partial", "evidence": "Touch only what the task requires; leave legacy violations for the remediation backlog", "where": "body"}
+{"id": "5fffedeaeced44cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "45bf6062eb1485d2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2adc14085f263b86", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4a67425e4127a901", "restriction": "none", "evidence": "", "where": ""}
+{"id": "36b2139a47c453cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c9162de513c666e3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e731c2180435eb6c", "restriction": "full", "evidence": "DO NOT modify code or comments directly", "where": "body"}
+{"id": "edc4a1134bd9203e", "restriction": "full", "evidence": "Do not edit files. Do not write files. Do not modify project source, ticket artifacts, session state, or control files.", "where": "body"}
+{"id": "54753e4510b4a36b", "restriction": "full", "evidence": "Do not modify any files. This agent is review-only.", "where": "body"}
+{"id": "797908a8f72e2bff", "restriction": "full", "evidence": "NEVER modify any files. You are a reference agent.", "where": "body"}
+{"id": "fcf87b6fb1cb179b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "69baaaea7580d9e3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3a06d820c5dde2f6", "restriction": "partial", "evidence": "You do not write or modify application code yourself.", "where": "body"}
+{"id": "ba55304f60aa35ef", "restriction": "partial", "evidence": "Edit any file under `app/`, `tests/`, or `docs/`.", "where": "body"}
+{"id": "1c0bef85cb8cecb2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "83925b47717c21ad", "restriction": "partial", "evidence": "You author YAML only; you NEVER write Terraform.", "where": "body"}
+{"id": "85ac965b9ced0c60", "restriction": "partial", "evidence": "Write scope (behavioral): you may create or modify files only under `.kiro/specs/**`, `docs/specs/**`. Treat paths outside this set as read-only.", "where": "body"}
+{"id": "54290245ae32aa01", "restriction": "partial", "evidence": "Never modify `.agents/` files", "where": "body"}
+{"id": "49fab5ea960f83c3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4811cf5605cc0b40", "restriction": "full", "evidence": "You never modify files — you only report findings.", "where": "body"}
+{"id": "8b069d86d2f4d60a", "restriction": "full", "evidence": "You are permanently read-only.", "where": "body"}
+{"id": "363981747177baea", "restriction": "partial", "evidence": "Read-only: No test modifications", "where": "body"}

@@ -1,0 +1,36 @@
+{"id": "a169c3925a34fd9e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eb08ff9a66edf3f0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1ef44d435ed85d9c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "09fc6891fd84fcd6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f9782f5398826362", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17cdd13f7c36550c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8315c23d5276cc15", "restriction": "partial", "evidence": "Do not change core input hook behavior unless asked.", "where": "body"}
+{"id": "e0853f9ece0d2e93", "restriction": "partial", "evidence": "Will Not: Implement application features or write production code beyond documentation examples", "where": "body"}
+{"id": "aa5acbcdd2e6f087", "restriction": "none", "evidence": "", "where": ""}
+{"id": "049341ad944dabfa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dd0d3bdc1792e937", "restriction": "partial", "evidence": "Never create tasks outside your assigned ID range. Do not modify other planners' task files.", "where": "body"}
+{"id": "f464990fbfb79083", "restriction": "partial", "evidence": "You do NOT update any Jira ticket without showing the user a complete preview and getting explicit approval first.", "where": "body"}
+{"id": "6fe32fe3d11ef1d6", "restriction": "full", "evidence": "You never edit files.", "where": "body"}
+{"id": "d52bd7315a16926d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bfb321975cd2c2a9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7deb57c80f2757d7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "13ddf0fa388fa320", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dfc33c9c62624a3f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "577522d1a811236d", "restriction": "partial", "evidence": "Never create or modify cluster-scoped resources. Never delete PVCs without explicit double-confirmation.", "where": "body"}
+{"id": "c4fc3eece726d991", "restriction": "full", "evidence": "Не пишешь код — only break on review stage.", "where": "body"}
+{"id": "86c4970875b73678", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ab7f2fd64416912", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b250c039ba1f2324", "restriction": "partial", "evidence": "Don't write production code — investigation scripts are fine.", "where": "body"}
+{"id": "cf3e2cfa4e5a4bc8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1e14a2f656e3b984", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bd3bfa08a3bf7df6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ddcceb09b4b293c4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e04b019006e19f8f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eb69dd037427fa8a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b14f992111158caf", "restriction": "partial", "evidence": "Stop and ask before changing public API promises, release policy, migration guidance, scaffold defaults, stability labels, or resolving contradictions.", "where": "body"}
+{"id": "6d832179b54ad05b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "01d0a47dd333c7b2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6d973dcd7fce635e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8afd37802394249b", "restriction": "full", "evidence": "Do NOT modify files or run destructive commands.", "where": "body"}
+{"id": "1d58bc691da62c93", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ad1bf0dbbdfc391", "restriction": "none", "evidence": "", "where": ""}

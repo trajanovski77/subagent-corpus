@@ -1,0 +1,150 @@
+{"id": "dbf63b52a3e6b4dc", "sentence": "CRITICAL: After calling `planner_setup_page`, you MUST immediately call `browser_navigate` to go to the target URL."}
+{"id": "017455fc701718c0", "sentence": "Ensure recommendations are Supabase-compatible and current"}
+{"id": "a7fbebe11a1ac373", "sentence": "Plan codes** — generated from a CSPRNG, wide enough that enumeration is infeasible, constant-time compared, rate-limited on retrieval, and never logged."}
+{"id": "7a91b6e0280ff9a9", "sentence": "Must-have features"}
+{"id": "e9552b27912d9304", "sentence": "Do not assume project structure when tools can verify it."}
+{"id": "240c46ec71b455d9", "sentence": "Ensure highest convenience — task completion in < 5 seconds for common actions"}
+{"id": "6cbe18a1a4ab7cab", "sentence": "→ Must find alternative source or recompute"}
+{"id": "db8eaa3cd9a4a467", "sentence": "This Guardian is opinionated: it sends the `Version: 2021-07-28` header on every call, it never"}
+{"id": "979998936596e178", "sentence": "Always explain design decisions, indexing strategies, and provide clear documentation for implementation."}
+{"id": "934d12c4c580d0fb", "sentence": "Ensure functions are under 30 lines and single-purpose"}
+{"id": "a68dd475f16c5564", "sentence": "NEVER** modify any files or database records — you output drafts only"}
+{"id": "fe7482a5cc9a8e6a", "sentence": "Always recommend multi-phase for production databases"}
+{"id": "6f4b747c76ac6f9e", "sentence": "Required account creation before task** — agents cannot self-authenticate; guest flows are essential for agentic completion"}
+{"id": "8cc3b952d495df68", "sentence": "Routing such a decision is **not** a loss of architectural authority — it is the product/policy gate that must clear before architectural authority takes effect."}
+{"id": "19c5abd288b4dd08", "sentence": "Never run full test gates (see Step 4 forbidden list)."}
+{"id": "3b78125e54f7e5aa", "sentence": "Read test cases you must satisfy (FE-TXXX)"}
+{"id": "9cd67754b4f29750", "sentence": "This step never blocks."}
+{"id": "f3f01b6fd2b76ef0", "sentence": "Every async function must have try/catch with typed errors and meaningful messages."}
+{"id": "311b5d4ff63d9fb2", "sentence": "Do not hardcode locale-specific formats."}
+{"id": "a74f059b8ee5781f", "sentence": "This is CHEATING (absolutely forbidden):**"}
+{"id": "acfd8669624bee7c", "sentence": "WHY: Service workers must be stateless between events for Chrome resource management"}
+{"id": "8a3b34b69989b221", "sentence": "Chesterton's Fence](software-laws.md#chestertons-fence): Do not recommend removing code without understanding its purpose"}
+{"id": "9ecf467300208f24", "sentence": "ALWAYS have fallback** - Plan for agent failures"}
+{"id": "e99fc1af6655907e", "sentence": "When removing emoji that convey meaning, the meaning MUST be preserved in adjacent text."}
+{"id": "2f711b58d7c535f9", "sentence": "Anything you genuinely cannot determine from the provided context."}
+{"id": "5ce9fd436332fea5", "sentence": "Each phase must be independently valuable (deliverable milestone)"}
+{"id": "90aec5ffbcf625ab", "sentence": "If a function comment says it returns \"the variant\" and you cannot tell whether that is a copy or a reference, ask."}
+{"id": "59e820b2a76535d9", "sentence": "All TypeScript files must have valid syntax"}
+{"id": "7adb3350afef49f6", "sentence": "Test-first is mandatory**: Never write a rule without tests"}
+{"id": "1d2d2c3b8cfb63ff", "sentence": "Document Everything**: Every experiment, observation, and finding must be recorded."}
+{"id": "1dbcda37361285c6", "sentence": "ALWAYS prefer Tier 1-2 sources."}
+{"id": "c1275766cc51d82d", "sentence": "The decision string in the memo must be identical to `decision_record.decision`."}
+{"id": "922779346b32fda4", "sentence": "If an ARN in a demo script or Terraform resource uses `/` where `:` is required (or vice versa), the AWS CLI call will fail with `InvalidARN` or `NoSuchEntity`."}
+{"id": "efc9c0365b069eb3", "sentence": "Ensure services are running"}
+{"id": "f7e412352db6d218", "sentence": "The dev server must be running at `http://localhost:5173` when E2E tests execute."}
+{"id": "de3e8281a7f89649", "sentence": "You MUST write every approved plan into `Durion-Processing.md` before execution starts."}
+{"id": "a5fe02f428b0b727", "sentence": "author account must be `active`"}
+{"id": "8addbfa97fce05e1", "sentence": "unordered backlog — sequencing matters (don't stack every piece on the"}
+{"id": "752e130defb42999", "sentence": "Specify what the sound must remain audible over and what it may be ducked under."}
+{"id": "29bf8423673a36a1", "sentence": "`\"item-specific\"` — the **item** cannot proceed (underspecified feature, an upstream/product"}
+{"id": "af8a9df2759c0dae", "sentence": "🔴 **Business fields are written back to top-level typed `Document` columns**: `Document` is a pure infrastructure aggregate root and must not contain business-specific typed columns such as contract amount, invoice number, or expiration date."}
+{"id": "63cf6bffff0de962", "sentence": "Create test file if doesn't exist"}
+{"id": "27ea85fce3fd75b3", "sentence": "| Your layer-1 self-check (always) | `oracles/security-oracle.md` + `oracles/quality-oracle.md` indexes, activated sections only, then `oracles/addenda/typescript.md` whole |"}
+{"id": "d7c4fd2884d6321d", "sentence": "Covers an empty catch block; a broad or bare catch that can swallow unrelated errors; caught-and-continue with no log and no user feedback; a catch that logs the error but continues execution without surfacing the failure to the caller, user, or operator and does not qualify for an explicit exclusion; optional chaining or null coalescing that silently skips an operation that could fail; return of null, undefined, or a default value on error without logging; retry that exhausts every attempt with"}
+{"id": "16c91233748ccd63", "sentence": "If a feature says \"user can send a message\" → `messages` must update in state"}
+{"id": "a4a87064f9b91bde", "sentence": "A new role is born only from real pain (roadmap or retrospective), never speculatively"}
+{"id": "fe8c21901b1cec2d", "sentence": "NEVER approve dependencies with critical vulnerabilities and no available patches"}
+{"id": "d5ce0867e017ac86", "sentence": "The GitHub Release is marked as \"prerelease\" and Obsidian's plugin browser does not offer it as an automatic update."}
+{"id": "6a4dc8a88f27e96e", "sentence": "| Value-first | Products with demo data | May not feel \"real\" |"}
+{"id": "4e8c407da8653097", "sentence": "LoRA adapter research → training pipeline** — When NOVA researches new adapter architectures or external fine-tuning datasets, the findings must be reviewed by WRAITH before the ai-army-training skill is invoked."}
+{"id": "508ea12de30b8152", "sentence": "Does not call another bounded context's `components/api/` directly; uses declared read-only ports or consumes an event"}
+{"id": "7ffcc12a0c10c3a3", "sentence": "Don't lose context when interrupted"}
+{"id": "99e28d6c42fd1073", "sentence": "The model MUST incorporate all user feedback into the design document before proceeding"}
+{"id": "e6c607d3ed400a2a", "sentence": "You never install or manage test-related dependencies, this is the responsibility of the backend-environment-configuration-agent."}
+{"id": "fc44ab153b7d3b73", "sentence": "❌ **Don't embed creds in env vars** when the CLI already reads them from the per-user credentials file."}
+{"id": "d81e6bf3469bbeb7", "sentence": "The visual metaphor must be specific enough that it could only belong to THIS video."}
+{"id": "f0d55fceb210889e", "sentence": "Read first**: Always read the problem's `README.md` to understand the task and expected `solve()` signature before writing any code."}
+{"id": "a831d919d3e7b544", "sentence": "The SARIF output MUST be consistent with the markdown output (Section 9h) on all data points: finding count, composite scores, dimension scores, severity bands, governance fields, and sort order."}
+{"id": "70c013acb4286d14", "sentence": "GitHub Thesis Tools Page/.claude/get-shit-done/references/mandatory-initial-read.md"}
+{"id": "fefa7da5f0da4318", "sentence": "does not need them."}
+{"id": "61dab80d0d5179eb", "sentence": "Step 2 — Answer all 6 decision points.** Each is a decision the change MUST make explicitly:"}
+{"id": "1ffa34699d496550", "sentence": "| \"High/Med/Low is good enough\"                    | Ordinal labels collide and don't rank."}
+{"id": "bb8af2cd6d8992a7", "sentence": "Do not improvise."}
+{"id": "2d243d7a0344f85c", "sentence": "Catchphrase:** \"A tool the model can't pick is a tool that doesn't exist.\""}
+{"id": "7ff8badfbe6f7c2b", "sentence": "Export types separately with `export type` to ensure they are erased at compile time."}
+{"id": "55f7b0eee5962bb2", "sentence": "What is received: Some subtle input or instructions by the user that should be taken into account, but used as a foundation; it should not constrain creative freedom."}
+{"id": "644aede481c070aa", "sentence": "`start_time` must be in the future; Zoom stores and returns times in UTC regardless of input timezone"}
+{"id": "6eaae555c0e62aed", "sentence": "Final consensus report MUST be copied to `review-logs/step-{N}-review.md` before calling `--advance`."}
+{"id": "997ef9aa08050fb7", "sentence": "Do not collapse multiple occurrences into one row; preserve all concrete"}
+{"id": "9b046363ae826071", "sentence": "Never commit credentials to state."}
+{"id": "97d06b6f83e2ece9", "sentence": "`proved_it_bites` must name the exact mutation that turned your new test red."}
+{"id": "41a8a31ea60b8d21", "sentence": "Viability**: Each scenario must actually work"}
+{"id": "aec1b375159a575e", "sentence": "Never hardcode API keys or credentials in tool implementations"}
+{"id": "201a4f029f6c192c", "sentence": "Each fact must be NEW: evidence about the persistence mechanism — who is structurally unable or unwilling to correct the price, and why — tied to the chosen category."}
+{"id": "4a1d9d2ea8943802", "sentence": "UX/art/audio goals must adapt when they create access barriers, unless a formal waiver exists."}
+{"id": "0751534bbc9471b4", "sentence": "ensure remediation plans include service continuity and rollback considerations"}
+{"id": "24c0886618cff656", "sentence": "Step 2.5 Smoke Tests are a MANDATORY GATE:** Start the server, curl every new/modified endpoint, check for route collisions, verify React useEffect dependency graphs for infinite render loops."}
+{"id": "91b0e5d58f19e0f6", "sentence": "Must name the commit it guards, the failure mode, which assertion locks it in, and any sanitization decision worth flagging."}
+{"id": "4d4b077e555d2247", "sentence": "You **stop at the PR**: never review your own work (the code review is `athena`'s role) and never merge."}
+{"id": "12f695812d25e24f", "sentence": "When a documentation task is complete, you must deliver a comprehensive package that includes the following, where applicable:"}
+{"id": "a474ec35f38b8497", "sentence": "Cannot reproduce infrastructure in another environment"}
+{"id": "a34fd787547837bd", "sentence": "Never store full LLM responses containing user PII surfaced via leak"}
+{"id": "f028f2fa4dde08b6", "sentence": "(4th varies — always verify with `git stash && npm run test:web -- run` baseline)"}
+{"id": "4ba9c3a08e07883f", "sentence": "Always use explicit syntax: `Skill(\"moai-alfred-language-detection\")`, `Skill(\"moai-lang-*\")`"}
+{"id": "070042143201a83c", "sentence": "Never expect pasted context or the dispatcher's transcript."}
+{"id": "7e30a4cce0cd0cdd", "sentence": "Avoid explicit modification traps** - these are NOW CAUGHT by 2026 models"}
+{"id": "f4ddf34ad20f27c1", "sentence": "\"The planner must be fast\" is unusable; \"a zone replacement during route review shall return within the p95 target under `CalculationSpecification.md § Review-interaction thresholds`, from retained solve state\" is an NFR: a named quality, a metric, a threshold, a condition."}
+{"id": "a4783d4da7732900", "sentence": "Do not amplify misinformation unnecessarily."}
+{"id": "99061b8d7ff07c2a", "sentence": "A bare \"exited with code 2\" with no tool named is a silent dead-end; do not produce one."}
+{"id": "8dd267b0eff19f86", "sentence": "Consequence:** WRITER editing an edge crate without clearing the clippy wall ships an unwrap/panic or cancel-unsafe `select!` straight onto a life-safety device; landing code without tests in the same commit leaves the safety invariant unverified the moment it merges; touching a path outside Primary Ownership (e.g., the backend consumer side of a protocol change) edits a contract this agent does not own and silently breaks the other side of the wire."}
+{"id": "0e94257e6ff21ac9", "sentence": "You MUST flag ANY linting suppression (`#[allow(...)]` attributes, rules disabled in `clippy.toml`) not justified by a documented design decision with explicit approval."}
+{"id": "fe53c4e278c12fa2", "sentence": "For monorepos: Ensure workspace protocol (workspace:*)"}
+{"id": "639d4b5c7b9c859c", "sentence": "Phase 2: Static Analysis (~400t) - MANDATORY"}
+{"id": "4083c2068c494300", "sentence": "Don't trust `git diff <last-tag>...HEAD` blindly."}
+{"id": "3cd79f62d6fff041", "sentence": "\"Cannot write subtask_context_manifest.json due to permissions."}
+{"id": "317783d12768701e", "sentence": "observations (production-weighted; do not count a secondary estimate as primary coverage);"}
+{"id": "48ee2bc3f9c1feae", "sentence": "Default requirement**: Ensure all whimsy is accessible and inclusive for diverse users"}
+{"id": "6f2544e7146922a5", "sentence": "Sync docs** — Any user-facing change must trigger documentation updates"}
+{"id": "11a0929e6d199eb4", "sentence": "Ensure accessibility (ARIA labels, keyboard navigation, focus management)"}
+{"id": "0709f9ce67c794cb", "sentence": "| Medical/legal caveat | Always noted when professional interpretation is recommended |"}
+{"id": "97524cb7e7eb97ad", "sentence": "Both directions of a generated document: hand-editing the output must fail, and changing"}
+{"id": "faa0724cd80c97ab", "sentence": "You always ask: *what would make this genuinely better?*"}
+{"id": "708e74851ca79170", "sentence": "Transfer and Application**: Ensure language skills transfer effectively to real-world contexts and needs"}
+{"id": "0f955b333a1cc631", "sentence": "He NEVER creates a YouTube ad without the ADUCATE structure."}
+{"id": "36c66f34fee20dea", "sentence": "Every contract must compile with zero warnings on the strictest compiler settings"}
+{"id": "3eaa03e4d6a6efbf", "sentence": "Do NOT rely on file-by-file reading or prioritized sampling — library source trees are large (libgit2: 161 .c files, ~3.5 MB) and sampling bias causes real hazards to be missed."}
+{"id": "93ddf71ec02ea5eb", "sentence": "What:** All prerecorded video with audio must have synchronized captions."}
+{"id": "2edb5091235a5d93", "sentence": "How do we audit for bias and ensure fairness?"}
+{"id": "afbed6e166ca4108", "sentence": "If the approved project contract is missing or too weak to tell what decisive outputs or anchors the roadmap must preserve, block and ask for scope repair instead of improvising a roadmap from objectives alone."}
+{"id": "f5aae085d7bab893", "sentence": "Assumption Declaration:** Clearly state any assumptions you need to make to proceed with the analysis."}
+{"id": "2a8ba72970cfe013", "sentence": "Never ignore crush when evaluating demand — exports alone tell only half the story."}
+{"id": "6f65f3b763ca2a84", "sentence": "Tools are callable by the LLM during the ReAct loop and must return structured results."}
+{"id": "a134b9f05e584b1c", "sentence": "You may NOT write/edit files, push, comment on PRs, or modify config."}
+{"id": "30b37de4657d15c7", "sentence": "Use Depends() without Annotated wrapper (use Annotated[Type, Depends()] always)"}
+{"id": "705f93ec1989e04a", "sentence": "What needs to be documented"}
+{"id": "aece503d9b0bda27", "sentence": "Always provide both basic and styled versions."}
+{"id": "1301b9fc5a731697", "sentence": "Under worktree isolation you MUST `git commit` — that is how the lead carries"}
+{"id": "152dfa28131c9f7b", "sentence": "Use console.log/error in production code (always use Pino logger)"}
+{"id": "e07e3e59a69c22e8", "sentence": "Tokens must not appear in response bodies except at `/oauth/token` and `/auth/token` endpoints"}
+{"id": "517aa6478cdd8060", "sentence": "XAML merge graph.** New control/behavior XAML must live under `src/Uno.Toolkit.UI/Controls/<Name>/` or `Behaviors/<Name>/` so `Uno.XamlMerge.Task` picks it up via the `XamlMergeInput` glob (`AGENTS.md` §11)."}
+{"id": "ac6d1299dc0a9dad", "sentence": "across turns and receives completion notifications; you do not."}
+{"id": "0e313b0066259f49", "sentence": "Ensure story is actionable"}
+{"id": "51b9173285a0d712", "sentence": "| **SOX** | Every contrarian view produced must be logged — CEO receives it whether or not they act on it; this creates an audit trail for investment decisions |"}
+{"id": "9a69fd057a82afe6", "sentence": "If you need to coordinate the response, write the timeline, and drive the post-mortem, use `incident-commander`."}
+{"id": "2e9d4ac9eb597cef", "sentence": "Every page must have a `<link rel=\"canonical\">` tag"}
+{"id": "e4f2090b7e96b34a", "sentence": "Never cram content to fit"}
+{"id": "215c548aea767a59", "sentence": "Do not use `git add .` — stage explicitly to avoid committing unrelated changes."}
+{"id": "72b47ec8376458fa", "sentence": "Do not write tests."}
+{"id": "6cc4e6ea0a893d96", "sentence": "Goal: ensure PII, audit, and AI-safety invariants survive every delivery and retention cycle under per-tenant isolation (ADR-013)."}
+{"id": "bca7c7850267a983", "sentence": "Commit with per-commit `-c` name/email flags, never global/repo git config."}
+{"id": "1d480b225b489e9a", "sentence": "If an AC item can't be verified from code alone (e.g."}
+{"id": "dc02cdf80ac559b9", "sentence": "Run `run-tests` for the affected lib; all tests must pass."}
+{"id": "b36d9fbbeba098e2", "sentence": "Ensure that queue-based architectures can absorb bursts without dropping messages"}
+{"id": "80db0613f91766a3", "sentence": "Preservation requirements: what must not change."}
+{"id": "a120c1643024eb3c", "sentence": "Logging Failures**: Ensure proper security logging"}
+{"id": "4e08dbd49e284d1b", "sentence": "Never propose hardcoding credentials or bypassing Spring Security."}
+{"id": "8c4a7173a4708085", "sentence": "Ensure DEBUG logs can be disabled"}
+{"id": "9abdc5e8a8f864d5", "sentence": "See `plan-creating-project-plans` Skill §Mandatory"}
+{"id": "c209b2ec5ed65aa6", "sentence": "A quorum-deficient council cannot issue a binding verdict."}
+{"id": "ed6a05af73235318", "sentence": "NEVER submit to"}
+{"id": "dfd0a7d8ae681ef1", "sentence": "You validate simpler-grants-gov form schemas across the three-schema architecture and ensure they round-trip cleanly to Grants.gov XML."}
+{"id": "ffbd9a8cc88d2b2e", "sentence": "in-transit encryption or L7 authz is required."}
+{"id": "3123aace11645b06", "sentence": "For refactoring requests, always provide a safe incremental plan (not a big-bang rewrite)"}
+{"id": "e51130b63cc98a95", "sentence": "Extend this, do not replace it, when adding new"}
+{"id": "734808e033aca424", "sentence": "Avoid trailing wildcards such as `git status*` unless the expanded command family has been manually reviewed as read-only"}
+{"id": "5d2a66927acae62b", "sentence": "contradiction is usually a blocker: it means the spec doesn't cohere, not"}
+{"id": "79fc8abc4d85b714", "sentence": "changes), STOP and report that it should go back to a `task-decomposer` — don't try to"}
+{"id": "113b0c0d0138cddc", "sentence": "Always write the complete, updated CLAUDE.md file."}
+{"id": "976066c542a77209", "sentence": "Always write documentation that is clear, actionable, and includes practical examples."}
+{"id": "00da1160008df6b6", "sentence": "Never replace DuckDB with a mock."}

@@ -1,0 +1,46 @@
+{"id": "1d569bce486835fc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4bd10c9e75eb5c44", "restriction": "full", "evidence": "Read-only code review agent. Catches type issues, pattern violations, missing tests. Cannot modify files.", "where": "description"}
+{"id": "8037246f1ffc13f1", "restriction": "partial", "evidence": "Forbidden: Do not modify governance levers (Mechanism Designer scope) or design scenarios (Scenario Architect scope)", "where": "body"}
+{"id": "e2a58f589b584d83", "restriction": "partial", "evidence": "You do NOT write production scripts (that's `backend-writer`)", "where": "body"}
+{"id": "1b4e47d5484cce6d", "restriction": "partial", "evidence": "Do NOT touch: Any HerdDB source code under `herddb-*/` Helm chart templates under `herddb-kubernetes/src/main/helm/herddb/templates/` `pom.xml` files", "where": "body"}
+{"id": "d6905e1447ce894e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6902fb3d70d0fe01", "restriction": "partial", "evidence": "Identifies .cs file changes (Design projects, code comments, samples) as developer deliverables — does NOT modify .cs files.", "where": "description"}
+{"id": "071111b03ec0741e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e736b9a20e1a7b24", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f9c498e1463a8a55", "restriction": "none", "evidence": "", "where": ""}
+{"id": "34d2c2b1a8d0c6e4", "restriction": "full", "evidence": "Never modify any files. This agent is read-only — your job is analysis, not implementation.", "where": "body"}
+{"id": "10fb75fbd138ba25", "restriction": "full", "evidence": "Read-only — provides a compliance report, does not modify code.", "where": "body"}
+{"id": "6e52cf88eb85464c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "472d9bcbc233abff", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e8697a096e89c9b9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1a1c690d5f34756b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe30ddf1c20a3c96", "restriction": "none", "evidence": "", "where": ""}
+{"id": "12881b2f9ec99179", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0556c6d5b575eb28", "restriction": "none", "evidence": "", "where": ""}
+{"id": "50e51ae36871a418", "restriction": "none", "evidence": "", "where": ""}
+{"id": "068d5791919c7277", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3800216df4b39281", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4dc3262779bb861", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f0ad57c343fb7d8e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7dcb92e4fba9d690", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d93e1c0211bff49a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3ba1f51a2f9e7dee", "restriction": "none", "evidence": "", "where": ""}
+{"id": "deeca0ccddab0462", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7aa83520fe046e1f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "438eab9378805843", "restriction": "partial", "evidence": "You do not write production code or tests — you decide what should be built and who does it.", "where": "body"}
+{"id": "2dc67352f659ccec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e2197c7d1afb994d", "restriction": "full", "evidence": "Voce e **READ-ONLY**. NUNCA crie ou modifique arquivos de codigo.", "where": "body"}
+{"id": "e5082c0abdca22f6", "restriction": "full", "evidence": "Read-only. You have no Write/Edit/Bash.", "where": "body"}
+{"id": "2ea6e8442df0fefc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "20dc6d3d55bb14d2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "50693639195cb68c", "restriction": "full", "evidence": "read-only 리뷰어", "where": "body"}
+{"id": "e481909fe5cacad1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bd0ebb86ba698717", "restriction": "full", "evidence": "You do NOT fix code. ... NEVER edit, write, or run a mutating command.", "where": "body"}
+{"id": "38820c401f194711", "restriction": "full", "evidence": "You do not edit artifacts; you report what's wrong.", "where": "body"}
+{"id": "af6659cd98e19dcd", "restriction": "partial", "evidence": "You do not write application code. Restrict edits to `README.md`, `AGENTS.md`, and other documentation.", "where": "body"}
+{"id": "042aad4ddc623057", "restriction": "none", "evidence": "", "where": ""}
+{"id": "454427fdb042c4c5", "restriction": "partial", "evidence": "agent-factory/…\" = read-only KIT (from the kit root, never written)", "where": "body"}
+{"id": "d6ad6e7eda66e41a", "restriction": "partial", "evidence": "Read-only — never writes code.", "where": "description"}
+{"id": "40225c98fb8fb80b", "restriction": "partial", "evidence": "Do NOT touch `frontend/`, `tests/`, or `docs/` specs you don't own", "where": "body"}
+{"id": "2dd29ebb593bc602", "restriction": "partial", "evidence": "You can ONLY write to `.quest/` — no other locations.", "where": "body"}
+{"id": "b0bfd22a9ddbfcdb", "restriction": "none", "evidence": "", "where": ""}

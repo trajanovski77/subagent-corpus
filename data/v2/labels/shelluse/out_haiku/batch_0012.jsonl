@@ -1,0 +1,43 @@
+{"id": "158f9fcda816289d", "shell_use": "inspect", "evidence": "git diff main...HEAD --stat"}
+{"id": "9abda25bf6872201", "shell_use": "verify", "evidence": "runs `nx affected --target=build` and `npm run type-check`"}
+{"id": "3279649ef6d46c23", "shell_use": "none", "evidence": ""}
+{"id": "fdebfd7c3cfa5b30", "shell_use": "none", "evidence": ""}
+{"id": "61eb620b2e54d0f4", "shell_use": "none", "evidence": ""}
+{"id": "b81d478c2a6b248f", "shell_use": "inspect", "evidence": "gh pr view 42, gh pr diff 42"}
+{"id": "16a7486118b4a210", "shell_use": "verify", "evidence": "run bash commands to test feeds, run feed-level unit tests"}
+{"id": "71c1022377a46e35", "shell_use": "inspect", "evidence": "git diff HEAD, codegraph impact"}
+{"id": "445058639b8ae8da", "shell_use": "inspect", "evidence": "read-only validation commands"}
+{"id": "fc4e70fdf5a1e8ca", "shell_use": "inspect", "evidence": "git diff --staged, git diff"}
+{"id": "c65c585739514be0", "shell_use": "change", "evidence": "pnpm format, git add -A"}
+{"id": "7b8eebd4b7e90724", "shell_use": "verify", "evidence": "forge test -vvvv, pnpm tsc --noEmit"}
+{"id": "e2e0f9df6a94c5fa", "shell_use": "verify", "evidence": "go test, go build"}
+{"id": "9d0e20b37d235f35", "shell_use": "none", "evidence": ""}
+{"id": "1a1c690d5f34756b", "shell_use": "none", "evidence": ""}
+{"id": "2ebf3b8d1932a293", "shell_use": "inspect", "evidence": "git branch --show-current, git fetch, git rev-list"}
+{"id": "8b32dfb4a7e6d508", "shell_use": "verify", "evidence": "Runs the test suite"}
+{"id": "7f9b1e433150e369", "shell_use": "none", "evidence": ""}
+{"id": "ca95d3a76a920089", "shell_use": "inspect", "evidence": "gh issue view, gh pr view"}
+{"id": "2b65d57838d58327", "shell_use": "verify", "evidence": "./scripts/verify/verify.sh, bash scripts/ci/"}
+{"id": "91d94a053a78580f", "shell_use": "none", "evidence": ""}
+{"id": "5bc8fadac4763662", "shell_use": "verify", "evidence": "git diff, rush test:ci"}
+{"id": "4a9554248a9d1fbb", "shell_use": "none", "evidence": ""}
+{"id": "0eab8f30411eaee7", "shell_use": "inspect", "evidence": "grep -r, npm audit, curl -I"}
+{"id": "b3786b00cc70f112", "shell_use": "none", "evidence": ""}
+{"id": "2b6d9443a5d4a997", "shell_use": "inspect", "evidence": "grep -rn, find"}
+{"id": "35453eac5190e3c6", "shell_use": "inspect", "evidence": "npm audit"}
+{"id": "407385d16a6dc3fe", "shell_use": "none", "evidence": ""}
+{"id": "bb0a3eb8f8593126", "shell_use": "inspect", "evidence": "gh pr diff"}
+{"id": "a1410c8ae8de470a", "shell_use": "inspect", "evidence": "run safe validation checks"}
+{"id": "9377b6a286153c97", "shell_use": "inspect", "evidence": "./.claude/tools/web_search.sh"}
+{"id": "c567dfc53100b293", "shell_use": "verify", "evidence": "python manage.py check, ruff check, mypy"}
+{"id": "124d3d6efa57fe04", "shell_use": "inspect", "evidence": "ls -t exports/"}
+{"id": "d51ddda591143f8c", "shell_use": "none", "evidence": ""}
+{"id": "a54dbd3ad8c2ef90", "shell_use": "inspect", "evidence": "Grep/Glob, git log"}
+{"id": "c4fc3eece726d991", "shell_use": "verify", "evidence": "Scripts/pipeline.sh, grep for localization checks"}
+{"id": "58341ed3abfbdcc7", "shell_use": "none", "evidence": ""}
+{"id": "e67d971725c17e28", "shell_use": "change", "evidence": "git add, git commit, git tag, git push"}
+{"id": "85c59a56d99bdc07", "shell_use": "none", "evidence": ""}
+{"id": "952020e1b1a0aa84", "shell_use": "inspect", "evidence": "find, Grep, Glob"}
+{"id": "390e534ac2be62af", "shell_use": "verify", "evidence": "run the failing test, run the build"}
+{"id": "e8406cf88d82749c", "shell_use": "verify", "evidence": "uv run ruff check, uv run mypy"}
+{"id": "0f95a9deb2bbb30b", "shell_use": "none", "evidence": ""}

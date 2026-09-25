@@ -1,0 +1,48 @@
+{"id": "3392dc7f01a1793b", "shell_use": "none", "evidence": ""}
+{"id": "4d164db91a12f981", "shell_use": "verify", "evidence": "exercises the brief's acceptance criteria end-to-end"}
+{"id": "de2b5a97afc83895", "shell_use": "none", "evidence": ""}
+{"id": "f7c10eaad60cdfdf", "shell_use": "none", "evidence": ""}
+{"id": "fe9604c95298e715", "shell_use": "verify", "evidence": "Run `git diff -- '*.py'` to see recent Python file changes; Run static analysis tools if available (ruff, mypy, pylint, black --check)"}
+{"id": "14164b0b10fb1bf3", "shell_use": "none", "evidence": ""}
+{"id": "312a3c703953811c", "shell_use": "change", "evidence": "installs kernel/modules/DTBs on-device, reboots, and verifies deployment"}
+{"id": "46d93c55ec9d0ea4", "shell_use": "none", "evidence": ""}
+{"id": "7125e02aa99fdd30", "shell_use": "verify", "evidence": "Run the build to capture the full error: `./gradlew :WooCommerce:assembleWasabiDebug 2>&1`; Run the failing test: `./gradlew :WooCommerce:testWasabiDebugUnitTest`"}
+{"id": "845e270637d62752", "shell_use": "none", "evidence": ""}
+{"id": "72b0e15727850146", "shell_use": "verify", "evidence": "run `git diff main...HEAD` and `git status`; Run `npm test`, `node --check js/*.js`"}
+{"id": "b234f03d8f0ba6db", "shell_use": "verify", "evidence": "Execute the UI spec suite: `crystal spec spec/ui/`; Run `crystal build --no-codegen src/ui.cr`"}
+{"id": "7811cca334b7f760", "shell_use": "none", "evidence": ""}
+{"id": "6c310a85bc09b766", "shell_use": "inspect", "evidence": "grep -r \"import.*$export_name\"; For each phase's exports, verify they're imported and used"}
+{"id": "dd576826fb8b92d0", "shell_use": "inspect", "evidence": "open the cited `file:line`, grep the relevant symbols"}
+{"id": "e9dab650b80d9181", "shell_use": "none", "evidence": ""}
+{"id": "0113806f24f2cdf8", "shell_use": "change", "evidence": "railway up --service smartats-linkedin-scraper --path-as-root --detach scripts/playwright-linkedin"}
+{"id": "814e9dc90e47f4e7", "shell_use": "none", "evidence": ""}
+{"id": "c17597170328958d", "shell_use": "none", "evidence": ""}
+{"id": "445d14d4d42cca1b", "shell_use": "verify", "evidence": "npm test, npm run lint, npm run build all pass (check CI status or run locally)"}
+{"id": "01c47c54cb42a66a", "shell_use": "none", "evidence": ""}
+{"id": "39896f8028437ff4", "shell_use": "none", "evidence": ""}
+{"id": "6f977f9daad55cf7", "shell_use": "none", "evidence": ""}
+{"id": "6eb6bbea458b3495", "shell_use": "change", "evidence": "commits + pushes to the screenshots repo's main"}
+{"id": "5121ad1f45a7172a", "shell_use": "verify", "evidence": "run `git fetch origin main` then `git diff origin/main --stat`; run `npm run lint`; run `npm test`"}
+{"id": "64da0199adf2af85", "shell_use": "verify", "evidence": "xcodebuild -project Anytype.xcodeproj -scheme Anytype -destination 'platform=iOS Simulator,name=iPhone 16' build"}
+{"id": "72276b193ff67e2d", "shell_use": "verify", "evidence": "Verify any bundled scripts work correctly"}
+{"id": "a1d4b1861d18f172", "shell_use": "verify", "evidence": "Run lightweight checks when available: unit tests, `pytest`, `ruff`, `mypy`, notebook checks"}
+{"id": "c29690865e36f3f5", "shell_use": "none", "evidence": ""}
+{"id": "c8236d4ceb0ded9e", "shell_use": "change", "evidence": "git tag v<version>; git push origin v<version>; gh release create"}
+{"id": "980d392f00814b2c", "shell_use": "change", "evidence": "git add -A && git commit -m \"release: v$VER\"; git tag -a; git push origin main --tags; gh release create"}
+{"id": "d968a65c732abbf2", "shell_use": "change", "evidence": "Drive App Store Connect and Google Play by API rather than by clicking"}
+{"id": "20dc6d3d55bb14d2", "shell_use": "verify", "evidence": "Compile the code with CMake and report the result"}
+{"id": "b26acc69721632ba", "shell_use": "verify", "evidence": "Run unit, integration, and e2e tests; npm test, cargo test, pytest"}
+{"id": "97b0a41e552f084c", "shell_use": "none", "evidence": ""}
+{"id": "d4eb6aec6152315a", "shell_use": "inspect", "evidence": "Reconnaissance only. Discover what nodes, models, and custom nodes are available"}
+{"id": "504a2995fcd84ee7", "shell_use": "none", "evidence": ""}
+{"id": "16f8d5f5601920d7", "shell_use": "inspect", "evidence": "git log --oneline -20 -- packages/<package>; gh issue list --search"}
+{"id": "20453659cea618ec", "shell_use": "none", "evidence": ""}
+{"id": "73f1692f2d37ceb6", "shell_use": "none", "evidence": ""}
+{"id": "7049b2b725623f07", "shell_use": "inspect", "evidence": "gh pr checks; gh run list --branch; gh pr list"}
+{"id": "f55003804b73ca1b", "shell_use": "none", "evidence": ""}
+{"id": "a2389b8242d9ecab", "shell_use": "inspect", "evidence": "Bash is read/search only: `rg`, `gh search`, `tvly search`, `tinyfish agent run`"}
+{"id": "e0bb1f15d20c4a40", "shell_use": "verify", "evidence": "yamllint .tekton/*.yaml; make docker-build; prek run --all-files; make go-check; gitleaks detect"}
+{"id": "fa62ec3a24e15d37", "shell_use": "none", "evidence": ""}
+{"id": "d6afc7c0081388d9", "shell_use": "none", "evidence": ""}
+{"id": "f218be9dea8b26f7", "shell_use": "none", "evidence": ""}
+{"id": "1dbbaacd7392b7e9", "shell_use": "none", "evidence": ""}

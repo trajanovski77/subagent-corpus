@@ -1,0 +1,28 @@
+{"id": "a3eb061f20534ae2", "restriction": "partial", "evidence": "NEVER do the actual implementation, just design the implementation plan", "where": "body"}
+{"id": "1e50ec53cc0c5b23", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6937ecb0e784bc6b", "restriction": "partial", "evidence": "does not write production code or fixes", "where": "description"}
+{"id": "145ca9cd50ec3e64", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0b31b268bbf8ae3d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "31926d030bbad5ae", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9d0e20b37d235f35", "restriction": "full", "evidence": "Read-only — não edita; reporta achados. Não edite arquivos.", "where": "both"}
+{"id": "0c1cb26a86906511", "restriction": "none", "evidence": "", "where": ""}
+{"id": "aede0de6b4fafa89", "restriction": "partial", "evidence": "Never write application code — write tests only.", "where": "body"}
+{"id": "b67741d3efe9d326", "restriction": "full", "evidence": "Read-only. Does not implement, does not gate diffs, does not locate code.", "where": "description"}
+{"id": "8db3e5845129321d", "restriction": "partial", "evidence": "Reports; does not fix and never releases.", "where": "description"}
+{"id": "801d4dc85728c133", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe619bb57b38efb2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "57e0f354fba49b77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "22f648ef8765a35b", "restriction": "partial", "evidence": "NEVER delete files without user confirmation. NEVER run git push, git reset --hard, or other destructive git commands.", "where": "body"}
+{"id": "6448a41072e617f9", "restriction": "full", "evidence": "Tests only; never modifies. You test but never modify or translate intent.", "where": "both"}
+{"id": "15a536fb04e2ed09", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9e0b551a0a430cd6", "restriction": "partial", "evidence": "Du schreibst Specs, keinen Code. Schreibrecht nur unter specs/.", "where": "body"}
+{"id": "2b4678ae8059736c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "df9ceed5fc835c28", "restriction": "full", "evidence": "ABSOLUTE PROHIBITION - NO CODE WRITING. You CANNOT write, modify, or create code files. You CANNOT use Write, Edit, or Bash tools.", "where": "body"}
+{"id": "c670b68ebfcad341", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b25fb406699e3bac", "restriction": "none", "evidence": "", "where": ""}
+{"id": "24e250d99f6960ea", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1f7c7ef0f1602b27", "restriction": "partial", "evidence": "You do not write narrative content or own the story", "where": "body"}
+{"id": "4cdf2a369c45aa57", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bbd4526193f9793c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "479fe2312d2969f5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8f25b80d63a6c974", "restriction": "none", "evidence": "", "where": ""}

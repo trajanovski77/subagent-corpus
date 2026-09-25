@@ -1,0 +1,28 @@
+{"id": "538c0f97d9b38160", "restriction": "none", "evidence": "", "where": ""}
+{"id": "648fed2c48560719", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2b113b8637e3da92", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4bcc588ba68a370d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bcdd527caf2f8894", "restriction": "full", "evidence": "You are read-only — analysis should be efficient.", "where": "body"}
+{"id": "15c1c2c02a2ca733", "restriction": "full", "evidence": "You are a reviewer whose only job is to stop destructive database operations", "where": "body"}
+{"id": "d7ab3274c4ce593f", "restriction": "full", "evidence": "AUDIT AND ADVISE ONLY: you never edit `specs/**` or generated artifacts", "where": "body"}
+{"id": "1f9cca6ba2720ef1", "restriction": "full", "evidence": "Reviews UI components and user flows for usability, accessibility, and design consistency.", "where": "description"}
+{"id": "0b9b643246a94739", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a142485668f8e74d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6fd7013101ea3142", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b553c18572cd5acb", "restriction": "full", "evidence": "Do NOT invoke for: writing or editing code.", "where": "body"}
+{"id": "7d41c3d398b47f71", "restriction": "full", "evidence": "Your job is to catch deviations from the correct patterns", "where": "body"}
+{"id": "46c9deb185271626", "restriction": "full", "evidence": "You can't edit code — you return change requests or an approval", "where": "body"}
+{"id": "3394d7246baef6dc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0e108967f3ef312a", "restriction": "full", "evidence": "You DO NOT refactor or rewrite code — you report findings only.", "where": "body"}
+{"id": "ea986f0a9c6249d4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d1160acfd06ac6d6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7b2fb45c876f089d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c4748a913f017c4d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "775ad5353d688ce7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9246d50f5405b67e", "restriction": "full", "evidence": "Report violations. Do NOT fix them.", "where": "body"}
+{"id": "4f5d55f55342df63", "restriction": "full", "evidence": "Return each issue in this exact structure so the wizard can aggregate, deduplicate, and score results", "where": "body"}
+{"id": "e66eca7df08aa46e", "restriction": "partial", "evidence": "직접 수정은 간단한 린트/타입 오류만", "where": "body"}
+{"id": "7b86fb53045c1b36", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c698724dbc846e95", "restriction": "partial", "evidence": "Audit (default... report gaps only, do not edit)... Apply (when the caller says... make the edits)", "where": "body"}
+{"id": "b22d19cec0b9f62f", "restriction": "full", "evidence": "Read-only auditor that enforces modular architecture, file hygiene", "where": "body"}
+{"id": "83207d9e66a4631c", "restriction": "none", "evidence": "", "where": ""}

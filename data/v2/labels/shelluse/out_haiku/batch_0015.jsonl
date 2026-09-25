@@ -1,0 +1,53 @@
+{"id": "4244ef16010644b5", "shell_use": "inspect", "evidence": "Diff pendente: `git diff --cached`"}
+{"id": "8ab11f4537cb866d", "shell_use": "verify", "evidence": "Run tests (`pnpm test`)"}
+{"id": "0a659b3ded93fec0", "shell_use": "inspect", "evidence": "`git log`/`git show`/`git blame` are in-bounds for history questions (read-only)"}
+{"id": "70ee98f65e8c954d", "shell_use": "change", "evidence": "write an `.ics`"}
+{"id": "d4a3a3801c98e0db", "shell_use": "none", "evidence": ""}
+{"id": "e2fcd43a6dec5ab0", "shell_use": "none", "evidence": ""}
+{"id": "07495d34a29e87f3", "shell_use": "none", "evidence": ""}
+{"id": "3f24909a9f936033", "shell_use": "inspect", "evidence": "grep for mitigation pattern in files cited in mitigation plan"}
+{"id": "d8bdd8f127e95b82", "shell_use": "verify", "evidence": "run `pnpm lint:gates` / the relevant test"}
+{"id": "e0bc1f7cd7c0d501", "shell_use": "change", "evidence": "Write backfilled spans to telemetry files"}
+{"id": "45390dcdb9708773", "shell_use": "change", "evidence": "mempalace sync --wing <wing> --apply"}
+{"id": "83ba8e0acbb97363", "shell_use": "none", "evidence": ""}
+{"id": "24d69fba5c598c77", "shell_use": "verify", "evidence": "`node scripts/qa.mjs` — report the exact count"}
+{"id": "243bd170dd15ed85", "shell_use": "inspect", "evidence": "运行 `python maestro/cost-tracker.py` 获取最新费用数据"}
+{"id": "28d9b3708b2748bd", "shell_use": "change", "evidence": "simpan file lewat Bash redirect/heredoc"}
+{"id": "ed826ade48d96a54", "shell_use": "verify", "evidence": "`pnpm audit --audit-level=high`"}
+{"id": "3812a80f6aebdf3d", "shell_use": "inspect", "evidence": "`node scripts/probe-sweep.js --only <vantage>`"}
+{"id": "2cc46bd6b9cb09aa", "shell_use": "none", "evidence": ""}
+{"id": "bb631dcdf94257ba", "shell_use": "inspect", "evidence": "Use Bash only for read-only inspection commands"}
+{"id": "76d9b34907687bbd", "shell_use": "none", "evidence": ""}
+{"id": "adc4626655575026", "shell_use": "verify", "evidence": "`npm audit`, `cargo audit`, `pip-audit`"}
+{"id": "f55c23b15d0590c5", "shell_use": "none", "evidence": ""}
+{"id": "bdec5a9380a47699", "shell_use": "none", "evidence": ""}
+{"id": "48dbb3ec2111f5cc", "shell_use": "none", "evidence": ""}
+{"id": "c278c2a62a26a88d", "shell_use": "change", "evidence": "Create the `design/edc/` directory if it does not exist. Save the file"}
+{"id": "e5cd50fb7037426c", "shell_use": "inspect", "evidence": "`cat AGENTS.md` / `cat .ystar_session.json`"}
+{"id": "9cbcdb1816c275f9", "shell_use": "none", "evidence": ""}
+{"id": "7145d5daee6c5605", "shell_use": "verify", "evidence": "`python3 tools/validate_tokens.py --json`"}
+{"id": "c7d2d29c6dc184cb", "shell_use": "inspect", "evidence": "`git status`, `git branch --show-current`, `git log`, `wc`"}
+{"id": "b6eb8bdc3c18c3ee", "shell_use": "change", "evidence": "Run the test suite and write verdict to `agent_collab/outbox/critic/`"}
+{"id": "cb1bef04ca39b7c0", "shell_use": "verify", "evidence": "`./scripts/run-tests.sh`"}
+{"id": "0d878fc1226e1759", "shell_use": "change", "evidence": "`gh pr create`"}
+{"id": "42e39c3c2e1043c1", "shell_use": "verify", "evidence": "`./scripts/pw-session.sh` / `playwright-cli` snapshot"}
+{"id": "c3f925498150307c", "shell_use": "inspect", "evidence": "Use read-only Git and `gh` commands when GitHub context is relevant"}
+{"id": "cf73dc118996aef2", "shell_use": "none", "evidence": ""}
+{"id": "063a5daaf5c0ce9d", "shell_use": "none", "evidence": ""}
+{"id": "7f46bd21ac3ffdba", "shell_use": "none", "evidence": ""}
+{"id": "2621a692c96c176a", "shell_use": "none", "evidence": ""}
+{"id": "a17d52d07bed4597", "shell_use": "none", "evidence": ""}
+{"id": "03490652010d8a7c", "shell_use": "verify", "evidence": "`pnpm typecheck`"}
+{"id": "c98f9df7eabce0ce", "shell_use": "verify", "evidence": "`python3 scripts/lint.py --all`"}
+{"id": "83adb5135179b6f0", "shell_use": "verify", "evidence": "`pnpm test`"}
+{"id": "90c7faf3a2973e59", "shell_use": "inspect", "evidence": "Grep으로 앵커 키워드 탐색"}
+{"id": "32de1464eec0e05b", "shell_use": "change", "evidence": "write probe outputs, synthesis docs to wiki/Research/Harness-Reports/"}
+{"id": "b535248b5fadd964", "shell_use": "change", "evidence": "write output to `_workspace/review_phase_{N}.md`"}
+{"id": "5229419ea48aa9ef", "shell_use": "none", "evidence": ""}
+{"id": "ad7104a7c2a4333d", "shell_use": "none", "evidence": ""}
+{"id": "454e6550dd1eaf3c", "shell_use": "verify", "evidence": "`npm test -- --coverage`"}
+{"id": "e925ad461f93451a", "shell_use": "verify", "evidence": "`swift build --package-path apps/queen`"}
+{"id": "4f477e16f868f832", "shell_use": "none", "evidence": ""}
+{"id": "c9c87fd7a04003e3", "shell_use": "verify", "evidence": "`npm audit` and `composer audit` and `curl`"}
+{"id": "c9222b9e97b2709a", "shell_use": "change", "evidence": "`pnpm exec changeset`"}
+{"id": "a9d366ad2a1bbb7e", "shell_use": "verify", "evidence": "`pnpm lint:check`, `pnpm typecheck`, `pnpm knip`, `pnpm test`"}

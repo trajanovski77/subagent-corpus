@@ -1,0 +1,40 @@
+{"id": "2f936319afaca51a", "shell_use": "change", "evidence": "gh issue edit <issue-number> --repo agigante80/Actual-sync --body-file /tmp/gate-body-<issue-number>.md"}
+{"id": "411b16283ed26cc5", "shell_use": "none", "evidence": ""}
+{"id": "ca298359de94cb78", "shell_use": "inspect", "evidence": "Use Bash only for read-only inspection (`git diff`, `git log`, grep-style checks)"}
+{"id": "0087d7956a51ddb1", "shell_use": "change", "evidence": "Write fixes for Critical and High findings directly using the Write/Edit tools"}
+{"id": "4a403d8935ff1b12", "shell_use": "inspect", "evidence": "Run the helper: `py tools/log-tools/log_triage.py <path>` ... The script emits JSON on stdout"}
+{"id": "7c284d924d36b4fe", "shell_use": "verify", "evidence": "Пускай реалните гейтове като доказателство: `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, `npm audit`"}
+{"id": "29bf8a6a7803b2ca", "shell_use": "verify", "evidence": "Run linting (golangci-lint), Run unit tests, Security scanning (gitleaks, gosec), make go-check"}
+{"id": "76e84b19e20da57b", "shell_use": "inspect", "evidence": "Glob/Grep で後補ファイル名単位 + Grep でキーワード検索"}
+{"id": "d240ae4db9242edb", "shell_use": "inspect", "evidence": "Run `git diff` to see recent changes"}
+{"id": "5ac123e46f4cde27", "shell_use": "none", "evidence": ""}
+{"id": "314ab8c0b0b1aded", "shell_use": "inspect", "evidence": "review `git diff master...HEAD`"}
+{"id": "ac2148990f69456b", "shell_use": "inspect", "evidence": "Run `git diff --staged` and `git diff` to see all changes"}
+{"id": "afcfd48ff473ada7", "shell_use": "inspect", "evidence": "Run `validator/scripts/verify_rls.py` directly. Use Bash only for read-only inspection"}
+{"id": "92c6c4bfdaa458f7", "shell_use": "inspect", "evidence": "Run the `review-pr` skill and Verify CI via `statusCheckRollup`"}
+{"id": "4ebaf3c87535d4f7", "shell_use": "none", "evidence": ""}
+{"id": "da37f0e90dea7c2f", "shell_use": "verify", "evidence": "cargo build --release -p gitcortex, Run the harness: scripts/lang-smoke.sh <git-url>"}
+{"id": "4393c07aceb7e531", "shell_use": "verify", "evidence": "Run `node --check`, `node src/index.js --seed`, Count vertices (`grep -c`), collect all results"}
+{"id": "7635a86a5257283f", "shell_use": "verify", "evidence": "npm audit, pip-audit, go mod audit, govulncheck, mvn dependency-check:check"}
+{"id": "a79b5efaa92ef52d", "shell_use": "verify", "evidence": "lostbench hunt --model <M> --provider <P> --strategy <strategy>, lostbench coverage, lostbench audit"}
+{"id": "5c31d8a65868c8e6", "shell_use": "inspect", "evidence": "gh run list --branch <branch-name>, gh run watch <run-id> --exit-status"}
+{"id": "6ed6b64b39762e75", "shell_use": "inspect", "evidence": "Read Supabase configuration files, Examine migration files, Review Row Level Security policies, Check sync logs"}
+{"id": "27db164c2cd197a2", "shell_use": "inspect", "evidence": "npm run logs N, descreve o que precisaria e devolve ao chamador acionar o `architect` ou `devops`"}
+{"id": "0b78e61c5cdff3a7", "shell_use": "inspect", "evidence": "grep -n, git log --oneline, grep -r to confirm concepts and verify file existence"}
+{"id": "1b295de5c1d64f95", "shell_use": "verify", "evidence": "Run `npm run build` to confirm the site builds, Run `npm run preview` if a live check is needed"}
+{"id": "0d08b86d80ae542c", "shell_use": "verify", "evidence": "Headless Testing with SDL_VIDEODRIVER environment variable"}
+{"id": "46a6fa7369dfee50", "shell_use": "verify", "evidence": "Run `gleam test` in the root package and every package under `packages/*/`"}
+{"id": "7068b1d85c4f93b4", "shell_use": "inspect", "evidence": "entire search --json to search checkpoint history and transcripts"}
+{"id": "192a3c1127b3e50f", "shell_use": "verify", "evidence": "cd src && npm test, npm run lint, npm run lint:fix, npm run start, /health pipeline"}
+{"id": "8fafb26bb1fdaa6b", "shell_use": "inspect", "evidence": "grepai search, grepai trace for semantic search and call graph tracing"}
+{"id": "483c32dc0ede660f", "shell_use": "verify", "evidence": "Run language-specific static analysis tools and take into account errors and warnings"}
+{"id": "8e9a5255f5610631", "shell_use": "inspect", "evidence": "Reviews staged/modified files for security vulnerabilities, performance issues, code quality problems"}
+{"id": "81cfec19c0ad7a2e", "shell_use": "inspect", "evidence": "git fetch origin main, gh pr list, gh pr diff, gh issue view, gh pr checks, gh pr merge"}
+{"id": "83fe1902ab936d46", "shell_use": "inspect", "evidence": "gh issue list --label \"MSMVPAI\" --state closed, Read JSON files, Read MS MVP site pages"}
+{"id": "7a588a219ab3a1bb", "shell_use": "verify", "evidence": "make go-check, boilerplate/_lib/container-make, yamllint .tekton/*.yaml, gitleaks, pre-commit run --all-files"}
+{"id": "c22b29feebd5b12a", "shell_use": "verify", "evidence": "Run linter (ESLint/Pylint/golangci-lint), check test coverage, run security audit (npm audit / pip-audit)"}
+{"id": "254efeef983b45a7", "shell_use": "inspect", "evidence": "Read .agents/instructions/sdd-explorer.md and explore problem without modifying artifacts"}
+{"id": "933104b86119a69d", "shell_use": "verify", "evidence": "swift build --package-path apps/queen"}
+{"id": "70c3164b4cc4b543", "shell_use": "change", "evidence": "Read before writing. Before producing any `old_string` / `new_string` edit pair, use the Read tool to load the actual file"}
+{"id": "5c7d0dced3e474c4", "shell_use": "none", "evidence": ""}
+{"id": "a72d9830325ff1a8", "shell_use": "inspect", "evidence": "You may run read-only commands (e.g. `git diff`, `cargo test --release`) to verify claims"}

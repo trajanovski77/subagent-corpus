@@ -1,0 +1,150 @@
+{"id": "633e4ad57689e87b", "sentence": "Self-verify before finalizing**: After generating your violation list, re-read the conventions and re-scan the files once more to ensure no false positives or missed violations."}
+{"id": "dbb27fe5bb9d1424", "sentence": "Confidence is in **the data you observed**, not in any analysis (you don't analyze)."}
+{"id": "353a215836782fc2", "sentence": "You never write or edit source code."}
+{"id": "c4a035ee480da0e7", "sentence": "Per-ticket validation does NOT run e2e (e2e is end-of-feature only), so this is the one place the e2e specs actually run."}
+{"id": "c045cb455852f641", "sentence": "difference between catching a bug once and catching it always."}
+{"id": "f46364e58c3c0cec", "sentence": "Skin tone correction: Use the vectorscope to ensure skin tones fall on the \"skin tone line\""}
+{"id": "c7b67a508ffa4039", "sentence": "Never skip any of the 7 checks"}
+{"id": "dfa80bbe8654ab20", "sentence": "You don't pin an OpenCost version in guidance, and you don't `kubectl edit` a live"}
+{"id": "ebdcb494a4eb9bba", "sentence": "Repositories should NOT log mutations; that is the service's job."}
+{"id": "48533fa88962b4c8", "sentence": "Do not write APPROVAL or finding entries to the sign-off register — post-change-sweep is advisory, not a gate."}
+{"id": "dae7a20060811257", "sentence": "Recommended for: promotional campaigns, partner-subsidised flows, card/bonus-point fee abstraction where the user never touches crypto."}
+{"id": "3e7d54e18319e6ed", "sentence": "Don't copy entire shadcn blocks that replicate behavior already implemented locally"}
+{"id": "c77cff31381ab822", "sentence": "If no components match any trigger keyword, return zero findings; do not speculate about agent autonomy threats on architectures without autonomous agent capabilities."}
+{"id": "967c2ceb7434046d", "sentence": "continue to work for any blueprint that doesn't set `mode: 'drag'`."}
+{"id": "6ec223f4014aeea2", "sentence": "extra tasks from `tasks.md`, and do not broaden the scope because nearby cleanup"}
+{"id": "fec0379c1d6dcecc", "sentence": "Every recurring incident (≥3) must have a postmortem entry."}
+{"id": "fa0027c1d8d8f226", "sentence": "MUST ATTENTION priority has numeric order (1=highest, not High/Medium/Low)"}
+{"id": "60c5e75f56092863", "sentence": "Never recommend fake scarcity or deceptive tactics"}
+{"id": "ede16e1bc38cadfa", "sentence": "The following finding types must always be rated `Important` or `Blocking`."}
+{"id": "7ef1d6305834caa3", "sentence": "P127]** Translate an abstract, together with its title, as a self-contained text — it is published separately in abstracting services and readers judge from it whether to read the whole paper — so never leave anything awkward or unclear in an abstract on the assumption it will become clear later"}
+{"id": "449e5e9a2f0965c7", "sentence": "Duplicate checks: \"Participant IDs must be unique\" OR \"composite_IDs must be unique\""}
+{"id": "3428e740e5f1683e", "sentence": "Sub-agent `TodoWrite` lists are confined to the sub-agent's transcript and never surface back to the parent."}
+{"id": "b5c9bd1223965237", "sentence": "Avoid unbounded particle counts."}
+{"id": "f303e395425d6eed", "sentence": "NEVER modify RTL or TB files** — you are read-only + Bash for re-sim only"}
+{"id": "be1af22fe64fda68", "sentence": "You cannot choose your electricity supplier."}
+{"id": "d95f0b44d6d8205e", "sentence": "Generated files (`*.g.dart`) must have corresponding `part '*.g.dart'` directive in the source file"}
+{"id": "a923f1b2130bcdc1", "sentence": "Must debounce rapid events to prevent duplicate notifications for the same crossing."}
+{"id": "b54211e57e1ea009", "sentence": "NEVER push, commit, or merge code"}
+{"id": "266576e3d21b6946", "sentence": "If you need to draft a Jira comment, return it in your result JSON — the parent will post it"}
+{"id": "c9256eb7ef01d104", "sentence": "Escape:** if neither the explicit date nor the git log produces a date (file has no commit history, git is unavailable), emit `needs-human` — name the plan file, the Decision entry title, and that the open-since date cannot be determined."}
+{"id": "0506bf5ca8ac6e0e", "sentence": "What are the critical user flows that MUST have E2E tests?"}
+{"id": "f62f5fc103ab837a", "sentence": "Architecture mutations must be recorded with snapshots."}
+{"id": "53aa772dbb8e0fc7", "sentence": "You live by the principle \"if you have to do it more than once, automate it.\""}
+{"id": "489d28c9c48f7e9e", "sentence": "never refuses, never finds gaps, never escalates is not a QA — it is a rubber"}
+{"id": "525b5e9ef1634d77", "sentence": "Ensure `awsAccessKeyId` / `awsSecretAccessKey` not present in any thrown errors"}
+{"id": "134cf01a08504c4e", "sentence": "Flag any direct edit to `CHANGELOG.md` as a MUST-FIX (the `Changelog fragments` CI job will fail the PR)"}
+{"id": "0f5a1dd0671e8610", "sentence": "Ana does NOT write plan.md."}
+{"id": "9c4f03761533741e", "sentence": "Progress percentage must match reality.** Count `[x]` markers in the active repo's `learning_path.md` — do not estimate or approximate."}
+{"id": "65efc4f8b5ac43dc", "sentence": "| `typescript-pro`          | **Always** — TypeScript coding standards and conventions            |"}
+{"id": "7728ce70134581d7", "sentence": "and `plt.savefig` — never rely on a GUI."}
+{"id": "8d1ed8174fa27448", "sentence": "type-only imports must use `import type` (`verbatimModuleSyntax`);"}
+{"id": "fd8fb6ea530dec06", "sentence": "symbol that does not exist, or a stale \"still exists\", is a finding."}
+{"id": "f5e1d5ce5efb42c4", "sentence": "Your role is to verify implementations, run test suites, and ensure quality standards are met."}
+{"id": "f290ef0ea4ccd319", "sentence": "Whether all data packages in a multi-signer payload are guaranteed to have the same timestamp (SDK does not enforce this)"}
+{"id": "93df2b064b7d6bde", "sentence": "New specs must use Vietnamese section headings."}
+{"id": "69bb061043e52c6f", "sentence": "Parameter docs mismatch:** documented params don't match actual signature"}
+{"id": "bd8e9497635951e2", "sentence": "Rephrase to: \"Given the chosen approach, the plan doesn't clarify...\""}
+{"id": "cfc904d4488a60b1", "sentence": "On any Firebase MCP failure (auth, quota, build error), stop and report the exact error — never retry silently past a failed deploy."}
+{"id": "e33ea5cc0519e41e", "sentence": "False positives to avoid flagging in future"}
+{"id": "80604b85ba0e9e67", "sentence": "CRITICAL**: Always respond in the same language the user is using."}
+{"id": "fd5b28a0903add36", "sentence": "Never record these as standalone findings: missing security headers, SPF/DKIM/DMARC, GraphQL introspection, banner/version disclosure without working proof, clickjacking without PoC, tabnabbing, CSV injection, CORS wildcard without credentialed exfil, logout CSRF, self-XSS, open redirect, mobile app client_secret, SSRF DNS-only, host header injection, rate limit on non-critical forms, logout session issues, concurrent sessions, internal IP disclosure, missing cookie flags, password autocomplete."}
+{"id": "868de5c0b9f51944", "sentence": "that test must fail under the obvious mutation."}
+{"id": "ca48fd51a1fc02d7", "sentence": "ALWAYS implement idempotent pipelines (safe to retry)"}
+{"id": "ef5d83341967e06c", "sentence": "`must` — zero e2e coverage; extends/adds WDIO; removes Playwright coverage of shipping behavior."}
+{"id": "d109842d6bb9cb90", "sentence": "return '{\"error\":\"CSS files cannot be tested\"}';"}
+{"id": "6577ef177a0614eb", "sentence": "You ensure that every implemented unit meets its acceptance criteria and that the overall system meets defined quality gates before delivery."}
+{"id": "7f6c19e932c82d3e", "sentence": "Start with indexes**: Always check navigation index first"}
+{"id": "c8ad30b33242c8cf", "sentence": "Timeout must exceed expected training time** - Default 30min is TOO SHORT for most training."}
+{"id": "5abbd99a15d3ab29", "sentence": "Avoid long history or obsolete sections."}
+{"id": "43708990e2148b23", "sentence": "| Module Error | \"Cannot find module\" | Import/path issue |"}
+{"id": "9094ee0dde2aa14e", "sentence": "Never present planned work as a fresh discovery."}
+{"id": "e7e40f6a22331554", "sentence": "PII in events**: Check that error/event data doesn't capture passwords, tokens, keys, or PII"}
+{"id": "db987321755aeae0", "sentence": "The engineering team owns the implementation and the decision to ship, deprecate, or extend; this advisor informs conformance and security but does not own the product decision (P027, P026)."}
+{"id": "80f41f6ba29d4d4c", "sentence": "@/Users/tokahana/workspaces/news.hako.tokyo/.claude/get-shit-done/references/mandatory-initial-read.md"}
+{"id": "888286f8bce2e4d4", "sentence": "Always use meaningful alt attributes for images"}
+{"id": "1f3386aba077bf8b", "sentence": "Each AI endpoint must have ≥ 5 example inputs with expected output assertions (exact match for classification, schema match for extraction, LLM-judge for open-ended)."}
+{"id": "0667a72e59b8b2ea", "sentence": "The secure implementation must be written entirely by the developer."}
+{"id": "518486f1b12bff86", "sentence": "Confirm `metadata.id` is globally unique and does not impersonate a built-in (`github`, `google-drive`, `slack`, `linear`)."}
+{"id": "f5f53a6033427ac4", "sentence": "Everything must be version controlled (GitOps)."}
+{"id": "b5afb1f67a74a574", "sentence": "Always define semantic configuration** for agentic retrieval indexes"}
+{"id": "d45d34c12d3b4740", "sentence": "Do not proceed to coding until you have confirmed answers for all open specification questions."}
+{"id": "07aa642d3e7e2579", "sentence": "positions, movement over time, or a spatial relationship the reader must hold."}
+{"id": "1be4c999177c0cfd", "sentence": "Don't hide content behind interactions"}
+{"id": "97863cee66bc78a9", "sentence": "The Evidence Rule**: Every vulnerability claim must have concrete proof"}
+{"id": "e03d37e9bc10595f", "sentence": "NEVER abbreviate."}
+{"id": "79304bc592d9d471", "sentence": "Inform the user: \"I cannot verify you own `<package-name>`."}
+{"id": "ef1115dc43a18f88", "sentence": "Never introduce another font family."}
+{"id": "2767fdecce3af41e", "sentence": "VALIDATE** — every claim in ANALYSIS_REPORT.md must be backed by a SQL query or Python computation shown in the report"}
+{"id": "337abc392c3abd2d", "sentence": "Your two output files must conform to it:"}
+{"id": "09562579c9558507", "sentence": "Faucets must pay for their sinks with intent.** Salvage yields, recipe costs, and the deck-plate cost are a closed Tier 0 economy."}
+{"id": "78bc25516b4a40b0", "sentence": "NEVER** hand-edit migration files after they've run in production."}
+{"id": "eaf01fdf3eadab94", "sentence": "Before moving ANY file, you MUST search for and document every single import of that file"}
+{"id": "0b435284bcb2eded", "sentence": "NEVER** present speculation, opinions, or outdated information as verified fact"}
+{"id": "3543ae7b2b5f14e2", "sentence": "You need to update or install SpecKit templates while preserving project customizations."}
+{"id": "a96e6090712652c3", "sentence": "Always pass lowercase to"}
+{"id": "716af836081dde86", "sentence": "PR TO MAIN** - Always create PR with doc references"}
+{"id": "c0cdb302ae2b2896", "sentence": "You do not author topic-level deep research — that lives under `topics/` and uses different skills (the `scrape-firecrawl` / `sitemap-graph` / `extract-knowledge-graph` pipelines)."}
+{"id": "16ffd4fb9540667f", "sentence": "→ Because we don't check response status"}
+{"id": "2605453ecb0332ba", "sentence": "Never touch `users.password_hash`.** Don't select it, don't log it."}
+{"id": "9ab940223d2d25fc", "sentence": "Never include source code, credentials, API keys, personal data, or project-specific business logic in upstream reports."}
+{"id": "c98b802676ed860b", "sentence": "manager — do not guess."}
+{"id": "1d9ed0f05adefe30", "sentence": "You operate; you do not edit structure."}
+{"id": "49a7b8d594f10a16", "sentence": "Do not conclude \"not vulnerable\" from WAF blocks."}
+{"id": "3973b31635feda11", "sentence": "If it does, say so loudly in your report — it forces a mandatory"}
+{"id": "04d07d641b7d13b6", "sentence": "\"Can't perform React state update on unmounted component\" warnings"}
+{"id": "cf1f7e0b98b514c4", "sentence": "Always read the full file** to understand the complete data flow"}
+{"id": "81941877200d8029", "sentence": "vs `adr-contract-audit` and `drift-check`:** Read their outputs, cross-link in incident log, do not re-run them as part of triage."}
+{"id": "47c7aba5df7016c4", "sentence": "Errors that don't include actionable guidance for the user"}
+{"id": "6498e82d94c99fe8", "sentence": "If either fails, report the failure and stop — do NOT proceed to Phase 2."}
+{"id": "0503ee7f5a0eef05", "sentence": "must follow that exact format as the first nonblank non-option line."}
+{"id": "b9b6723aba6c568a", "sentence": "If you need to fill out a PDF form, follow the instructions in forms.md"}
+{"id": "d0fa030fe13551c3", "sentence": "Measure First**: Never propose changes without baseline measurements."}
+{"id": "f910d1d6711073d6", "sentence": "That is why several reasons read **\"reason not recorded\"** — the decision is real and evidenced, the rationale was never written anywhere."}
+{"id": "eeb201ced6740127", "sentence": "Maul's re-probe of fixed areas is a mandatory Crossfire gate:** Review fixes can introduce new failure modes (e.g., 404-as-success for circuit breaker masks real failures)."}
+{"id": "2262c6bcb74f85ba", "sentence": "Always include real code examples from the actual codebase (read the source, don't invent)."}
+{"id": "3c5d24eff1f7a755", "sentence": "Note such a unit in one line if you pass it, but do not design the split."}
+{"id": "67cf65bae37fdf9c", "sentence": "Ensure debt register is complete and prioritized"}
+{"id": "d537090751d96741", "sentence": "Always call the MCP tool** `timps_kernel_status` exactly once via the `mcp__timps-swarm__timps_kernel_status` tool handle."}
+{"id": "daad038ab94cc54a", "sentence": "Never expose stack traces or internal details to the client."}
+{"id": "553e66a502d35fa9", "sentence": "These fields must be present and non-empty in `mkdocs.yml`."}
+{"id": "eb5890cb0407f3c6", "sentence": "Read the actual code before deciding — don't advise from the executor's summary alone if the relevant files are cheap to read."}
+{"id": "cace0db910ef922e", "sentence": "Do not invent beyond what the"}
+{"id": "e3f10e4138b64cf9", "sentence": "Does not apply Gates** — `kata-skill-validate` is executed by Claudionor (Phase 6 — Gate 2, analog of `kata-quality-gate` in Athena)"}
+{"id": "829fe275843b0f5e", "sentence": "Cross-reference integrity: if a directive.json references `goal_ids: [\"x\"]`, goal `x` must exist"}
+{"id": "7a4cb4f21e2f882b", "sentence": "Say what the brief claimed, what you found, and what you would need to proceed."}
+{"id": "6cdad9e049700610", "sentence": "Don't over-link** — not every note needs to link to every other note."}
+{"id": "e455c14d83266448", "sentence": "Don't rely on PR titles alone — they are often terse or developer-oriented."}
+{"id": "228335ecba817bdc", "sentence": "Always use FluentAssertions"}
+{"id": "546c8fb109f07074", "sentence": "Every CRITICAL or MAJOR finding MUST end with: `**What would change my mind:** [specific evidence/test/revision]`."}
+{"id": "e642582f5d622049", "sentence": "The user needs to validate configuration files, implement configuration schemas, ensure consistency across environments, and prevent configuration-related errors."}
+{"id": "ba40bd42f4e5e965", "sentence": "Feynman insisted on teaching Caltech's intro courses because it forced the deepest understanding — if he couldn't make a freshman lecture on a topic, \"that means we don't really understand it.\""}
+{"id": "b0ada457ac816cd4", "sentence": "{ \"text\": \"Importer must verify this at the consumer\", \"scope\": \"consumer\" }"}
+{"id": "b5e35e503624f18e", "sentence": "Lead with the main topic** - Don't show logos or company intros for too long"}
+{"id": "b5ef6d0cc8d1d677", "sentence": "Don't speculate when a real API call gives the truth."}
+{"id": "30002d3bc1d08404", "sentence": "You MUST wait for CI and fix failures before proceeding."}
+{"id": "22e444b183159a93", "sentence": "\"The SHA-256 hashes match\" → This only proves the file wasn't changed after hashing; it does NOT prove the measurements are accurate."}
+{"id": "7d0e693ffb21e6de", "sentence": "Line counts must be accurate** — `wc -l` the file, write the integer in the `Lines` column"}
+{"id": "de2404512af85ab6", "sentence": "Every BLOCKS_USE/IMPAIRS_USE finding must cite specific UI elements, screenshot regions, code locations, or interaction patterns."}
+{"id": "f1be4327eade2303", "sentence": "This validates your branch (must be on the artifact branch), validates slug format (kebab-case), checks uniqueness, pulls latest, creates the directory, and records the start time."}
+{"id": "f6946be12dd5c34b", "sentence": "Both have value; the strategist needs to know which is which."}
+{"id": "425dd898d24cce89", "sentence": "API Development Rules — MUST"}
+{"id": "6d68eb3502789633", "sentence": "Provide a secure code example as a suggestion (do not edit; this agent is read-only)."}
+{"id": "525a772aade94188", "sentence": "cannot be stated in one concrete sentence, the finding is not ready."}
+{"id": "e39d5a21584b7d6d", "sentence": "Missing Source Templates**: Report specific agent templates that don't exist in source system"}
+{"id": "d30facf4beb34690", "sentence": "Pipeline parameters must match those defined in `.circleci/config.yml`"}
+{"id": "57de52b8e5a6d5bd", "sentence": "You may NOT edit files under `agents/`, `.claude/agents/`, `config/`, or `scripts/`."}
+{"id": "bf9462049ad2eac4", "sentence": "Run Python applications in containers (never on host)"}
+{"id": "576bbe333cf7c4ce", "sentence": "No secret exposure.** Never print, copy, commit, or alter credentials discovered during inspection."}
+{"id": "f7519e6a1ebb3c9d", "sentence": "All MCP tools exposed via `@monomind/cli/src/mcp-tools/` must:"}
+{"id": "3b1ac4adc2636d08", "sentence": "When it says no extra context needed, don't burn tokens chasing depth you don't need."}
+{"id": "ddc766e61a1d2a9e", "sentence": "Mission: Solve oracle problems when quality criteria are unclear, find balance between user experience and business needs, and ensure \"value to someone who matters\" for all stakeholders."}
+{"id": "01bf1c16ad9e54a1", "sentence": "Never inflate the close to match a promise the body did not keep, which would be claim inflation applied to reader-facing prose."}
+{"id": "e3c3c1c888cd04ed", "sentence": "Celery**: Tasks must be idempotent."}
+{"id": "bccb87407f3da9c0", "sentence": "`Client Coder` must return: changed files, integration contract notes, failure-handling notes, and tool-backed verification evidence."}
+{"id": "9ba1c40126f7726a", "sentence": "Mechanical check:** the command must include a **positional refspec argument** of the form `<branch>:<branch>` where both sides equal the current feature branch name from `git rev-parse --abbrev-ref HEAD`."}
+{"id": "aff56d641bf9e500", "sentence": "Secret management in CI: encrypted secrets, OIDC to AWS/GCP, never"}
+{"id": "2fc260ee17e0af58", "sentence": "Hook Dependencies**: Identify missing deps, handle arrays, avoid loops"}
+{"id": "7830ce630de5b15e", "sentence": "If it is a full specification, the ML inference output schemas you produce must account for the async data states defined in Section 8 (loading, empty, error, success) — these states propagate from your module's return values to the frontend rendering layer."}
+{"id": "19f92ebdcd2b6007", "sentence": "🔴 / 🟠 always rendered in block format regardless of mode."}
+{"id": "0eb05649ac771fd4", "sentence": "<use-case-avoid-when>"}

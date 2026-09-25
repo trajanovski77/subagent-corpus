@@ -1,0 +1,41 @@
+{"id": "0c7c044ccee58f54", "shell_use": "inspect", "evidence": "Bash is for bounded retrieval only — wc, ls, grep, python/node one-liners that parse JSON"}
+{"id": "6482ba1a844ca29e", "shell_use": "inspect", "evidence": "Read-only commands and Git inspection are allowed when they help the assignment"}
+{"id": "2d16158827a3823c", "shell_use": "none", "evidence": ""}
+{"id": "1ae8bdac9037ddf3", "shell_use": "verify", "evidence": "Run the full CI pipeline locally: lint, format check, tests"}
+{"id": "52999bc10495f8f5", "shell_use": "change", "evidence": "Resolve Blockers: Rebase conflicts - git rebase origin/dev; Dependency issues - yarn install"}
+{"id": "9b05ad8ea2b0d5d7", "shell_use": "inspect", "evidence": "Enumerate, don't sample...grep for every call site. You have Bash. Use it. Compute the half-life"}
+{"id": "05a6f085df37c90a", "shell_use": "none", "evidence": ""}
+{"id": "fa6e3bb099dbc3ce", "shell_use": "none", "evidence": ""}
+{"id": "be989e732cb4ce21", "shell_use": "verify", "evidence": "Run tests in the smallest-to-broadest order: pnpm test for focused changes, then pnpm check:all"}
+{"id": "8047932de2ad6569", "shell_use": "change", "evidence": "post inline comments directly on the PR using the GitHub CLI: gh api repos/{OWNER}/{REPO}/pulls/${PR_NUMBER}/comments --method POST"}
+{"id": "4d60ecf0f324fed0", "shell_use": "change", "evidence": "Create and switch to the feature branch: git checkout -b; Merge the work branch: git merge"}
+{"id": "2008947f742c8331", "shell_use": "none", "evidence": ""}
+{"id": "b49bbdd401eea7f0", "shell_use": "none", "evidence": ""}
+{"id": "e75b3922b70de70b", "shell_use": "verify", "evidence": "Run all tests: npm test pytest go test ./...; Check API responses: curl -s http://localhost:PORT/api/endpoint"}
+{"id": "c6062232a966a389", "shell_use": "none", "evidence": ""}
+{"id": "5c6258b18fb111ec", "shell_use": "none", "evidence": ""}
+{"id": "f03e7121e296a6c8", "shell_use": "none", "evidence": ""}
+{"id": "37ec3fe341132f5c", "shell_use": "none", "evidence": ""}
+{"id": "95b7efb9d19434ad", "shell_use": "none", "evidence": ""}
+{"id": "c69340481e6bade0", "shell_use": "none", "evidence": ""}
+{"id": "e250a9bd76a5986b", "shell_use": "change", "evidence": "Write a DebugReport as JSON to `.fcc/debugger/reports/<task-slug>.json`"}
+{"id": "d637b46fe1e4bf7e", "shell_use": "verify", "evidence": "Run the checks: ./whirl -x <example> ci; Run sequentially, one at a time"}
+{"id": "c908b747a5aae7c8", "shell_use": "verify", "evidence": "Run backend tests first: cd /srv/PotteryTracker/backend && npm test"}
+{"id": "4afffa628212433d", "shell_use": "none", "evidence": ""}
+{"id": "b17bf1a9ce3d8180", "shell_use": "none", "evidence": ""}
+{"id": "a4ceb55cd1886de9", "shell_use": "inspect", "evidence": "Run each query via `gemini -p \"your query\"` through the available shell operation"}
+{"id": "12f915479f5489fa", "shell_use": "inspect", "evidence": "Use git log --since to find commits in the date range"}
+{"id": "3ed37f7b37b0d5d4", "shell_use": "inspect", "evidence": "Run git diff HEAD~1 (or the relevant branch diff) to identify changed files"}
+{"id": "2bed689e9e612955", "shell_use": "none", "evidence": ""}
+{"id": "4a3e57d4fd09d752", "shell_use": "verify", "evidence": "Logs: journalctl beider Units. Ressourcen: VmHWM beider Prozesse. Refresh-Dauer messen"}
+{"id": "e451a07b97ab3732", "shell_use": "none", "evidence": ""}
+{"id": "8f4e5cda30baf661", "shell_use": "inspect", "evidence": "Use grep/file checks, not running the app. Goal is structural verification"}
+{"id": "51917126056ab1fa", "shell_use": "none", "evidence": ""}
+{"id": "48907d169ee6b213", "shell_use": "change", "evidence": "Run: gh issue edit <number> --add-label \"in-progress\""}
+{"id": "b686e95d37c50cb2", "shell_use": "verify", "evidence": "Run automated tools first (npm audit, lint, type-check)"}
+{"id": "7c9c41c89e44959c", "shell_use": "inspect", "evidence": "git diff HEAD~1 HEAD  # View changes; git log -1 --stat"}
+{"id": "94d484a1926ebeb1", "shell_use": "inspect", "evidence": "结构化 / 符号级 searching to find code patterns and symbols"}
+{"id": "3a028d695f6f5b14", "shell_use": "change", "evidence": "Tag: git tag v0.0.x; Push tag: git push origin v0.0.x"}
+{"id": "57d8e483d06f9024", "shell_use": "verify", "evidence": "테스트 실행: pnpm test; 빌드 검증: pnpm build"}
+{"id": "ea41e93a7cab0594", "shell_use": "verify", "evidence": "Run these in order of increasing scope: python -m pytest tests/ -v; python validation/estimators/test_conv2d.py"}
+{"id": "230fad4c688d032a", "shell_use": "none", "evidence": ""}

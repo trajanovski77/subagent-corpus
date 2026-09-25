@@ -1,0 +1,63 @@
+{"id": "1c294aaf1cc2b1ea", "shell_use": "verify", "evidence": "node --prof app.js  # Generate V8 profile"}
+{"id": "f6eb4f275daa0e34", "shell_use": "verify", "evidence": "Run the failing case (test, repro script, or the reported steps)"}
+{"id": "c8a33eb02126cf85", "shell_use": "inspect", "evidence": "grep + ensure gitignored for credentials and server keys"}
+{"id": "94546a76c64d32f5", "shell_use": "inspect", "evidence": "gh issue list --label=\"loom:architect\""}
+{"id": "dc7a39beb36ed7bc", "shell_use": "none", "evidence": ""}
+{"id": "6f9f1159840ed5a2", "shell_use": "inspect", "evidence": "npx --yes ctx7@latest library <name> \"<query>\""}
+{"id": "ef4e6e1c8df28622", "shell_use": "inspect", "evidence": "git diff, git diff --staged, git status"}
+{"id": "29636353c5fc5721", "shell_use": "inspect", "evidence": "python -m data_modules.index_manager get-protagonist"}
+{"id": "31b2a4b1199fde2e", "shell_use": "inspect", "evidence": "Grep해 그 테이블의... RLS 정책 검증"}
+{"id": "2adc14085f263b86", "shell_use": "verify", "evidence": "make go-check, make go-test, pre-commit run --all-files"}
+{"id": "45e7c706a93bf227", "shell_use": "verify", "evidence": "Run the checks prescribed by repository guidance"}
+{"id": "77a7ac83027a6bf6", "shell_use": "inspect", "evidence": "GET /object_info and GET /system_stats"}
+{"id": "15273438980666b2", "shell_use": "inspect", "evidence": "Use Grep/Glob/Bash for deterministic traceability"}
+{"id": "2be3d7937c6683c6", "shell_use": "verify", "evidence": "npm run type-check, npm run lint, npm run build"}
+{"id": "d6e55f61908a9f08", "shell_use": "none", "evidence": ""}
+{"id": "55bfee01a9216ca5", "shell_use": "inspect", "evidence": "git diff to review tests"}
+{"id": "bc2e15ed673e1b26", "shell_use": "none", "evidence": ""}
+{"id": "0c1cb26a86906511", "shell_use": "inspect", "evidence": "devloop status TASK-ID, devloop review TASK-ID"}
+{"id": "e505eea998b77298", "shell_use": "change", "evidence": "git operations on .ai/ folder including commits"}
+{"id": "1cc2978b0b972efa", "shell_use": "inspect", "evidence": "pnpm list <package-name>, pnpm view <package-name> versions"}
+{"id": "e6fcb40e1eefb6b6", "shell_use": "inspect", "evidence": "npx --yes ctx7@latest library <name> \"<query>\""}
+{"id": "1011f1a51452cab8", "shell_use": "inspect", "evidence": "git diff / git log via Bash and cargo check"}
+{"id": "993a759c19c0fbde", "shell_use": "inspect", "evidence": "find .planning/phases -name \"*-CONTEXT.md\""}
+{"id": "b2c079623855a24f", "shell_use": "verify", "evidence": "Run the scoped checks from your brief"}
+{"id": "9c5a66965899f125", "shell_use": "verify", "evidence": "python <SKILLS>/smefit-runcard/scripts/validate_runcard.py"}
+{"id": "c6c890a80493ab52", "shell_use": "none", "evidence": ""}
+{"id": "48a1b2abdf3cb7dc", "shell_use": "none", "evidence": ""}
+{"id": "ab839f68a825bcf3", "shell_use": "none", "evidence": ""}
+{"id": "8f9438f52bc3f6ca", "shell_use": "verify", "evidence": "./gradlew ktlintFormat, ./gradlew build -x test"}
+{"id": "d6a917fd3d0c3a7d", "shell_use": "verify", "evidence": "cargo check and Definition of Done checks"}
+{"id": "e5c86b8dfad33e30", "shell_use": "verify", "evidence": "cargo fmt --all -- --check, cargo clippy, cargo build, cargo test"}
+{"id": "691f02c534d2cb10", "shell_use": "verify", "evidence": "lint, typecheck, both vitest suites, site build"}
+{"id": "01f436af7a589207", "shell_use": "inspect", "evidence": "gh run list --branch <branch>, glab ci list, grep -E"}
+{"id": "1a436570f271b229", "shell_use": "inspect", "evidence": "git diff the change, trace input → sink with Grep/Read"}
+{"id": "c5b63fb18ee85546", "shell_use": "inspect", "evidence": "Grep for EntitySet declarations"}
+{"id": "d24eeba385993e52", "shell_use": "verify", "evidence": "scripts/integrate-gate.sh <branch-name> (runs tsc, eslint, vitest)"}
+{"id": "5229eebe62feb103", "shell_use": "inspect", "evidence": "Grep-проходы for security patterns"}
+{"id": "100a6e4a5ebaabdc", "shell_use": "inspect", "evidence": "find src/lib -maxdepth 1 -name \"*.ts\", grep -oP, comm"}
+{"id": "7538b511d07552be", "shell_use": "verify", "evidence": "Choose proof based on changed surfaces and run checks"}
+{"id": "7ce4ece29518c8aa", "shell_use": "inspect", "evidence": "Grep, Glob, git grep, git log -S"}
+{"id": "a664eca88b0d50c6", "shell_use": "change", "evidence": "lsof -ti :3335 | xargs kill -9"}
+{"id": "8b67238195a0c7b8", "shell_use": "verify", "evidence": "./scripts/pw-session.sh open verify-chrome, playwright-cli"}
+{"id": "d15cef37d2524ba8", "shell_use": "none", "evidence": ""}
+{"id": "d4fa72238ed490b9", "shell_use": "inspect", "evidence": "gh CLI or GitHub API, WebSearch"}
+{"id": "a0c629a6d15767e6", "shell_use": "verify", "evidence": "npm audit --audit-level=high, git diff, npx depcheck"}
+{"id": "f774e0ec29e3602e", "shell_use": "inspect", "evidence": "git diff --name-only, grep -r \"functionName\""}
+{"id": "f65c65bee0528167", "shell_use": "none", "evidence": ""}
+{"id": "a8796924e1182e07", "shell_use": "inspect", "evidence": "git diff HEAD"}
+{"id": "436f4699f4b59ddc", "shell_use": "inspect", "evidence": "Glob and Grep to find relevant files"}
+{"id": "c88a44adaf815ba8", "shell_use": "none", "evidence": ""}
+{"id": "1c00f49116e08e3f", "shell_use": "inspect", "evidence": "airlayer query, airlayer inspect --json"}
+{"id": "c9e084853a64b2bd", "shell_use": "inspect", "evidence": "git status, git remote -v, gh repo view --json"}
+{"id": "53aea6ffa5989681", "shell_use": "none", "evidence": ""}
+{"id": "c8f8a7f01da65f80", "shell_use": "none", "evidence": ""}
+{"id": "b5f0e651db615c2c", "shell_use": "none", "evidence": ""}
+{"id": "ca930308e7007275", "shell_use": "none", "evidence": ""}
+{"id": "83f3464b6eaad1bc", "shell_use": "none", "evidence": ""}
+{"id": "c1014e194579c93b", "shell_use": "none", "evidence": ""}
+{"id": "68cced5b01b76f7e", "shell_use": "none", "evidence": ""}
+{"id": "d84e6f66c16ca8d3", "shell_use": "none", "evidence": ""}
+{"id": "38820c401f194711", "shell_use": "none", "evidence": ""}
+{"id": "e01a7202c1fd0ca3", "shell_use": "none", "evidence": ""}
+{"id": "1d9701e2e3333ea6", "shell_use": "none", "evidence": ""}

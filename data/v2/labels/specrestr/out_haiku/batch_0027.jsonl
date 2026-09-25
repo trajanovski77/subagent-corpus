@@ -1,0 +1,45 @@
+{"id": "210ae82ad14edef9", "restriction": "partial", "evidence": "Do NOT publish, do NOT touch a live container. Compile only.", "where": "body"}
+{"id": "175d7ddcdb29b813", "restriction": "full", "evidence": "Review and report only. Do not modify code.", "where": "body"}
+{"id": "fdce14fd74729886", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a9cc02ebfe95fccc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c7e8a115f6a42655", "restriction": "full", "evidence": "Your role is to surface information for maintainers to decide.", "where": "body"}
+{"id": "d347daaf19cb6524", "restriction": "none", "evidence": "", "where": ""}
+{"id": "35f9f5aeb10aa4dd", "restriction": "partial", "evidence": "Write only inside the declared test write set. Do not write production code.", "where": "body"}
+{"id": "43557f4aa019ebbc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "454ef86327f19e5b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3d824ec8e7d61771", "restriction": "partial", "evidence": "Implements approved architecture changes on a feature branch, never main", "where": "description"}
+{"id": "bbf2ed0c22285ce0", "restriction": "full", "evidence": "You never push, comment on GitHub, or merge — you report internally to the orchestrator.", "where": "body"}
+{"id": "15bf7fb6423ba4f3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ccc0bb38218c74b5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d894d4273259da97", "restriction": "none", "evidence": "", "where": ""}
+{"id": "32f1744a193e7ab3", "restriction": "partial", "evidence": "Only edit files in manifest", "where": "body"}
+{"id": "b388f08342daf1f8", "restriction": "partial", "evidence": "Do not write tests", "where": "both"}
+{"id": "c5bbf4379a51c08c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c17f4b2c05a238bc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ed7ec6aff64db66", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c68e0f4eccfd9a6b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b32cbcf532baa5cb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c1fc3bfa6f73b08e", "restriction": "full", "evidence": "Do not write the fix unless asked.", "where": "body"}
+{"id": "a4841871925a892f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7938b450b8e65938", "restriction": "partial", "evidence": "Do NOT change code.", "where": "description"}
+{"id": "474472586a58cba8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d249798f4b1820d", "restriction": "partial", "evidence": "SELECT only, no DML/DDL.", "where": "body"}
+{"id": "d139999e753c7f85", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ecbdeee81b4bcbe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1554b0a3fd62ea50", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f7d0d7b4ea7cabc3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5523f54f8e96cd2a", "restriction": "partial", "evidence": "You never touch `src/e2e/**`.", "where": "body"}
+{"id": "ff69d3407a966d83", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9150fc413ebb88bd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1bfb85d0b6c16678", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b5c67821edc4b62c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ae6a78fd4cfb8ba2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "20d85630a4085265", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a32148d36261bcc8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dd1c25d22b2afc72", "restriction": "full", "evidence": "Read-only adversarial review", "where": "description"}
+{"id": "be1eb89b7504be94", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5b7907a1f8bc8abd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "04600a7d1e565773", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e492adf1b4e94e9e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7db567e862a653b7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "195ec2ed89c4b98d", "restriction": "none", "evidence": "", "where": ""}

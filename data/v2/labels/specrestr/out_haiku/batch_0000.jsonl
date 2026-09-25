@@ -1,0 +1,51 @@
+{"id": "b1bc7d586e41ae02", "restriction": "full", "evidence": "This reviewer is read-only and instruction-only.", "where": "body"}
+{"id": "e4e226343daf69e1", "restriction": "partial", "evidence": "Never run `dzil release` or upload to CPAN", "where": "body"}
+{"id": "3da8e914b09ab5ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3c34b3f523215422", "restriction": "full", "evidence": "You never edit; you read, grep, and reason.", "where": "body"}
+{"id": "1e5c7d591268928f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "467c8845c1036ea1", "restriction": "partial", "evidence": "does not write production code or fixes", "where": "description"}
+{"id": "f3ba65547151037c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1ff13143a0925d45", "restriction": "partial", "evidence": "never changes code", "where": "description"}
+{"id": "7829cccc749e9b42", "restriction": "full", "evidence": "You must not edit files.", "where": "body"}
+{"id": "bfa6d4afc1d03c29", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e2421d68df7db65b", "restriction": "partial", "evidence": "please don't write any code", "where": "body"}
+{"id": "525786fcec2e60b5", "restriction": "full", "evidence": "Read-only — report findings, never modify code", "where": "body"}
+{"id": "03960618116acb77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a2a24ab099afd348", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8898c2799b24e2fe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "978bd15a63ba0114", "restriction": "partial", "evidence": "Cannot create files (KB articles via delegation to @documenter)", "where": "body"}
+{"id": "1702e33adb07e441", "restriction": "partial", "evidence": "does NOT apply fixes to production code", "where": "description"}
+{"id": "7f86e19b4c0afc22", "restriction": "none", "evidence": "", "where": ""}
+{"id": "457321374e7b958d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a8fabbc6bb2cb40a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bcfab00a2d8a9a0d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5358c74b070ac34e", "restriction": "partial", "evidence": "Do not implement code.", "where": "body"}
+{"id": "4767e504db9e4c11", "restriction": "partial", "evidence": "without editing code directly", "where": "body"}
+{"id": "607fb0c12aa2170a", "restriction": "full", "evidence": "You do not write the fix; you judge it.", "where": "body"}
+{"id": "8b7682ece89e9c95", "restriction": "none", "evidence": "", "where": ""}
+{"id": "877a612ed8fdcc10", "restriction": "full", "evidence": "코드를 직접 읽거나 수정하지 않고", "where": "body"}
+{"id": "5e0e056a3f87be8c", "restriction": "partial", "evidence": "never on source code, tests, or config", "where": "body"}
+{"id": "b593c0233686e7c6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "23f772dd57d986db", "restriction": "none", "evidence": "", "where": ""}
+{"id": "15f623cb7b638a3b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4861c84c034cee98", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b41839284dacb1a2", "restriction": "partial", "evidence": "Do NOT edit the files themselves — only `INDEX.md`", "where": "body"}
+{"id": "727fd1e33e8b60ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4841771776635a09", "restriction": "none", "evidence": "", "where": ""}
+{"id": "40f19d70421755e0", "restriction": "partial", "evidence": "do not write code, write tests, or modify anything", "where": "body"}
+{"id": "bd7f30f1866d2af4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8ebcf8d1ecf919b1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ebaedce226e568c6", "restriction": "full", "evidence": "ファイル直接編集（提案のみ）", "where": "body"}
+{"id": "b6239bad0b946740", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f96a56682b1111af", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e93e23a887886c14", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b39537deb6a542f4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d1f85af62c3bcec", "restriction": "full", "evidence": "Never move, rename, create, or delete files.", "where": "body"}
+{"id": "951c3a12c5efd66c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "84e229e5b99cc8bc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a76f19d480400e68", "restriction": "none", "evidence": "", "where": ""}
+{"id": "820fa59274a451d5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f7fbb7d387edbbac", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9854db96e4c2d3e4", "restriction": "partial", "evidence": "You don't: write app code (Java — never)", "where": "body"}
+{"id": "c4e26b815200ebbe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4de367004bd38f6a", "restriction": "full", "evidence": "Read-only; reports findings, never edits", "where": "description"}

@@ -1,0 +1,6 @@
+{"id": "6aca6cf4a620d1c8", "shell_use": "inspect", "evidence": "Use Grep only for literal patterns (e.g., error code `23505`, specific function names)"}
+{"id": "87c1b60ff35bc127", "shell_use": "inspect", "evidence": "Use Glob and Grep to find files related to the phase goal terms"}
+{"id": "4b19a4df927155fb", "shell_use": "inspect", "evidence": "List all PLAN.md files... ls \"$PHASE_DIR\"/*-PLAN.md"}
+{"id": "01ec529c514f1993", "shell_use": "verify", "evidence": "Run automated tools first (`npm audit`, lint, type-check)"}
+{"id": "3881a64583f7e509", "shell_use": "verify", "evidence": "Node.js package auditing (npm audit)"}
+{"id": "97657759d9f6dd67", "shell_use": "inspect", "evidence": "Your only history-search mechanism is the `entire search --json` command"}

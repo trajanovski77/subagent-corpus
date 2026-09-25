@@ -1,0 +1,42 @@
+{"id": "2f550e4d97d36758", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d913e00c89fab133", "restriction": "none", "evidence": "", "where": ""}
+{"id": "baae309734e27b67", "restriction": "partial", "evidence": "允許寫入: .agent-output/context/* | 禁止寫入: source, tests, docs/issues/*, PRs, github issue 留言或 state", "where": "body"}
+{"id": "34aa9e282e7995a0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2021a0d26b4a81d0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "19fb17685bc46512", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d0e9c9a9a12c60ed", "restriction": "partial", "evidence": "Reads SOT (session.json) for context; never writes directly", "where": "body"}
+{"id": "738cd98cf8c21951", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8491be6c14403068", "restriction": "partial", "evidence": "never branches, pushes, or opens PRs. Never writes AI co-author trailers.", "where": "both"}
+{"id": "51a1e0f0737b60f5", "restriction": "partial", "evidence": "You do NOT implement.", "where": "body"}
+{"id": "54f2e77e99d95392", "restriction": "partial", "evidence": "You never write or modify product code.", "where": "body"}
+{"id": "61298cfd7f1b3814", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b5ebb420df067047", "restriction": "full", "evidence": "Never modifies files.", "where": "both"}
+{"id": "e205bd4a7a85ae52", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f646d219a16f1ee8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fc25b5867b244698", "restriction": "none", "evidence": "", "where": ""}
+{"id": "694c1d37b11f6e1d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "36ebf528f494bb79", "restriction": "partial", "evidence": "Get approval before writing files: Show the code or a detailed summary. Explicitly ask: 'May I write this to [filepath(s)]?'", "where": "body"}
+{"id": "68a4ba6d9263cd04", "restriction": "none", "evidence": "", "where": ""}
+{"id": "713150879b3c948f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e62cef8c101b455d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8f712d8a497bde66", "restriction": "none", "evidence": "", "where": ""}
+{"id": "86f45a1d1ba95c53", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6a34e5d36785afef", "restriction": "partial", "evidence": "never branches, pushes, or opens PRs. Never writes AI co-author trailers.", "where": "body"}
+{"id": "89145f8b2148725a", "restriction": "partial", "evidence": "never writes production code or tests for the implementation", "where": "body"}
+{"id": "ab839f68a825bcf3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "911dc636468d7534", "restriction": "partial", "evidence": "You do NOT write code.", "where": "body"}
+{"id": "ec4fcebc70cae64d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "82593b26d0539307", "restriction": "full", "evidence": "You operate under permission_mode=\"plan\" with the Edit/Write tools NOT whitelisted. If you find yourself wanting to fix something, STOP", "where": "body"}
+{"id": "3ea9bb979f84ba86", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9c24356e5e916ed7", "restriction": "full", "evidence": "You operate under permission_mode=\"plan\" with the Edit/Write tools NOT whitelisted.", "where": "body"}
+{"id": "46d8ed39271aefe4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2dde18a227c1b17e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b6d5f90c60037ce", "restriction": "none", "evidence": "", "where": ""}
+{"id": "08b7dbba6248c898", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e6734f97e07ca4fd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fc83bed5c100a060", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cb074be732854dd5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fb0228662ef888c4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "95a7f3db2c9a8d16", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bf4acd17dfdc8256", "restriction": "none", "evidence": "", "where": ""}
+{"id": "afe804a5ff0b49b3", "restriction": "none", "evidence": "", "where": ""}

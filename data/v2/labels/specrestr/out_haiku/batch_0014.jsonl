@@ -1,0 +1,46 @@
+{"id": "02eb7e088dc0dd98", "restriction": "full", "evidence": "You are read-only on run data. Inspect, load, plot, diff. Do NOT delete, re-run beats, coldstart, or launch SLURM/TRANSP/PORTALS jobs.", "where": "body"}
+{"id": "718ec78e0d917e44", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c92e14e155034d62", "restriction": "partial", "evidence": "❌ Don't commit.", "where": "body"}
+{"id": "baf7623f1175c587", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b79a5f43f6444c07", "restriction": "none", "evidence": "", "where": ""}
+{"id": "21da920eb0d19884", "restriction": "partial", "evidence": "Only modify `.wiswa.jsonnet`. Never modify managed files - they are outputs of Wiswa.", "where": "body"}
+{"id": "59d3e2444113a4e2", "restriction": "partial", "evidence": "You do **not** implement server-side logic, modify the schema, or write tests.", "where": "body"}
+{"id": "1e47184aa97b6988", "restriction": "full", "evidence": "**Read-only** - Runs tests, validates behavior, produces reports.", "where": "body"}
+{"id": "5bdac6e963546e3e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a01f492249c0d97b", "restriction": "partial", "evidence": "Never modify `en-page.js` — source of truth, read-only for this agent", "where": "body"}
+{"id": "b20f711995b536a8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "90b3863d09c194eb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4e3e51a05093a90b", "restriction": "full", "evidence": "You **do not modify files** — you review and report.", "where": "body"}
+{"id": "454e6550dd1eaf3c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5375ad970f39d08b", "restriction": "full", "evidence": "Read-only. Use Glob, Grep, and Read. Do not edit files, do not propose new abstractions you wouldn't defend in review — report findings only.", "where": "body"}
+{"id": "ea41e93a7cab0594", "restriction": "full", "evidence": "Do NOT modify any files -- only run and report", "where": "body"}
+{"id": "10d0408a20a645b8", "restriction": "full", "evidence": "⛔ DO NOT MODIFY ANY FILES | You must NEVER use Edit, Write, or Bash tools.", "where": "body"}
+{"id": "67f4f50485394cfd", "restriction": "partial", "evidence": "Do not modify `docs/` - that is the writer's job.", "where": "body"}
+{"id": "1ddcaf8905015152", "restriction": "partial", "evidence": "NEVER create helper scripts (.js, .py, .sh) and NEVER create documentation or status files (.md, .txt)", "where": "body"}
+{"id": "2f583daf7d6a1935", "restriction": "full", "evidence": "너는 Coder가 작성한 코드의 **최후 방어선**이다. (You are the last line of defense for code written by the Coder.)", "where": "body"}
+{"id": "1271c11bbb198fa5", "restriction": "full", "evidence": "Read-only; returns findings", "where": "description"}
+{"id": "08c61145bfbaa12d", "restriction": "full", "evidence": "Summarize for the main agent; don't dump raw extraction back... Report — findings + provenance + flags.", "where": "body"}
+{"id": "e9383d54591579c0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6e29ef5988869832", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e8406cf88d82749c", "restriction": "full", "evidence": "Output format is review findings (severity and suggestions), not implementation.", "where": "body"}
+{"id": "f9aa7f7628898400", "restriction": "full", "evidence": "You deeply analyze the codebase for ONE phase and produce structured assumptions with evidence", "where": "body"}
+{"id": "15c63824da85d5c3", "restriction": "partial", "evidence": "Do not write tests (that is the tester's job) and Do not write documentation (that is the documenter's job)", "where": "body"}
+{"id": "17835d3051334b0d", "restriction": "partial", "evidence": "NIE dotykaj testów - to rola testera (Do NOT touch tests - that is the tester's role)", "where": "body"}
+{"id": "989ebe275393f7c3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "27d92eb00e645c34", "restriction": "partial", "evidence": "You do NOT touch services, controllers, screens, or stores.", "where": "body"}
+{"id": "890dbbd307bd8642", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4682b8d72511469e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "74fdc80659fc50de", "restriction": "none", "evidence": "", "where": ""}
+{"id": "07d9a67099225223", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a1b50d0d6ed68ebc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8060d56ca1200d2f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "45ce7dd54739c4c8", "restriction": "full", "evidence": "Read-only — reports findings, does not edit. You review math, you do not change code; report findings for the main agent to fix.", "where": "body"}
+{"id": "445058639b8ae8da", "restriction": "full", "evidence": "Remain read-only. Use Bash only for read-only validation commands. Do not edit the spec, manifest, design plan, code, or workflow state.", "where": "body"}
+{"id": "40d6e58498dcb402", "restriction": "none", "evidence": "", "where": ""}
+{"id": "99d68ae698f23e06", "restriction": "full", "evidence": "Do not edit files.", "where": "body"}
+{"id": "c4bdbab09d2cf46b", "restriction": "full", "evidence": "Agent is tasked with reviewing for compliance against rules and providing formatted feedback", "where": "body"}
+{"id": "e8e69e8de2c64284", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3efb00132e778df6", "restriction": "partial", "evidence": "You may ONLY modify files explicitly assigned to you in the task prompt... You may READ any file for context, but NEVER WRITE outside your assigned files", "where": "body"}
+{"id": "5e6e3ef14068505f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3b797470750ed6bf", "restriction": "partial", "evidence": "Запрещено редактировать production code (`apps/**`, `packages/**`) — это zone Coder'а and explicit zone-of-write restrictions", "where": "body"}
+{"id": "15759463a1ab133e", "restriction": "partial", "evidence": "raw SQL & ORMs BLOCKED", "where": "description"}

@@ -1,0 +1,35 @@
+{"id": "f6f1c0df00a7f77f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "abe245974b8b6dc8", "restriction": "partial", "evidence": "You ONLY: fix detekt violations by editing source files. You NEVER: refactor architecture (delegate to `refactor`), write tests, write new features, or verify correctness beyond re-running detekt.", "where": "body"}
+{"id": "4ee1685a2c4da69d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "02771ec0189bda62", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9dd8033e37982c92", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d985c5a3a013b1ec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "11c01611fb906567", "restriction": "none", "evidence": "", "where": ""}
+{"id": "884b074c4be42328", "restriction": "none", "evidence": "", "where": ""}
+{"id": "74f7b30a87c021d6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6c7cec2e960fbda1", "restriction": "full", "evidence": "This is a READ-ONLY planning task. You CANNOT edit, write, or create files.", "where": "body"}
+{"id": "a765f83a5b7b5356", "restriction": "none", "evidence": "", "where": ""}
+{"id": "27b54535b4f01e4f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0bd030e495d7172b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c01e059ce7519d20", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d2949c558527214a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "672deab3e27b50c9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1770a361d9d472ab", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bfca7db25bccd22f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bcfd21f6f6285349", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7fcbebdbaabd19ce", "restriction": "none", "evidence": "", "where": ""}
+{"id": "375bd88736c75930", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c17a527083648db7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8047932de2ad6569", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7ac7cc945141252d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ebf4e06a82e4b633", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a003dab7aeb04f31", "restriction": "none", "evidence": "", "where": ""}
+{"id": "08e5316e6e4c90c4", "restriction": "full", "evidence": "Read-only diagnostics. Do not modify any files or driver settings. Only gather information and report.", "where": "body"}
+{"id": "e0ce3288bf350686", "restriction": "none", "evidence": "", "where": ""}
+{"id": "45528961cc4559eb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bb5a456ec740ccd1", "restriction": "full", "evidence": "read-only agent optimized for searching and analyzing codebases", "where": "description"}
+{"id": "f7eaf2fd136272ab", "restriction": "partial", "evidence": "Do not write code—produce actionable tasks.", "where": "body"}
+{"id": "4211575a7a0e2745", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ca2b2ff156073c95", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1caa5e9f6f5a66ac", "restriction": "full", "evidence": "No file modifications. Read-only mode always.", "where": "body"}
+{"id": "31690bf81a802eec", "restriction": "none", "evidence": "", "where": ""}

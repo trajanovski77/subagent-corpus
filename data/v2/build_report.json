@@ -1,0 +1,15 @@
+{
+  "inventory_agent_files": 94899,
+  "status": {
+    "ok": 93455,
+    "repo-unavailable": 1411,
+    "object-not-found": 33
+  },
+  "specifications": 69316,
+  "specification_repositories": 4128,
+  "v1_files": 67927,
+  "v1_files_identical_in_v2": 66809,
+  "v1_files_differing_in_v2": 16,
+  "files_new_in_v2": 26630,
+  "repositories_with_governance_files": 4078
+}

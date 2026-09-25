@@ -1,0 +1,150 @@
+{"id": "58b2505d5778dd35", "sentence": "Password Hashing**: Always use strong hashing algorithms like bcrypt or Argon2 with appropriate salt generation."}
+{"id": "00002cc51feeaacd", "sentence": "Do not assume the architecture from memory."}
+{"id": "f691ea708e9d725a", "sentence": "Don't reinvent what's already well-understood."}
+{"id": "b3de133f15336006", "sentence": "Backend must enforce plan limits."}
+{"id": "428007db8091725a", "sentence": "Hexagonal dependency flow: adapters depend inward, domain does not depend on infrastructure"}
+{"id": "4be970cac5b44b36", "sentence": "Always verify that configurations work properly with the `/mcp` command in Claude Code."}
+{"id": "fa0de294c950810b", "sentence": "Don't touch shared code** - Stay within your boundaries"}
+{"id": "ccfd4be4a1cdcc70", "sentence": "You're firm on standards but flexible on timeline, strict on Production+ policies but encouraging at Prototype level, and always focused on helping teams succeed rather than creating obstacles."}
+{"id": "4a4b7613970a6b0c", "sentence": "What does a reader new to Ethereum consensus need to learn here?"}
+{"id": "64b13d8f27e545b0", "sentence": "When creating a command, always:"}
+{"id": "fd764381ffaba7a0", "sentence": "Never skip Zod validation on endpoints that accept user input"}
+{"id": "252e97997ccff9a8", "sentence": "helper text must be associated with inputs"}
+{"id": "fa77d2cf54d00988", "sentence": "Important: do not create static verification config such as `harness/config/verify.json`."}
+{"id": "b7ac18cd84e27179", "sentence": "The actual suggestions are in `/pulls/{n}/reviews/{review_id}/comments` - you MUST fetch this 4th endpoint to find them."}
+{"id": "74c165d93e7cd441", "sentence": "ALWAYS set `computationMethod` to use Statemachine**"}
+{"id": "49e9c5616ebabde0", "sentence": "Route to more than one department agent as \"primary\"** — the output must have exactly one primary agent; ties are broken by escalating to COO, not by listing two primaries"}
+{"id": "3aa4a7c74743bb06", "sentence": "Responsibility**: Ensure statistical validity of confidence scores per stratum (context)"}
+{"id": "24a4b1a3a2806a3b", "sentence": "valence always leads.)"}
+{"id": "3f09acf1ace29696", "sentence": "Tasks that modify shared state must run SEQUENTIALLY"}
+{"id": "a4d6aa24d9589ae5", "sentence": "NEVER** include AI references in commit messages"}
+{"id": "c57ec1687b9f9f52", "sentence": "DO NOT** proceed with modifying unassigned files."}
+{"id": "0c39f047a2511763", "sentence": "Don't pull this in speculatively; pixel-faithful porting comes first."}
+{"id": "4207b7dee5a6cbe5", "sentence": "Every system GDD must include:"}
+{"id": "7152ee14375d539f", "sentence": "MANDATORY PROCEDURES (NO EXCEPTIONS):**"}
+{"id": "b7e227f0e81f6d7d", "sentence": "Never mix with grafana-prd in the same request."}
+{"id": "f952d35eda9ba88b", "sentence": "ux-ui-svelte-stinger](../skills/ux-ui-svelte-stinger) - Svelte 5 UI enforcement, consulted when AuthKit branding or a custom sign-in screen needs to match the app's design system."}
+{"id": "30c5a48418be49e2", "sentence": "Treat every entry as a hard constraint — read it before you touch code and do not re-introduce the mistake."}
+{"id": "26bfdafef2276566", "sentence": "Always return this exact section structure and order:"}
+{"id": "7e676fdc657788a2", "sentence": "Practices to Avoid**:"}
+{"id": "a06d2d9ab7b71598", "sentence": "Cross-Functional Coordination**: Ensure alignment and coordination across all teams and stakeholders"}
+{"id": "bf5c167bc1953316", "sentence": "If forwards are at the top third, keep more index exposure (don't lock at the peak)."}
+{"id": "c0674a7b477eb918", "sentence": "Do not claim a file or pattern exists unless you saw it."}
+{"id": "72d80404ffde3f9d", "sentence": "Second, prose complexity is a judgment call, not a deterministic defect, and a judgment call must never deadlock a merge."}
+{"id": "3409373c405bddc1", "sentence": "Does NOT invent patterns when patterns.json is empty (returns no_precedent honestly)"}
+{"id": "57169588c94e241b", "sentence": "Must NOT run when:** The change is confined inside one package's internals."}
+{"id": "6675b5a96d074c65", "sentence": "Terms that overlap: \"Licensing\" and \"Software Licensing\" both exist, editors don't know which to use"}
+{"id": "8e26d11027539398", "sentence": "Does not write a PRD or prioritize the backlog — that is `warrior-prometheus`'s responsibility"}
+{"id": "fbc5010ef1891a66", "sentence": "On Windows: ensure `command` uses `cmd` with `/c` for npx-based servers"}
+{"id": "96e0619d7c209f5e", "sentence": "Verbatim preservation: invalidate superseded facts (set `valid_to`); do not destroy history."}
+{"id": "8eb14300687e6feb", "sentence": "Ensure code follows conventions"}
+{"id": "12f687d2ffcd8499", "sentence": "Invariants** - What must always hold?"}
+{"id": "bcdc85ae6b2072d6", "sentence": "Style, naming, and lint deviations (note as comments, don't block)"}
+{"id": "029619131fcf6773", "sentence": "| Integration Point | What SCRIBE Must Verify |"}
+{"id": "be7a9714c5bd7d08", "sentence": "DON'T**: Use complex navigation headers."}
+{"id": "d425b71dcc93a661", "sentence": "`lib/mock-data.ts` — synthetic data for development (must match schema)"}
+{"id": "f79da0cc3a6d5f99", "sentence": "Never claim something is fixed without a rescan that proves the finding is gone — a fix you did not verify is a false sense of safety, which is worse than a known gap"}
+{"id": "dc674b48911ce3cf", "sentence": "Steps so coarse the critic can't review atomically, OR so granular the implementer drowns"}
+{"id": "b2e1056b8c4ffa0b", "sentence": "Always validate:"}
+{"id": "ad9edea6ad27cead", "sentence": "Do NOT report style preferences as bugs (wrong naming → CQ, not BUG)"}
+{"id": "b4241c6b7ea696ec", "sentence": "| Scripts don't run | -25 | Strategic |"}
+{"id": "d4e78b3a38f1fa0c", "sentence": "→ Ensure Application key has `apm_service_catalog_read` or `apm_service_catalog_write` scope"}
+{"id": "fa74706e73ddfe59", "sentence": "MANDATORY before suggesting ANY fix:**"}
+{"id": "76f10b86d7215369", "sentence": "WHEN creating architecture ALWAYS show component relationships"}
+{"id": "91bbe7c818238b80", "sentence": "If this skill was invoked by a routing or orchestration layer, you MUST report the final disposition explicitly as one of: APPROVED, REVISE, or REJECT, with a brief rationale."}
+{"id": "ee46bd00e843ddd2", "sentence": "Blockers**: Issues that MUST be resolved (with specific recommendations)"}
+{"id": "6018f6e8eaa08348", "sentence": "Do not leave broken code for the orchestrator to fix."}
+{"id": "a1c1fa44165ec4b6", "sentence": "You are a retrieval step, not the assistant: every fact must be lifted from a memory file body, not derived from general knowledge or your own reasoning about the query."}
+{"id": "74e9f7c5127daa6c", "sentence": "All files must be complete, syntactically valid, and runnable."}
+{"id": "b9c86d92b32eea35", "sentence": "PaywallModal must render in JSX** — setting `showPaywall=true` without `<PaywallModal>` does nothing"}
+{"id": "9daf5826bce68bf4", "sentence": "CRITICAL**: This agent MUST use autonomous iteration for all test execution."}
+{"id": "b727ae1c1563ee8c", "sentence": "You design what must be tested and why; Cursor authors"}
+{"id": "17e12ed5e93bf7b4", "sentence": "You do not invent pricing."}
+{"id": "4c76c2644e9c0d05", "sentence": "`subprocess`/`urllib`; the skill must keep the local-only subcommand law with"}
+{"id": "67ed5c306d633293", "sentence": "Always cite source for every claim.** Every dollar amount, date, file, and finding must be traceable to a specific email (M-####), invoice number, git commit hash, audit-log row, or third-party report."}
+{"id": "3a18816b72aafb50", "sentence": "Always prioritize sustainable reliability, automation, and learning while balancing feature development with system stability."}
+{"id": "68d7f4f060bba8a8", "sentence": "Adds at most one DOM observer per page to avoid performance impact."}
+{"id": "27b7afb98df4f828", "sentence": "CORS: explicit allowed origins, never wildcard in production"}
+{"id": "ac4b1243c558ca47", "sentence": "Always write the decision record even for **\"Insufficient Data — Refuse To Rate\"** (`basket` = `\"Insufficient Data\"`, `paper_treatment` = `\"No trade, track process quality only\"`, `entry_price` = `null`)."}
+{"id": "15540d428bc6c735", "sentence": "Numeric string formatting**: All numeric properties MUST be formatted as strings with exactly one decimal place."}
+{"id": "3ed87ea4502c0800", "sentence": "Never rewrite content outside `## Vault Links` or `<!-- linked-notes -->` regions."}
+{"id": "ec8ebdbb116ffa3e", "sentence": "Ensure your code works with the existing build system"}
+{"id": "b033329c19ec7770", "sentence": "Verify only - do not execute any business operations"}
+{"id": "525062a17f864872", "sentence": "MANDATORY Design Rules (Enforced by Hooks)"}
+{"id": "9fc84b87ab4fd77c", "sentence": "For durable unattended cadence beyond a session's life, propose a scheduled-task setup to the human; do not improvise one."}
+{"id": "e4169c01c87fb97d", "sentence": "Request body vs mutation input** — TypeBox schema fields do not match what the mutation expects"}
+{"id": "87a58e2891cdd0e8", "sentence": "\"Related Endpoints\" must reference endpoints actually defined in this document's Section 3"}
+{"id": "bf8fca1bd991eee6", "sentence": "Authenticate via the user's existing `gh auth` token — the agent never touches auth."}
+{"id": "3e4b9937ce094a7b", "sentence": "Required fields per stage** — Don't let reps advance a deal without filling in required data"}
+{"id": "eff82aec068244ba", "sentence": "You do not implement features."}
+{"id": "06f133a1933390ff", "sentence": "Uncertainty Quantification**: Always communicate confidence intervals and limitations"}
+{"id": "fc7ff7a505ef7480", "sentence": "Y stays green AND un-regressed.** Never leave Y non-compiling across a cycle boundary, and never"}
+{"id": "59a61e62b0c5bfe8", "sentence": "MCP evidence does not replace parent review."}
+{"id": "d9c01e00a217ff24", "sentence": "Architecture/security → the CTO reviews (always)"}
+{"id": "356428066c33b780", "sentence": "Mandatory identifiers present and propagated: `correlation_id` (whole chain) and `trace_id`; plus"}
+{"id": "4bb0ce6d2070103f", "sentence": "What level of depth is required?"}
+{"id": "6d8c0b8eabb62ccb", "sentence": "Don't nitpick formatting — that's the linter's job."}
+{"id": "044f5b9da631bb73", "sentence": "HARD] Always verify TRUST principles through trust-checker script"}
+{"id": "f856ebd4871e468a", "sentence": "`high` - must address (blockers, security, changes requested)"}
+{"id": "4151a20e5fea1edc", "sentence": "ALWAYS document findings with evidence"}
+{"id": "e0545544255a1898", "sentence": "Common suspects to scan for by name even if tools don't catch them:"}
+{"id": "32187dad6229f899", "sentence": "Constructor signatures (must use `out self`)"}
+{"id": "d14b244c953ea69b", "sentence": "This Benchmark Suite agent provides comprehensive automated performance testing, regression detection, and validation capabilities to ensure optimal swarm performance and prevent performance degradation."}
+{"id": "66aa5bca65ca923a", "sentence": "Implement multi-service pinning architectures that ensure content availability across different providers."}
+{"id": "535e59bd8d6dc51c", "sentence": "The user always wins over the recommendation."}
+{"id": "0c6c9830eedc8fe8", "sentence": "| No guessing             | Do NOT fabricate file paths, function names, or behavior — investigate first                        |"}
+{"id": "6a399d598f20ff01", "sentence": "→ User must verify phone/SMS channel via verification code"}
+{"id": "5cfc0416baf11c5a", "sentence": "If the document header contains \"No UI/UX design specification is required for this feature\" (Non-UI Waiver):** validate all four required waiver elements against the Non-UI Waiver Schema defined in `SKILL.md`."}
+{"id": "4b28c6a784218c2d", "sentence": "If your task needs to run something slow or repeatable that a peer task might also need (a big `gh api` call, a full test suite), use `bin/cache fetch <key> -- <command...>` instead of running it bare — it reuses a cached result automatically and stores yours for the next reader."}
+{"id": "d8b81c34d56d72df", "sentence": "No Destructive Operations**: Never delete files, kill processes, or modify system configs without explicit confirmation"}
+{"id": "72dd187861a487e7", "sentence": "If `argument-hint:` is set, the body must handle: (a) provided argument, (b) empty argument (fallback or ask), (c) malformed argument (PR number where a branch is expected, etc.)."}
+{"id": "caaac9a1e89e42f8", "sentence": "Do NOT use for** analyzing reports (use `variant-template-writer`), indexing DeFiHackLabs exploits (use `defihacklabs-indexer`), or vulnerability hunting (use `invariant-catcher`)."}
+{"id": "add0c8bfe1105f18", "sentence": "Approval-request items for Doppler mutations MUST include: the secret NAME, the project + config, and a short rationale."}
+{"id": "794400e089ed6b7d", "sentence": "The OKF concept page — provenance, confidence, typed edges, the `decision` rationale — must read like a considered document, not a CRUD form."}
+{"id": "efed05b3a226b5da", "sentence": "Never Trust User Input:** Treat all input from external sources as potentially malicious and implement rigorous validation and sanitization."}
+{"id": "4062b4c5d73a70d9", "sentence": "Maximum 3 definitional clarifications before you must proceed with best available definitions"}
+{"id": "efb3cb4a1631301e", "sentence": "Never fabricate**: Only report what you actually found in the files"}
+{"id": "630b313ee1162065", "sentence": "Newlines **must** be encoded as `\\n` (JSON string escape) — never literal newlines."}
+{"id": "20bf46d736b23b5d", "sentence": "Actionable over interesting - every insight must drive a decision"}
+{"id": "f789d092d40fcf59", "sentence": "All flags resolved but `architecture.md` does not exist → proceed to writing output documents"}
+{"id": "96ed0519b003297a", "sentence": "Phaser canvas remain unchanged so the button doesn't eat clicks."}
+{"id": "1cf17704a235fd5c", "sentence": "The final tier can never be lower than the coder's declaration or the step manifest baseline — unless `.claudetmp/oversight/human-tier-override.md` exists and contains an explicit human decision for this step."}
+{"id": "e7677b3dc5a83aa9", "sentence": "Keep it Simple**: Avoid over-engineering"}
+{"id": "c2488e51bd0faf6b", "sentence": "Phone numbers must be in E.164 format (+1234567890)"}
+{"id": "08bfb9658b908f77", "sentence": "This agent operates under a strict set of rules to ensure optimal multi-agent coordination:"}
+{"id": "bdc203cbe848e42f", "sentence": "Backward compatible migrations only (old code must work with new schema during deploy)"}
+{"id": "99b2a7ab3f71b149", "sentence": "Ensure .claude/verify.sh actually runs the new tests; extend it if not."}
+{"id": "2f57e299959c8fa8", "sentence": "Manual first.** Don't automate what you haven't proven manually."}
+{"id": "d9f0d282cdade18a", "sentence": "Never communicate seller-side commercial information** to the buyer-side or vice-versa beyond what is required for the transfer."}
+{"id": "065b16f51c2ddeb6", "sentence": "Integration Verification**: Ensure all components work together correctly"}
+{"id": "5a4584f41ee15707", "sentence": "formulas, so verify against the design docs and mark anything you cannot confirm from code as"}
+{"id": "b36ce7b1013f3e10", "sentence": "Do not access, store, or redistribute actual credentials or PII.** Guidance focuses on identifying exposure and assessing risk, not on collecting or weaponizing personal data outside the authorized scope."}
+{"id": "49ca86c68e099d0d", "sentence": "Open questions that MUST be resolved before implementation (ask the user if needed)"}
+{"id": "e22aed078109afa9", "sentence": "Don't duplicate — follow."}
+{"id": "100b43090194bf69", "sentence": "If conventions are not established and this is the first plan: the first task MUST establish them."}
+{"id": "02ded1a529642204", "sentence": "Always check CLAUDE.md for current layout documentation"}
+{"id": "d36ae4da31ae4936", "sentence": "a commented block at the end of `04_estado_arte.tex` — do not invent the"}
+{"id": "38301c4541006dcd", "sentence": "Your final report MUST include all research findings, competitive analysis, and market insights in full detail."}
+{"id": "b008e5c0588435ab", "sentence": "发布**：实现 `cn.structure.infra.event.Event` + `EventManager.publish(event)`；跨服务 MUST `MESSAGE_EVENT`（走 `DataScopeStreamBridge` 数据权限包装）"}
+{"id": "1105c9ebc97eccdb", "sentence": "Avoid global state"}
+{"id": "15a7010d05ddb89e", "sentence": "They do not catch failure shapes that are novel to the PR under audit."}
+{"id": "7fe71a00128cf06d", "sentence": "The plan must name the wave, target backend modules, capability stories in scope, and specialist ownership split."}
+{"id": "06e087b99b5ea736", "sentence": "meaning, never measured."}
+{"id": "dad6d6a287dd3736", "sentence": "Every spawned `Child` must be killed and waited on"}
+{"id": "8771f34c6870feca", "sentence": "Don't flag violations for patterns that don't apply to the code being validated.**"}
+{"id": "61de4fc912ae51b1", "sentence": "Component names: **Always in English** (Button, Card, Modal)"}
+{"id": "5f45a18afeb8215e", "sentence": "Reports must cite **D1+** (real drought) as the floor for bullish signals."}
+{"id": "5ea215a4eda78dab", "sentence": "Findings must be ordered by severity, then remediation priority."}
+{"id": "0ce4be1eb8b4f110", "sentence": "Before optimizing, you must identify the user's **Core Identity**."}
+{"id": "fadbbcefbdd8319e", "sentence": "It does not automatically override design direction, production capacity, or safety constraints."}
+{"id": "6137c0c8071df837", "sentence": "Proxy requests to avoid CORS issues"}
+{"id": "bd2b1dabd2bf145c", "sentence": "Missing `SELECT FOR UPDATE` inside multi-step RPCs that must be serialized"}
+{"id": "f4b1904f3d6bc361", "sentence": "Do not block on trivial style preferences — only genuine correctness/safety issues."}
+{"id": "38a58c15e4ff5fed", "sentence": "`field_data`: Object with field slug keys (NOT display names); must include `name` and `slug`"}
+{"id": "a6052cc15bbd8e5a", "sentence": "Simplify to amplify.** If you can't state your story simply, you don't understand it yet."}
+{"id": "a8b201a30e0d6ec0", "sentence": "Generate or consume the resolved typed API projection when HTTP types are required."}
+{"id": "c5ad808c6e2bfb68", "sentence": "Every intervention must be logged"}
+{"id": "7886e9653d1bafbf", "sentence": "Use `scripts/*` paths, never absolute."}
+{"id": "068e9dee3e1ce54c", "sentence": "Never `git add -A` blind."}
+{"id": "08cf6008ad0846b0", "sentence": "Inspect uncommitted work and never overwrite changes you did not make"}
+{"id": "6b37f20714c039eb", "sentence": "Always include at least one `priority:` label and one `area:` label"}

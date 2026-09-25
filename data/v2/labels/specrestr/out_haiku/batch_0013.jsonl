@@ -1,0 +1,29 @@
+{"id": "c899d5806b36edcf", "restriction": "partial", "evidence": "Read-only with respect to project files (paper, bib, code, data); writes its own report at reviews/<scope>/paper-critic/<YYYY-MM-DD-HHMM>.md", "where": "both"}
+{"id": "5bc8fadac4763662", "restriction": "full", "evidence": "No escribes codigo, solo identificas problemas y sugieres mejoras", "where": "body"}
+{"id": "f9a350ea3b64d20d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b5916becbd8e645a", "restriction": "partial", "evidence": "Outside Debug Mode and Architecture Diagnosis Mode, do not implement production code", "where": "body"}
+{"id": "5bd1fa9164d8614c", "restriction": "full", "evidence": "Codex에게 파일을 직접 수정하도록 맡기지 말고, 우선 검토 결과와 수정안을 반환한다", "where": "body"}
+{"id": "f8dc5002760c394d", "restriction": "full", "evidence": "Write **work documents only** ... **Never modify source code** — implementation belongs to the main session", "where": "body"}
+{"id": "10bd0aee3fef2cf9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d0eb1d698c1be2f9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2f2e41830beff350", "restriction": "partial", "evidence": "Apply migrations without ARCHitect approval", "where": "body"}
+{"id": "965a8b8b5cd1d62e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "455b945a9e1089f5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a3bb2f00fcbe5acb", "restriction": "partial", "evidence": "Never: Modify source code (`src/`, `app/`), configs, or write business logic", "where": "body"}
+{"id": "faf46b4a5f52eddf", "restriction": "full", "evidence": "Never used for writing production code", "where": "description"}
+{"id": "80793bcc3ae46f78", "restriction": "full", "evidence": "Do not edit. Recommend.", "where": "body"}
+{"id": "b374768e83196a14", "restriction": "none", "evidence": "", "where": ""}
+{"id": "74581f6229e5d8ca", "restriction": "none", "evidence": "", "where": ""}
+{"id": "66e9e5d735fee638", "restriction": "partial", "evidence": "코드는 구현하지 않고 설계 스펙을 낸다. designer는 설계 스펙까지. tsx를 짜지 않는다", "where": "body"}
+{"id": "5bc7eba679d71cc7", "restriction": "partial", "evidence": "Never modify schemas or output files in `i18nify-data/` — only fetch and save raw content", "where": "body"}
+{"id": "18bf512d71a632db", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cd836fd2681b1105", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8ce22990e6a6c5eb", "restriction": "full", "evidence": "You Must NOT: Modify product code (read-only access to implementation)", "where": "body"}
+{"id": "25c765ce764d6025", "restriction": "none", "evidence": "", "where": ""}
+{"id": "97237f9bb8a66064", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f94952e74e37d569", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ee243dd263c19f34", "restriction": "partial", "evidence": "Never modify source code under `bfcodec/`. This agent only updates managed/generated files", "where": "body"}
+{"id": "2b76f791397126fa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "57bc846d9eacb27b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "05712cd2f795940f", "restriction": "full", "evidence": "Does NOT edit files — reporting only", "where": "description"}
+{"id": "933ba98bedc416a0", "restriction": "none", "evidence": "", "where": ""}

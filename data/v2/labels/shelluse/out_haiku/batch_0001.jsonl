@@ -1,0 +1,49 @@
+{"id": "397cb82050ab153c", "shell_use": "verify", "evidence": "You may also run tests or validations if the scripts are clear"}
+{"id": "3594b7fd5c27da33", "shell_use": "inspect", "evidence": "run only read-only commands like git status/diff/log"}
+{"id": "aeb75428289faece", "shell_use": "change", "evidence": "gh issue edit <NUMBER> --repo agigante80/VPNSentinel --body"}
+{"id": "be1d18e5f3b3e53c", "shell_use": "verify", "evidence": "Build INAV firmware targets using the established build system"}
+{"id": "01f7b4576e2ccef4", "shell_use": "none", "evidence": ""}
+{"id": "7acd08239a1bfaaa", "shell_use": "inspect", "evidence": "Changed files: `git diff --name-only HEAD`"}
+{"id": "662f140a719bd4c0", "shell_use": "verify", "evidence": "beyond verification (lint/build/test)"}
+{"id": "0e210b68570ec6c8", "shell_use": "none", "evidence": ""}
+{"id": "87439a87d1c7611b", "shell_use": "inspect", "evidence": "Use Glob and Grep to find files related to the phase goal terms"}
+{"id": "b54d38664c2df370", "shell_use": "change", "evidence": "synthesize audio for location { name: \"Stari most\" } locale"}
+{"id": "2b9a29bd8e0832aa", "shell_use": "verify", "evidence": "npm run dev as a **background** process"}
+{"id": "b4386c39ef647a89", "shell_use": "verify", "evidence": "Do the tests actually test the thing? Run them."}
+{"id": "56026c2e9329d9e4", "shell_use": "inspect", "evidence": "git log -p | grep -iE '(password|secret|api.?key|token)'"}
+{"id": "31e376560b44b716", "shell_use": "change", "evidence": "git tag v<バージョン>"}
+{"id": "6cf6d37dc4fd699a", "shell_use": "inspect", "evidence": "git diff --name-only HEAD"}
+{"id": "e99dd5f5692e1826", "shell_use": "verify", "evidence": "Execute: `pytest /tmp/test_docs_[feature].py -v`"}
+{"id": "0bbe450f96c35e65", "shell_use": "change", "evidence": "gh pr review <url> --approve"}
+{"id": "3a092bbe5e7ac316", "shell_use": "change", "evidence": "Run `git commit` with a descriptive message"}
+{"id": "efd2b7c917024f81", "shell_use": "verify", "evidence": "pnpm install --frozen-lockfile && pnpm build"}
+{"id": "5afa20d42fb4df04", "shell_use": "inspect", "evidence": "Use Grep to find all recently modified files"}
+{"id": "c58b8a3ae8c35946", "shell_use": "none", "evidence": ""}
+{"id": "f5d02f5807c01673", "shell_use": "change", "evidence": "printf 'PASS' > /tmp/jtbd-verdict"}
+{"id": "3eba46a5764864f2", "shell_use": "inspect", "evidence": "Always verify: `node -e`"}
+{"id": "11ea025b4ce44f95", "shell_use": "none", "evidence": ""}
+{"id": "e52000a8cb979be6", "shell_use": "none", "evidence": ""}
+{"id": "bdc2c61f83f08444", "shell_use": "verify", "evidence": "swift build"}
+{"id": "56ab5fe3b2b2b880", "shell_use": "none", "evidence": ""}
+{"id": "bce345c40208de74", "shell_use": "inspect", "evidence": "Run git diff to see recent changes"}
+{"id": "cc9635163e0c5dfb", "shell_use": "verify", "evidence": "Executes tests, static analysis, and security tools"}
+{"id": "913e8586b66ee518", "shell_use": "verify", "evidence": "Run ruff on each changed Python file"}
+{"id": "877a612ed8fdcc10", "shell_use": "none", "evidence": ""}
+{"id": "d6db049f4c11d8ef", "shell_use": "none", "evidence": ""}
+{"id": "c6124df4aea86d4e", "shell_use": "verify", "evidence": "swift test"}
+{"id": "872cf4cbab43ce5e", "shell_use": "none", "evidence": ""}
+{"id": "70911f98035ac66a", "shell_use": "none", "evidence": ""}
+{"id": "d95cddab215c9cdd", "shell_use": "change", "evidence": "codegraph score --save-baseline"}
+{"id": "600ba3b4c176e2d7", "shell_use": "change", "evidence": "`~/.ark/ark search expand --result REQUEST_ID`"}
+{"id": "85f37a99f954c2ea", "shell_use": "inspect", "evidence": "Inspect the diff"}
+{"id": "50da1f22a0ffc3ad", "shell_use": "verify", "evidence": "Run `pnpm type-check` and `pnpm lint`"}
+{"id": "2a0b7ec6bfe106e8", "shell_use": "none", "evidence": ""}
+{"id": "3f29ed8e6651087b", "shell_use": "none", "evidence": ""}
+{"id": "3715ce4b678420aa", "shell_use": "verify", "evidence": "you may `git diff`, `Grep`, `cargo` read-only checks"}
+{"id": "6c0b3d12fcd0837a", "shell_use": "change", "evidence": "adb install -r"}
+{"id": "2cc4d2f79b3af20e", "shell_use": "verify", "evidence": "make go-check"}
+{"id": "2d48f09c9d2b11b8", "shell_use": "none", "evidence": ""}
+{"id": "cd8e6dda84aba384", "shell_use": "none", "evidence": ""}
+{"id": "9a1fb7a35317ef6a", "shell_use": "inspect", "evidence": "use Bash only for read-only commands (git log/blame, grep, cargo metadata)"}
+{"id": "b0c828b327930a57", "shell_use": "change", "evidence": "gh pr review 123 --request-changes"}
+{"id": "934d639ac3a2f72a", "shell_use": "change", "evidence": "bash .claude/scripts/integration_tests/cleanup_screenshots.sh"}

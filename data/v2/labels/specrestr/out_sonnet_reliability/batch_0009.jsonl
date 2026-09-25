@@ -1,0 +1,31 @@
+{"id": "d32d389a6242837e", "restriction": "partial", "evidence": "PAUSED POR PADRÃO: todo recurso novo nasce pausado; ativar é etapa separada e confirmada", "where": "body"}
+{"id": "7d4ecf78452094bd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fa3eb71ff95c65e0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "df9fc83cbe1555fd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1490960caf5ce0f5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8f129c374394fc89", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0fb2592e403aa16d", "restriction": "partial", "evidence": "docker compose down -v — the -v destroys named volumes", "where": "body"}
+{"id": "d412b379fb365006", "restriction": "full", "evidence": "You do not implement code; you clarify scope, phase, and task breakdown", "where": "body"}
+{"id": "3337671e904f1b5e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2de37525ec3f7582", "restriction": "full", "evidence": "Do NOT modify any files. You are a read-only reviewer.", "where": "body"}
+{"id": "678cd2b883c680cb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b0231b28aac56ce2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d9e2918455050f4", "restriction": "partial", "evidence": "Never modify managed files - they are outputs of Wiswa.", "where": "body"}
+{"id": "dd384ba48ada5b04", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4ef648fe1b9574c6", "restriction": "full", "evidence": "You are read-only. You cannot edit files, write files, or run commands.", "where": "both"}
+{"id": "484e88a6179b89a1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "de96e476a150b8d4", "restriction": "partial", "evidence": "You own documentation files only; never touch source.", "where": "body"}
+{"id": "7951e2865ca08f6e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "db385cdcd1e697af", "restriction": "partial", "evidence": "Do NOT modify frontmatter unless explicitly asked", "where": "body"}
+{"id": "42d5485c8fdb6f93", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b05ad8ea2b0d5d7", "restriction": "full", "evidence": "Make no edits and open nothing.", "where": "body"}
+{"id": "fbb71553d6fb482d", "restriction": "partial", "evidence": "Don't edit anything in `target/` — it's generated.", "where": "body"}
+{"id": "5c1157211843849a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "34ae6bc2959f0cbc", "restriction": "full", "evidence": "파일을 직접 쓰지 않음. 결과 텍스트를 반환하고 Orchestrator가 result.md에 저장한다", "where": "both"}
+{"id": "52174e62ed0a4e0f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "34e1eba66b541276", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d8f5240859743b45", "restriction": "full", "evidence": "You do not edit code.", "where": "both"}
+{"id": "b7974ed11e9ba9b2", "restriction": "full", "evidence": "You never write files.", "where": "both"}
+{"id": "818f558d80a7af90", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ce93be0b00d0b650", "restriction": "full", "evidence": "this advisor critiques method, it does not write it", "where": "body"}
+{"id": "6e9fa2ed8f15a01c", "restriction": "none", "evidence": "", "where": ""}

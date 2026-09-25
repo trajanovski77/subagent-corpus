@@ -1,0 +1,45 @@
+{"id": "52dc90e27bf7d154", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f7b495f32ab08dd2", "restriction": "full", "evidence": "READ-ONLY — do NOT modify any files. You audit and report only.", "where": "body"}
+{"id": "4926b876f5b7edea", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ce2a5b8c5823fa10", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a35f96007c64b9e7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f49ea97022d6646c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "066e91f6f3b5ee60", "restriction": "none", "evidence": "", "where": ""}
+{"id": "acb0937f3a2962ff", "restriction": "none", "evidence": "", "where": ""}
+{"id": "11c2eef3feb1b493", "restriction": "full", "evidence": "**Read-only.** Do not run tests or mutating commands. `Read`, `Grep`, `Glob`, and read-only `git`", "where": "body"}
+{"id": "f567727f49104347", "restriction": "partial", "evidence": "Never `Edit`, `Write`, or `MultiEdit` documentation files. Your only `Write` targets are `packages/backend.ai-webui-docs/.agent-output/docs-lint-report.md`", "where": "body"}
+{"id": "604f69016dad0746", "restriction": "none", "evidence": "", "where": ""}
+{"id": "aa57817b8326d478", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8ce53b8c88ed5071", "restriction": "full", "evidence": "Do not edit code. Do not commit. You are read-only on the repo; your job is to observe and report.", "where": "body"}
+{"id": "17e1bc7e68331fe7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9cf40dadf9aa0442", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b431fbe1e5813a08", "restriction": "none", "evidence": "", "where": ""}
+{"id": "61ef209dee57f3cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e3fd89624f481aae", "restriction": "full", "evidence": "NO modifiques archivos (Don't modify files). Solo LEE, ANALIZA, REPORTA (Just read, analyze, report)", "where": "body"}
+{"id": "5298b13342a09efd", "restriction": "partial", "evidence": "You may ONLY write to or edit document files (.md, .txt). You must NEVER directly modify source code files (.js, .ts, .py, .java, etc.)", "where": "body"}
+{"id": "6297f4aba68fa1d4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a20815cc25d7bcdb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "314ab8c0b0b1aded", "restriction": "full", "evidence": "Do not write or edit files. Read-only.", "where": "body"}
+{"id": "6678f22b4c58a8de", "restriction": "full", "evidence": "Never run a command that writes: no `git add`, `commit`, `push`. You have no `Edit` or `Write` tool by design.", "where": "body"}
+{"id": "53b61f1d61c325a2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "db9ba28406d81a3b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0c1a6c4bdae9b9fb", "restriction": "partial", "evidence": "**Edit:** - `wiki/Research/Debriefs/**` only. **Hard refuse:** edits anywhere outside `wiki/Research/Debriefs/**`", "where": "body"}
+{"id": "8de115e0c397ba52", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2c83b7953e6256e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f74f059215871e00", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b47f27f33fceeec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fbed393294a97972", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e0d00db8c6f82469", "restriction": "partial", "evidence": "Sandbox: edit assigned paths under `DOMAIN.md` and `openspec/specs/`; do not edit `src/`, `tests/`, or runtime docs.", "where": "body"}
+{"id": "051ea5ec37837fb2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d8971467420243fc", "restriction": "partial", "evidence": "do not edit them and do not stage or commit existing diffs in them (scaffold-managed files)", "where": "body"}
+{"id": "0fbabd423ec4d683", "restriction": "none", "evidence": "", "where": ""}
+{"id": "10afb2a578b8fe83", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b6002b0c074233d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "06db216e339ce282", "restriction": "none", "evidence": "", "where": ""}
+{"id": "54d4113dc91b5f38", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5e388c1eaab9be80", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eaf6bed220f36cb7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2b1998616d848b79", "restriction": "partial", "evidence": "You do NOT write PROJECT.md, REQUIREMENTS.md, or ROADMAP.md — those are produced downstream by `gsd-roadmapper`", "where": "body"}
+{"id": "e5fa4e20ac75c94e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1536f52c1e510c3e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eebb58dd6168e98e", "restriction": "none", "evidence": "", "where": ""}

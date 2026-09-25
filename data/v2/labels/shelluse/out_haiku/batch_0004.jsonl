@@ -1,0 +1,46 @@
+{"id": "c972fce93d5558b4", "shell_use": "inspect", "evidence": "Automated scan — SAST + deps + secrets (gitleaks, Trivy, Semgrep)"}
+{"id": "0b28c25d2de9b8f4", "shell_use": "none", "evidence": ""}
+{"id": "b273620e189022c7", "shell_use": "verify", "evidence": "make go-check, make go-test, make docker-build"}
+{"id": "3e054de1f6819dd2", "shell_use": "none", "evidence": ""}
+{"id": "fb78a9ce0478dd09", "shell_use": "inspect", "evidence": "Bash is for read-only inspection only (`grep`, `git log`, `git show`, `cat`, `ls`)"}
+{"id": "da236631ebb3e312", "shell_use": "verify", "evidence": "Run the suite before any behavioural claim you are unsure of"}
+{"id": "24a95296417365d6", "shell_use": "verify", "evidence": "Có thể chạy `flutter analyze` / `flutter test`"}
+{"id": "a72e8b5f7b6eafb7", "shell_use": "inspect", "evidence": "grep -r for security pattern checking"}
+{"id": "ffaf6d8d7a94f1ad", "shell_use": "none", "evidence": ""}
+{"id": "98703f565ffe3b3d", "shell_use": "verify", "evidence": "Execute the fresh PoC again from scratch, bob_repo_docker_run"}
+{"id": "7c6265a8973c59d6", "shell_use": "inspect", "evidence": "`entire search --json` command"}
+{"id": "5317daecc5ad92cb", "shell_use": "verify", "evidence": "Run `make eval` and analyze the RAGAS metrics output"}
+{"id": "bb5a456ec740ccd1", "shell_use": "inspect", "evidence": "Use Glob/Grep for targeted searches"}
+{"id": "d34c910b22279bc1", "shell_use": "none", "evidence": ""}
+{"id": "499fb777eeeca871", "shell_use": "verify", "evidence": "Run automated tools first (`npm audit`, lint, type-check)"}
+{"id": "66a73adac42b3f19", "shell_use": "inspect", "evidence": "May use `git diff`, `git log`, `git show` via Bash for read-only inspection"}
+{"id": "fb0228662ef888c4", "shell_use": "none", "evidence": ""}
+{"id": "588c7bd88e733058", "shell_use": "inspect", "evidence": "Use Bash only for read-only commands (ls, git, cat, find, swift package describe)"}
+{"id": "7db540d50c249898", "shell_use": "verify", "evidence": "python3 -c and .claude/scripts/dotnet-serialized run for verification"}
+{"id": "267ed7e157ecc9c6", "shell_use": "verify", "evidence": "npm test -- --run, npm run lint, npm run typecheck, pytest, go test"}
+{"id": "f69d4cbb47bdfd9c", "shell_use": "none", "evidence": ""}
+{"id": "42d5485c8fdb6f93", "shell_use": "inspect", "evidence": "Identify changes via `git diff`"}
+{"id": "1df3c8cfa3b3f091", "shell_use": "inspect", "evidence": "Search for performance anti-patterns using Grep"}
+{"id": "f3d9cdda82e3d84f", "shell_use": "verify", "evidence": "make go-check, make go-test, make docker-build, yamllint"}
+{"id": "f0ff6f355bd1c5df", "shell_use": "verify", "evidence": "uv run pytest -q --tb=short"}
+{"id": "5ed66343e9992b12", "shell_use": "change", "evidence": "gh issue edit <NUMBER> --repo agigante80/AgentGate --body to synthesize missing content"}
+{"id": "29f2c206e02a7395", "shell_use": "verify", "evidence": "xcrun simctl screenshot, xcrun simctl install / launch, convos CLI, xcrun simctl spawn log show"}
+{"id": "204b22ee8ed29b34", "shell_use": "inspect", "evidence": "grep for risky patterns in code"}
+{"id": "af73f349db25d9bb", "shell_use": "change", "evidence": "flow record comment add task-<id> and flow record index <taskFolder>"}
+{"id": "df70f8ba0d91de11", "shell_use": "none", "evidence": ""}
+{"id": "54c698ab54546379", "shell_use": "inspect", "evidence": "Run `git diff` to see what changed, Check `git status` for modified files"}
+{"id": "fdf70220651eca22", "shell_use": "none", "evidence": ""}
+{"id": "a69a2b90f0304291", "shell_use": "inspect", "evidence": "ssh odra / ssh polonez, byobu list-sessions, byobu capture-pane -p, rg, tail, head"}
+{"id": "fb9fc46da463366a", "shell_use": "change", "evidence": "git push, gh pr create, git rebase --exec, grava signal PR_CREATED"}
+{"id": "bd8a717b8d543125", "shell_use": "inspect", "evidence": "tail -f, ls -lt, watch, grep for log monitoring"}
+{"id": "4f972fc71a3f21cf", "shell_use": "verify", "evidence": "cd frontend && node -e to re-run and verify data"}
+{"id": "0375404cd9446431", "shell_use": "verify", "evidence": "Captures before/after screenshots via Playwright and diffs them"}
+{"id": "d903524f94f23d02", "shell_use": "verify", "evidence": "uv run poe build, uv run poe test, uv run poe lint"}
+{"id": "ed74deeb1d90beb3", "shell_use": "inspect", "evidence": "`git log`, `git diff`, `gh pr view`, `ls`, `wc`"}
+{"id": "d314f5bf8327bf8a", "shell_use": "verify", "evidence": "Run lint, type check, and tests"}
+{"id": "e9acaaca551cfec4", "shell_use": "inspect", "evidence": "`git log`, `git diff` for investigating commits"}
+{"id": "dfaa202540f1d7ed", "shell_use": "inspect", "evidence": "The full diff (`git diff <base>...HEAD`)"}
+{"id": "bf17b1ad67ae7e41", "shell_use": "inspect", "evidence": "`grep sk_live|eyJ` for hardcoded secrets check"}
+{"id": "a13f1800aa9ea4cb", "shell_use": "verify", "evidence": "`echo $(( <n> * 2 ))`"}
+{"id": "376b9fca8183e804", "shell_use": "none", "evidence": ""}
+{"id": "5ef4bf16755a8619", "shell_use": "inspect", "evidence": "find . -maxdepth 3 -type d | grep, Grep for import patterns"}

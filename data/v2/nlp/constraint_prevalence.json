@@ -1,0 +1,102 @@
+{
+ "n_sample": 2998,
+ "n_population": 189914,
+ "strata": {
+  "obligation": {
+   "population": 69937,
+   "sampled": 1498,
+   "weight": 0.3683
+  },
+  "prohibition": {
+   "population": 119977,
+   "sampled": 1500,
+   "weight": 0.6317
+  }
+ },
+ "categories": {
+  "FS_MODIFY": {
+   "prevalence": 0.0814,
+   "lo": 0.0713,
+   "hi": 0.0918,
+   "n_labelled": 215
+  },
+  "EXEC": {
+   "prevalence": 0.0411,
+   "lo": 0.0341,
+   "hi": 0.0487,
+   "n_labelled": 126
+  },
+  "VCS": {
+   "prevalence": 0.0246,
+   "lo": 0.019,
+   "hi": 0.0309,
+   "n_labelled": 70
+  },
+  "SCOPE": {
+   "prevalence": 0.1066,
+   "lo": 0.0948,
+   "hi": 0.1185,
+   "n_labelled": 276
+  },
+  "SECRETS": {
+   "prevalence": 0.0282,
+   "lo": 0.0221,
+   "hi": 0.0348,
+   "n_labelled": 76
+  },
+  "EXTERNAL": {
+   "prevalence": 0.0267,
+   "lo": 0.0209,
+   "hi": 0.0332,
+   "n_labelled": 76
+  },
+  "DESTRUCTIVE": {
+   "prevalence": 0.0071,
+   "lo": 0.004,
+   "hi": 0.0104,
+   "n_labelled": 18
+  },
+  "QUALITY": {
+   "prevalence": 0.4741,
+   "lo": 0.4558,
+   "hi": 0.492,
+   "n_labelled": 1530
+  },
+  "OUTPUT": {
+   "prevalence": 0.1399,
+   "lo": 0.127,
+   "hi": 0.1533,
+   "n_labelled": 430
+  },
+  "ESCALATE": {
+   "prevalence": 0.0608,
+   "lo": 0.0519,
+   "hi": 0.07,
+   "n_labelled": 171
+  },
+  "HONESTY": {
+   "prevalence": 0.1047,
+   "lo": 0.0938,
+   "hi": 0.1159,
+   "n_labelled": 279
+  },
+  "DELEGATION": {
+   "prevalence": 0.0363,
+   "lo": 0.0298,
+   "hi": 0.0438,
+   "n_labelled": 107
+  },
+  "OTHER": {
+   "prevalence": 0.0956,
+   "lo": 0.0846,
+   "hi": 0.107,
+   "n_labelled": 274
+  }
+ },
+ "restricts_writes": {
+  "prevalence": 0.0763,
+  "lo": 0.0664,
+  "hi": 0.0865,
+  "n_labelled": 192
+ }
+}

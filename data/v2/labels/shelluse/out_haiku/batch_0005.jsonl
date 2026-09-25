@@ -1,0 +1,44 @@
+{"id": "9d1496f068dec36f", "shell_use": "inspect", "evidence": "git show origin/main:<file> / git grep -n"}
+{"id": "2d5d1ff7821549b2", "shell_use": "change", "evidence": "Create a tmux session for this test run, Create GitHub Issues for bugs found"}
+{"id": "a3ae4235860e22f8", "shell_use": "verify", "evidence": "make go-check, make go-test, make docker-build, yamllint"}
+{"id": "207bfdd74af40be1", "shell_use": "inspect", "evidence": "Use git diff, git status, or examine recently modified files"}
+{"id": "1f52ea45074568ba", "shell_use": "verify", "evidence": "Automated vulnerability scanning, Manual security testing"}
+{"id": "bcdd527caf2f8894", "shell_use": "none", "evidence": ""}
+{"id": "3e0333e2a5f2d4e8", "shell_use": "change", "evidence": "deploy using the appropriate method, Build: build the application"}
+{"id": "fbed393294a97972", "shell_use": "none", "evidence": ""}
+{"id": "45ce7dd54739c4c8", "shell_use": "verify", "evidence": "Run `npm test` and read the relevant test files"}
+{"id": "cdb6f85db24a6027", "shell_use": "none", "evidence": ""}
+{"id": "b41c87f7d5921e86", "shell_use": "inspect", "evidence": "Run `git diff --staged` and `git diff` to see all changes"}
+{"id": "faf46b4a5f52eddf", "shell_use": "none", "evidence": ""}
+{"id": "2945ec693f27a958", "shell_use": "none", "evidence": ""}
+{"id": "495e184b39983731", "shell_use": "none", "evidence": ""}
+{"id": "eb9ec80424519869", "shell_use": "verify", "evidence": "npm audit --audit-level=high"}
+{"id": "9f7f806b2244c448", "shell_use": "inspect", "evidence": "qmd query or grep for wikilinks"}
+{"id": "0799521305e0a2f0", "shell_use": "verify", "evidence": "npm audit / pip audit / safety check"}
+{"id": "c5f09a9d523d151b", "shell_use": "verify", "evidence": "flutter analyze to check"}
+{"id": "07517280761bcd7f", "shell_use": "inspect", "evidence": "cat research/output/live_run_YYYYMMDD_HHMMSS.json"}
+{"id": "701ef13a9bb06881", "shell_use": "verify", "evidence": "test / ci / lint / build: Bash でコマンド実行結果を確認する"}
+{"id": "17f7bdaa5d80b316", "shell_use": "verify", "evidence": "python3 scripts/markdown_extract.py"}
+{"id": "680e58f020f96151", "shell_use": "change", "evidence": "git push, git revert --no-edit"}
+{"id": "bd333524f56b6a96", "shell_use": "inspect", "evidence": "Use Grep for searching code"}
+{"id": "21ba1fcd9a986bb8", "shell_use": "none", "evidence": ""}
+{"id": "f2e1881c12e29a39", "shell_use": "change", "evidence": "docker compose up -d db or alembic upgrade head"}
+{"id": "3dc7e22cd294ff29", "shell_use": "verify", "evidence": "Execute code, run tests, inspect build output"}
+{"id": "c44d4e691c67e2d2", "shell_use": "none", "evidence": ""}
+{"id": "eaed5f4d30ddf89a", "shell_use": "none", "evidence": ""}
+{"id": "8967f31656ebcc3b", "shell_use": "none", "evidence": ""}
+{"id": "218cd666e790c487", "shell_use": "inspect", "evidence": "find . -maxdepth 2"}
+{"id": "ca7cc3fd51146cb7", "shell_use": "inspect", "evidence": "find command or git diff --name-only"}
+{"id": "f9bde37d38c750a6", "shell_use": "inspect", "evidence": "usá `git diff` o `git status`"}
+{"id": "aa996394f5240ffa", "shell_use": "verify", "evidence": "python3 scripts/verify_traceability.py"}
+{"id": "ee460180bbd2ade9", "shell_use": "none", "evidence": ""}
+{"id": "7fdb83c03156bfd9", "shell_use": "inspect", "evidence": "npx --yes ctx7@latest"}
+{"id": "13adf898d6440a93", "shell_use": "inspect", "evidence": "curl with Authorization header or git log"}
+{"id": "0392539d3280085e", "shell_use": "inspect", "evidence": "git status --short"}
+{"id": "51b53a49efc4c509", "shell_use": "verify", "evidence": "run the relevant stateless suite twice"}
+{"id": "f567727f49104347", "shell_use": "inspect", "evidence": "grep -rn or git log"}
+{"id": "c11a1d258f3953e9", "shell_use": "verify", "evidence": "npm test and npm run test:integration pass"}
+{"id": "fe30ddf1c20a3c96", "shell_use": "none", "evidence": ""}
+{"id": "4c61bd6667e33895", "shell_use": "none", "evidence": ""}
+{"id": "04a4ab1efa36db47", "shell_use": "none", "evidence": ""}
+{"id": "2dde18a227c1b17e", "shell_use": "verify", "evidence": "pnpm type-check pnpm lint pnpm build pnpm test"}

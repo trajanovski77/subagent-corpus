@@ -1,0 +1,28 @@
+{"id": "0b78e61c5cdff3a7", "restriction": "partial", "evidence": "Do not edit the backlog. You are read-only on `.claude/backlog.md`.", "where": "body"}
+{"id": "81bb5bcdbb63b31e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "63b67029f9c039c8", "restriction": "partial", "evidence": "NEVER modify production code — only write test files in `tests/unit/`", "where": "body"}
+{"id": "84cdd4001bd84d0a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "96d9d049f43ef850", "restriction": "partial", "evidence": "NEVER try to fix bugs yourself. Always delegate to the bug-fixer agent via the Task tool.", "where": "body"}
+{"id": "35453eac5190e3c6", "restriction": "full", "evidence": "READ-ONLY ACCESS: Never modify code - only analyze and report", "where": "body"}
+{"id": "b6433c04429a3dcd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f2dae88b2c8f030c", "restriction": "full", "evidence": "Read-only", "where": "description"}
+{"id": "893916fc4f817152", "restriction": "none", "evidence": "", "where": ""}
+{"id": "57968bd436a3336a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "76729f088ecf4770", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d98c3e058db28bd9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "adc5717e48cad6cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "265784045ef3afa5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6f2020791c91cac3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b3edffe8e4a3da83", "restriction": "partial", "evidence": "NEVER touch SwiftUI view files — those belong to queen-swift", "where": "body"}
+{"id": "a6a24b67d22520e0", "restriction": "partial", "evidence": "Stay inside your cluster's datasets. A fix that needs a framework change (`pipelines/utils`, `AGENTS.md`) is a separate PR — report it, do not make it.", "where": "body"}
+{"id": "8a36f3382b75f306", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d953c14474351883", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8f52cfb4ab224c05", "restriction": "full", "evidence": "Does not edit code", "where": "description"}
+{"id": "33c5ffe5c8244756", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bbb6ef839f98e081", "restriction": "partial", "evidence": "You do not modify production code under `app/` — if a test reveals a source bug, report it for dev-mode follow-up.", "where": "body"}
+{"id": "9c5a66965899f125", "restriction": "full", "evidence": "Never edit or write files", "where": "body"}
+{"id": "93b06b12e6ac56e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "69f60ee868f291e5", "restriction": "partial", "evidence": "Kein Produktions-PHP, JS oder CSS schreiben.", "where": "body"}
+{"id": "5cd12fc119daad82", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d857bde3f87ea38", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe11fada72575287", "restriction": "none", "evidence": "", "where": ""}

@@ -1,0 +1,40 @@
+{"id": "a96630a75f6ff6fc", "restriction": "full", "evidence": "You DO NOT build, edit code, rewrite markdown, or capture screenshots. Review only.", "where": "body"}
+{"id": "cb1bef04ca39b7c0", "restriction": "full", "evidence": "you have no write tools — your output is the review", "where": "body"}
+{"id": "d62fd3dcacbf36c0", "restriction": "partial", "evidence": "NEVER commit to git (the lead handles git)", "where": "body"}
+{"id": "c5cf37de91a3ff7e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "67411181074de4f5", "restriction": "partial", "evidence": "DO NOT write the file yourself (permissions are denied in background) / DO NOT attempt to commit or push", "where": "body"}
+{"id": "a2d8e710547a96a1", "restriction": "full", "evidence": "You MUST NOT call `Edit`, `Write`, or any MCP edit tool.", "where": "body"}
+{"id": "8590088470b528d3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bdc187178bd35a28", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d59dfb5a6d2c579f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cbdfe10b364a5981", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cf8b822a5db99f59", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4526a09f9f38deab", "restriction": "full", "evidence": "You DO NOT implement solutions yourself - you only brainstorm and advise / DO NOT implement anything, just brainstorm", "where": "body"}
+{"id": "c6056681c22a41dc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a2516d590dd177f2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c98829d0cd44f18c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dcab4eab2ecedc00", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c47ce8a11cb1b18e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "df7ef9a011761e59", "restriction": "partial", "evidence": "You do NOT: Create PRs or merge", "where": "body"}
+{"id": "b510776ce7f0ff90", "restriction": "partial", "evidence": "Do NOT write tests — just find existing coverage", "where": "body"}
+{"id": "3123a9a38741e027", "restriction": "partial", "evidence": "do not open PRs, do not commit / Open PRs, push branches, or commit", "where": "body"}
+{"id": "e7ce5659fa78f5fa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0051e7a205fb9ea3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a2a955c952075b49", "restriction": "partial", "evidence": "Never modify source code under `instagram_archiver/` or `tests/`", "where": "body"}
+{"id": "a6e3dfc3e139afb6", "restriction": "full", "evidence": "Do not edit any file. Not a test, not a `.asmdef`, not a `known-failures.txt`. / Do not commit, push, or touch git state.", "where": "body"}
+{"id": "62ce3563da4ddf7e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "84addbe061cbfc35", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5d0a850a6ef25322", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9f479fa9364e60c6", "restriction": "partial", "evidence": "NO crees cupulas N4 sin consultar al operador / NO borres cupulas sin backup previo y confirmacion explicita / NO modifiques `.savia-vault/` a mano", "where": "body"}
+{"id": "68cb294b7eecd466", "restriction": "partial", "evidence": "Do NOT use for the iOS app in app/, features/, or components/", "where": "description"}
+{"id": "a79d7c74d21ca311", "restriction": "partial", "evidence": "Code only — not prose/documentation writing (Markdown docs, READMEs, guides)", "where": "description"}
+{"id": "8d21d397836e0636", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cdd2b9411623ddeb", "restriction": "partial", "evidence": "NEVER modify the doc file. The verifier is read-only.", "where": "body"}
+{"id": "9a38bfb919186736", "restriction": "full", "evidence": "You don't edit files — your output is structured feedback the author acts on. / No editing. Your output is text.", "where": "body"}
+{"id": "904a8033ca6e28f2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "783bcc878f8f87db", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ede9b7f1989cf360", "restriction": "none", "evidence": "", "where": ""}
+{"id": "deab29b815176517", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a3fd552333046194", "restriction": "none", "evidence": "", "where": ""}
+{"id": "570fc7d1a0d1720f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3ded4da2de079f77", "restriction": "none", "evidence": "", "where": ""}

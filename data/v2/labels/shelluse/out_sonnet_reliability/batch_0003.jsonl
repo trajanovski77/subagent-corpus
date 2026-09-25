@@ -1,0 +1,40 @@
+{"id": "2f936319afaca51a", "shell_use": "change", "evidence": "gh issue edit <issue-number> --repo agigante80/Actual-sync --body-file /tmp/gate-body-<issue-number>.md"}
+{"id": "411b16283ed26cc5", "shell_use": "none", "evidence": ""}
+{"id": "ca298359de94cb78", "shell_use": "inspect", "evidence": "Use Bash only for read-only inspection (`git diff`, `git log`, grep-style checks)."}
+{"id": "0087d7956a51ddb1", "shell_use": "verify", "evidence": "Run `pnpm audit` (or `npm audit` / `pip-audit` / `go mod verify` depending on language)"}
+{"id": "4a403d8935ff1b12", "shell_use": "verify", "evidence": "py -m unittest discover -s tools/log-tools/tests -v"}
+{"id": "7c284d924d36b4fe", "shell_use": "verify", "evidence": "`npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, `npm audit --omit=dev`"}
+{"id": "29bf8a6a7803b2ca", "shell_use": "verify", "evidence": "make go-test"}
+{"id": "76e84b19e20da57b", "shell_use": "none", "evidence": ""}
+{"id": "d240ae4db9242edb", "shell_use": "inspect", "evidence": "Run `git diff` to see recent changes"}
+{"id": "5ac123e46f4cde27", "shell_use": "inspect", "evidence": "grep existing check implementations"}
+{"id": "314ab8c0b0b1aded", "shell_use": "inspect", "evidence": "review `git diff master...HEAD`"}
+{"id": "ac2148990f69456b", "shell_use": "inspect", "evidence": "Run `git diff --staged` and `git diff` to see all changes"}
+{"id": "afcfd48ff473ada7", "shell_use": "verify", "evidence": "Run `validator/scripts/verify_rls.py` directly."}
+{"id": "92c6c4bfdaa458f7", "shell_use": "inspect", "evidence": "gh api repos/.../contents/<path>?ref=<sha>"}
+{"id": "4ebaf3c87535d4f7", "shell_use": "none", "evidence": ""}
+{"id": "da37f0e90dea7c2f", "shell_use": "change", "evidence": "scripts/lang-smoke.sh <git-url> <probe-symbol> <clone-name>"}
+{"id": "4393c07aceb7e531", "shell_use": "verify", "evidence": "Run `node --check` on all .js files under `src/` to verify no syntax errors."}
+{"id": "7635a86a5257283f", "shell_use": "verify", "evidence": "npm audit"}
+{"id": "a79b5efaa92ef52d", "shell_use": "inspect", "evidence": "Run `lostbench coverage --taxonomy configs/attack_taxonomy.yaml` for gap analysis"}
+{"id": "5c31d8a65868c8e6", "shell_use": "inspect", "evidence": "gh run list --branch <branch-name> --limit 5 --json status,conclusion,workflowName,createdAt,headSha,event,databaseId"}
+{"id": "6ed6b64b39762e75", "shell_use": "none", "evidence": ""}
+{"id": "27db164c2cd197a2", "shell_use": "inspect", "evidence": "`npm run logs 50`"}
+{"id": "0b78e61c5cdff3a7", "shell_use": "inspect", "evidence": "grep -n \"^- \\[ \\]\" .claude/backlog.md"}
+{"id": "1b295de5c1d64f95", "shell_use": "verify", "evidence": "Run `npm run build` to confirm the site builds without errors or warnings."}
+{"id": "0d08b86d80ae542c", "shell_use": "none", "evidence": ""}
+{"id": "46a6fa7369dfee50", "shell_use": "verify", "evidence": "Run `gleam test` in the project root"}
+{"id": "7068b1d85c4f93b4", "shell_use": "inspect", "evidence": "entire search --json"}
+{"id": "192a3c1127b3e50f", "shell_use": "change", "evidence": "npm run lint:fix"}
+{"id": "8fafb26bb1fdaa6b", "shell_use": "inspect", "evidence": "grepai search \"authentication flow\" --json --compact"}
+{"id": "483c32dc0ede660f", "shell_use": "verify", "evidence": "Run language-specific static analysis tools and take into account errors and warnings"}
+{"id": "8e9a5255f5610631", "shell_use": "none", "evidence": ""}
+{"id": "81cfec19c0ad7a2e", "shell_use": "change", "evidence": "gh pr merge <N> --squash --repo StefanMaron/BusinessCentral.AL.Runner"}
+{"id": "83fe1902ab936d46", "shell_use": "inspect", "evidence": "gh issue list --label \"MSMVPAI\" --state closed --json number,title"}
+{"id": "7a588a219ab3a1bb", "shell_use": "verify", "evidence": "boilerplate/_lib/container-make go-test"}
+{"id": "c22b29feebd5b12a", "shell_use": "verify", "evidence": "Run linter (ESLint/Pylint/golangci-lint) and formatter checks"}
+{"id": "254efeef983b45a7", "shell_use": "none", "evidence": ""}
+{"id": "933104b86119a69d", "shell_use": "verify", "evidence": "swift build --package-path apps/queen"}
+{"id": "70c3164b4cc4b543", "shell_use": "change", "evidence": "Never `git add -A` or `git add .` unless the user asked for it"}
+{"id": "5c7d0dced3e474c4", "shell_use": "none", "evidence": ""}
+{"id": "a72d9830325ff1a8", "shell_use": "verify", "evidence": "You may run read-only commands (e.g. `git diff`, `cargo test --release --lib <filter>`) to verify claims"}

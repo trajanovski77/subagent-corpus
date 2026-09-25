@@ -1,0 +1,41 @@
+{"id": "eb555d5e365359b4", "shell_use": "verify", "evidence": "verify plan-structure"}
+{"id": "b8aae4657f953962", "shell_use": "none", "evidence": ""}
+{"id": "fdf69fc9a386ce42", "shell_use": "change", "evidence": "update labels (remove `loom:review-requested`, add `loom:pr`)"}
+{"id": "880cc595c776e729", "shell_use": "change", "evidence": "Create or update `TEST-PLAN.md`"}
+{"id": "8c0c67f1e2cc00de", "shell_use": "none", "evidence": ""}
+{"id": "e8deca1b16606380", "shell_use": "inspect", "evidence": "Use Grep to locate relevant line ranges first, then Read with `offset`/`limit`"}
+{"id": "fe21c0917a5bc614", "shell_use": "change", "evidence": "Use `make cleanup` if zombie processes detected"}
+{"id": "1adb8845270cc39b", "shell_use": "none", "evidence": ""}
+{"id": "8df71aa5fa1db454", "shell_use": "verify", "evidence": "dotnet test --nologo"}
+{"id": "2ac11f3086ff38ff", "shell_use": "inspect", "evidence": "running `git diff --stat` to match dynamic dispatch"}
+{"id": "dfb1585c4b2e621d", "shell_use": "inspect", "evidence": "`git diff main` — for review of working-tree changes"}
+{"id": "4e0b7ef7d0e26367", "shell_use": "verify", "evidence": "may read, search, and run builds, tests, and lints"}
+{"id": "96a6bcf64916057b", "shell_use": "inspect", "evidence": "Use `git diff` to see what changed if no specific files are named"}
+{"id": "399d5f581fe4a31c", "shell_use": "verify", "evidence": "flutter test <regression_test_file> --name \"<test_name>\""}
+{"id": "74c812c1b5f6cc4e", "shell_use": "change", "evidence": "Stage changes, then suggest a one-line commit message"}
+{"id": "bcdac1a97804548f", "shell_use": "inspect", "evidence": "Inspect the diff, nearby tests, and project instructions"}
+{"id": "a274e24ce2fe7b58", "shell_use": "inspect", "evidence": "Use Grep to locate relevant line ranges first, then Read with `offset`/`limit`"}
+{"id": "595cce06131a8fda", "shell_use": "verify", "evidence": "`npm audit`, `pip-audit`, `cargo audit`, GitHub Dependabot"}
+{"id": "dc0b2f8359e3942c", "shell_use": "change", "evidence": "Apply the fix directly to the code."}
+{"id": "e3fe6286954cdd50", "shell_use": "verify", "evidence": "python -c \"from atlas.evaluator import judge; ...\""}
+{"id": "2bcb8ed903e2ea0b", "shell_use": "change", "evidence": "저장 위치: `leads/{company_slug}/profile.json`"}
+{"id": "d27c9fc7d23b5857", "shell_use": "change", "evidence": "claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman"}
+{"id": "9c24356e5e916ed7", "shell_use": "verify", "evidence": "Run lint: ``ruff check .`` and ``mypy --no-incremental .``"}
+{"id": "4de367004bd38f6a", "shell_use": "inspect", "evidence": "git diff <base>...HEAD"}
+{"id": "c63615aab9513930", "shell_use": "inspect", "evidence": "Use `git diff --stat HEAD` to find recent changes involving ETOs or EventHandlers"}
+{"id": "a46060e898ab3fcd", "shell_use": "verify", "evidence": "Start the dev server with the Bash tool's background mode"}
+{"id": "65ffa72000dabfe4", "shell_use": "verify", "evidence": "Bash - Run commands (for logs, tests)"}
+{"id": "a23ce529e62d7b78", "shell_use": "none", "evidence": ""}
+{"id": "bdee478f87d86bb5", "shell_use": "none", "evidence": ""}
+{"id": "6b87678f6a353653", "shell_use": "none", "evidence": ""}
+{"id": "3fa5eec775aee58f", "shell_use": "none", "evidence": ""}
+{"id": "fdf74fe8b6e00575", "shell_use": "verify", "evidence": "You may run the failing test, query the local database read-only and grep the tree."}
+{"id": "4bd10c9e75eb5c44", "shell_use": "none", "evidence": ""}
+{"id": "885ddeb9b2be8776", "shell_use": "change", "evidence": "applies type/effort/priority/area labels via gh CLI"}
+{"id": "e4ac12a423842274", "shell_use": "none", "evidence": ""}
+{"id": "860755cd57f1053b", "shell_use": "inspect", "evidence": "Use `Bash` ONLY for read-only operations (`ls`, `find`, `grep`, `git status`, `git log`, `git diff`, `cat`, `head`, `tail`)"}
+{"id": "190de52b828b598b", "shell_use": "none", "evidence": ""}
+{"id": "21de3108fcca7f0b", "shell_use": "change", "evidence": "cat > \"$PLAN_TASK_DIR/prd.md\" << 'EOF'"}
+{"id": "c51fea91180623de", "shell_use": "inspect", "evidence": "`git diff` and `git diff --staged`, plus the specific files named"}
+{"id": "7a62be8599045c1d", "shell_use": "verify", "evidence": "go vet ./... && staticcheck ./..."}
+{"id": "d50ce6a2b09b866e", "shell_use": "change", "evidence": "git add path/to/file1.ts"}

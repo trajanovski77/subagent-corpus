@@ -1,0 +1,35 @@
+{"id": "81cfec19c0ad7a2e", "restriction": "partial", "evidence": "No code, no commits, no direct push.", "where": "both"}
+{"id": "14319624483329b8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fc78149715475382", "restriction": "full", "evidence": "Do not edit files.", "where": "body"}
+{"id": "2eae0e3d39766ca4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7e0bde9de7b7d015", "restriction": "partial", "evidence": "You NEVER implement fixes - all changes are TEMPORARY for investigation only.", "where": "body"}
+{"id": "a9bfce141864cd5c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4921625fa1d1fa4d", "restriction": "partial", "evidence": "Never commits, never modifies pom.xml without orchestrator approval", "where": "both"}
+{"id": "cdfc018802edfc1a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0c96e095e2002dbb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9d85236400111a33", "restriction": "partial", "evidence": "不要動手寫 `.deck.tsx` 或任何檔案；那是 slide-generator 的工作。", "where": "body"}
+{"id": "83039cdb534013c8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e46909bb49c1408a", "restriction": "partial", "evidence": "Do not implement fixes. Do not modify any source files.", "where": "body"}
+{"id": "5f1eba4354be13a0", "restriction": "full", "evidence": "You do NOT edit.", "where": "body"}
+{"id": "bbde32201a1ed397", "restriction": "full", "evidence": "This is report-only: do not edit files or commit.", "where": "body"}
+{"id": "60cc150f1fbec668", "restriction": "partial", "evidence": "Do not amend the commit — you are not committing; the orchestrator commits.", "where": "body"}
+{"id": "910017c5d5fd5c2f", "restriction": "full", "evidence": "Do not modify any files — this agent is read-only exploration, not implementation.", "where": "body"}
+{"id": "509a60b90ad1704e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "707895a784905bdc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a5a9eb72600cfb49", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bff42c9866d10967", "restriction": "full", "evidence": "Never modify files - Read only", "where": "body"}
+{"id": "fd53095ca0bdc531", "restriction": "none", "evidence": "", "where": ""}
+{"id": "00e96ff1acb70f96", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d9484c16bd8e5c03", "restriction": "full", "evidence": "You read and run, you never write.", "where": "body"}
+{"id": "f3112235cae73cab", "restriction": "none", "evidence": "", "where": ""}
+{"id": "02bf866d1e63c2a6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c65c585739514be0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b43cdd4774cc29c4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "48dbb0d043f2dca5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f5b5305f47e69ac0", "restriction": "partial", "evidence": "Do NOT edit source files", "where": "body"}
+{"id": "945ddaefc45bddaa", "restriction": "partial", "evidence": "코드는 한 줄도 고치지 않는다.", "where": "body"}
+{"id": "6774737f8ee4b0df", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7e2bd560106f1058", "restriction": "full", "evidence": "Never write, edit, or run shell commands. You are read-only.", "where": "body"}
+{"id": "67135d9a837e0e5f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c40a98c32c78d3e5", "restriction": "full", "evidence": "Never change files.", "where": "body"}
+{"id": "ab4132ed7103008d", "restriction": "none", "evidence": "", "where": ""}

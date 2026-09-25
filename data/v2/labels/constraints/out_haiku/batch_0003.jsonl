@@ -1,0 +1,150 @@
+{"id": "58b2505d5778dd35", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "00002cc51feeaacd", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "f691ea708e9d725a", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "b3de133f15336006", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "428007db8091725a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "4be970cac5b44b36", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "fa0de294c950810b", "topics": ["SCOPE", "FS_MODIFY"], "polarity": "prohibit", "restricts_writes": true}
+{"id": "ccfd4be4a1cdcc70", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "4a4b7613970a6b0c", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "64b13d8f27e545b0", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "fd764381ffaba7a0", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "252e97997ccff9a8", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "fa77d2cf54d00988", "topics": ["FS_MODIFY", "SCOPE"], "polarity": "prohibit", "restricts_writes": true}
+{"id": "b7ac18cd84e27179", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "74c165d93e7cd441", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "49e9c5616ebabde0", "topics": ["OUTPUT", "ESCALATE"], "polarity": "require", "restricts_writes": false}
+{"id": "3aa4a7c74743bb06", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "24a4b1a3a2806a3b", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "3f09acf1ace29696", "topics": ["EXEC", "QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "a4d6aa24d9589ae5", "topics": ["VCS"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "c57ec1687b9f9f52", "topics": ["FS_MODIFY", "SCOPE"], "polarity": "prohibit", "restricts_writes": true}
+{"id": "0c39f047a2511763", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "4207b7dee5a6cbe5", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "7152ee14375d539f", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "b7e227f0e81f6d7d", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "f952d35eda9ba88b", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "30c5a48418be49e2", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "26bfdafef2276566", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "7e676fdc657788a2", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "a06d2d9ab7b71598", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "bf5c167bc1953316", "topics": ["OTHER"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "c0674a7b477eb918", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "72d80404ffde3f9d", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "3409373c405bddc1", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "57169588c94e241b", "topics": ["EXEC", "SCOPE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "6675b5a96d074c65", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "8e26d11027539398", "topics": ["DELEGATION", "OUTPUT"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "fbc5010ef1891a66", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "96e0619d7c209f5e", "topics": ["FS_MODIFY", "QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "8eb14300687e6feb", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "12f687d2ffcd8499", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "bcdc85ae6b2072d6", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "029619131fcf6773", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "be7a9714c5bd7d08", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "d425b71dcc93a661", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "f79da0cc3a6d5f99", "topics": ["QUALITY", "HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "dc674b48911ce3cf", "topics": ["OUTPUT"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "b2e1056b8c4ffa0b", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "ad9edea6ad27cead", "topics": ["OUTPUT"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "b4241c6b7ea696ec", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "d4e78b3a38f1fa0c", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "fa74706e73ddfe59", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "76f10b86d7215369", "topics": ["QUALITY", "OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "91bbe7c818238b80", "topics": ["OUTPUT", "ESCALATE"], "polarity": "require", "restricts_writes": false}
+{"id": "ee46bd00e843ddd2", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "6018f6e8eaa08348", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "a1c1fa44165ec4b6", "topics": ["HONESTY", "QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "74e9f7c5127daa6c", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "b9c86d92b32eea35", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "9daf5826bce68bf4", "topics": ["EXEC"], "polarity": "require", "restricts_writes": false}
+{"id": "b727ae1c1563ee8c", "topics": ["DELEGATION"], "polarity": "require", "restricts_writes": false}
+{"id": "17e12ed5e93bf7b4", "topics": ["HONESTY", "OUTPUT"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "4c76c2644e9c0d05", "topics": ["SCOPE", "QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "67ed5c306d633293", "topics": ["HONESTY", "QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "3a18816b72aafb50", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "68d7f4f060bba8a8", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "27b7afb98df4f828", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "ac4b1243c558ca47", "topics": ["OUTPUT", "QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "15540d428bc6c735", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "3ed87ea4502c0800", "topics": ["FS_MODIFY", "SCOPE"], "polarity": "prohibit", "restricts_writes": true}
+{"id": "ec8ebdbb116ffa3e", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "b033329c19ec7770", "topics": ["EXEC"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "525062a17f864872", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "9fc84b87ab4fd77c", "topics": ["ESCALATE", "EXEC"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "e4169c01c87fb97d", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "87a58e2891cdd0e8", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "bf8fca1bd991eee6", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "3e4b9937ce094a7b", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "eff82aec068244ba", "topics": ["DELEGATION", "OUTPUT"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "06f133a1933390ff", "topics": ["OUTPUT", "HONESTY"], "polarity": "require", "restricts_writes": false}
+{"id": "fc7ff7a505ef7480", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "59a61e62b0c5bfe8", "topics": ["ESCALATE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "d9c01e00a217ff24", "topics": ["ESCALATE"], "polarity": "require", "restricts_writes": false}
+{"id": "356428066c33b780", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "4bb0ce6d2070103f", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "6d8c0b8eabb62ccb", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "044f5b9da631bb73", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "f856ebd4871e468a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "4151a20e5fea1edc", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "e0545544255a1898", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "32187dad6229f899", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "d14b244c953ea69b", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "66aa5bca65ca923a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "535e59bd8d6dc51c", "topics": ["ESCALATE"], "polarity": "require", "restricts_writes": false}
+{"id": "0c6c9830eedc8fe8", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "6a399d598f20ff01", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "5cfc0416baf11c5a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "4b28c6a784218c2d", "topics": ["QUALITY", "EXEC"], "polarity": "require", "restricts_writes": false}
+{"id": "d8b81c34d56d72df", "topics": ["DESTRUCTIVE", "ESCALATE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "72dd187861a487e7", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "caaac9a1e89e42f8", "topics": ["DELEGATION", "SCOPE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "add0c8bfe1105f18", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "794400e089ed6b7d", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "efed05b3a226b5da", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "4062b4c5d73a70d9", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "efb3cb4a1631301e", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "630b313ee1162065", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "20bf46d736b23b5d", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "f789d092d40fcf59", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "96ed0519b003297a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "1cf17704a235fd5c", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "e7677b3dc5a83aa9", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "c2488e51bd0faf6b", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "08bfb9658b908f77", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "bdc203cbe848e42f", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "99b2a7ab3f71b149", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "2f57e299959c8fa8", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "d9f0d282cdade18a", "topics": ["SECRETS", "SCOPE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "065b16f51c2ddeb6", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "5a4584f41ee15707", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "b36ce7b1013f3e10", "topics": ["SECRETS"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "49ca86c68e099d0d", "topics": ["ESCALATE"], "polarity": "require", "restricts_writes": false}
+{"id": "e22aed078109afa9", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "100b43090194bf69", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "02ded1a529642204", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "d36ae4da31ae4936", "topics": ["HONESTY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "38301c4541006dcd", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "b008e5c0588435ab", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "1105c9ebc97eccdb", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "15a7010d05ddb89e", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "7fe71a00128cf06d", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "06e087b99b5ea736", "topics": ["OTHER"], "polarity": "other", "restricts_writes": false}
+{"id": "dad6d6a287dd3736", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "8771f34c6870feca", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "61de4fc912ae51b1", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "5f45a18afeb8215e", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "5ea215a4eda78dab", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}
+{"id": "0ce4be1eb8b4f110", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "fadbbcefbdd8319e", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "6137c0c8071df837", "topics": ["EXTERNAL"], "polarity": "require", "restricts_writes": false}
+{"id": "bd2b1dabd2bf145c", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "f4b1904f3d6bc361", "topics": ["QUALITY"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "38a58c15e4ff5fed", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "a6052cc15bbd8e5a", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "a8b201a30e0d6ec0", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "c5ad808c6e2bfb68", "topics": ["QUALITY"], "polarity": "require", "restricts_writes": false}
+{"id": "7886e9653d1bafbf", "topics": ["SCOPE"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "068e9dee3e1ce54c", "topics": ["VCS"], "polarity": "prohibit", "restricts_writes": false}
+{"id": "08cf6008ad0846b0", "topics": ["VCS", "HONESTY"], "polarity": "require", "restricts_writes": false}
+{"id": "6b37f20714c039eb", "topics": ["OUTPUT"], "polarity": "require", "restricts_writes": false}

@@ -1,0 +1,32 @@
+{"id": "e3fe4c6d0c56bbb3", "restriction": "full", "evidence": "You are read-only. Do NOT edit any file.", "where": "body"}
+{"id": "ba29eb1f6aa98e5b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9c8841cf92a0bc29", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2506fe1cc872be99", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cdac5a367dd1f348", "restriction": "full", "evidence": "Read-only. You produce a punch list; you do not edit rules, code, or memory.", "where": "body"}
+{"id": "4dd22a511574e99a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f275054ab4b940e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1e15e5365dbbc0d0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2417e9f22eb554ae", "restriction": "full", "evidence": "Never write to persistent `design/` — promotion is owned by domain creators. Never modify code, design docs, or infrastructure.", "where": "body"}
+{"id": "1d81faa29b2aaa90", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cb8c895bf3dd3027", "restriction": "none", "evidence": "", "where": ""}
+{"id": "49421f736eb8da25", "restriction": "none", "evidence": "", "where": ""}
+{"id": "46e9dfdee01a11c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "133edb8e76aeced9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e8eab7b332ce25e4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "037c4cea0996b44b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "22492c2cfd7b6d8a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b6cbc1d617814329", "restriction": "none", "evidence": "", "where": ""}
+{"id": "25c882e8f626cd9c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2ed2d5b5b86273d6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ed2935fb854a941a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c5f09a9d523d151b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8224bd8dbbf26a51", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8d6a1500b4fafc18", "restriction": "none", "evidence": "", "where": ""}
+{"id": "316581af7fc59962", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2b6f8c361bb11a1b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a1337df47ec9a25d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ca643cff4dab803", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4a2bbf2c074b8bfa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2314c954d7872121", "restriction": "none", "evidence": "", "where": ""}
+{"id": "92aded4faaa91608", "restriction": "partial", "evidence": "You never write executable code.", "where": "body"}
+{"id": "70ccdcf94ad8184a", "restriction": "none", "evidence": "", "where": ""}

@@ -1,0 +1,23 @@
+{"id": "38649f6151e9274f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "733e01047c785f0c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "16f8d5f5601920d7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e40041924a0493f4", "restriction": "full", "evidence": "ONLY describe what exists, how it works, and how components interact. You are a technical documentarian, not a critic or consultant.", "where": "body"}
+{"id": "d32200a474449b14", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7564539b887cbc06", "restriction": "full", "evidence": "You are the **usability judge** on the 7-agent scale-test team...Your lens is **operator experience**...judges help text, error messages, output paths", "where": "body"}
+{"id": "c1216213ea6a809c", "restriction": "full", "evidence": "You are a code reviewer specialized in the VPNSentinel codebase. Review the changes you are given (usually the unstaged diff)...cite `file:line` and propose the fix.", "where": "body"}
+{"id": "a58f830e7484cf40", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ac9517038e9c1c8c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ca95d3a76a920089", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7a869154051d8b3d", "restriction": "full", "evidence": "You are a **Senior Staff Engineer** conducting code reviews. Your goal is to improve code health while being practical and constructive.", "where": "body"}
+{"id": "973938d35077f37c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f7ed09e4fab1ffb3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cec22103d319044a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "503cf2089007ab34", "restriction": "none", "evidence": "", "where": ""}
+{"id": "337861c648a5c3f1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4c40f022c25fb83d", "restriction": "partial", "evidence": "You always start in read-only Plan mode...Allowed tools: Read, Grep, Glob...Forbidden: Write, Edit, any mutating Bash...Execute mode: Now you may use Task, Write", "where": "body"}
+{"id": "f7bcc237a326568c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3c76a35abb6539fc", "restriction": "full", "evidence": "Protects the quality bar by judging output against the requirement...I reject incomplete traceability and unsupported assumptions. I make verdicts explicit.", "where": "body"}
+{"id": "18879915f37cbaef", "restriction": "full", "evidence": "You are a senior code reviewer responsible for ensuring code quality, security, and maintainability through thorough review processes.", "where": "body"}
+{"id": "87221b8c34305b9d", "restriction": "partial", "evidence": "You do **not** edit files outside `server/app/api-gateway/prisma/` and `server/app/api-gateway/src/prisma/`...execute any destructive Prisma command without explicit user confirmation", "where": "body"}
+{"id": "4b6ae350106c7849", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4353201d63394e5a", "restriction": "full", "evidence": "Read the docs as this builder/operator: semi-technical, speed/efficiency/trust-driven...Produce **specific, actionable** feedback...Recommend a concrete fix", "where": "body"}

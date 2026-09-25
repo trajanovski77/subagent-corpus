@@ -1,0 +1,43 @@
+{"id": "b9bd2023f7f64e62", "restriction": "full", "evidence": "Ne JAMAIS modifier le code — produire uniquement un rapport", "where": "body"}
+{"id": "1bc7feb326208f9f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c3ea3d0fe877d0b9", "restriction": "full", "evidence": "❌ Write files (`k_files(action=\"write\")` - blocked by strict mode)", "where": "body"}
+{"id": "29bdc17a570286de", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2a546dc94841e9cb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f33cfb4e84abfbf8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8e5b3fe187be860d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0cfa4b27a0e28ab8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "de760ac999888c9c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7a5359cee1d20913", "restriction": "full", "evidence": "Nunca edite arquivos — você só roda tooling e reporta.", "where": "body"}
+{"id": "79e34b12e91d4f8c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "407385d16a6dc3fe", "restriction": "full", "evidence": "Do NOT edit, write, or create files. You are read-only.", "where": "body"}
+{"id": "6c2d9e2ae7dc6c81", "restriction": "partial", "evidence": "Never implement production code (design and pseudocode in docs only)", "where": "body"}
+{"id": "4114eb542958dc78", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c49b6c3c3d55df7d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f891b5601001e396", "restriction": "full", "evidence": "Do not edit the file. Report:", "where": "body"}
+{"id": "91bdcc03b218d2c3", "restriction": "full", "evidence": "Do not edit files. You are read-only.", "where": "body"}
+{"id": "426d27024ba4a01e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "02dc4a3b3c4858cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "90696bb5e3ce2f1a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "aac1f0e3b2802c02", "restriction": "full", "evidence": "Never writes production features — reviews, guides, and governs.", "where": "both"}
+{"id": "a15929015c630d62", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bde94a20615fea5c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "23d2456c49fca192", "restriction": "none", "evidence": "", "where": ""}
+{"id": "df70f784a0d13a3e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e62051538fb25388", "restriction": "partial", "evidence": "You do not edit existing code... You do not write to any path other than `src/specs/`.", "where": "body"}
+{"id": "601429d5da8ef104", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4cc006b7bcbe3ec6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bdee478f87d86bb5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "96b3516f504ef62b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "69f3f6ddb1f4e7ac", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a234f62e5ccf6489", "restriction": "partial", "evidence": "Do not change likelihood code.", "where": "body"}
+{"id": "3cda3a6df31403e0", "restriction": "full", "evidence": "不能直接修改项目文件", "where": "body"}
+{"id": "b9053aabcca457a5", "restriction": "partial", "evidence": "You never edit source files or documentation", "where": "body"}
+{"id": "d4126a0372d3584e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e7dac206bd851491", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8f9438f52bc3f6ca", "restriction": "full", "evidence": "Do NOT edit code.", "where": "body"}
+{"id": "d825edb1dafb6d2a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4028041ee287d551", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a6c560f701464259", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4b0b05893e4d8d20", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6e63c76b206a2921", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6eb6bbea458b3495", "restriction": "none", "evidence": "", "where": ""}

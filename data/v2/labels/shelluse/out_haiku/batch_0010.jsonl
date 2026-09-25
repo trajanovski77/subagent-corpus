@@ -1,0 +1,53 @@
+{"id": "7222a4117d1aecb6", "shell_use": "inspect", "evidence": "Verification process uses git log --oneline, git status, git diff to read repository state"}
+{"id": "4d1f85af62c3bcec", "shell_use": "inspect", "evidence": "Uses Glob/Read/Grep to inventory files and analyze codebase structure"}
+{"id": "7938b450b8e65938", "shell_use": "change", "evidence": "`mcp__github__update_pull_request` で説明文を更新する (updates PR description)"}
+{"id": "e3339d5a6c159bcd", "shell_use": "none", "evidence": "Empty body with no shell commands or execution mentioned"}
+{"id": "e927159f8c9270b3", "shell_use": "inspect", "evidence": "`find packages -name \"*.ts\" -type f | head -20` and `grep -r \"relevant_pattern\" src/` for codebase exploration"}
+{"id": "bf4acd17dfdc8256", "shell_use": "verify", "evidence": "Run Kyber smoke and validation checks, then summarize failures"}
+{"id": "7cbc43d6e0e23c19", "shell_use": "change", "evidence": "`cat <<'EOF' > .memory/scout-reports/<session-id>/<task-slug>.md` writes report files"}
+{"id": "3f2b2ab9f785fa0a", "shell_use": "inspect", "evidence": "`find . -name \"*.log\"`, `git log --oneline`, `git status`, `grep -n \"error:\" *.log` for diagnostics"}
+{"id": "64b604f141ac38f1", "shell_use": "verify", "evidence": "Run `.claude/verify.sh` or `cargo test`, `pytest -q`, `npm test` to verify"}
+{"id": "f1ff4df137b8a839", "shell_use": "verify", "evidence": "Runs `crystal spec spec/ui/` and `crystal build --no-codegen src/ui.cr` for testing"}
+{"id": "776e4883b742234a", "shell_use": "inspect", "evidence": "Читать репозиторий (Read/Grep/Glob) to find and analyze existing entities"}
+{"id": "fd6aadf95f97cef5", "shell_use": "verify", "evidence": "`node scripts/governance/document-relocation-adversary.mjs --plan <arquivo> --json` runs verification"}
+{"id": "065d064fbd602d3e", "shell_use": "verify", "evidence": "Bundle size analysis, tree-shaking verification, performance profiling using build/analysis tools"}
+{"id": "105e6dbd09475460", "shell_use": "inspect", "evidence": "`git diff ncap/ pb/` and `grep -i \"processSyncContainerData\" changelog.txt` for static analysis"}
+{"id": "82593b26d0539307", "shell_use": "inspect", "evidence": "`git branch --show-current` and GitHub MCP tools to fetch and analyze PR comments"}
+{"id": "7a5359cee1d20913", "shell_use": "verify", "evidence": "Runs `cd hora-extra-backend && npx tsc --noEmit` for TypeScript type checking"}
+{"id": "2a09720fcbc9fe57", "shell_use": "none", "evidence": "Pure analysis of edge cases and scenarios without running commands or executing tests"}
+{"id": "b109ea6b388a6e78", "shell_use": "inspect", "evidence": "`git diff main...HEAD` or `gh pr diff <n>` and `Grep the changed files for `arcpy.`"}
+{"id": "ce94ee33149777bd", "shell_use": "inspect", "evidence": "Orchestrates parallel search workflows and file discovery across codebase"}
+{"id": "76422aca159b88c3", "shell_use": "verify", "evidence": "`pixi run configure-profile && pixi run build-profile` and `pixi run -e profiling analyze-profile`"}
+{"id": "c27f036ccbdd9ed4", "shell_use": "inspect", "evidence": "Uses `entire search --json` command to search checkpoint history and transcripts"}
+{"id": "e6185bc81336d7ce", "shell_use": "inspect", "evidence": "`gh pr view <PR> --json` and `gh pr diff <PR>` to read and compare PR changes"}
+{"id": "f8a423fcc76b2f74", "shell_use": "inspect", "evidence": "Reviews code against security documentation without running commands or making changes"}
+{"id": "8d709ebb5768ca22", "shell_use": "inspect", "evidence": "Code review analysis of Python code quality without running tests or modifying files"}
+{"id": "5bd1fa9164d8614c", "shell_use": "inspect", "evidence": "Codex MCP 도구 or `codex exec` for read-only code review"}
+{"id": "c565b77ffed60991", "shell_use": "inspect", "evidence": "Uses Glob and Grep to find files related to phase and reads 5-15 source files for analysis"}
+{"id": "2db365e9ab3d5187", "shell_use": "inspect", "evidence": "Uses Grep/Glob for searching and runs `--help` via Bash only if source is ambiguous"}
+{"id": "6d6a6e670939ca8f", "shell_use": "verify", "evidence": "Runs `bun run build` and `bun run size` to build library and measure gzipped sizes"}
+{"id": "579d3f6a126a9599", "shell_use": "verify", "evidence": "Runs `npm run build` and read-only checks/typecheck scripts"}
+{"id": "c2d5c71b0a759036", "shell_use": "verify", "evidence": "Runs `pnpm -r typecheck` and `pnpm lint` for type checking and linting"}
+{"id": "f7344e6ce0123149", "shell_use": "none", "evidence": "Cryptography advisor role with no shell commands or execution mentioned"}
+{"id": "27445ce767a15464", "shell_use": "change", "evidence": "`gh issue create` and `gh issue comment` to create and update GitHub Issues"}
+{"id": "81a034b053a1f50f", "shell_use": "verify", "evidence": "Runs language-specific audit tools (cargo audit, pip-audit, npm audit, govulncheck)"}
+{"id": "9be111463a78be44", "shell_use": "inspect", "evidence": "Uses Grep/Glob to find files and analyze codebase patterns for planning"}
+{"id": "56550bd4b86dbe33", "shell_use": "verify", "evidence": "Runs lint/typecheck/tests via Bash (read-only commands) to verify code"}
+{"id": "b6ec973ecdd53ee4", "shell_use": "inspect", "evidence": "Uses `Read` to read files and `Bash` only for `grep` searches to review access control"}
+{"id": "cb90fe5b1c092299", "shell_use": "change", "evidence": "`cat > \"$PLAN_TASK_DIR/REJECTED.md\"` and `jq '.status = \"rejected\"'` to create and modify files"}
+{"id": "d1602faf5b91b548", "shell_use": "inspect", "evidence": "Analyzes requirements and code patterns without explicit shell commands shown"}
+{"id": "9a3bab3e6bc6461f", "shell_use": "change", "evidence": "自動修復功能 (--fix) can automatically fix issues by modifying data files"}
+{"id": "cdac5a367dd1f348", "shell_use": "inspect", "evidence": "Runs grep to verify rules against code: `run the grep that would falsify it`"}
+{"id": "5bd39a08e35e6bae", "shell_use": "inspect", "evidence": "`git log --oneline -10`, `ls -la`, Glob patterns to explore codebase structure"}
+{"id": "fe619bb57b38efb2", "shell_use": "inspect", "evidence": "Code review analysis without running commands or making changes"}
+{"id": "b4d12a84b5125d9c", "shell_use": "inspect", "evidence": "Reads and analyzes engine model files and stack verification without shell execution"}
+{"id": "230117ddb0cb520c", "shell_use": "inspect", "evidence": "Reads repository files and configuration to report stack and conventions"}
+{"id": "e49a86af8c6ae27c", "shell_use": "inspect", "evidence": "`git log`, `git show`, `git blame`, `cargo tree`, `cargo metadata` for read-only analysis"}
+{"id": "908a53a15b817fc2", "shell_use": "inspect", "evidence": "C# code review analysis without running commands or modifying files"}
+{"id": "20b78c29782401f5", "shell_use": "inspect", "evidence": "Security review of docs and code against documentation without running commands"}
+{"id": "9e74ffa986237068", "shell_use": "inspect", "evidence": "Read-only exploration across files and repos with Bash used for reads only"}
+{"id": "65328895f22a8f07", "shell_use": "inspect", "evidence": "Reads code and related files for verification; traces code paths without running"}
+{"id": "3476f40dd6a9710b", "shell_use": "inspect", "evidence": "`find . -maxdepth 2 \\( -name \"package.json\" -o -name \"pyproject.toml\"` to scan for technology signals"}
+{"id": "7d458c9b1a99e623", "shell_use": "inspect", "evidence": "ALWAYS query the database using `npx tsx -e` one-off scripts for read-only database queries"}
+{"id": "73776794be872c4a", "shell_use": "inspect", "evidence": "Reviews git diff to understand changes and applies review checklist"}
+{"id": "ab76c154f41554e6", "shell_use": "verify", "evidence": "Optional `dotnet build src/Beutl.Engine.SourceGenerators/Beutl.Engine.SourceGenerators.csproj` for verification"}

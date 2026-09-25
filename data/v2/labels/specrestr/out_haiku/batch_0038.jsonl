@@ -1,0 +1,50 @@
+{"id": "e906235c0218c645", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e9143572856d6335", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ab2b66f1e2b716cd", "restriction": "partial", "evidence": "Write implementation code — your job ends where the implementer's begins", "where": "body"}
+{"id": "2ac31543506a5fc2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bc85ef7582bfd242", "restriction": "none", "evidence": "", "where": ""}
+{"id": "97a62fa4271f5ef5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "54952d028545216f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0b4fdfa8c9a831a6", "restriction": "full", "evidence": "No editás archivos — solo reportás.", "where": "body"}
+{"id": "2594042c94bcf914", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c8a70b9683550819", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1fb86505e9a170a2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f76b22aa39e2186a", "restriction": "full", "evidence": "You do NOT write code — you review, analyze, and produce a structured report.", "where": "body"}
+{"id": "263121a1bcfd2ce3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "55fa7867a0a8c85a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ed2dee4132c71ed1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0199b1f4895fff10", "restriction": "partial", "evidence": "Edits source files but never commits, pushes, or disables anything", "where": "description"}
+{"id": "f31d199ba639228e", "restriction": "full", "evidence": "you do not edit files, and your output is a draft for the owner's verification, never a decision.", "where": "body"}
+{"id": "4d60ecf0f324fed0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "79808a778b58ebf1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b1e446423368f89f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a056b75af4abe72f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b5ee8866cc50bcec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3680b7ee53869cfd", "restriction": "partial", "evidence": "Rör ALDRIG `värdeA`, `värdeB`, `enhet` eller riktningen.", "where": "body"}
+{"id": "a8305037201d54ca", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5f2d970ba4c1653d", "restriction": "full", "evidence": "You do not edit files. Report; the author fixes.", "where": "body"}
+{"id": "255937990d4f600c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6d58a68abf143c75", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7382b3cf2c465f8e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2319f136549c0863", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6dbf8f022de2c06d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c2f0463cc0242b48", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17b6f26ae6fda57b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7f6d2543e0af0569", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b069a09d12c3517c", "restriction": "full", "evidence": "⚠️ RULE #0 (INVIOLABLE): YOU NEVER IMPLEMENT. YOU ALWAYS DELEGATE. ... You DO NOT write code. NEVER.", "where": "body"}
+{"id": "2a2eedd34c83044e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7145d5daee6c5605", "restriction": "full", "evidence": "You are a read-only reviewer for Graphite theme changes. Do not modify files.", "where": "body"}
+{"id": "1a6574e099882694", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b893e250ff8bdd1d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2ff637e5035eb57d", "restriction": "full", "evidence": "You verify work; you do not implement features.", "where": "body"}
+{"id": "6e57a7b8cbe6cd6e", "restriction": "full", "evidence": "You are read-only — you do NOT edit files, create branches, or open pull requests.", "where": "body"}
+{"id": "60aa679190ebb174", "restriction": "partial", "evidence": "You assess test quality and coverage gaps, not write tests.", "where": "body"}
+{"id": "99fda1123ce97775", "restriction": "full", "evidence": "You hold no write tools — that is the fence, not the prompt (Law: read-only means holding no write tools).", "where": "body"}
+{"id": "1ddc61154ca5a3fc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "64e6365f82c1e08a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9f56dbb50e26a130", "restriction": "full", "evidence": "You do not edit code - you judge it. ... Read-only; never edits code.", "where": "body"}
+{"id": "df800fa85d1a88ee", "restriction": "full", "evidence": "You are read-only. You do not edit files (except writing the verdict file).", "where": "body"}
+{"id": "eee08c14a808848f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "74c4f5210c9bd414", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ed8bc21da48f5552", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3119da112794e555", "restriction": "none", "evidence": "", "where": ""}

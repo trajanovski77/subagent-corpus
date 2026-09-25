@@ -1,0 +1,47 @@
+{"id": "58d0a97ddecabe33", "restriction": "partial", "evidence": "You MAY write design notes/specs (Markdown). You do NOT edit model/training/data code, submit jobs, or run training", "where": "body"}
+{"id": "96aaa607966eb326", "restriction": "full", "evidence": "Review only — do not modify code.", "where": "body"}
+{"id": "e9748c31be025119", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5646e442be42958b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c29690865e36f3f5", "restriction": "full", "evidence": "只读，绝不改文件（无 Edit/Write 工具）。你只规划，实现交回主循环。", "where": "body"}
+{"id": "8eb43a2695d21a3e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "16db9c68bbeaa3b9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "43223239e80bd54a", "restriction": "full", "evidence": "Audit only; do not edit files.", "where": "body"}
+{"id": "5fba663be2cd966e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6889bb5e2225e77f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "504995b29d06d346", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ccb21274f4ac605d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1dbbf1d6b28a8fef", "restriction": "partial", "evidence": "You never write executable code.", "where": "body"}
+{"id": "869741d0eb9444e4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "32187e4bd2ee7188", "restriction": "none", "evidence": "", "where": ""}
+{"id": "53399d13f4109c7b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0b2365f86f06de8f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "96440f79f808d931", "restriction": "full", "evidence": "You never hand-edit a baseline, a sidecar, or a generated matrix doc, and you never regenerate them. You are read-only.", "where": "body"}
+{"id": "cf01fc773c27a0fa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8a887bf67cb9ed0f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "94820fcaf114f8ba", "restriction": "partial", "evidence": "You can ONLY write to `.quest/` — no other locations.", "where": "body"}
+{"id": "01f7b4576e2ccef4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "09dcba4cef5a2768", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a32da48f0ab54ea9", "restriction": "full", "evidence": "You do NOT fix anything — you produce a structured violation report. Do NOT fix any code. Only report.", "where": "both"}
+{"id": "bfa3aedf26f66de1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "831fdbcae45626bb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c487d29d49be9229", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a871fb9e7af9c20c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b6eb437e0556afcd", "restriction": "full", "evidence": "Read-only. No `Edit`/`Write`, and no `git add`/`commit`/`push`/`checkout` — you review, never mutate the branch.", "where": "body"}
+{"id": "7d51060e7fd327b7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8830c37b0c8a3c52", "restriction": "none", "evidence": "", "where": ""}
+{"id": "46c810be1a132a55", "restriction": "none", "evidence": "", "where": ""}
+{"id": "80ca6d5aef5d14bf", "restriction": "full", "evidence": "You are strictly READ-ONLY — never delete, rename, move, or edit any file. Your only output is a report.", "where": "body"}
+{"id": "3449eaca8b3c6f89", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7b8d2f9c72d0fc9e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bbfbd0aaf7bc35c3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "71455682847475b3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "efe1618c8bd0529d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c151bf89bad64dc6", "restriction": "partial", "evidence": "never modifies the production accounting DB or sends real SMS in tests", "where": "body"}
+{"id": "3aef2b546586031c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6777d83dbca16cb3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "679b9d91c12ce07f", "restriction": "full", "evidence": "Do not modify files unless explicitly asked. You are not an implementation agent by default.", "where": "body"}
+{"id": "a934fadda30ec070", "restriction": "none", "evidence": "", "where": ""}
+{"id": "188743faa2c921ec", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bdd8e3ee352f95a5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9023032555e70d91", "restriction": "full", "evidence": "Never fix code. Report findings with evidence and severity, never fix code.", "where": "body"}
+{"id": "fab356e5523885b9", "restriction": "partial", "evidence": "Do not modify vault content until a dry-run plan exists.", "where": "body"}

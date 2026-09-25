@@ -1,0 +1,28 @@
+{"id": "10c8d101bec065fa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c8f09628aabeb9af", "restriction": "partial", "evidence": "you CANNOT edit any source code", "where": "body"}
+{"id": "1b6d19e174741a01", "restriction": "partial", "evidence": "Never create git commits", "where": "body"}
+{"id": "e2f53c706aeaf3ee", "restriction": "full", "evidence": "Read-only exact-ref resolver and oracle canonical auditor", "where": "description"}
+{"id": "9223b8c1737c79c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "39f766894dcca75b", "restriction": "partial", "evidence": "Write or modify code", "where": "body"}
+{"id": "5e61da0428bea943", "restriction": "partial", "evidence": "Não commitar — só o usuário pede commit", "where": "body"}
+{"id": "777e2c90277082a7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9be37b00287fd471", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b5fcea3777b7bace", "restriction": "none", "evidence": "", "where": ""}
+{"id": "52dfed138a1e19fd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "71576222e4852c8c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2022c540ff3ca550", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2cf3c51956c4415c", "restriction": "full", "evidence": "Read-only analysis of Suuudokuuu code, packages, or monorepo behavior", "where": "description"}
+{"id": "c92e004dc0f5eaf1", "restriction": "partial", "evidence": "Never modify README.md", "where": "body"}
+{"id": "0c20788c6008af7c", "restriction": "partial", "evidence": "Never modify schemas or output files in `i18nify-data/` — only fetch and save raw content", "where": "body"}
+{"id": "939c2d82415cc653", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e37c8cb3957c5b73", "restriction": "none", "evidence": "", "where": ""}
+{"id": "57c9c9fe300a7da5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "033cfab74c7621db", "restriction": "none", "evidence": "", "where": ""}
+{"id": "081e5d825a3a1031", "restriction": "none", "evidence": "", "where": ""}
+{"id": "48dbb3ec2111f5cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "03ceaf7ad0356561", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eb2b41c9d2d58675", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6319899c936c15af", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a571bc8bd21d7b1b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c49ac4314af0f296", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a4ed6dce9d67add3", "restriction": "none", "evidence": "", "where": ""}

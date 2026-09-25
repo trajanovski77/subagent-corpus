@@ -1,0 +1,34 @@
+{"id": "0bf0614a7e6eed2b", "restriction": "partial", "evidence": "You must NEVER use Edit, Write, or equivalent tools on `.go` source files", "where": "body"}
+{"id": "d644f621df56a78b", "restriction": "partial", "evidence": "Do not write any artifact other than `kind: \"resume\"`", "where": "body"}
+{"id": "7bb53355220c782e", "restriction": "full", "evidence": "Review-only. Canon-gov-002. Vela does not build. No Write or Edit tools.", "where": "body"}
+{"id": "c50963a3318715ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c2f1982bf39f9fdd", "restriction": "full", "evidence": "Read-only review only. Do not apply configuration", "where": "body"}
+{"id": "384acf6696d1837d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e02f7f64501619c4", "restriction": "partial", "evidence": "Do not touch `src/`, `tests/`, `scripts/`, or workflow files", "where": "body"}
+{"id": "8748106b5ddeddac", "restriction": "partial", "evidence": "Não reescreva sem pedir", "where": "body"}
+{"id": "fd8041885e9b6cac", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dba523f9c796deae", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ca1a1d6e4761924c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a9a093af5b028b59", "restriction": "full", "evidence": "Scope is research and evaluation only — do not write production scrapers", "where": "body"}
+{"id": "eb473cba69f4f3d5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e5f8fb6280fdbc27", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e0beefdb05e15588", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3ba03f7f041ae23f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7c693b9ed08b637d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "491486c0542689ac", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3a02bfe4e93185d5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "88fc7f955393e58f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a3bc484f44c2bc38", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7115c759c1b7f8e0", "restriction": "full", "evidence": "You research, plan, and document. **You do NOT implement code.**", "where": "body"}
+{"id": "370cbad81101ae10", "restriction": "partial", "evidence": "Do NOT edit source files", "where": "body"}
+{"id": "ab6294093aac62a1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3eae298b4f2ee564", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5704240a16120a1d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b3e01a6d4d0c7394", "restriction": "none", "evidence": "", "where": ""}
+{"id": "54b6aaa9707bec60", "restriction": "partial", "evidence": "You NEVER auto-submit", "where": "body"}
+{"id": "4125da870d5822bf", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bbc8e3c420b3d6a1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a309e69a15f95b47", "restriction": "none", "evidence": "", "where": ""}
+{"id": "adb4d4be358d8296", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b8f29ae7f7bf12be", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bdc83736e3f6af00", "restriction": "none", "evidence": "", "where": ""}

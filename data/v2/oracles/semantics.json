@@ -1,0 +1,361 @@
+{
+ "builtin_agents": [
+  "claude",
+  "claude-code-guide",
+  "Explore",
+  "general-purpose",
+  "Plan",
+  "statusline-setup"
+ ],
+ "shadow_same_dir_a_vs_b": {
+  "files": [
+   [
+    "a.md",
+    "Read"
+   ],
+   [
+    "b.md",
+    "Write"
+   ]
+  ],
+  "agents": [
+   "dup"
+  ],
+  "winner_tools": [
+   "Read"
+  ]
+ },
+ "shadow_same_dir_b_vs_a_reversed_tools": {
+  "files": [
+   [
+    "a.md",
+    "Write"
+   ],
+   [
+    "b.md",
+    "Read"
+   ]
+  ],
+  "agents": [
+   "dup"
+  ],
+  "winner_tools": [
+   "Write"
+  ]
+ },
+ "shadow_top_vs_nested": {
+  "files": [
+   [
+    "z.md",
+    "Read"
+   ],
+   [
+    "sub/a.md",
+    "Write"
+   ]
+  ],
+  "agents": [
+   "dup"
+  ],
+  "winner_tools": [
+   "Write"
+  ]
+ },
+ "shadow_nested_vs_top": {
+  "files": [
+   [
+    "a.md",
+    "Write"
+   ],
+   [
+    "sub/z.md",
+    "Read"
+   ]
+  ],
+  "agents": [
+   "dup"
+  ],
+  "winner_tools": [
+   "Write"
+  ]
+ },
+ "shadow_two_nested_dirs": {
+  "files": [
+   [
+    "x/a.md",
+    "Read"
+   ],
+   [
+    "y/a.md",
+    "Write"
+   ]
+  ],
+  "agents": [
+   "dup"
+  ],
+  "winner_tools": [
+   "Write"
+  ]
+ },
+ "nesting_loaded": [
+  "nested1",
+  "nested2",
+  "nested3",
+  "top"
+ ],
+ "roots_from_repo_root": [
+  "rootagent"
+ ],
+ "roots_from_subproject": [
+  "rootagent",
+  "subagent"
+ ],
+ "admission_loaded": [
+  "Spaced Name",
+  "declared-name"
+ ],
+ "disallowed_with_omitted_tools": [
+  "Task",
+  "CronCreate",
+  "CronDelete",
+  "CronList",
+  "DesignSync",
+  "EnterWorktree",
+  "ExitWorktree",
+  "NotebookEdit",
+  "Read",
+  "ReportFindings",
+  "ScheduleWakeup",
+  "SendMessage",
+  "Skill",
+  "TaskOutput",
+  "TaskStop",
+  "ToolSearch",
+  "WebFetch",
+  "WebSearch",
+  "Workflow"
+ ],
+ "disallowed_with_list": [
+  "Read",
+  "Bash"
+ ],
+ "form_space_separated": {
+  "value": "Read Grep Bash",
+  "resolved": [
+   "Read",
+   "Bash"
+  ]
+ },
+ "form_lowercase": {
+  "value": "read, bash",
+  "resolved": []
+ },
+ "form_yaml_list": {
+  "value": [
+   "Read",
+   "Bash"
+  ],
+  "resolved": [
+   "Read",
+   "Bash"
+  ]
+ },
+ "form_scoped_bash": {
+  "value": "Read, Bash(git diff:*)",
+  "resolved": [
+   "Read",
+   "Bash"
+  ]
+ },
+ "form_wildcard_string": {
+  "value": "*",
+  "resolved": [
+   "Task",
+   "Bash",
+   "CronCreate",
+   "CronDelete",
+   "CronList",
+   "DesignSync",
+   "Edit",
+   "EnterWorktree",
+   "ExitWorktree",
+   "NotebookEdit",
+   "Read",
+   "ReportFindings",
+   "ScheduleWakeup",
+   "SendMessage",
+   "Skill",
+   "TaskOutput",
+   "TaskStop",
+   "ToolSearch",
+   "WebFetch",
+   "WebSearch",
+   "Workflow",
+   "Write"
+  ]
+ },
+ "form_all_word": {
+  "value": "all",
+  "resolved": []
+ },
+ "form_empty_string": {
+  "value": "",
+  "resolved": []
+ },
+ "form_json_like": {
+  "value": "[Read, Bash]",
+  "resolved": []
+ },
+ "form_mcp_name": {
+  "value": "Read, mcp__github__create_issue",
+  "resolved": [
+   "Read"
+  ]
+ },
+ "form_powershell": {
+  "value": "Read, PowerShell",
+  "resolved": [
+   "Read"
+  ]
+ },
+ "form_grep_glob_scoped_bash": {
+  "value": "Read, Grep, Glob, Bash(npm test)",
+  "resolved": [
+   "Read",
+   "Bash"
+  ]
+ },
+ "version": "2.1.233",
+ "order_probes": {
+  "b_then_a_written": {
+   "files": [
+    [
+     "b.md",
+     "Write"
+    ],
+    [
+     "a.md",
+     "Read"
+    ]
+   ],
+   "winner_tools_by_trial": [
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ]
+   ]
+  },
+  "c_then_b_written": {
+   "files": [
+    [
+     "c.md",
+     "Read"
+    ],
+    [
+     "b.md",
+     "Write"
+    ]
+   ],
+   "winner_tools_by_trial": [
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ]
+   ]
+  },
+  "long_vs_short": {
+   "files": [
+    [
+     "aaaa-long-name.md",
+     "Read"
+    ],
+    [
+     "b.md",
+     "Write"
+    ]
+   ],
+   "winner_tools_by_trial": [
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ]
+   ]
+  },
+  "nested_same_basename_rev": {
+   "files": [
+    [
+     "y/a.md",
+     "Read"
+    ],
+    [
+     "x/a.md",
+     "Write"
+    ]
+   ],
+   "winner_tools_by_trial": [
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ],
+    [
+     "Read"
+    ]
+   ]
+  },
+  "three_files": {
+   "files": [
+    [
+     "m.md",
+     "Read"
+    ],
+    [
+     "a.md",
+     "Write"
+    ],
+    [
+     "z.md",
+     "Grep"
+    ]
+   ],
+   "winner_tools_by_trial": [
+    [
+     "Write"
+    ],
+    [
+     "Write"
+    ],
+    [
+     "Write"
+    ]
+   ]
+  },
+  "ancestor_vs_descendant_from_subproject": {
+   "root": "Read",
+   "subproject": "Write",
+   "winner_tools": [
+    "Write"
+   ]
+  },
+  "settings_diagnostics_sample": {
+   "stderr": [],
+   "permissionMode": "default"
+  }
+ }
+}

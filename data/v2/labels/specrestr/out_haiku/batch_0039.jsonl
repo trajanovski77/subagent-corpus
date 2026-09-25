@@ -1,0 +1,33 @@
+{"id": "aea91b51f2106876", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2cdf322fd7d08077", "restriction": "partial", "evidence": "Never commit.", "where": "body"}
+{"id": "afc6f9cc78653278", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5ce25ad175d9d03e", "restriction": "partial", "evidence": "You report PRD defects as findings; you never edit the PRD.", "where": "body"}
+{"id": "5f0cc1c4f217b068", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5da7a2b2c29f84c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "de085f846aa96dce", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4ef5a622f1e0857", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6eadb6765b54fde0", "restriction": "full", "evidence": "Write/Edit は持たない。指摘のみ返す。修正は派遣元が行い", "where": "body"}
+{"id": "ff610a04b2e44683", "restriction": "full", "evidence": "You never modify anything... Never write files, never install anything, never run state-changing commands.", "where": "body"}
+{"id": "a36714c9ebd53f42", "restriction": "none", "evidence": "", "where": ""}
+{"id": "98d49fd21f5331f6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7cfe9c40f04e8ab1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d06e79d7e0b50a16", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d3638bddf092cf75", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9bb5e78d6eebd760", "restriction": "partial", "evidence": "never write or modify code. Never modify `.agents/` files", "where": "body"}
+{"id": "66eda160bb3a0e57", "restriction": "partial", "evidence": "never commit `data/raw`", "where": "body"}
+{"id": "e928a97270f08afa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0d629cdbf7680c27", "restriction": "none", "evidence": "", "where": ""}
+{"id": "18dc0be149c4c39d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b9ece985a7e5b7cc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "30d15576f870fad4", "restriction": "partial", "evidence": "You do **not** write feature code... Do not fix the code yourself", "where": "body"}
+{"id": "9bb0015c3f8e7ddf", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1aa57a5c483096cc", "restriction": "partial", "evidence": "Never write source code or test code.", "where": "body"}
+{"id": "5092b58c613a563a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dfc80c8a1dee0da7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a26a60f2edf43e53", "restriction": "none", "evidence": "", "where": ""}
+{"id": "502f57dc4870b799", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b60ff0b3cf000e1", "restriction": "partial", "evidence": "Does not modify source code", "where": "description"}
+{"id": "007daaec178f7786", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b576a479c1fe4ea6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "512477896d2f3bf1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "01e925b0ad4e3bea", "restriction": "none", "evidence": "", "where": ""}

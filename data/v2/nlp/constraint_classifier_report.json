@@ -1,0 +1,114 @@
+{
+ "FS_MODIFY": {
+  "precision": 0.531,
+  "recall": 0.395,
+  "f1": 0.453,
+  "threshold": 0.83,
+  "support_train": 118,
+  "support_test": 43
+ },
+ "EXEC": {
+  "precision": 0.333,
+  "recall": 0.5,
+  "f1": 0.4,
+  "threshold": 0.75,
+  "support_train": 82,
+  "support_test": 26
+ },
+ "VCS": {
+  "precision": 0.24,
+  "recall": 0.333,
+  "f1": 0.279,
+  "threshold": 0.67,
+  "support_train": 37,
+  "support_test": 18
+ },
+ "SCOPE": {
+  "precision": 0.286,
+  "recall": 0.286,
+  "f1": 0.286,
+  "threshold": 0.74,
+  "support_train": 171,
+  "support_test": 49
+ },
+ "SECRETS": {
+  "precision": 0.643,
+  "recall": 0.6,
+  "f1": 0.621,
+  "threshold": 0.83,
+  "support_train": 51,
+  "support_test": 15
+ },
+ "EXTERNAL": {
+  "precision": 0.103,
+  "recall": 0.267,
+  "f1": 0.148,
+  "threshold": 0.65,
+  "support_train": 43,
+  "support_test": 15
+ },
+ "DESTRUCTIVE": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "threshold": 0.59,
+  "support_train": 10,
+  "support_test": 1
+ },
+ "QUALITY": {
+  "precision": 0.64,
+  "recall": 0.878,
+  "f1": 0.741,
+  "threshold": 0.34,
+  "support_train": 915,
+  "support_test": 312
+ },
+ "OUTPUT": {
+  "precision": 0.381,
+  "recall": 0.483,
+  "f1": 0.426,
+  "threshold": 0.64,
+  "support_train": 258,
+  "support_test": 89
+ },
+ "ESCALATE": {
+  "precision": 0.36,
+  "recall": 0.486,
+  "f1": 0.414,
+  "threshold": 0.71,
+  "support_train": 99,
+  "support_test": 37
+ },
+ "HONESTY": {
+  "precision": 0.435,
+  "recall": 0.392,
+  "f1": 0.412,
+  "threshold": 0.75,
+  "support_train": 172,
+  "support_test": 51
+ },
+ "DELEGATION": {
+  "precision": 0.3,
+  "recall": 0.48,
+  "f1": 0.369,
+  "threshold": 0.64,
+  "support_train": 59,
+  "support_test": 25
+ },
+ "OTHER": {
+  "precision": 0.371,
+  "recall": 0.245,
+  "f1": 0.295,
+  "threshold": 0.74,
+  "support_train": 165,
+  "support_test": 53
+ },
+ "restricts_writes": {
+  "precision": 0.38,
+  "recall": 0.475,
+  "f1": 0.422,
+  "threshold": 0.75,
+  "support_train": 101,
+  "support_test": 40
+ }
+}

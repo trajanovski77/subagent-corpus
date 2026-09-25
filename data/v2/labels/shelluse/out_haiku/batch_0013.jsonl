@@ -1,0 +1,42 @@
+{"id": "5f6e5251bc935889", "shell_use": "change", "evidence": "install deps from its pyproject/requirements — filter install output"}
+{"id": "56bc0795e130aa4e", "shell_use": "none", "evidence": ""}
+{"id": "da648f516aa98ca2", "shell_use": "none", "evidence": ""}
+{"id": "92faf74628c1b381", "shell_use": "inspect", "evidence": "Your Bash access is for inspection only (git, grep, reading)"}
+{"id": "7735fd344ae5b369", "shell_use": "verify", "evidence": "Unit tests: ./gradlew :module:testDebugUnitTest"}
+{"id": "1d7eaa8313802eae", "shell_use": "inspect", "evidence": "`git diff` 本 sprint 提交"}
+{"id": "1d70209d8c0ed976", "shell_use": "none", "evidence": ""}
+{"id": "7c85cbf0a30693aa", "shell_use": "inspect", "evidence": "git status --short"}
+{"id": "1caf2f41ac8b7979", "shell_use": "none", "evidence": ""}
+{"id": "e83ee77ff475a5db", "shell_use": "verify", "evidence": "test runners for evidence"}
+{"id": "939c2d82415cc653", "shell_use": "inspect", "evidence": "Run `git status` and `git diff` to see what changed"}
+{"id": "71455682847475b3", "shell_use": "verify", "evidence": "bash tests/harness/fixtures/teardown.sh"}
+{"id": "deac977821a51ec8", "shell_use": "inspect", "evidence": "`.claude/scripts/jar-search.sh`"}
+{"id": "f7f9a49f30817265", "shell_use": "verify", "evidence": "cargo test --all-features -p <crate>"}
+{"id": "bcc8c4787b361516", "shell_use": "verify", "evidence": "RUN every automated criterion command against the current tree"}
+{"id": "3800216df4b39281", "shell_use": "none", "evidence": ""}
+{"id": "72e6bfe667875a46", "shell_use": "inspect", "evidence": "Use `Grep` to find function definitions and call sites"}
+{"id": "f70afc81925341cc", "shell_use": "verify", "evidence": "Run the relevant tests + `php -l` yourself"}
+{"id": "08d4a9943840304f", "shell_use": "none", "evidence": ""}
+{"id": "8c34bf65b10b596c", "shell_use": "none", "evidence": ""}
+{"id": "31bbbbda75c4e080", "shell_use": "none", "evidence": ""}
+{"id": "071111b03ec0741e", "shell_use": "change", "evidence": "gh pr merge {PR_URL} --squash --delete-branch"}
+{"id": "e7b400db4a5a65c9", "shell_use": "inspect", "evidence": "`git diff main...HEAD`"}
+{"id": "678cd2b883c680cb", "shell_use": "none", "evidence": ""}
+{"id": "85b88bbcc6b4468b", "shell_use": "inspect", "evidence": "`git log`, `git diff`, `git show`, `git grep`"}
+{"id": "75105be24aa9f726", "shell_use": "change", "evidence": "gh issue create"}
+{"id": "bb92e03850bcdd3c", "shell_use": "none", "evidence": ""}
+{"id": "e68779e64b9b9ab0", "shell_use": "inspect", "evidence": "`git diff`, `git diff --staged`/`git log`/`git status`"}
+{"id": "b67741d3efe9d326", "shell_use": "inspect", "evidence": "`git log/diff/show/blame`, `grep`, `find`, `wc`"}
+{"id": "64879ef2d2a16f8a", "shell_use": "none", "evidence": ""}
+{"id": "c3bcbb8aa645719a", "shell_use": "inspect", "evidence": "Run `ito agent instruction orchestrate` and read its output"}
+{"id": "299ef6fef13f92e1", "shell_use": "verify", "evidence": "Run `python scripts/run_e2e.py` and look at the latest screenshots"}
+{"id": "0f95bf7571d75c28", "shell_use": "none", "evidence": ""}
+{"id": "6312dc08428a4d85", "shell_use": "inspect", "evidence": "Discover files with `find`"}
+{"id": "a249e5d31f81be9d", "shell_use": "none", "evidence": ""}
+{"id": "29af1166ba9764ca", "shell_use": "inspect", "evidence": "`gh pr diff`, `git diff`, `git log --oneline`, `tree`, `wc`"}
+{"id": "dfd0995c3619763d", "shell_use": "change", "evidence": "npm run gulp vscode-darwin-arm64"}
+{"id": "6a3ccba7f340aaf2", "shell_use": "change", "evidence": "commit+push"}
+{"id": "732742401e96e0d9", "shell_use": "none", "evidence": ""}
+{"id": "910017c5d5fd5c2f", "shell_use": "inspect", "evidence": "`$PY` -m graphify query"}
+{"id": "d57e597fe7fc80e9", "shell_use": "none", "evidence": ""}
+{"id": "9c89632d521d34b0", "shell_use": "none", "evidence": ""}

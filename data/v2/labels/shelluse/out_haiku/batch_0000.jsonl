@@ -1,0 +1,51 @@
+{"id": "0e108967f3ef312a", "shell_use": "verify", "evidence": "Run the project's canonical TypeScript check command first when one exists"}
+{"id": "b31bc2d20df16aed", "shell_use": "inspect", "evidence": "scripts/worktree-diff.sh <wt> — ONE call returns the cheap signal (porcelain status + per-file stat)"}
+{"id": "be7c352f483a10fa", "shell_use": "inspect", "evidence": "Use tools like jscpd or grep patterns to find duplicates"}
+{"id": "46d18d21fbec09a9", "shell_use": "change", "evidence": "ssh -p 922 wottle@ssh.wottle.com \"~/docker/latest_docker_images_pull.sh\""}
+{"id": "43ba8a8cd96d1e17", "shell_use": "inspect", "evidence": "search for patterns, read related files, trace call paths"}
+{"id": "4a01b033d6bbd9ec", "shell_use": "change", "evidence": "gh issue close … -c \"<message>\""}
+{"id": "b65fb5957ed66982", "shell_use": "inspect", "evidence": "find . -maxdepth 2 \\( -name \"package.json\" -o -name \"pyproject.toml\""}
+{"id": "0b3f216cb3daefad", "shell_use": "none", "evidence": ""}
+{"id": "dc328fec77877c71", "shell_use": "inspect", "evidence": "gh pr view <PR_NUMBER> --json number,title,commits"}
+{"id": "33b8523fb523f5fc", "shell_use": "verify", "evidence": "Run the scoped test file and report the real result"}
+{"id": "8fce47ac28e9e892", "shell_use": "verify", "evidence": "npx lighthouse http://localhost:5173 --view"}
+{"id": "d70dd35201f44730", "shell_use": "verify", "evidence": "Run `dotnet build` and `dotnet format --verify-no-changes`"}
+{"id": "2eca9c8f3356771d", "shell_use": "change", "evidence": "npm run lint:fix && npm run build to confirm clean state"}
+{"id": "d7598e1293854c1b", "shell_use": "verify", "evidence": "跑該任務相關測試（run the relevant tests for this task）"}
+{"id": "03f74d4c52bf6c0b", "shell_use": "verify", "evidence": "Re-run acceptance, unit, property, architecture, security, mutation evidence, and `wct gate --tier full`"}
+{"id": "2e69717d55221ced", "shell_use": "inspect", "evidence": "git status --porcelain --untracked-files=no and python -c \"import sys; sys.path.insert\""}
+{"id": "5ca643cff4dab803", "shell_use": "none", "evidence": ""}
+{"id": "c93f990ba4235663", "shell_use": "none", "evidence": ""}
+{"id": "e149ea7553dfcea9", "shell_use": "verify", "evidence": "You may compile check files with babel using Bash"}
+{"id": "ca0ea51783bb0b2a", "shell_use": "none", "evidence": ""}
+{"id": "b364b0ca3c90e1a8", "shell_use": "none", "evidence": ""}
+{"id": "ae65919b4e31116a", "shell_use": "inspect", "evidence": "Use `ripgrep` skill for fast text/regex search across the codebase"}
+{"id": "f53a6cf302bc4ad4", "shell_use": "none", "evidence": ""}
+{"id": "e3fe4c6d0c56bbb3", "shell_use": "inspect", "evidence": "git diff main...HEAD -- helm/library/*/Chart.yaml"}
+{"id": "43656acb716a63f3", "shell_use": "inspect", "evidence": "Run git diff to see recent changes"}
+{"id": "45fbe3137228195e", "shell_use": "none", "evidence": ""}
+{"id": "3ebda37803c20cd9", "shell_use": "verify", "evidence": "Run security-relevant tooling if present and fast: `gitleaks`, `bandit -r`, `gosec ./...`"}
+{"id": "efe45f80b604c9eb", "shell_use": "inspect", "evidence": "grep -r \"import.*$export_name\" \"$search_path\""}
+{"id": "bd767fc01ea0ea59", "shell_use": "inspect", "evidence": "git fetch origin && git worktree add"}
+{"id": "d10fcb637163bce3", "shell_use": "verify", "evidence": "cd frontend && npm run lint && npx tsc --noEmit && npm run build"}
+{"id": "532d32cfe55b16f0", "shell_use": "none", "evidence": ""}
+{"id": "d1194a54ed9dce06", "shell_use": "verify", "evidence": "uv run pytest -vvv"}
+{"id": "4c4bd6b15186b82a", "shell_use": "change", "evidence": "docker exec mealplanner-db-1 psql -U postgres -d recipes -c"}
+{"id": "4e14cfc6afad9666", "shell_use": "verify", "evidence": "`cargo build --workspace` succeeds and `cargo clippy --workspace -- -D warnings`"}
+{"id": "ebcaed5db2944fe7", "shell_use": "none", "evidence": ""}
+{"id": "0e6e374e93793ce7", "shell_use": "verify", "evidence": "pytest <feature-test-paths> -q --tb=short"}
+{"id": "21a2bf7ce0c4251f", "shell_use": "none", "evidence": ""}
+{"id": "b0095aca84210e2f", "shell_use": "none", "evidence": ""}
+{"id": "c8a70b9683550819", "shell_use": "none", "evidence": ""}
+{"id": "803317032a0d0a56", "shell_use": "none", "evidence": ""}
+{"id": "11483b9e5288052f", "shell_use": "inspect", "evidence": "Run `git diff --name-only HEAD~1` to identify changed files"}
+{"id": "2b65e257c9cb89e6", "shell_use": "none", "evidence": ""}
+{"id": "9573343847d24112", "shell_use": "inspect", "evidence": "Run `git diff -- '*.{extension}'` to see changed files"}
+{"id": "7aa2c5d5f1f8cd95", "shell_use": "verify", "evidence": "npm run lint, npx biome check, ruff check, black --check, cargo clippy"}
+{"id": "e92dae81a1b7b584", "shell_use": "verify", "evidence": "`npx tsc --noEmit`, `npx vitest run`, `npx eslint .`, `npx playwright test`"}
+{"id": "a0c1b212a39a8c67", "shell_use": "inspect", "evidence": "Run `git diff` or `git diff --cached` to see recent changes"}
+{"id": "e3fd89624f481aae", "shell_use": "none", "evidence": ""}
+{"id": "989f2eba28703451", "shell_use": "none", "evidence": ""}
+{"id": "b990e0541da4ea57", "shell_use": "verify", "evidence": "make go-check, make go-test, make docker-build, yamllint .tekton/*.yaml"}
+{"id": "4926b876f5b7edea", "shell_use": "verify", "evidence": "Run static analysis tools if available (ruff, mypy, pylint, black --check)"}
+{"id": "61e4047eb73c2be1", "shell_use": "none", "evidence": ""}

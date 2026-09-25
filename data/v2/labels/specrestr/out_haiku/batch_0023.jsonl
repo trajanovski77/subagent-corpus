@@ -1,0 +1,45 @@
+{"id": "7ce90b072d27e767", "restriction": "none", "evidence": "", "where": ""}
+{"id": "78282faf998dd0a1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8c34bf65b10b596c", "restriction": "full", "evidence": "You are READ-ONLY. You never modify files.", "where": "body"}
+{"id": "22052d23935ec485", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e46029e1eda45f6f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8d2bace88191869c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4095e1d043d75a3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "492abddcaea8bc6d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "92d10fe90fa574df", "restriction": "none", "evidence": "", "where": ""}
+{"id": "48f567dabf78a869", "restriction": "none", "evidence": "", "where": ""}
+{"id": "99148f749565bf65", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2812131422e3ff76", "restriction": "none", "evidence": "", "where": ""}
+{"id": "95cd4d5a58a10845", "restriction": "full", "evidence": "You are report-only: never edit vignettes/, R/, or any source.", "where": "body"}
+{"id": "3a80bc1c5888174f", "restriction": "partial", "evidence": "producing the proposed derrick.yaml without writing anything until confirm; never overwrite a user file without explicit confirm", "where": "body"}
+{"id": "ef651405052437d8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a3dcb27ebe089edb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b7b0f81a661466ee", "restriction": "none", "evidence": "", "where": ""}
+{"id": "492b5b7b8fb5b409", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ba061128a0301341", "restriction": "partial", "evidence": "Only modify .wiswa.jsonnet. Never modify managed files - they are outputs of Wiswa.", "where": "body"}
+{"id": "552673e222248482", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2311f7a65335389e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "542afef5dfa8445a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6d62ca5d9aec6647", "restriction": "none", "evidence": "", "where": ""}
+{"id": "553e998997bcb0aa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "44264db2a00cd9f3", "restriction": "partial", "evidence": "Never modify existing check targets unless the user explicitly requests it.", "where": "body"}
+{"id": "5989089c32233ca3", "restriction": "full", "evidence": "Never modify any files", "where": "body"}
+{"id": "f42ded054ccfe250", "restriction": "partial", "evidence": "Write: Create new ADRs in docs/adr/ ONLY; Restricted Tools: Edit: Do NOT edit existing ADRs", "where": "body"}
+{"id": "be722c5fd5deabdc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e1b51d5b528e6da7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "14909dd6e23d2c9c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1f4798caa6c4bd83", "restriction": "none", "evidence": "", "where": ""}
+{"id": "541c311d7b15b4e1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b64434666bd45d47", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4e95c70d43ab0ae", "restriction": "partial", "evidence": "ALLOW app/apps/dashboard/src/**, DENY app/apps/api/src/**, ingestion/**, models/**", "where": "body"}
+{"id": "c555e9c84e5949b6", "restriction": "partial", "evidence": "only write docs/backlog.md if the user accepts; Forbidden: Writing or editing src/main/**, src/test/**, src/main/webui/**", "where": "body"}
+{"id": "f3f593b7de5eda61", "restriction": "full", "evidence": "You are READ-ONLY and cannot submit anything", "where": "body"}
+{"id": "29f2c206e02a7395", "restriction": "partial", "evidence": "Never modify app business logic or views. You may adjust accessibility identifiers/labels/actions", "where": "body"}
+{"id": "85f37a99f954c2ea", "restriction": "full", "evidence": "Review the current changes without editing files.", "where": "body"}
+{"id": "28e39dfad5462ceb", "restriction": "partial", "evidence": "Write or edit code. Your write access is restricted to the artifact directory.", "where": "body"}
+{"id": "2bebac151758c615", "restriction": "full", "evidence": "Write - Cannot create files; Edit - Cannot modify files", "where": "body"}
+{"id": "8ddf39d00f61d4d6", "restriction": "full", "evidence": "You do NOT modify code — you only read and report.", "where": "body"}
+{"id": "bce9ab65923baf82", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0bae741613704fe4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "271eafa87a43efc0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "776e4883b742234a", "restriction": "full", "evidence": "ты не пишешь и не правишь код (you don't write or edit code)", "where": "body"}

@@ -1,0 +1,47 @@
+{"id": "b0c7e73ee1818d97", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f085de793ae8ac1d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e94611d95d48d1a4", "restriction": "partial", "evidence": "Edit any `vintasend-*` downstream repository.", "where": "body"}
+{"id": "141424f01658bb17", "restriction": "none", "evidence": "", "where": ""}
+{"id": "55dac9fe2fdea400", "restriction": "none", "evidence": "", "where": ""}
+{"id": "08d6ffbf5c081ea2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "69b62867db716fbb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4617dff6f609b98c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4aadc2c9e5746c26", "restriction": "none", "evidence": "", "where": ""}
+{"id": "362075e99f4f806a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7674a1dbdf46f74b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1b25c8a8a5d6e2a2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d0c705a5d57dea0b", "restriction": "partial", "evidence": "You can only access: `./sales/`, `./sales/crm/`, `./marketing/` (read-only), `./reports/`", "where": "body"}
+{"id": "3883856c7acd6c29", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4b15f3eb2c165034", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4ac12a423842274", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ff235fc5bff559b8", "restriction": "full", "evidence": "Do NOT attempt to post comments, edit PRs, or perform any write operations.", "where": "body"}
+{"id": "d6ccfacd3a7de2ba", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9f969d9ac1d6c85a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "92f5d5ae1dbeec9c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e324a5476ac21541", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ef9afc40d9bd140c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d1eda07379376c55", "restriction": "none", "evidence": "", "where": ""}
+{"id": "232eed052d95f431", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dec6fb73dac38901", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0a2efad27f6b04fc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ebf1b5f5266af804", "restriction": "partial", "evidence": "Do not edit `CHANGELOG.md` or `pyproject.toml:project.version`.", "where": "body"}
+{"id": "d25485c90d132a50", "restriction": "none", "evidence": "", "where": ""}
+{"id": "abf1bcb431bf0ae2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9849755983ba577c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "24117864d6b5ee50", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7090bb5d7c78f810", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9e3e2109b09b1787", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1034d26b2946b9f4", "restriction": "partial", "evidence": "Write, Edit 도구를 사용하여 **소스 코드 파일**을 생성/수정하는 것은 금지입니다.", "where": "body"}
+{"id": "45abcd82a354e878", "restriction": "full", "evidence": "You are read-only — never modify UI-SPEC.md. Report findings, let the researcher fix.", "where": "body"}
+{"id": "c98e4e71e458353f", "restriction": "partial", "evidence": "Forbidden operations: `git commit`, `git push`, `git merge`", "where": "body"}
+{"id": "24a7adce089dad85", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b6bf0ced68de1304", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c13a8db1462e8d68", "restriction": "none", "evidence": "", "where": ""}
+{"id": "51ae3900e54e2aab", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f3f054c162da5339", "restriction": "none", "evidence": "", "where": ""}
+{"id": "215271f64877ce58", "restriction": "none", "evidence": "", "where": ""}
+{"id": "af39579b5112483a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9293edccbe151024", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17f99f147db3a09c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17f72ab20b942306", "restriction": "full", "evidence": "You make no changes.", "where": "body"}
+{"id": "5b7faa2edb23d061", "restriction": "none", "evidence": "", "where": ""}

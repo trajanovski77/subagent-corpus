@@ -1,0 +1,38 @@
+{"id": "0b50640da2b1bc90", "restriction": "partial", "evidence": "You never mutate `src/` or `tests/`.  You hold the thesis; delegate every code change via `Task` with a tight, tested spec. You may write product docs (roadmap, decision log) — nothing else.", "where": "body"}
+{"id": "53643a141b67717d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9e30a3bada1c96d4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3fe4abf061dee3c2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2e6f63b93e8b4afb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8fe56561730675d2", "restriction": "partial", "evidence": "Stage only product files — never `.claude/`, `.codex/`, `.ai-sync/`, `TASKS.md`, `AGENTS.md`, `PRODUCT.md`, `task-images/`", "where": "body"}
+{"id": "44f1f10c615cae29", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d3a6b0dc1406f457", "restriction": "none", "evidence": "", "where": ""}
+{"id": "544e0d37dab8aac4", "restriction": "full", "evidence": "IMPORTANT: Provide verification and analysis only. DO NOT modify any files.", "where": "body"}
+{"id": "75c452fd2606bb0c", "restriction": "full", "evidence": "先 review，先给问题总表，不要急着改代码 (review first, give problem list first, don't rush to change code)", "where": "body"}
+{"id": "8fa72dca81342961", "restriction": "none", "evidence": "", "where": ""}
+{"id": "aeace19e6d4317a9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "438b046dbbde3d5c", "restriction": "full", "evidence": "Do not modify files. Report only.", "where": "body"}
+{"id": "a87e292a1703cdaa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4bf6276388020a08", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4210ff63bd7504d3", "restriction": "partial", "evidence": "Never modify `README.md`.", "where": "body"}
+{"id": "5121ad1f45a7172a", "restriction": "full", "evidence": "The agent is a pre-push review agent that checks and verifies; it does not make code changes. It produces findings and reports, not fixes.", "where": "body"}
+{"id": "639d9f0a978e3e9b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dcc549df2b11efc2", "restriction": "partial", "evidence": "Do NOT commit or push — the user handles that.", "where": "body"}
+{"id": "1d30ee1f8fb2778c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1b2004a3aa528b8a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7c05a48e52044d29", "restriction": "full", "evidence": "The agent validates and checks pipelines and configuration; it does not modify files or pipelines.", "where": "body"}
+{"id": "3750161497f7b3bd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "66f0a1b6bea2fd3b", "restriction": "unclear", "evidence": "The body is a reference to another file: @../../.cursor/agents/silverkey-audit-architecture-remediation.md. Cannot determine restrictions without reading the actual spec.", "where": ""}
+{"id": "6f43eebf6e169a28", "restriction": "partial", "evidence": "Boundary: do not touch files owned by implementer-b, qa, or leader", "where": "body"}
+{"id": "7a588a219ab3a1bb", "restriction": "full", "evidence": "The agent validates Tekton pipelines and checks CI/CD configuration; it is a validator and reviewer, not a fixer or implementer.", "where": "body"}
+{"id": "6af3216d83b36ddf", "restriction": "full", "evidence": "You MUST NEVER delete code or files to \"fix\" failures. **NEVER.** FIX THE ROOT CAUSE.", "where": "body"}
+{"id": "841b630cf2ab76b4", "restriction": "full", "evidence": "You are strictly forbidden from mutating code, committing changes, or deploying infrastructure.", "where": "body"}
+{"id": "54cc601e9c75b9bc", "restriction": "full", "evidence": "The agent audits and reviews job behavior and operational safety; it does not modify code.", "where": "body"}
+{"id": "99db72dabbb7f2c0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ce2fa8a91c8cd317", "restriction": "full", "evidence": "NEVER modify any code or files — this is a READ-ONLY analysis", "where": "body"}
+{"id": "367c97a80810d8e2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6a5271dfe576bb76", "restriction": "full", "evidence": "The agent red-teams plan documents; it reviews for gaps and issues but does not modify plans or code.", "where": "body"}
+{"id": "36fe8252375ea20e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ed0494f3b172815a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c1c11bbf4a014d6f", "restriction": "partial", "evidence": "Do not write APPROVAL or finding entries to the sign-off register... **Exception:** you write `Status: N/A` bookkeeping entries on behalf of skipped reviewers", "where": "body"}
+{"id": "47dab0a89bd572b2", "restriction": "full", "evidence": "Never edit files. Every decision ends with a handoff: 'writer implements X, starting with file Y.'", "where": "body"}
+{"id": "0fe6f348377f05c1", "restriction": "none", "evidence": "", "where": ""}

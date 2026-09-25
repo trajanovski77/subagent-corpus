@@ -1,0 +1,59 @@
+{"id": "25e6c5a9e40d59fe", "restriction": "partial", "evidence": "Do NOT write any files in this mode", "where": "body"}
+{"id": "30cad22b0c7c8bfb", "restriction": "full", "evidence": "Write/Edit excluded", "where": "description"}
+{"id": "a4e03c9cbf921530", "restriction": "partial", "evidence": "it never publishes", "where": "description"}
+{"id": "7f64dd4069b07354", "restriction": "none", "evidence": "", "where": ""}
+{"id": "eb56e277783b7bde", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e49571b77968f507", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e2a9d88a186cd4ea", "restriction": "partial", "evidence": "You do NOT write code", "where": "body"}
+{"id": "c8c750d9520bda78", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3835d03c16f28008", "restriction": "partial", "evidence": "You do NOT author documentation. You do NOT edit source markdown.", "where": "body"}
+{"id": "35d7a8c29862d558", "restriction": "none", "evidence": "", "where": ""}
+{"id": "33b8523fb523f5fc", "restriction": "full", "evidence": "You cannot edit anything — report, do not fix.", "where": "body"}
+{"id": "0c1599dc647d5c93", "restriction": "partial", "evidence": "never fixes source files", "where": "description"}
+{"id": "a7960c6fdd30ccda", "restriction": "partial", "evidence": "no edits to CLAUDE.md, hooks, skills, agents, or workflow files. Your only writable location is .claude/proposals/.", "where": "body"}
+{"id": "0b88217ec95d279e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2ac18ca4dee08532", "restriction": "partial", "evidence": "You write specs. You do not write code", "where": "body"}
+{"id": "d35576fdfb8f8aae", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0fd38e77300ef4ce", "restriction": "none", "evidence": "", "where": ""}
+{"id": "882379de663fa775", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cc72272c7eb2c911", "restriction": "none", "evidence": "", "where": ""}
+{"id": "65ba74c308563773", "restriction": "partial", "evidence": "MUST NOT assign issues to cycles or update estimates without human approval", "where": "body"}
+{"id": "9f8c0effb6a2b6d8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "37c664582648ede8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2dd5840af64e5862", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e973750a0aa7e9d5", "restriction": "partial", "evidence": "Plans strategy; does not write tests", "where": "body"}
+{"id": "04e597b10bf0713a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7d92ef065d4b946c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f65c65bee0528167", "restriction": "partial", "evidence": "Do not write production code unless explicitly asked", "where": "body"}
+{"id": "e6937feacd3f842a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e67d971725c17e28", "restriction": "partial", "evidence": "never drafts CHANGELOG or release notes", "where": "description"}
+{"id": "a381701c69fcda76", "restriction": "partial", "evidence": "You do not write implementation code", "where": "body"}
+{"id": "d637b46fe1e4bf7e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5cd33f0f5e5c6b73", "restriction": "none", "evidence": "", "where": ""}
+{"id": "09dc13a158f7dbe7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "be29a9daf66d7120", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e2e0f9df6a94c5fa", "restriction": "partial", "evidence": "Never fix code yourself - report via `stuck`", "where": "body"}
+{"id": "3861a67fdb7c57e3", "restriction": "full", "evidence": "Read-only", "where": "description"}
+{"id": "8d9f5a3f9c870e55", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d112ad76e7ad7824", "restriction": "none", "evidence": "", "where": ""}
+{"id": "379e297dbd61ac02", "restriction": "none", "evidence": "", "where": ""}
+{"id": "905ae9b734b82096", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fdebfd7c3cfa5b30", "restriction": "full", "evidence": "Do not write or edit any files — planning only", "where": "body"}
+{"id": "f53a6cf302bc4ad4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fd0ada37fc424d27", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e1ed52cc7c5fe8e2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3cf1af048628368e", "restriction": "partial", "evidence": "Do not edit unless the task explicitly grants a dedicated worktree", "where": "body"}
+{"id": "755e8db7220ec5f3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ffa89ddb8bb74539", "restriction": "full", "evidence": "you must never modify files", "where": "body"}
+{"id": "55ffdf3bf27bb244", "restriction": "none", "evidence": "", "where": ""}
+{"id": "35e3922c41392cf5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "10e050d6e83842e3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4f8f2822e5bf6406", "restriction": "none", "evidence": "", "where": ""}
+{"id": "32707adaaab9161b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2b3b7c7ae3e41c73", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c44d4e691c67e2d2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "df70f8ba0d91de11", "restriction": "none", "evidence": "", "where": ""}
+{"id": "86e6e3ea077346ab", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8bf1b928a3cac05a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "529e32efb05399fe", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f522c821cbbc87de", "restriction": "none", "evidence": "", "where": ""}

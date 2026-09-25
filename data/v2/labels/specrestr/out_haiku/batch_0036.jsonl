@@ -1,0 +1,49 @@
+{"id": "fed59926d101de59", "restriction": "none", "evidence": "", "where": ""}
+{"id": "72b0e15727850146", "restriction": "full", "evidence": "Read-only — reports findings, does not edit.", "where": "both"}
+{"id": "21bf472864923dc5", "restriction": "full", "evidence": "Read-only security research for ClaudeSec ... Gathers and cites; does not modify files.", "where": "both"}
+{"id": "e37d4d717876a32d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17d0583748860ff2", "restriction": "partial", "evidence": "NEVER commit to git (the lead handles git)", "where": "body"}
+{"id": "c94f7f8f79836414", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4e892ccc7643b4a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6ff477eba442fec4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b364b0ca3c90e1a8", "restriction": "full", "evidence": "Read-only domain expert ... you do NOT modify files.", "where": "both"}
+{"id": "afafb59926040862", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dbb58bbbf24f69c1", "restriction": "partial", "evidence": "You write and update deployment manifests ... Never put a secret in any committed values*.yaml", "where": "body"}
+{"id": "504a2995fcd84ee7", "restriction": "full", "evidence": "Read-only — reports findings, never edits.", "where": "both"}
+{"id": "ee8ceb351477f8d8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4ff8aa0c06a1b5e", "restriction": "full", "evidence": "Read-only. Do not edit files.", "where": "body"}
+{"id": "47a8e843393c3709", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2ec58a63100cd7d5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "265bb67aa37da803", "restriction": "full", "evidence": "read-only ... You do NOT: ... Modify the codebase", "where": "both"}
+{"id": "b2c27f68231593cb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a2e1eae903dd3c77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6e9e48de8da25cbb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c5804048bf5f44e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "92e93ee73c55f489", "restriction": "none", "evidence": "", "where": ""}
+{"id": "56550bd4b86dbe33", "restriction": "full", "evidence": "Never writes or edits code.", "where": "description"}
+{"id": "12d6cda2563c8447", "restriction": "none", "evidence": "", "where": ""}
+{"id": "165a79b6a489cd7a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1a628cd2a3590f11", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4493b70ff0a69067", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f6349574ccc6f621", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5cf563fe68babf3b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "348ef34ec60d0be6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7821b3b6427f99d0", "restriction": "full", "evidence": "You do not edit.", "where": "body"}
+{"id": "dc7a39beb36ed7bc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d5ba4a3ec52cb1e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4c4bd6b15186b82a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d253ab3a301cfc77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bfd112376457ae8f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b6c982e704c7bf6", "restriction": "full", "evidence": "Read-only implementation planner ... Do not edit files or run commands.", "where": "both"}
+{"id": "a72d9830325ff1a8", "restriction": "full", "evidence": "do not modify any file — you review code, you never rewrite it.", "where": "body"}
+{"id": "024bd10706229ff6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe2757558f99e041", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cb22e01ae6e1ed20", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0a34d3662a65cdc4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5dc19ebdad74f2b9", "restriction": "full", "evidence": "Write implementation code ... Modify source files directly [Forbidden Actions]", "where": "body"}
+{"id": "204b22ee8ed29b34", "restriction": "full", "evidence": "Read-only advisory agent ... you do not own any files and must never edit or write code", "where": "both"}
+{"id": "3962cd3d268e930a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "809b751e8857dfa8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5c5e6be9de08a1bb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3ee0a49cd8498d33", "restriction": "full", "evidence": "Read-only; safety-sensitive ... never edit source.", "where": "both"}
+{"id": "37113983e9ac3e06", "restriction": "none", "evidence": "", "where": ""}

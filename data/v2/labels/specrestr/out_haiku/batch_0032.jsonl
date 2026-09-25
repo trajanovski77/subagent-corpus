@@ -1,0 +1,40 @@
+{"id": "5d05a8639ecb8029", "restriction": "none", "evidence": "", "where": ""}
+{"id": "be778ff31eb20905", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1ea1c7dbe3eca9e0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "94cf6844199778cb", "restriction": "full", "evidence": "Never edit files", "where": "body"}
+{"id": "e3f214f0b85bf0a1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8b31da735d9e0cb7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "49af5bf457d33682", "restriction": "partial", "evidence": "Never modifies application code; that's done via work-order", "where": "both"}
+{"id": "237b85c340a2bee2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "66af7c275946c768", "restriction": "partial", "evidence": "Does not implement code directly", "where": "body"}
+{"id": "2ddbb12e2b3a578d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "399689f492e68af3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fb6dc87a948c6eaa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "efcd2ff899ddf10e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a4da29bdabdd7c70", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8a1b534707d2c5e2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4048aa436376440d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "124d3d6efa57fe04", "restriction": "full", "evidence": "Read-only — diagnoses and prescribes, never edits", "where": "description"}
+{"id": "d9ddf423ce19be79", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e925ad461f93451a", "restriction": "full", "evidence": "You are READ-ONLY except for Bash (to run builds)", "where": "body"}
+{"id": "b28b19c181988a17", "restriction": "none", "evidence": "", "where": ""}
+{"id": "595cce06131a8fda", "restriction": "none", "evidence": "", "where": ""}
+{"id": "2f365b7f1b03bea5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5e337b0dfd9fa575", "restriction": "partial", "evidence": "Never edit code", "where": "body"}
+{"id": "a06060a54657cb99", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7eb777cfa2357e82", "restriction": "partial", "evidence": "never rewrite the history of already-released sections", "where": "body"}
+{"id": "5af9eebbcd093a7b", "restriction": "partial", "evidence": "Never delete files inside packages/ or apps/", "where": "body"}
+{"id": "79b96216475becdc", "restriction": "full", "evidence": "Never write files, never install anything, never run mutating commands", "where": "body"}
+{"id": "b0710791ab8aa064", "restriction": "none", "evidence": "", "where": ""}
+{"id": "38dbfb29a121861d", "restriction": "full", "evidence": "NEVER write code. You are read-only", "where": "body"}
+{"id": "2a3195e7456d43c5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "48c1e6a3da49d094", "restriction": "none", "evidence": "", "where": ""}
+{"id": "70c63a0b98c73235", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4820ec18603866ab", "restriction": "partial", "evidence": "NUNCA toco em `src/**`", "where": "body"}
+{"id": "bdc418b80d09bda4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ad9a54f30e05ccb1", "restriction": "partial", "evidence": "НІЧОГО не міняй у продукті; пиши лише свій файл знахідок", "where": "body"}
+{"id": "8455cab8bda8491e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d82e5c9d946c88f6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ac55edd4e423fb8c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "db44c547a335247b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f476c6f7d759384c", "restriction": "partial", "evidence": "NEVER run `git clean` inside a worktree", "where": "body"}

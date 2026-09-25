@@ -1,0 +1,1907 @@
+{
+ "encoder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+ "min_cluster_size": 80,
+ "seed": 42,
+ "n_items": 42348,
+ "outliers_before_reduction": 17956,
+ "topics": [
+  {
+   "topic": 0,
+   "size_items": 1649,
+   "size_specs": 2336,
+   "words": [
+    "documentation",
+    "docs",
+    "writer",
+    "readme",
+    "doc",
+    "technical",
+    "guides",
+    "api docs",
+    "api",
+    "documentation specialist"
+   ],
+   "npmi": 0.3578976582157564,
+   "examples": [
+    "documenter :: Use to document a feature once it is implemented and verified. Updates the Writerside docs in docs/topics/, ticks the ROADMAP item, amends the FEATURES.md mappi",
+    "note-taker :: จดโน้ต - feeling, info, idea จาก content type commands",
+    "doc-gardening :: Audits existing ZAQ documentation for drift against the real codebase. Compares docs/services/ files against actual source files in lib/zaq/, identifies missing",
+    "artifact-librarian :: 维护 dataset/checkpoint/table/figure/result/document 的索引与归档状态、生成 stale asset 报告时使用；绝不删除或移动数据。",
+    "example-generator :: API 문서(02_docs.md)와 실제 화면 파일들을 읽고 각 서비스 함수의 사용 예제 코드를 생성하는 에이전트. 실제 화면 코드에서 패턴을 추출하여 현실적인 예제를 만든다. api-doc-orchestrator가 파이프라인 Step 3에서 호출한다.",
+    "mallu-reels :: Escreve roteiros de Reel para @amalluvasconcellos. Formato talking head, tom direto e crítico. Ler nucleo-comum/voz-paaps.md antes de escrever."
+   ]
+  },
+  {
+   "topic": 1,
+   "size_items": 1532,
+   "size_specs": 2442,
+   "words": [
+    "security",
+    "vulnerability",
+    "owasp",
+    "vulnerabilities",
+    "threat",
+    "security reviewer",
+    "security auditor",
+    "secrets",
+    "auditor",
+    "auth"
+   ],
+   "npmi": 0.395892615592779,
+   "examples": [
+    "tachi-info-disclosure :: STRIDE information disclosure threat agent that detects confidentiality violations against Processes, Data Stores, and Data Flows, covering error message exposu",
+    "security-reviewer :: Scans for injection, auth bypass, hardcoded secrets, SSRF, path traversal, and other OWASP top 10 vulnerabilities.",
+    "timps_threat_intel_analyst :: Ingest threat feeds (CVE, MITRE ATT&CK, CISA KEV) and produce a threat brief with detection rules and prioritised mitigations. Use the `timps_threat_intel_analy",
+    "frontend-mobile-security-xss-scan :: You are a frontend security specialist focusing on Cross-Site Scripting (XSS) vulnerability detection and prevention. Analyze React, Vue, Angular, and vanilla J",
+    "audit-skills :: Expert security auditor for AI Skills and Bundles. Performs non-intrusive static analysis to identify malicious patterns, data leaks, system stability risks, an",
+    "api-security :: Delegates to this agent when the user asks about API security testing, REST API attacks, GraphQL exploitation, OAuth/OIDC vulnerabilities, JWT attacks, API enum"
+   ]
+  },
+  {
+   "topic": 2,
+   "size_items": 1352,
+   "size_specs": 2583,
+   "words": [
+    "debugger",
+    "error",
+    "errors",
+    "root",
+    "cause",
+    "bug",
+    "fix",
+    "root cause",
+    "failures",
+    "debugging"
+   ],
+   "npmi": 0.3774611830535465,
+   "examples": [
+    "debugger :: Advanced debugging specialist for full-stack Tauri development. Systematically identifies, classifies, isolates, and fixes errors across TypeScript, Rust, SQLit",
+    "debugger :: Root-cause diagnostic expert. Systematically isolates bugs, traces failures, and verifies fixes. Use for complex investigative tasks, crashes, or unexplained be",
+    "DebuggerAgent-HAIKU :: Debugging specialist for errors test failures, and unexpected behavior. Uses screen+ipdb for interactive debugging for collaborating with multiple debugger agen",
+    "spark-troubleshooter :: Spark debugging specialist for diagnosing OOM errors, data skew, shuffle failures, and job hangs.\nUse PROACTIVELY when a Spark job fails, is slow, or produces u",
+    "vite-cache-poisons-mutation-testing :: vitest's on-disk node_modules/.vite transform cache makes rapid mutate→run→restore loops report phantom failures — rm -rf node_modules/.vite between mutations o",
+    "monitoring-error-rates :: Monitor and analyze application error rates to improve reliability. Use when tracking errors in applications including HTTP errors, exceptions, and database iss"
+   ]
+  },
+  {
+   "topic": 3,
+   "size_items": 1607,
+   "size_specs": 2216,
+   "words": [
+    "test",
+    "tests",
+    "testing",
+    "coverage",
+    "unit",
+    "tester",
+    "runner",
+    "test coverage",
+    "test writer",
+    "test runner"
+   ],
+   "npmi": 0.34476801448300326,
+   "examples": [
+    "test-writer :: Writes xUnit BDD-style tests before implementation for Nephila Capital",
+    "test-writer :: Analyzes code changes and writes missing tests. Use after adding new features, modifying handlers, changing runtime behavior, or fixing bugs.",
+    "test-debug :: Use this agent to diagnose failing tests in Suiviseries — Vitest unit specs (TestBed, Transloco test module, mock factories, signal assertions, fake timers) and",
+    "tester :: Test writing specialist for creating and executing tests following TDD methodology. Uses Read, Write, Bash tools to write tests, run them, and verify coverage. ",
+    "test-writer :: Use to define or write AC-linked failing tests and manual verification steps before implementation.",
+    "test-runner :: 테스트 작성 및 실행 전문가. Go 테스트와 React 테스트 모두 담당.\n'테스트', 'test', 'TDD', 'mock', '검증' 키워드에 반응."
+   ]
+  },
+  {
+   "topic": 4,
+   "size_items": 1417,
+   "size_specs": 2406,
+   "words": [
+    "reviewer",
+    "code reviewer",
+    "code",
+    "review",
+    "quality",
+    "reviews",
+    "code review",
+    "code quality",
+    "reviewer reviews",
+    "correctness"
+   ],
+   "npmi": 0.3226625373895263,
+   "examples": [
+    "check-translation :: Audits a named C function in Main.c against the skool disassembly and applies the project's known Z80→C pitfall checklist. Use after translating any new functio",
+    "code-reviewer :: Expert code reviewer for React/TypeScript projects. Prioritizes correctness, regressions, maintainability, and test adequacy. Use proactively after meaningful c",
+    "code-reviewer :: Code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after code changes are completed and ready for revi",
+    "deep-review-project-checklist :: Apply orwellstat-specific Playwright/POM/fixture/tag/path-alias/loadEnv conventions.",
+    "code-reviewer :: Reviews code for clarity, maintainability, and adherence to project standards.",
+    "store-reviewer :: Store layer code reviewer. Ensures store code follows established patterns for database operations."
+   ]
+  },
+  {
+   "topic": 5,
+   "size_items": 969,
+   "size_specs": 1086,
+   "words": [
+    "phrases like",
+    "trigger phrases",
+    "phrases",
+    "like",
+    "trigger",
+    "windsurf",
+    "vercel",
+    "cursor",
+    "exa",
+    "firecrawl"
+   ],
+   "npmi": 0.1553363712609329,
+   "examples": [
+    "azure-appconfiguration-ts :: Centralized configuration management with feature flags and dynamic refresh.",
+    "apollo-reference-architecture :: Implement Apollo.io reference architecture.\nUse when designing Apollo integrations, establishing patterns,\nor building production-grade sales intelligence syste",
+    "clerk-security-basics :: Implement security best practices with Clerk authentication.\nUse when securing your application, reviewing auth implementation,\nor hardening Clerk configuration",
+    "spark-specialist :: Apache Spark SME for performance optimization, architecture design, and troubleshooting.\nUse PROACTIVELY when working with Spark code, data pipelines, or encoun",
+    "gamma-core-workflow-a :: Implement core Gamma workflow for AI presentation generation.\nUse when creating presentations from prompts, documents,\nor structured content with AI assistance.",
+    "windsurf-local-dev-loop :: Configure Windsurf local development with hot reload and testing.\nUse when setting up a development environment, configuring test workflows,\nor establishing a f"
+   ]
+  },
+  {
+   "topic": 6,
+   "size_items": 1021,
+   "size_specs": 1552,
+   "words": [
+    "database",
+    "schema",
+    "migration",
+    "migrations",
+    "query",
+    "sql",
+    "data",
+    "postgresql",
+    "schema design",
+    "queries"
+   ],
+   "npmi": 0.4117129483970896,
+   "examples": [
+    "dba :: Designs and writes the DB schema, migrations, and indexes for an assigned work unit.",
+    "new-entity :: Use when creating a new entity class mapped to a database table. Ensures proper attribute annotations, published properties, and follows all SimpleORM entity co",
+    "perf-sql-optimizer :: Senior SQL Database Engineer (15+ years) specialized in query optimization, indexing strategies, execution plan analysis, and cloud cost optimization. Use this ",
+    "dataflow-specialist :: Zero-config database framework specialist for Kailash DataFlow implementation (v0.12.2). Use proactively when implementing database operations, bulk data proces",
+    "database-architect :: Database architecture expert for designing scalable data models, choosing appropriate database technologies, optimization strategies, and data governance. Invok",
+    "merge-accounts-agent :: Merge multiple normalized CSV files into a single transactions file. Use after categorization."
+   ]
+  },
+  {
+   "topic": 7,
+   "size_items": 1023,
+   "size_specs": 1543,
+   "words": [
+    "frontend",
+    "react",
+    "nextjs",
+    "components",
+    "component",
+    "css",
+    "frontend developer",
+    "tailwind",
+    "state",
+    "state management"
+   ],
+   "npmi": 0.35374625715775876,
+   "examples": [
+    "frontend-lead :: Coordinates frontend specialists for React TypeScript UI and state work",
+    "frontend-developer :: Use this agent when implementing frontend pages, components, or tests. This agent references the 'frontend-context' skill and follows a structured test implemen",
+    "scaffolder :: Multi-file scaffolding in isolated context. Use when creating screens, managers, components, models, tests, modules, paywalls, AB tests, view modifiers, extensi",
+    "frontend-engineer :: Implements delegated G5 client/UI behavior while preserving accessibility, state correctness, and existing architecture.",
+    "nextjs-developer :: Expert in Next.js 14+ App Router and full-stack development, covering server components, edge runtime, rendering strategies, and production deployment focused o",
+    "frontend-specialist :: Frontend specialist for Twig templates, SCSS/CSS, and JavaScript in the Drupal theme. Use for theming, styling, and frontend behavior changes."
+   ]
+  },
+  {
+   "topic": 8,
+   "size_items": 949,
+   "size_specs": 1271,
+   "words": [
+    "design",
+    "designer",
+    "uiux",
+    "visual",
+    "component",
+    "accessibility",
+    "user",
+    "interaction",
+    "components",
+    "responsive"
+   ],
+   "npmi": 0.22368638428872759,
+   "examples": [
+    "ui-designer :: Defines the visual language and component specifications that guide UI implementation. Activates on visual design, component specifications, design tokens, or p",
+    "neumorphism :: Web and App implementation guide for Neumorphism (Soft UI). Trigger when user wants soft shadows, extruded appearance, and light source simulation.",
+    "vt-designer :: 虚拟产品技术团队的 UI/UX 设计师。基于 PRD 产出界面/交互/组件设计规范,指导开发实现。仅在虚拟团队工作流中被调用。",
+    "ui-component-developer :: Builds reusable UI components, implements design systems, ensures responsive layouts and accessibility compliance, handles user interactions and form management",
+    "color-specialist :: Use this agent when you need to choose color schemes, create color palettes, or ensure color accessibility. Call this agent when designing interfaces, establish",
+    "dev-user-team :: Turn-based dialogue simulation giữa Solo Developer và End User để tạo User Stories với Acceptance Criteria"
+   ]
+  },
+  {
+   "topic": 9,
+   "size_items": 1102,
+   "size_specs": 1848,
+   "words": [
+    "architect",
+    "architecture",
+    "design",
+    "decisions",
+    "technical",
+    "architectural",
+    "architect use",
+    "software",
+    "designs",
+    "adrs"
+   ],
+   "npmi": 0.26804022786746073,
+   "examples": [
+    "SECA Planner :: 产品架构师 — 将简短描述扩展为可执行的产品 Spec 与架构设计，支持多版本持续迭代",
+    "architect :: Architecture advisor that evaluates all patterns and approaches objectively. Analyzes tradeoffs across monoliths, microservices, event-driven, serverless, modul",
+    "movement-architect :: When designing community structures for a movement. When building engagement ladders and participation pathways. When creating governance models for decentraliz",
+    "deck-architect :: Turns a deck brief plus a deterministic build plan into a strategically grounded 99 — archetype, gameplan, a cited role budget, and specific card swaps against ",
+    "solution-design-assistant :: Use this agent for Zurich EAM (Enterprise Architecture Management) tasks — Architecture Decisions, Standards, Exceptions, EA Principles, Software/Tool Evaluatio",
+    "arquitecto-robustez :: Arquitecto con lente de robustez y tolerancia a fallos. Invocar (en paralelo con otros arquitectos) ante decisiones complejas o herramientas nuevas, para aporta"
+   ]
+  },
+  {
+   "topic": 10,
+   "size_items": 738,
+   "size_specs": 997,
+   "words": [
+    "test",
+    "tests",
+    "quality",
+    "testing",
+    "coverage",
+    "engineer",
+    "cases",
+    "quality assurance",
+    "assurance",
+    "regression"
+   ],
+   "npmi": 0.2530350840050495,
+   "examples": [
+    "qa :: QA Lead that verifies implementation meets requirements. Spawns parallel tester subagents for comprehensive testing.",
+    "qa-automation :: **PHASE 15 [GATE] in 19-phase workflow v4.1** - Cypress automated testing.\n\nUse this agent when:\n1. **Post-QA-Manual Testing**: After qa-manual (Phase 14) passe",
+    "qa-claudemd :: Audit of compliance with the project's CLAUDE.md and repo conventions. Verifies that the code respects the documented rules (workflow, naming conventions, struc",
+    "scope-qa :: Process agent that audits a completed scope engagement against the original scope document before final packaging — deliverable-by-deliverable acceptance review",
+    "qa :: Quality Assurance specialist. Writes comprehensive test suites, performs regression testing, and validates releases.",
+    "qa-quality :: When Claude as the BMad orchestrator needs to invoke the QA agent for quality assurance to review the story the dev agent just implemented as part of the scrum "
+   ]
+  },
+  {
+   "topic": 11,
+   "size_items": 998,
+   "size_specs": 1600,
+   "words": [
+    "cicd",
+    "devops",
+    "deployment",
+    "infrastructure",
+    "docker",
+    "devops engineer",
+    "pipelines",
+    "cicd pipelines",
+    "pipeline",
+    "engineer"
+   ],
+   "npmi": 0.34299447621407425,
+   "examples": [
+    "devops-engineer :: The DevOps Engineer maintains build pipelines, CI/CD, version-control workflow, artifact management, environment configuration, deployment automation, infrastru",
+    "voyager-devops-expert :: Senior DevOps engineer with deep expertise in GitHub Actions CI/CD, Docker multi-stage builds, CloudNet v4 deployment, Gradle 9.4 build optimization, container ",
+    "systems-consistency :: Broad agent: reads the full deployment surface together (fly.toml + deploy.sh + CD workflows + config.yaml) and checks cross-file invariants.",
+    "vp-engineering :: VP of Engineering for Pur-New. Owns delivery timelines, engineering team coordination, sprint planning, cross-team dependencies, and engineering KPIs. Use for s",
+    "hdc-maintainer :: Thin pointer. Canonical fleet agent definition lives under hdc-agent-server.",
+    "devops-engineer :: Docker, CI/CD, Coolify deployment for Next.js 16 + PocketBase stacks. Uses Coolify MCP and GitHub MCP. Must search devops skills first."
+   ]
+  },
+  {
+   "topic": 12,
+   "size_items": 876,
+   "size_specs": 1604,
+   "words": [
+    "content",
+    "seo",
+    "social",
+    "blog",
+    "search",
+    "media",
+    "social media",
+    "posts",
+    "pages",
+    "youtube"
+   ],
+   "npmi": 0.29804813326012214,
+   "examples": [
+    "geo-local-seo :: Plans city and country specific SEO, discovery, landing pages, and local hotel acquisition content.",
+    "instagram :: Integracao completa com Instagram via Graph API. Publicacao, analytics, comentarios, DMs, hashtags, agendamento, templates e gestao de contas Business/Creator.",
+    "keyword-strategist :: Creates comprehensive keyword strategies by analyzing keyword data, SERP data, and competitive landscape",
+    "seo-authority-builder :: Analyzes content for E-E-A-T signals and suggests improvements to\nbuild authority and trust. Identifies missing credibility elements. Use\nPROACTIVELY for YMYL t",
+    "chainaware-reputation-scorer :: Calculates a numeric reputation score for any Web3 wallet using the ChainAware Reputation Formula: (1000/110) × (experience + 1) × (risk_capability + 1) × (1 - ",
+    "internal-linking-strategist :: Optimizes internal link structures for SEO by analyzing site crawl data and creating strategic linking recommendations to improve crawlability and PageRank flow"
+   ]
+  },
+  {
+   "topic": 13,
+   "size_items": 762,
+   "size_specs": 1206,
+   "words": [
+    "backend",
+    "api",
+    "serverside",
+    "backend engineer",
+    "database",
+    "logic",
+    "backend developer",
+    "services",
+    "apis",
+    "endpoints"
+   ],
+   "npmi": 0.2895275252673128,
+   "examples": [
+    "backend-developer :: Backend implementation specialist. Use proactively when: creating or modifying API endpoints, implementing business logic, handling server-side data processing,",
+    "be-rev-solo :: Review and fix backend code (solo)",
+    "aba-backend-engineer :: Use for any NestJS API work in AI Budget Assistant — new modules, new endpoints, service logic, guards, controllers, business rules. Owns apps/api/src/ (excludi",
+    "Backend Dev :: Node.js/TypeScript backend specialist for outreach-bot and lead-enrichment packages. Handles API routes, workers, pipelines, and external API integrations.",
+    "fullstack-developer :: USE PROACTIVELY for implementing complete features from UI to database, integrating frontend with backend, ensuring end-to-end functionality, and delivering wor",
+    "backend :: Use for server-side implementation work — APIs, business logic, database schema/queries, auth, background jobs, and integrations with external services. Invoke "
+   ]
+  },
+  {
+   "topic": 14,
+   "size_items": 1013,
+   "size_specs": 2222,
+   "words": [
+    "orchestrator",
+    "agents",
+    "team",
+    "coordinator",
+    "coordinates",
+    "orchestration",
+    "multiagent",
+    "coordination",
+    "workflow",
+    "agent"
+   ],
+   "npmi": -0.021309683162865686,
+   "examples": [
+    "orchestratore-legale :: Orchestratore della fase Legale. Usalo per coordinare e distribuire il lavoro della fase Legale sui domini, delegando ai 28 agenti specialisti. Invocalo dopo la",
+    "bacio-design-worker :: bacio dispatched-work subagent for the \"Designing\" stage. Spawned by the supervisor session on a design dispatch.",
+    "worker :: Implementer role for Fadeno playbooks — makes the code change described by a plan. Use when a Fadeno playbook delegates implementation work to a subagent.",
+    "execution-modes :: Comprehensive documentation of execution modes in the Adaptive Hybrid Orchestration system, defining direct, assisted, and orchestrated execution patterns with ",
+    "Temporal Orchestrator :: Durable workflow orchestration for long-running agent tasks using Temporal — retries, timers, and stateful execution.",
+    "supervisor-orchestrator :: Master supervisor orchestrator with comprehensive knowledge of all 151+ agents, 51+ skills, 29+ slash commands, and 20+ automation hooks. Integrates with Claude"
+   ]
+  },
+  {
+   "topic": 15,
+   "size_items": 832,
+   "size_specs": 1926,
+   "words": [
+    "performance",
+    "optimization",
+    "optimizer",
+    "profiling",
+    "bottlenecks",
+    "performance engineer",
+    "memory",
+    "bundle",
+    "slow",
+    "optimize"
+   ],
+   "npmi": 0.394369495617388,
+   "examples": [
+    "performance-optimizer :: 性能优化专家。用于性能瓶颈分析、缓存策略、查询优化、资源优化。典型输入: \"这个接口响应太慢了\"、\"帮我优化数据库查询\"、\"分析内存泄漏\"。不适合功能开发、安全审计。",
+    "finops-rate-optimizer :: Use for **rate optimization** in Azure FinOps — paying **less for the same usage**, applied only **after** usage is fixed. Owns the commitment portfolio: **Rese",
+    "aws-finops-usage-optimizer :: Use for **usage optimization** in AWS FinOps — changing *what you run* to cut waste before any commitment is bought. Owns **rightsizing** (**AWS Compute Optimiz",
+    "async-performance-reviewer :: Use proactively when editing coordinator.py, agl/client.py, or any async function in custom_components/haggle/. Reviews for blocking I/O in the HA event loop (t",
+    "performance-review :: Run at end of month. Analyses YouTube performance data — CTR, average view duration, watch time, click sources — identifies top and bottom performers, extracts ",
+    "performance-specialist :: Level 3 Component Specialist. Select for performance-critical components. Defines requirements, designs benchmarks, profiles code, identifies optimizations."
+   ]
+  },
+  {
+   "topic": 16,
+   "size_items": 781,
+   "size_specs": 1362,
+   "words": [
+    "refactoring",
+    "refactor",
+    "code",
+    "legacy",
+    "complexity",
+    "cleanup",
+    "dead",
+    "dead code",
+    "refactoring specialist",
+    "debt"
+   ],
+   "npmi": 0.2431832085783811,
+   "examples": [
+    "retrospective-facilitator :: runs retros. invoke when end of sprint or milestone.",
+    "Codemod Agent :: Agent: Plan and execute large-scale, AST-based codebase transformations (renames, import-path updates, pattern migrations) in batches with scoped test verificat",
+    "complexity-analyzer :: Code complexity analysis specialist. Invoked for cyclomatic complexity measurement, cognitive complexity analysis, maintainability index calculation, and comple",
+    "complexity-auditor :: MUST BE USED as a review gate when a task adds non-trivial logic and you want to catch hard-to-maintain complexity before it lands. Enabled via .thekedar/config",
+    "tachi-attack-tree-delta :: Attack tree generation and delta reconciliation sub-agent. Deterministically carries forward, freshly generates, or reconciles Mermaid attack trees for Critical",
+    "deep-repo-analyzer :: Analyzes ONE repository deeply in parallel with 2 other instances. Returns structured findings for comparison-aggregator."
+   ]
+  },
+  {
+   "topic": 17,
+   "size_items": 827,
+   "size_specs": 1386,
+   "words": [
+    "llm",
+    "agent",
+    "model",
+    "prompt",
+    "agents",
+    "aiml",
+    "systems",
+    "rag",
+    "engineer",
+    "expert"
+   ],
+   "npmi": 0.13435671408291283,
+   "examples": [
+    "template :: Template for building reliable AI agents using the 5-part Structured Instructions framework",
+    "Chief-Notes-Officer :: Lightweight, always-on system note-taker. Receives note signals from every layer of the AI OS (Lead Orchestrator, SESH, department workers, sub-agents) and prod",
+    "adk-agent-builder :: Build production-ready AI agents using Google's Agent Development Kit with AI assistant integration, React patterns, multi-agent orchestration, and comprehensiv",
+    "Agentic Identity & Trust Architect :: Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments. Ensures agents can prove who th",
+    "assessor :: Use this agent to run an AI literacy assessment — scans the repository for observable evidence, asks clarifying questions, and produces a timestamped assessment",
+    "AI-Automation-Council :: AI & Automation Council — cross-functional governance body that approves AI/agent use cases, risk tiers, guardrails, and cross-org AI standards. Invoke before a"
+   ]
+  },
+  {
+   "topic": 18,
+   "size_items": 607,
+   "size_specs": 1029,
+   "words": [
+    "git",
+    "github",
+    "commit",
+    "issue",
+    "commits",
+    "branch",
+    "git workflow",
+    "workflow",
+    "github issue",
+    "jira"
+   ],
+   "npmi": 0.2864785006711447,
+   "examples": [
+    "github-actions-expert :: GitHub Actions CI/CD pipeline optimization, workflow automation, custom actions development, and security best practices for scalable software delivery",
+    "git-agent :: Use this agent to ANALYZE version control needs and CREATE SPECIFICATIONS for git operations including staging, committing, branching and pull requests. This ag",
+    "td-releaser :: tdmcp release/deploy specialist. Writes the CHANGELOG entry, bumps the version across all manifests, and (operating autonomously per project policy) commits, ta",
+    "git-workflow :: Use proactively to handle git operations, commits, and PR creation, and review.",
+    "github-workflow-agent :: GitHub platform specialist for pull requests, issues, project boards, repository settings, and GitHub Actions CI/CD. Invoke when managing GitHub-specific operat",
+    "pr-writer :: Use this agent when you need to create a pull request description for your current branch changes. This includes when you've completed a feature implementation,"
+   ]
+  },
+  {
+   "topic": 19,
+   "size_items": 535,
+   "size_specs": 538,
+   "words": [
+    "skill",
+    "creator",
+    "generator",
+    "autoactivating skill",
+    "skill category",
+    "autoactivating",
+    "category use",
+    "operations autoactivating",
+    "category",
+    "functionality trigger"
+   ],
+   "npmi": 0.37520919251277335,
+   "examples": [
+    "api-key-auth-setup :: Configure api key auth setup operations. Auto-activating skill for API Development.\nTriggers on: api key auth setup, api key auth setup\nPart of the API Developm",
+    "fastify-plugin-creator :: Create fastify plugin creator operations. Auto-activating skill for Backend Development.\nTriggers on: fastify plugin creator, fastify plugin creator\nPart of the",
+    "sprint-workflow :: Execute this skill should be used when the user asks about \"how sprints work\", \"sprint phases\", \"iteration workflow\", \"convergent development\", \"sprint lifecycl",
+    "mkdocs-config-generator :: Generate mkdocs config generator operations. Auto-activating skill for Technical Documentation.\nTriggers on: mkdocs config generator, mkdocs config generator\nPa",
+    "step-functions-workflow :: Manage step functions workflow operations. Auto-activating skill for AWS Skills.\nTriggers on: step functions workflow, step functions workflow\nPart of the AWS S",
+    "tools :: Developer tooling engineer for automation scripts and productivity utilities"
+   ]
+  },
+  {
+   "topic": 20,
+   "size_items": 938,
+   "size_specs": 1422,
+   "words": [
+    "product",
+    "product manager",
+    "brand",
+    "marketing",
+    "sales",
+    "strategy",
+    "manager",
+    "business",
+    "customer",
+    "owner"
+   ],
+   "npmi": 0.15376388135424662,
+   "examples": [
+    "customer-success :: Usa per la cura proattiva dei clienti — esperienza del primo ordine, telefonate di feedback dopo la consegna, onboarding cliente, prevenzione problemi, raccolta",
+    "product-owner :: Drives product vision definition — principles, value propositions, scope boundaries, and success metrics",
+    "product-manager :: Strategic product vision keeper that maintains alignment with core product goals and user needs. Called at session start for high-level context and to ensure al",
+    "product-owner :: Read-only product definitions agent. Consult when an issue introduces new entities, endpoints, or feature changes — before planning implementation — to ensure p",
+    "product-manager :: Product & UX discovery agent. Discusses ideas, scope, and business rules with the user BEFORE any code is written. Refines WHAT needs to be built and produces t",
+    "product-manager :: Expert product manager specializing in product strategy, user-centric development, and business outcomes. Masters roadmap planning, feature prioritization, and "
+   ]
+  },
+  {
+   "topic": 21,
+   "size_items": 800,
+   "size_specs": 1073,
+   "words": [
+    "visual",
+    "image",
+    "art",
+    "scene",
+    "narrative",
+    "director",
+    "motion",
+    "animation",
+    "artist",
+    "images"
+   ],
+   "npmi": 0.052797931903784574,
+   "examples": [
+    "perf-optimizer :: Analisa a animação do diagrama e componentes React em busca de re-renders desnecessários. Use se a animação estiver travando ou antes de adicionar novos cenário",
+    "hoi4-3d-model-pipeline :: Creates, rigs, animates, processes, exports, audits, and documents bounded HOI4 3D model packages from one approved reference image using explicit Meshy 7 gener",
+    "image-blast-wildcard :: Runs one arbitrary FAL API operation in the background. Use for non-blocking generic FAL requests such as image generation, video models, upscalers, or any expl",
+    "2slides-ppt-generator :: AI-powered presentation generation via the 2slides API — create slides from text, match a reference image style, summarize documents into decks, add AI voice na",
+    "compositions :: Defining compositions, stills, folders, default props and dynamic metadata",
+    "visual-storyteller :: Use this agent to turn data into visual narratives — season-arc graphics, title-race visualizations, model performance stories, and infographic concepts for soc"
+   ]
+  },
+  {
+   "topic": 22,
+   "size_items": 722,
+   "size_specs": 1103,
+   "words": [
+    "research",
+    "researcher",
+    "web",
+    "research agent",
+    "sources",
+    "information",
+    "search",
+    "deep",
+    "research specialist",
+    "researcher use"
+   ],
+   "npmi": 0.26532618484253667,
+   "examples": [
+    "thoughts-analyzer :: Deep dive on research documents and investigation notes. Use when wanting to extract actionable insights from docs/, plans, or checkpoint documents.",
+    "web-researcher :: Researches topics on the web. Use when you need information that is modern, not in the codebase, or beyond your training data. Flutter, Dart, pub.dev, and gener",
+    "research-analyzer :: The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
+    "gherkin-analyst :: 专业的前端Gherkin需求分析师。当用户需要分析、拆解或格式化前端需求时主动使用，特别是在敏捷开发和BDD实践中。",
+    "researcher-agent :: Conducts research and analysis filtered through your business context. Use when user needs research, competitive analysis, trend research, or data gathering to ",
+    "researcher :: Deep exploration and synthesis specialist for discovery and analysis"
+   ]
+  },
+  {
+   "topic": 23,
+   "size_items": 582,
+   "size_specs": 1008,
+   "words": [
+    "context",
+    "memory",
+    "session",
+    "knowledge",
+    "wiki",
+    "curator",
+    "state",
+    "sessions",
+    "retrieval",
+    "manager"
+   ],
+   "npmi": 0.05504210118780398,
+   "examples": [
+    "lemmaly :: Algorithm-first discipline: state Big-O, data structure, and algorithm family BEFORE writing loops, queries, or recursion. Catches O(n^2), N+1, and brute-force ",
+    "watchlist-cron-agent :: Supabase pg_cron으로 5분마다 트리거되는 에이전트. 워치리스트에 등록된 전체 종목의 뉴스를 일괄 수집·번역하고 market_context를 업데이트한다. Supabase Edge Function으로 배포된다.",
+    "Hober Mallow :: Tool schema designer — precise function-calling definitions and parameter typing",
+    "wiki-responder :: Git WIKI의 읽기 전용 응답자. 위키에 적힌 것만 근거로 팀원 질문에 답한다. 위키가 팀 설계를 제대로 반영했는지 점검하거나, 위키가 찾은 모순·인사이트를 꺼내 볼 때 사용한다.",
+    "session-context-saver :: Saves current session working state before /clear. Captures in-progress tasks, active teams, plan files, and key decisions so the next session can resume immedi",
+    "freesound-curator :: deep Freesound.org knowledge. invoke when SFX gaps Freesound can fill."
+   ]
+  },
+  {
+   "topic": 24,
+   "size_items": 604,
+   "size_specs": 797,
+   "words": [
+    "financial",
+    "analyst",
+    "risk",
+    "analise",
+    "exigir perspectiva",
+    "analise exigir",
+    "quando analise",
+    "exigir",
+    "perspectiva",
+    "portfolio"
+   ],
+   "npmi": 0.389051812167487,
+   "examples": [
+    "chainaware-portfolio-risk-advisor :: Assesses the rug pull risk and community health of a token portfolio using ChainAware's Behavioral Prediction MCP. Scans every token in the portfolio through pr",
+    "funnel-analyst :: analyzes funnels. invoke when any funnel needs analysis.",
+    "CIO-Investments :: Chief Investment Officer leading the full Trading and Investment Department. Entry point for all investment tasks. Owns the Investment Policy Statement for the ",
+    "quant-strategy-factor-miner :: Factor Researcher do time Quant Strategy Desk. Use quando a analise exigir a perspectiva de factor researcher.",
+    "feature-researcher :: Researches competitor finance trackers, extracts and validates features",
+    "debt-analysis :: Use proactively for debt consolidation analysis, debt payoff strategies (avalanche/snowball), interest calculations, and loan eligibility assessments in the Fou"
+   ]
+  },
+  {
+   "topic": 25,
+   "size_items": 1148,
+   "size_specs": 1667,
+   "words": [
+    "agent",
+    "claude",
+    "claude code",
+    "user",
+    "skill",
+    "skills",
+    "use agent",
+    "new",
+    "agents",
+    "build"
+   ],
+   "npmi": 0.12540361455285845,
+   "examples": [
+    "vitalcv-architect :: Use this agent when the user explicitly asks to plan, execute, or orchestrate a VitalCV development wave, or to coordinate a multi-system change spanning backen",
+    "book-agent :: Generates structured book outlines in Hebrew. Use when user wants to plan a book, create a book outline, mentions 'write a book', 'book outline', or needs a ful",
+    "verify-setup :: Verifies skills and agents are correctly set up for both Cursor and Claude Code. Use after modifying agent/skill configuration to ensure everything works across",
+    "agent-forge-foreman :: Use when no existing agent covers a real recurring need, or when the user asks to create, evolve, merge, promote, or audit a new agent. Coordinates the AgentFor",
+    "build-agent-24 :: Implements 1-2 files as part of the sequential build pipeline. Specialist for writing 1-2 specific files based on detailed instructions and context. Dispatched ",
+    "agent-authoring-build-agent :: Implements agent configurations from specs. Expects SPEC (path to spec file)"
+   ]
+  },
+  {
+   "topic": 26,
+   "size_items": 767,
+   "size_specs": 1298,
+   "words": [
+    "planner",
+    "plan",
+    "planning",
+    "plans",
+    "implementation",
+    "implementation plan",
+    "implementation plans",
+    "planning agent",
+    "creates",
+    "feature"
+   ],
+   "npmi": 0.247746922412284,
+   "examples": [
+    "Intake Coordinator :: Transforms the intake form and solution profile into a validated inception plan with agent assignments",
+    "milestone-planner :: Plan a ROADMAP milestone (M0–M5) for the Transon Visual Editor into a locked design and an ordered, per-FR task list, before any code is written. Read-only.",
+    "strike-move :: Use proactively for Sui Move object models, verifier skeletons, admin capabilities, replay/freshness fields, and Move tests.",
+    "qar-planner :: Produces decision-complete implementation plans for a named high-risk change in qar — a new task, a new selector, an ablation design, an evaluation change. Use ",
+    "proposal-strategist :: RFP response, win themes, narrative structure. Use for: Writing proposals that persuade, not just comply.",
+    "sf-design-step2 :: sf-design コマンドから委譲されるプログラム設計ステップ。SF_ALIAS 取得・対象機能確定後、sf-screen-writer（画面系）→ sf-design-writer（Apex系 + 機能一覧）の順に委譲する。"
+   ]
+  },
+  {
+   "topic": 27,
+   "size_items": 566,
+   "size_specs": 906,
+   "words": [
+    "azure",
+    "cloud",
+    "aws",
+    "infrastructure",
+    "terraform",
+    "gcp",
+    "cost",
+    "sdk",
+    "expert",
+    "lambda"
+   ],
+   "npmi": 0.3320594389026805,
+   "examples": [
+    "azure-storage-file-share-ts :: Azure File Share JavaScript/TypeScript SDK (@azure/storage-file-share) for SMB file share operations.",
+    "azure-data-tables-java :: Build table storage applications using the Azure Tables SDK for Java. Works with both Azure Table Storage and Cosmos DB Table API.",
+    "powershell-7-expert :: Use when building cross-platform cloud automation scripts, Azure infrastructure orchestration, or CI/CD pipelines requiring PowerShell 7+ with modern .NET inter",
+    "terraform-engineer :: Infrastructure as Code with Terraform, module design, state management, and multi-cloud provisioning",
+    "cloud-migration-specialist :: Cloud migration and infrastructure modernization specialist. Use PROACTIVELY for on-premise to cloud migrations, containerization, serverless adoption, and clou",
+    "core-layer-developer :: SDD Implement 단계의 도메인·데이터 레이어 개발자. :core:domain의 모델·Repository 인터페이스·UseCase와 :core:data의 DataSource·Repository 구현·Mapper를 담당한다."
+   ]
+  },
+  {
+   "topic": 28,
+   "size_items": 837,
+   "size_specs": 1363,
+   "words": [
+    "code",
+    "implementer",
+    "coder",
+    "implementation",
+    "implements",
+    "developer",
+    "coding",
+    "writes",
+    "following",
+    "features"
+   ],
+   "npmi": 0.16717761796908767,
+   "examples": [
+    "semgrep-rule-variant-creator :: Creates language variants of existing Semgrep rules. Use when porting a Semgrep rule to specified target languages. Takes an existing rule and target languages ",
+    "coder :: Implements the identification strategy in code. Translates the strategy memo into working R/Stata/Python scripts that produce publication-ready tables and figur",
+    "tutor :: Per-course tutor. Parameterized by course code. Reads the course's profile, goals, assignments, and wiki to provide grounded, in-notation help. Generates practi",
+    "elixir-engineer :: Use this agent when the user needs production-grade Elixir/OTP/Phoenix implementation on a BEAM-based platform — building gen_statem processes, LiveView dashboa",
+    "implementation-agent :: Use when implementing a bounded, well-specified feature slice that has clear acceptance criteria. Keeps diffs minimal, preserves behavior outside the scope, and",
+    "cjk-specialist :: Delegate to this agent for RenderState streaming, CellData binary encoding, frame coalescing strategy, preedit synchronization, Jamo composition display, ambigu"
+   ]
+  },
+  {
+   "topic": 29,
+   "size_items": 606,
+   "size_specs": 1032,
+   "words": [
+    "api",
+    "openapi",
+    "rest",
+    "endpoint",
+    "apis",
+    "integration",
+    "endpoints",
+    "api design",
+    "contract",
+    "versioning"
+   ],
+   "npmi": 0.29582186400684396,
+   "examples": [
+    "zod-schema-designer :: AUTOMATICALLY invoke BEFORE implementing any API endpoint. Triggers: new API endpoint, new route, form input, user input. Designs Zod validation schemas. PROACT",
+    "api-developer :: Senior API Developer: REST/GraphQL/gRPC implementation with 7+ years experience in Node.js, authentication, validation, and performance optimization",
+    "sendblue-api :: Send and receive iMessage, SMS, and RCS from application code via the Sendblue HTTP API — text, media, group messages, send styles, reactions, typing indicators",
+    "api-documentation :: API documentation workflow for generating OpenAPI specs, creating developer guides, and maintaining comprehensive API documentation.",
+    "protocol-implementer :: Implements the Claude (Anthropic) Messages API protocol layer. Handles JSON request building, response parsing, and the async tool-use loop. Use for ClaudeProto",
+    "feature-mapper :: Use this agent for mapping functional features from existing codebases and extracting behavior as acceptance criteria. Catalogs API endpoints, UI pages, CLI com"
+   ]
+  },
+  {
+   "topic": 30,
+   "size_items": 379,
+   "size_specs": 390,
+   "words": [
+    "fase",
+    "quando",
+    "dominio",
+    "nella",
+    "usa questo",
+    "questo agente",
+    "invocalo",
+    "lavoro",
+    "questo",
+    "serve"
+   ],
+   "npmi": 0.94128047041624,
+   "examples": [
+    "design-tokens :: Usa questo agente nella fase Design quando serve esportazione dei token di design in tema chiaro (`tokens.json`). Invocalo proattivamente quando l'orchestratore",
+    "navigation-builder :: Usa questo agente nella fase Sviluppo quando serve costruzione di header e menu coerenti con l'architettura del sito. Invocalo proattivamente quando l'orchestra",
+    "geo-targeting-planner :: Usa questo agente nella fase Ricerca quando serve pianificazione del target geografico (es. it, au) per ciascuna pagina. Invocalo proattivamente quando l'orches",
+    "indexing-status-monitor :: Usa questo agente nella fase SEO tecnico & GEO quando serve tracciamento dei blocchi sulle pagine non indicizzate. Invocalo proattivamente quando l'orchestrator",
+    "conversational-aligner :: Usa questo agente nella fase Humanizer quando serve adattamento della sintassi alle query conversazionali long-tail. Invocalo proattivamente quando l'orchestrat",
+    "skeleton-shimmer-component :: Usa questo agente nella fase Design quando serve progettazione del componente skeleton shimmer (stile instagram) in tema chiaro. Invocalo proattivamente quando "
+   ]
+  },
+  {
+   "topic": 31,
+   "size_items": 443,
+   "size_specs": 697,
+   "words": [
+    "game",
+    "gameplay",
+    "player",
+    "designer",
+    "mechanics",
+    "systems",
+    "games",
+    "physics",
+    "roblox",
+    "balance"
+   ],
+   "npmi": 0.2715647583822785,
+   "examples": [
+    "gameplay-programmer :: The Gameplay Programmer implements game mechanics, player systems, combat, and interactive features as code. Use this agent for implementing designed mechanics,",
+    "roblox-systems-scripter :: Luau, RemoteEvents/Functions, DataStore, server-authoritative module architecture. Use for: Building secure Roblox game systems, client-server communication, da",
+    "physics-controls :: Owns car physics, the 11 CarSpecs, collision/damage resolution, and input handling. Use for vehicle dynamics, grip curves, chassis damage, explosions, and keybo",
+    "game-feel-juice-guardian :: Game-feel and \"juice\" specialist for PROJECT-DRIFT (Unity 6 / C# top-down mobile space survival) — owns the FEEDBACK and POLISH layer, not the final feel call. ",
+    "cannonjs :: Implementa física 3D con cannon-es 0.20 (fork moderno de cannon.js). Usa proactivamente cuando el proyecto necesite CANNON.World, simulación de cuerpos rígidos,",
+    "designer :: Transform game jam briefs into detailed Game Design Documents. Use when starting a jam to create the GDD from the brief."
+   ]
+  },
+  {
+   "topic": 32,
+   "size_items": 292,
+   "size_specs": 325,
+   "words": [
+    "verifier",
+    "verification",
+    "verify",
+    "reruns",
+    "claims",
+    "adversarial",
+    "implementers",
+    "freshcontext",
+    "verifies",
+    "adversarial verification"
+   ],
+   "npmi": 0.04714474297225776,
+   "examples": [
+    "build-verifier :: Runs ./gradlew build -x test and reports success or failure. Does NOT edit code. Trigger when the user says '빌드해줘', '빌드 확인해줘', 'build-verifier 실행해', or after co",
+    "veyrnox-recon :: Read-only reconnaissance for the Veyrnox wallet. Use to map code, locate where logic lives, and report root cause BEFORE any change. Returns a findings report w",
+    "stage-verifier :: Stage Verifier Agent. Verifies pipeline stage outputs for content completeness,\nstructural validity, traceability coverage, and cross-document consistency.\nRuns",
+    "verifier :: Independently verifies one change from clean state in a fresh context (S3 in docs/guides/pipeline.md) — re-runs the quality gate, runs the spec-lifecycle / issu",
+    "metta-verifier :: Metta verifier agent — checks implementation against spec scenarios, runs gates, produces verification summary",
+    "data-verifier :: Performs adversarial goal-backward verification of completed analyses. Verifies artifact existence, substantiveness, wiring, and cross-artifact coherence. Invok"
+   ]
+  },
+  {
+   "topic": 33,
+   "size_items": 379,
+   "size_specs": 589,
+   "words": [
+    "e2e",
+    "playwright",
+    "testing",
+    "test",
+    "browser",
+    "tester",
+    "tests",
+    "endtoend",
+    "e2e test",
+    "e2e tests"
+   ],
+   "npmi": 0.37018915105114075,
+   "examples": [
+    "e2e-runner :: Use this agent when you need to run end-to-end tests, execute E2E test suites, or verify complete user workflows.",
+    "testing :: Specializes in automated test generation, screenshot capture, and visual comparison for the Native Display SDK. Use this agent when generating test JSON configu",
+    "review-persona-dev :: dialog-harness PR レビューの Council「開発者」ペルソナ。claude-review.yml の OC が Phase 3-b で起動する。技術的実現性・保守性・性能・セキュリティ・可逆性の軸から PR diff を独立評価し、output-format.md §3 の Persona 出力 J",
+    "test-app-api :: app:api 모듈의 인수 테스트(@AcceptanceTest)를 작성한다. REST API 엔드포인트의 사용자 여정(user journey)을 end-to-end로 검증해야 할 때 사용한다.",
+    "toolkit-pr-review-v2-design :: API design, types & architecture review sub-agent for toolkit-pr-review-v2. Covers RUST-API-001, RUST-TYPE-001, RUST-OWN-001, RUST-DATA-001, RUST-OBS-001, RUST-",
+    "phantom-run-detector :: Use this agent to execute the core Phantom Run Index computation. Takes processed skeleton kinematics and event linkage data, applies the 4-criteria detection a"
+   ]
+  },
+  {
+   "topic": 34,
+   "size_items": 830,
+   "size_specs": 1191,
+   "words": [
+    "validator",
+    "validation",
+    "verification",
+    "checker",
+    "validates",
+    "validate",
+    "verify",
+    "consistency",
+    "checks",
+    "validator validates"
+   ],
+   "npmi": 0.20174359753785723,
+   "examples": [
+    "compactor-validator :: Confirms a ticket is truly safe to compact — its PR is merged on origin and its session note exists on disk. Use as the final gate before an engineer self-compa",
+    "Validation Agent :: Validation script execution and result processing specialist with robust error handling",
+    "citation-validation :: Citation verification specialist for regulatory facts and source validation",
+    "prior-art-checker :: Checks whether an idea already exists as a teamctl GitHub issue, an in-repo feature, or established prior art elsewhere. Use before Sage files a ticket or tells",
+    "spec-validator :: API specification validation and quality gate enforcement with multi-dimensional scoring",
+    "validate-version-system :: Validate version system implementation — syntax check and functional verification"
+   ]
+  },
+  {
+   "topic": 35,
+   "size_items": 352,
+   "size_specs": 750,
+   "words": [
+    "mobile",
+    "android",
+    "native",
+    "app",
+    "react native",
+    "flutter",
+    "react",
+    "mobile app",
+    "expo",
+    "ios"
+   ],
+   "npmi": 0.47074590269646144,
+   "examples": [
+    "sms-integration-agent :: Use this agent to implement real SMS reminder integration behind a provider abstraction with fake mode fallback.",
+    "mitmproxy-engineer :: mitmproxy addon developer. Handles traffic capture, TLS passthrough configuration, console output filtering, and proxy setup for Netflix iOS/Android.",
+    "mobile-lead :: 모바일팀 팀장. PWA, 네이티브 앱 전환, 모바일 최적화, 오프라인 지원 등 모바일화 전반을 총괄합니다. Mobile View Team과 협업하여 완전한 모바일 경험을 제공합니다.",
+    "app-store-publisher :: iOS/Android deployment and App Store Optimization specialist for publishing, store compliance, and release management. USE PROACTIVELY for app store submissions",
+    "mobile-dev-expert :: Use this agent when working on any mobile application or React Native codebase, including implementing new features, debugging issues, reviewing mobile-specific",
+    "android-material3-design-system :: Apply Material 3 tokens, color, type, spacing, adaptive components, and theme ownership in Android apps."
+   ]
+  },
+  {
+   "topic": 36,
+   "size_items": 276,
+   "size_specs": 519,
+   "words": [
+    "accessibility",
+    "wcag",
+    "aria",
+    "keyboard",
+    "accessibility specialist",
+    "a11y",
+    "screen reader",
+    "screen",
+    "contrast",
+    "keyboard navigation"
+   ],
+   "npmi": 0.6073963961732025,
+   "examples": [
+    "word-accessibility :: Word document accessibility specialist. Use when scanning, reviewing, or remediating .docx files for accessibility. Covers document title, heading structure, al",
+    "accessibility-auditor :: Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design. Defaults to findi",
+    "accessibility-checker :: Audit and ensure WCAG 2.1 AA compliance for components, routes, and user flows",
+    "epub-accessibility :: ePub document accessibility specialist. Use when scanning, reviewing, or remediating .epub files for accessibility. Covers EPUB Accessibility 1.1 (WCAG 2.x conf",
+    "spec-researcher :: Fetches and summarizes accessibility specifications (WCAG, WAI-ARIA, Section 508, EN 301 549, ATAG, EPUB A11y, PDF/UA) into dense, retrieval-friendly kb entries",
+    "aria-implementer :: Autonomous implementer for ARIA-V9 P+C+CR+Impl pipeline. Receives CONVERGED plan + cross_review verdict; applies key_changes via Edit/Write under sandboxed Bash"
+   ]
+  },
+  {
+   "topic": 37,
+   "size_items": 313,
+   "size_specs": 459,
+   "words": [
+    "tdd",
+    "redgreenrefactor",
+    "testdriven",
+    "testdriven development",
+    "tdmcp",
+    "test",
+    "green",
+    "tests",
+    "failing",
+    "red"
+   ],
+   "npmi": 0.15640757926770316,
+   "examples": [
+    "tdc-testing-expert :: Testing strategy coordinator for TDC. Plans comprehensive testing strategies, selects and coordinates specialized testing agents, and ensures complete test cove",
+    "twfe-primer-drafter :: Draft Primers P1-P7 and the Roadmap for the TWFE math explainer",
+    "dto-contract-enforcer :: Enforces DTO discipline in ServEasy. Use for: - Ensuring no raw JPA entity is ever returned from a controller endpoint - Moving inner classes (StatusUpdateReque",
+    "tdd-workflows :: Use when working with tdd workflows tdd cycle (Alias for tdd-workflows-tdd-cycle)",
+    "tdd-coach :: Guides strict red-green-refactor TDD for new clauses, operators, or expression forms.",
+    "raytk-integration-lead :: Lead + single-writer for integrating the external RayTK (t3kt/raytk) raymarching/SDF toolkit into tdmcp. Plans the integration into dependency-ordered waves (ma"
+   ]
+  },
+  {
+   "topic": 38,
+   "size_items": 324,
+   "size_specs": 434,
+   "words": [
+    "audio",
+    "voice",
+    "video",
+    "music",
+    "sound",
+    "podcast",
+    "tts",
+    "ableton",
+    "speech",
+    "synthesizer"
+   ],
+   "npmi": -0.012198078212176723,
+   "examples": [
+    "blender-render :: Experto en renderizado con Blender 4.x (Cycles, Eevee Next, PBR, iluminación, color management AgX/Filmic/OCIO, compositor, AOVs/cryptomatte, denoising, HDRI, o",
+    "foley-artist :: creates physical sounds. invoke when ambient or interactive foley is needed.",
+    "citizen-voice-deacon-seymour :: Deacon Seymour — first-year Oakland A's manager (POP-00528). Canon citizen voice agent for interviews, Discord conversation, and 24/7 citizen-loop wakes. Quiet ",
+    "remotion-css-and-loop-gotchas :: Two verified Remotion/React traps — React mangles a numeric `scale` into `scale:1.1px`, and a whole-video music fade needs loopVolumeCurveBehavior=\"extend\"",
+    "sync-master :: Locks graphics/scenes to the voiceover so nothing leads or lags the words. Runs scene-sync before the motion-builder animates. Use for every narrated video.",
+    "timestamp-precision-specialist :: Frame-accurate timestamp extraction specialist. Use PROACTIVELY for precise cut points, speech boundary detection, silence analysis, and professional podcast ed"
+   ]
+  },
+  {
+   "topic": 39,
+   "size_items": 201,
+   "size_specs": 201,
+   "words": [
+    "temperature",
+    "weather",
+    "fetches",
+    "agent",
+    "city",
+    "islands",
+    "north",
+    "monaco",
+    "tom",
+    "port"
+   ],
+   "npmi": -0.20013845158149046,
+   "examples": [
+    "Weather Zambia Agent :: Fetches temperature in Celsius for Lusaka, Zambia",
+    "Weather New Zealand Agent :: Fetches temperature in Celsius for Wellington, New Zealand",
+    "Weather Croatia Agent :: Fetches temperature in Celsius for Zagreb, Croatia",
+    "Weather Average Agent :: Calculates average temperature from all fetched temperatures",
+    "Weather Saint Kitts and Nevis Agent :: Fetches temperature in Celsius for Basseterre, Saint Kitts and Nevis",
+    "Weather Peru Agent :: Fetches temperature in Celsius for Lima, Peru"
+   ]
+  },
+  {
+   "topic": 40,
+   "size_items": 317,
+   "size_specs": 576,
+   "words": [
+    "typescript",
+    "type",
+    "types",
+    "godot",
+    "javascript",
+    "type safety",
+    "gdscript",
+    "type design",
+    "typesafe",
+    "patterns"
+   ],
+   "npmi": -0.025484613086832336,
+   "examples": [
+    "typescript-engineer :: TypeScript generalist for Firebase Functions, Supabase Edge Functions, and shared TS utilities. Strict typing, zod validation, lean dependencies.",
+    "javascript-dev :: Senior JavaScript/TypeScript engineer for the AStar.Dev mono-repo. Writes clean, idiomatic, type-safe code across Vue 3, React 19, and Express. Use for implemen",
+    "type-design-analyzer :: Analyses type design for invariant strength and encapsulation. Rates Encapsulation / Invariant Expression / Invariant Usefulness / Invariant Enforcement on a 1-",
+    "pure-mathematics-expert :: Pure mathematics expert. Covers abstract algebra, number theory, real and complex analysis, topology, set theory, combinatorics, and mathematical logic. Applies",
+    "javascript-typescript-typescript-scaffold :: You are a TypeScript project architecture expert specializing in scaffolding production-ready Node.js and frontend applications. Generate complete project struc",
+    "template-creator :: Creates new templates based on already analyzed templates"
+   ]
+  },
+  {
+   "topic": 41,
+   "size_items": 268,
+   "size_specs": 520,
+   "words": [
+    "python",
+    "django",
+    "python code",
+    "fastapi",
+    "async",
+    "expert",
+    "pydantic",
+    "code",
+    "patterns",
+    "type"
+   ],
+   "npmi": 0.24831283130057763,
+   "examples": [
+    "code-analyst :: Investigates code-level issues in the agency's Python stack (Django, FastAPI, SQLAlchemy) — debugging, log analysis, query optimization, test-coverage gaps. Spa",
+    "deep-review-python :: Python specialist — PEP-8/20/257-anchored idiom and style review of `.py` changes. Dispatch only when the diff contains `.py` files.",
+    "django-developer :: Expert Django developer mastering Django 4+ with modern Python practices. Specializes in scalable web applications, REST API development, async views, and enter",
+    "lang-python-expert :: Expert Python developer for writing Pythonic, clean code following PEP 8. Use for Python files (*.py, requirements.txt, pyproject.toml), Python-related keywords",
+    "python-expert :: Expert-level Python author for non-trivial implementation work in the youtube-unofficial project. Use when the task needs idiomatic, production-quality Python b",
+    "python-reviewer :: MUST BE USED as a review gate when a task's diff is Python and you want a language-specific pass beyond the generic checks. Enabled via .thekedar/config.md or w"
+   ]
+  },
+  {
+   "topic": 42,
+   "size_items": 609,
+   "size_specs": 884,
+   "words": [
+    "agent",
+    "code",
+    "review",
+    "use agent",
+    "reviewer use",
+    "reviewer",
+    "user",
+    "code review",
+    "quality",
+    "new"
+   ],
+   "npmi": 0.15084059975854597,
+   "examples": [
+    "tech-stack-auditor :: Use this agent when recently written or modified code needs to be reviewed for use of outdated dependencies, deprecated APIs, suboptimal tooling choices, or dev",
+    "light-code-StyleChecker :: Use this agent when you need to scan imported or 3rd-party Delphi code for style compliance, common mistakes, and dangerous patterns. Do NOT use it for our own ",
+    "research :: Use this agent when the user asks an open-ended question about how the ast-index codebase works (\"how is incremental update wired\", \"why don't we tree-sitter Pe",
+    "support-responder :: Use this agent to handle user support — drafting replies to user questions and complaints, maintaining an FAQ, and turning support patterns into bug reports and",
+    "Regression Detector Agent :: Agent: Analyze a PR diff in simpler-grants-gov for hidden dependencies, untested code paths, and performance risks. Delegates deep analysis to pattern-recogniti",
+    "bizlogic-hunter :: Delegates to this agent when the user wants to test for business logic flaws, find workflow bypass vulnerabilities, detect price manipulation or payment tamperi"
+   ]
+  },
+  {
+   "topic": 43,
+   "size_items": 225,
+   "size_specs": 367,
+   "words": [
+    "rust",
+    "rust code",
+    "ruby",
+    "async",
+    "programming",
+    "ownership",
+    "systems programming",
+    "code",
+    "rails",
+    "trait"
+   ],
+   "npmi": -0.07957319310390809,
+   "examples": [
+    "rust-call-graph :: Visualize Rust function call graphs using LSP. Triggers on: /call-graph, call hierarchy, who calls, what calls, 调用图, 调用关系, 谁调用了, 调用了谁",
+    "ruby-expert :: Expert in Ruby programming language, focusing on idiomatic Ruby, performance optimization, and best practices.",
+    "loom-daemon :: Loom Daemon operator - Tier 2 daemon-mode surface that observes the running Rust `loom-daemon` binary via MCP tools and dispatches sweeps for multi-account auto",
+    "rust-code-reviewer :: Reviews Rust code for bugs, logic errors, security vulnerabilities, code quality issues, and adherence to project conventions, using confidence-based filtering ",
+    "init-dev :: Asesor para rinit, el PID 1 custom en Rust. Guia diseno de init systems, manejo de signals, cgroups v2, configuracion TOML de servicios. Experto en las restricc",
+    "rust-engineer :: Principal-level Rust engineering — writing, reviewing, and architecting Rust code across systems programming, async services, CLI tooling, and web backends. Use"
+   ]
+  },
+  {
+   "topic": 44,
+   "size_items": 319,
+   "size_specs": 449,
+   "words": [
+    "mcp",
+    "server",
+    "mcp server",
+    "tool",
+    "servers",
+    "tools",
+    "protocol",
+    "mcp servers",
+    "mcp tool",
+    "mcp tools"
+   ],
+   "npmi": 0.35114339867971517,
+   "examples": [
+    "mcp-security-auditor :: MCP server security specialist. Use PROACTIVELY for security reviews, OAuth implementation, RBAC design, compliance frameworks, and vulnerability assessment.",
+    "mcp-developer :: Designs, scaffolds, and implements MCP servers following protocol best practices and this user's established conventions. Handles both TypeScript (@modelcontext",
+    "building-mcp-servers :: Delegate when the user wants to create Model Context Protocol (MCP) servers",
+    "calendly-automation :: Automate Calendly scheduling, event management, invitee tracking, availability checks, and organization administration via Rube MCP (Composio). Always search to",
+    "windsurf-mcp-integration :: Manage integrate MCP servers with Windsurf for extended capabilities. Activate when users mention\n\"mcp integration\", \"model context protocol\", \"external tools\",",
+    "mcp-security-reviewer :: Reviews changes to the in-app MCP catalog server for least privilege, enablement gate, rate limits, sanitization, and Phoenix data-layer safety."
+   ]
+  },
+  {
+   "topic": 45,
+   "size_items": 367,
+   "size_specs": 473,
+   "words": [
+    "architecture",
+    "architecture reviewer",
+    "reviewer",
+    "review",
+    "reviews",
+    "design",
+    "architectural",
+    "architect",
+    "boundaries",
+    "coupling"
+   ],
+   "npmi": 0.18445765425408397,
+   "examples": [
+    "Celeborn :: Design system governor — token consistency, component library coherence, pattern compliance",
+    "improvement-agent :: Use to suggest and make quality improvements to finished slices — readability, reuse, accessibility, performance — strictly within the design system and guardra",
+    "ux-grid-reviewer :: Reviews Flutter screens against Müller-Brockmann Grid Systems principles — 8dp spacing, typography scale, alignment, and visual rhythm. Catches off-grid values ",
+    "hater :: Devil's advocate that critiques implementation plans and code. Finds logical flaws, missing edge cases, security issues, over-engineering, and architectural pro",
+    "impl-cross-platform :: Reviews implementation plans from a cross-platform compatibility perspective. Use when evaluating Linux vs. macOS behavioral differences, signal handling portab",
+    "modularity-reviewer :: Modularity reviewer for TurfGPS — the dedicated deep pass on unit boundaries: cohesion within a package/type, coupling between them, single-responsibility, and "
+   ]
+  },
+  {
+   "topic": 46,
+   "size_items": 465,
+   "size_specs": 635,
+   "words": [
+    "codebase",
+    "explorer",
+    "search",
+    "explore",
+    "exploration",
+    "readonly",
+    "files",
+    "discovery",
+    "codebase exploration",
+    "unfamiliar"
+   ],
+   "npmi": 0.12266897481392498,
+   "examples": [
+    "cartographer :: Read-only mapper of the SYNAPSE codebase. Inventories MCP tools, routing tiers, the autonomy loop, and architecture seams. Maps terrain; does not prospect.",
+    "worker-explorer :: Codebase exploration and web research worker. Use for pattern search, dependency mapping, doc lookup, and library comparison.",
+    "speck-scanner :: Extracts code behavior and reusable patterns. Use during brownfield scan, discovery, graph repair, or recheck after file boundaries are known.",
+    "data-provenance-tracker :: Trace la chaine de provenance des donnees de la source jusqu'a l'affichage. Utiliser quand on verifie la tracabilite, quand on cherche l'origine d'une donnee, o",
+    "codebase-analyst :: Read-only codebase explorer. Maps dependencies, traces execution paths, finds reusable code, identifies patterns, and produces architectural summaries for other",
+    "code-explorer :: Codebase navigation using Explore agent"
+   ]
+  },
+  {
+   "topic": 47,
+   "size_items": 340,
+   "size_specs": 484,
+   "words": [
+    "compliance",
+    "legal",
+    "privacy",
+    "regulatory",
+    "gdpr",
+    "hipaa",
+    "policy",
+    "data",
+    "soc",
+    "regulatory compliance"
+   ],
+   "npmi": 0.4078545723324421,
+   "examples": [
+    "qe-sod-analyzer :: SAP Segregation of Duties analysis with conflict detection, role-to-permission mapping, GRC integration, and compliance audit trail generation",
+    "timps_certificate_rotator :: Check TLS certificate expiry for all hosts found in config files. Warns 30 days before expiry and generates certbot renewal commands. Use the `timps_certificate",
+    "hq-rent-reporting-owner :: Owns Homiquity rent reporting — lease intake and OCR, the rent payment ledger, the Metro 2 furnishing gate and queue, the renter surfaces. Implements; server/ro",
+    "healthcare-dev :: Healthcare technology specialist, HIPAA compliance expert, HL7/FHIR standards, medical device integration, EHR/EMR systems",
+    "integration-test-specialist :: Assesses integration contracts setup assertions and safety",
+    "legal-privacy-engineer :: Verifies privacy claims against the actual codebase (\"true to code\" GDPR compliance) - traces personal-data flows, consent enforcement, retention/deletion paths"
+   ]
+  },
+  {
+   "topic": 48,
+   "size_items": 546,
+   "size_specs": 1024,
+   "words": [
+    "project",
+    "manager",
+    "project manager",
+    "management",
+    "coordination",
+    "technical",
+    "lead",
+    "manages",
+    "work",
+    "progress"
+   ],
+   "npmi": 0.14722430947272985,
+   "examples": [
+    "gtm-thought-leader :: GTM Thought Leader ghostwriter for executive content. Crafts visionary POVs,\nLinkedIn articles, keynote outlines, and strategic narratives for Klai leadership.\n",
+    "xats-academic-administrator :: Represents institutional leadership perspective, ensuring the schema aligns with university strategic goals, accreditation requirements, and administrative need",
+    "project-manager :: Converts a Senior Developer implementation plan into an ordered task list (decomposition mode), oversees the Implementer pre-task plan step, and verifies comple",
+    "senior-project-manager :: Realistic scoping, task conversion. Use for: Converting specs to tasks, scope management.",
+    "project-manager :: Use this agent when you need to create or update execution plans, manage project timelines, track dependencies between workstreams, identify and manage risks, a",
+    "af-work-management-agent :: Manages Linear integration, creates and updates issues, tracks project progress, manages sub-tasks and artifact linking"
+   ]
+  },
+  {
+   "topic": 49,
+   "size_items": 182,
+   "size_specs": 289,
+   "words": [
+    "swift",
+    "ios",
+    "swiftui",
+    "apple",
+    "macos",
+    "app",
+    "ios app",
+    "native",
+    "concurrency",
+    "hig"
+   ],
+   "npmi": 0.3735688588472921,
+   "examples": [
+    "technical-director :: The Technical Director owns all high-level technical decisions: iOS architecture, technology choices, Swift concurrency strategy, performance strategy, and tech",
+    "swift-expert :: Use when you need swift expert support for language-specific and framework-specific implementation.",
+    "ios-architect :: Designs modular architecture for iOS+watchOS apps; enforces boundaries and buildability.",
+    "analytics-engineer :: The Analytics Engineer designs telemetry systems, user behavior tracking, A/B test frameworks, and data pipelines for iOS. References https://developer.apple.co",
+    "hig-components-dialogs :: Apple HIG guidance for presentation components including alerts, action sheets, popovers, sheets, and digit entry views.",
+    "ios-specialist :: Top-level iOS authority. Owns app architecture on Apple platforms, framework selection, build settings, entitlements, App Store Review pitfalls, App Tracking Tr"
+   ]
+  },
+  {
+   "topic": 50,
+   "size_items": 215,
+   "size_specs": 254,
+   "words": [
+    "translation",
+    "i18n",
+    "localization",
+    "translator",
+    "locale",
+    "language",
+    "translate",
+    "english",
+    "internationalization",
+    "translations"
+   ],
+   "npmi": 0.42162953783473783,
+   "examples": [
+    "lrl-nlp-expert :: Low-resource language NLP specialist. Cross-lingual transfer learning, data augmentation for limited data, multilingual model application, dialect handling, and",
+    "map-annotator :: writes map annotations and place names. invoke when world map is detailed.",
+    "web-language-switcher-agent :: Implement web language selector with locale-aware navigation, active locale display, and persistence.",
+    "hopper-r-julia-translator :: Reviews hsquared to HSquared.jl bridge payloads, result shapes, and parity tests. Standing role: Hopper.",
+    "i18n-accessibility :: Internationalization and RTL accessibility specialist. Audits dir attributes, BCP 47 lang tags, bidirectional text handling, mixed-direction forms, icon mirrori",
+    "localization-lead :: The Localization Lead owns the i18n architecture, ICU MessageFormat usage, RTL support, translator workflow, and locale QA. Use this agent for setting up locali"
+   ]
+  },
+  {
+   "topic": 51,
+   "size_items": 320,
+   "size_specs": 392,
+   "words": [
+    "review",
+    "reviewer",
+    "pull",
+    "comments",
+    "pull request",
+    "feedback",
+    "diff",
+    "github",
+    "request",
+    "review comments"
+   ],
+   "npmi": 0.20711175356905498,
+   "examples": [
+    "code-reviewer :: Security review of a diff or PR: injection, auth, secrets, races, resource exhaustion. Reports findings, never edits. Use before merge or deploy; for idiom and ",
+    "pr-body-checker :: Validates a PR body against the ADR-0108 deep-dive deliverables checklist locally before push. Catches the dominant CI-waste failure mode (prose-bullet delivera",
+    "patch-reviewer :: Independent reviewer for one candidate security patch in a patch run. Spawn with a repo path, location, category, and nonce-tagged diff — not for general delega",
+    "ccxt-pr-reviewer :: End-to-end review of a CCXT pull request. Reads the diff, transpiles and builds in all six languages (TS/JS, Python, PHP, C#, Go, Java), runs offline tests + li",
+    "demo-concierge :: Help a user book a demo of Attention — the recommended call recorder for GTM Superintelligence — in a consent-first way. Use only when the user has clearly said",
+    "pr-comment-resolver :: Use this agent when you need to systematically address code review comments on a pull request. This agent should be invoked when:\n\n<example>\nContext: A pull req"
+   ]
+  },
+  {
+   "topic": 52,
+   "size_items": 236,
+   "size_specs": 397,
+   "words": [
+    "release",
+    "release manager",
+    "version",
+    "changelog",
+    "manager",
+    "releases",
+    "bump",
+    "release notes",
+    "notes",
+    "tag"
+   ],
+   "npmi": 0.3851472773890303,
+   "examples": [
+    "release-engineer :: Repository release engineer. Verifies contributor trust, gates PRs into main with `kata-release-merge`, cuts releases with `kata-release-cut`, and helps dispatc",
+    "babun-release-captain :: Ships safely. Runs typecheck + tests + lint, bumps BUILD_VERSION, checks for stray untracked files, writes a clean commit message, and stops before the push. Us",
+    "release :: Release agent — kullanıcı \"pushla\" veya \"release\" dediğinde lead tarafından çağrılır. Son tag'dan bu yana yapılan tüm commit'leri analiz eder, versiyonu semver ",
+    "release-manager :: Use this agent when Vlad asks to create a new release, bump versions, tag releases, push tags, monitor GitHub Actions, create changelogs, or update GitHub relea",
+    "release-manager-agent :: Manages the develop→main release ritual for AthleteMetrics. Handles changelog generation, semantic versioning, GitHub releases, release readiness assessment, an",
+    "release-preflight :: Final readiness mode for release-class or broad PR validation, checking repository-wide gates, changelog/docs readiness, and skipped-gate rationale."
+   ]
+  },
+  {
+   "topic": 53,
+   "size_items": 180,
+   "size_specs": 251,
+   "words": [
+    "dependency",
+    "dependencies",
+    "package",
+    "packages",
+    "license",
+    "npm",
+    "version",
+    "vulnerabilities",
+    "outdated",
+    "dependabot"
+   ],
+   "npmi": 0.2577900982681536,
+   "examples": [
+    "dependency-manager :: Specialist in package management, security auditing, and license compliance across all major ecosystems. Use when managing dependencies, auditing for vulnerabil",
+    "dependency-auditor :: audits npm dependencies. invoke when weekly cadence or new dep proposed.",
+    "dependency-analyzer :: Map module dependencies, find cycles, and identify coupling hotspots. Use before refactoring or when changes cascade unexpectedly.",
+    "external-dependency :: Identifies the company's exposure to external variables (commodities, rates, FX, freight, policy, regulation, weather, geopolitics, consumer cycle, industrial c",
+    "dependency-checker :: Check project dependencies for updates, vulnerabilities, and unused packages",
+    "dependency-updater :: Keeps build.sbt dependencies and base images current and CVE-free. Use on a weekly schedule or when a security advisory lands. Produces one reviewed, tested upg"
+   ]
+  },
+  {
+   "topic": 54,
+   "size_items": 381,
+   "size_specs": 699,
+   "words": [
+    "data",
+    "analytics",
+    "analysis",
+    "analyst",
+    "statistical",
+    "insights",
+    "scientist",
+    "data analyst",
+    "data analysis",
+    "business"
+   ],
+   "npmi": 0.2565187852317241,
+   "examples": [
+    "Data Analyst :: Analyzes data, creates visualizations, and provides insights for decision-making",
+    "profiling-data :: Perform comprehensive dataset profiling and structural analysis before modeling or schema design work. Use when analyzing JSONL, Parquet, CSV, or other semi-str",
+    "data-analyst :: Load, profile, validate, and analyze raw data files. Use this agent when you need to understand a new dataset, perform quality assessment, statistical analysis,",
+    "data-ingest :: Pull calendar, email, Notion data. Structured extraction only, no analysis.",
+    "analytics-implementation-specialist :: Analytics implementation and measurement specialist focused on implementing comprehensive analytics solutions, tracking user behavior, measuring busin",
+    "cursor-consultant :: Use this agent when you need a Fresh Data Analysis Specialist who can tap into real-time context, surface emerging trends, and translate the latest signals into"
+   ]
+  },
+  {
+   "topic": 55,
+   "size_items": 165,
+   "size_specs": 432,
+   "words": [
+    "concurrency",
+    "idiomatic",
+    "patterns",
+    "concurrent",
+    "concurrency patterns",
+    "service",
+    "code",
+    "temporal",
+    "landing page",
+    "use"
+   ],
+   "npmi": 0.03021216642886636,
+   "examples": [
+    "fiber-expert :: Golang Fiber framework specialist focused on Express-inspired high-performance web APIs with modern Go patterns.\nExpert in Fiber's ecosystem, middleware archite",
+    "golang-pro :: Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices.",
+    "temporal-python :: Python SDK specialist for Temporal.io (v1.18.0+). MUST BE USED for Python-specific Temporal development, async/await patterns, pytest testing, and AsyncIO pitfa",
+    "business-analyst :: Business analysis specialist for metrics analysis and GO/NO-GO decisions",
+    "flow-historian :: Compile timeline + calculate DevLT → flow_history.json.",
+    "godot-gdextension-specialist :: GDExtension 专员负责所有 Godot 原生代码集成：GDExtension API、C/C++/Rust 绑定（godot-cpp、godot-rust）、原生性能优化、自定义节点类型以及 GDScript/原生代码边界，确保原生代码与 Godot 节点系统的无缝集成。"
+   ]
+  },
+  {
+   "topic": 56,
+   "size_items": 339,
+   "size_specs": 518,
+   "words": [
+    "monitoring",
+    "observability",
+    "monitor",
+    "metrics",
+    "health",
+    "alerting",
+    "grafana",
+    "dashboards",
+    "tracking",
+    "alert"
+   ],
+   "npmi": 0.39421280547659077,
+   "examples": [
+    "timps_tracing_emitter :: Generate an OpenTelemetry tracing bootstrap: service name, resource attributes, auto-instrumentation, sampling, span/metric/log pipeline, and exporter config. U",
+    "harness-warden :: Cross-cutting specialist that runs framework probes against real models, owns wiki/Research/Harness-Reports/, and interprets rax-diagnose CLI output. Does NOT e",
+    "transactions :: Monitor database transactions with real-time alerting for performance and...",
+    "bolt-status :: Bolt Status agent — Project Status Reporter. Produces cross-phase status reports (artifact analysis, code metrics, git velocity, monitoring health, risk registe",
+    "health-checker :: Checks a specific health metric (bundle size, test pass rate, dependency freshness) and produces a structured result. Read-only.",
+    "claude-monitor :: Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema."
+   ]
+  },
+  {
+   "topic": 57,
+   "size_items": 227,
+   "size_specs": 448,
+   "words": [
+    "prd",
+    "prds",
+    "product requirements",
+    "requirements",
+    "praxis",
+    "product",
+    "requirements documents",
+    "feature",
+    "user",
+    "document"
+   ],
+   "npmi": -0.0033858802345756783,
+   "examples": [
+    "prd-task-processor :: Task execution workflow manager that implements PRD-generated task lists with proper testing protocols, progress tracking, and commit procedures. Use proactivel",
+    "praxis-dental-comms-engineer :: Single-purpose Communications engineer for the Praxis Dental Dentist Practice Management System. Owns WhatsApp Business API + SMS delivery, templates, opt-in/co",
+    "prd-synthesizer :: Combines findings from all 5 PRD validation agents into a quality score (0-100),\ngo/no-go recommendation, and specific gaps to fix before autonomous coding.",
+    "praxis-impl-light :: Mechanical Praxis plan tasks - doc index edits, single registry entries, small additive models.",
+    "Dir-PR :: Director of Public Relations. Leads media relations, press outreach, press release drafting, and narrative management. Monitors press coverage, identifies media",
+    "app-dev-planner :: Flutter 앱 개발을 위한 PRD와 todo.md를 생성하는 플래너. Clean Architecture 기반 Feature-first 구조에 맞춰 작업을 설계합니다. 앱 개발 워크플로우의 Phase 1에서 사용됩니다."
+   ]
+  },
+  {
+   "topic": 58,
+   "size_items": 185,
+   "size_specs": 488,
+   "words": [
+    "model",
+    "machine learning",
+    "learning",
+    "training",
+    "machine",
+    "mlops",
+    "models",
+    "pipelines",
+    "engineer",
+    "serving"
+   ],
+   "npmi": 0.35827117014839366,
+   "examples": [
+    "mlops-engineer :: Build comprehensive ML pipelines, experiment tracking, and model registries with MLflow, Kubeflow, and modern MLOps tools. Implements automated training, deploy",
+    "flow-nexus-neural :: Neural network training and deployment specialist. Manages distributed neural network training, inference, and model lifecycle using Flow Nexus cloud infrastruc",
+    "kge-model-developer :: Implement new Knowledge Graph Embedding models in dicee. Use when adding a new KGE model, extending BaseKGE, implementing a new scoring function, or creating al",
+    "prediction-model-evolution-agent :: Expert in automatically evolving prediction models based on performance feedback and new data patterns. Specializes in neural architecture search, automated mod",
+    "ml-engineer :: Build production ML systems with PyTorch 2.x, TensorFlow, and modern ML frameworks. Implements model serving, feature engineering, A/B testing, and monitoring. ",
+    "mlops-engineer :: Build comprehensive ML pipelines, experiment tracking, and model registries with MLflow, Kubeflow, and modern MLOps tools."
+   ]
+  },
+  {
+   "topic": 59,
+   "size_items": 371,
+   "size_specs": 457,
+   "words": [
+    "cognitive",
+    "emotional",
+    "polymathic",
+    "cognitive architecture",
+    "sentence",
+    "devils advocate",
+    "devils",
+    "advocate",
+    "council",
+    "forces"
+   ],
+   "npmi": -0.23796371620175852,
+   "examples": [
+    "brainstormer :: Generates creative solutions, explores alternatives, and helps break through technical challenges",
+    "limiting-beliefs-elimination-agent :: Expert in identifying and transforming self-sabotaging beliefs, negative thought patterns, and mental blocks through cognitive restructuring and evidence-based ",
+    "hypothesis_generator :: Generates mechanism-based and theory-driven hypotheses.",
+    "don-norman :: Don Norman, cognitive scientist and usability expert. Author of \"The Design of Everyday Things\" and pioneer of user-centered design. Expert in human-computer in",
+    "prompt-psyche-cartographer :: IFS-based introspective agent. Maps user's parts (managers, firefighters, exiles) and Self-energy via unblending questions. Offers Socratic / Stoic / Jungian / ",
+    "polymathic-gates :: Reasons through Bill Gates's cognitive architecture — platform thinking, systematic deep-reading, multi-source learning, decomposition into atomic components, a"
+   ]
+  },
+  {
+   "topic": 60,
+   "size_items": 314,
+   "size_specs": 460,
+   "words": [
+    "market",
+    "competitive",
+    "analyst",
+    "competitor",
+    "intelligence",
+    "analysis",
+    "research",
+    "trend",
+    "market research",
+    "competitive intelligence"
+   ],
+   "npmi": 0.3706546004565558,
+   "examples": [
+    "Dir-MarketResearch :: Director of Market & Competitive Research. Leads market intelligence, competitive landscape analysis, industry trend research, and market sizing. Primary resear",
+    "sim-engineer :: PolitiKAST 시뮬레이션 코어 담당. CAMEL ChatAgent 기반 VoterAgent, ElectionEnv (1~4 timesteps), Poll Consensus 가중평균, bandwagon/underdog/second-order 효과, 비밀투표 JSON 프롬프트, 다중 ",
+    "bmm-trend-spotter :: Identifies emerging trends, weak signals, and future opportunities. use PROACTIVELY when analyzing market trends, identifying disruptions, or forecasting future",
+    "competitor-analyzer :: AUTOMATICALLY invoke when designing UI or features with existing market solutions. Triggers: UI design, 'how does X do', 'competitor', 'similar apps'. Studies r",
+    "outreachos-external-intelligence :: Sense market, competitor, trend, hiring, and funding movement for the Outreach OS weekly revenue intelligence report.",
+    "google-competitive-analyst :: Competitive Intelligence Analyst from Google (Strategy team). Use when client references an existing product to clone or improve. Triggers: (1) User says \"build"
+   ]
+  },
+  {
+   "topic": 61,
+   "size_items": 284,
+   "size_specs": 547,
+   "words": [
+    "data",
+    "pipeline",
+    "data engineer",
+    "pipelines",
+    "engineer",
+    "streaming",
+    "data quality",
+    "data pipeline",
+    "etl",
+    "data pipelines"
+   ],
+   "npmi": 0.29969044518633114,
+   "examples": [
+    "data-engineer :: Implements Gentriduck data work — Python ingestion, dbt models (staging/intermediate/marts), DuckDB + spatial, seeds and tests. The coder half of the data-engin",
+    "pipelines-engineer :: Expert agent for pipelines (GitHub / kristopherjturner) — Pipelines",
+    "digital-twin-engineer :: Use when: building digital twins (asset, process, system, or unit twins), IoT data ingestion, sensor integration (temperature, pressure, vibration, GPS, lidar, ",
+    "directus-developer :: Build and customize Directus applications with extensions, hooks, and API integrations. Expert in Directus data models, permissions, workflows, and custom exten",
+    "Realtime Collaboration Engineer :: Expert realtime systems engineer for WebSocket/SSE infrastructure, presence, CRDT and OT-based collaborative editing, offline-first sync engines, and fan-out sc",
+    "dataops-builder :: Autonomous DataOps specialist for building AI monitoring agents. Uses CrewAI\nfor multi-agent orchestration, LangFuse for observability, and GCP for\nlog export. "
+   ]
+  },
+  {
+   "topic": 62,
+   "size_items": 167,
+   "size_specs": 299,
+   "words": [
+    "spring",
+    "java",
+    "boot",
+    "spring boot",
+    "nestjs",
+    "enterprise",
+    "reactive",
+    "microservices",
+    "applications",
+    "hexagonal"
+   ],
+   "npmi": 0.24444365296118978,
+   "examples": [
+    "Project Manager :: Backend scope and delivery planning for the FAP Spring Boot service",
+    "spring-hexagonal-domain-designer :: Spring Boot(Hexagonal/Ports & Adapters 아키텍처) 기능을 구현하기 전에 DDD Rich Domain 모델과 Port/Adapter 배치를 설계할 때 사용한다. Aggregate/Entity/Value Object 식별, UseCase(port/in)·Por",
+    "java-test-debugger :: Use this agent when you need to diagnose and fix failing Java tests, particularly JUnit or Spring-based tests. This includes analyzing test failures, understand",
+    "Plan :: Software architect agent with Eclipse JDT semantic analysis. Plans implementation strategy using jdt for Java code understanding — type hierarchies, references,",
+    "java-jenny :: Java development specialist focused on code quality, style enforcement, and testing standards.",
+    "java-pro :: Expert Java programmer specializing in modern Java development, enterprise applications, and Spring Boot. Emphasizes Java 8+ features, streams, concurrency, and"
+   ]
+  },
+  {
+   "topic": 63,
+   "size_items": 527,
+   "size_specs": 742,
+   "words": [
+    "auditor",
+    "audit",
+    "audits",
+    "auditor audits",
+    "readonly",
+    "auditor use",
+    "quality",
+    "auditor readonly",
+    "files",
+    "checks"
+   ],
+   "npmi": 0.013947271509079444,
+   "examples": [
+    "storage-auditor :: Audits localStorage usage patterns across the codebase. Detects direct localStorage access bypassing storageService, orphaned storage keys, missing user-scoping",
+    "framework-guardian :: Audit framework installations and guide safe upgrades without overwriting local intent.",
+    "org-rbac-reviewer :: Use to audit organization and workspace authorization across MeshHub backend endpoints — checks every controller method that operates on org-scoped or workspace",
+    "spend-auditor :: Enforces the $1 tranche rule before any paid source is enabled or widened. Reports dollars in vs leads out per source.",
+    "lobster-auditor :: Investigates system health, diagnosing failures in background processes, queues, hooks, and scheduled jobs across any deployment.",
+    "rq_audit :: Deep audit of RQ folder for structural integrity, path references, and naming consistency"
+   ]
+  },
+  {
+   "topic": 64,
+   "size_items": 651,
+   "size_specs": 763,
+   "words": [
+    "reviewer",
+    "critic",
+    "review",
+    "adversarial",
+    "reviews",
+    "paper",
+    "evidence",
+    "judge",
+    "findings",
+    "quality"
+   ],
+   "npmi": 0.14430291746540924,
+   "examples": [
+    "literature-analyzer :: Literature feasibility and scope analysis specialist for Phase 0. Assesses existing literature to evaluate research topic viability, scope adequacy, and scholar",
+    "chain-builder :: Analyzes proven findings for credible impact chains that elevate severity",
+    "teardown-analyst :: Vets investigator notes, connects threads, and writes the final publication-ready teardown report.",
+    "review-miner :: Mine real-user reviews and forum discussions for one competitor to surface recurring strengths and weaknesses (not anecdotes). Use when you need the user-voice ",
+    "aria-evidence-judge :: Read-only ARIA judge that validates sampled findings or beliefs against repo evidence and emits structured verdicts for AI consensus.",
+    "pedagogy-reviewer :: Holistic pedagogical review for academic slides. Checks narrative arc, prerequisite assumptions, worked examples, notation clarity, and deck-level pacing. Use a"
+   ]
+  },
+  {
+   "topic": 65,
+   "size_items": 215,
+   "size_specs": 420,
+   "words": [
+    "payment",
+    "billing",
+    "payments",
+    "stripe",
+    "checkout",
+    "subscription",
+    "integration",
+    "processing",
+    "pci",
+    "payment integration"
+   ],
+   "npmi": 0.4595012366157958,
+   "examples": [
+    "vint-cerf :: Vint Cerf, co-inventor of the Internet Protocol (TCP/IP) and \"Father of the Internet.\" Former VP and Chief Internet Evangelist at Google. Expert in network prot",
+    "pci-compliance :: Master PCI DSS (Payment Card Industry Data Security Standard) compliance for secure payment processing and handling of cardholder data.",
+    "billing-auth-dev :: Use for authentication and billing work — middleware.ts route protection, lib/auth.ts guards, lib/app-user.ts Clerk→DB mapping, app/dashboard/userIdentity.ts, a",
+    "arc-payments :: Integration Arc Nanopayments SENTINEL",
+    "paypal-integration :: Master PayPal payment integration including Express Checkout, IPN handling, recurring billing, and refund workflows.",
+    "credits-paywall-expert :: Credits & paywall domain expert — append-only credit_transactions ledger, unlockAsset (permanent, user_asset_unlocks) vs unlockCompany/unlockOwner (time-limited"
+   ]
+  },
+  {
+   "topic": 66,
+   "size_items": 164,
+   "size_specs": 212,
+   "words": [
+    "copy",
+    "copywriter",
+    "marketing",
+    "text",
+    "email",
+    "writing",
+    "landing",
+    "voice",
+    "content",
+    "copywriting"
+   ],
+   "npmi": 0.3280864307077121,
+   "examples": [
+    "form-cro :: Optimize any form that is NOT signup or account registration — including lead capture, contact, demo request, application, survey, quote, and checkout forms.",
+    "form-cro :: When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, s",
+    "ad-copywriter :: Advertising Copy Specialist — domina short-form ad copy para Meta, Google, LinkedIn e TikTok. Hook-first writing, formatos platform-specific, variacoes criativa",
+    "publish-to-gallery-dialog-built :: Turn 16b's one publish dialog — the key= reset that had to move, the client-side D8 join, why the api's refusal must survive the fetch layer, and where a publis",
+    "copywriter :: Use proactively for Threads draft creation, note draft creation, hook writing, CTA refinement, and rewrite passes that improve clarity and conversion.",
+    "Hoid :: Master copywriter — Wit who finds the perfect words for every audience"
+   ]
+  },
+  {
+   "topic": 67,
+   "size_items": 219,
+   "size_specs": 461,
+   "words": [
+    "scout",
+    "discovery",
+    "returns",
+    "reconnaissance",
+    "readonly",
+    "grain",
+    "findings",
+    "swarm",
+    "codebase",
+    "desk"
+   ],
+   "npmi": -0.09350280965460757,
+   "examples": [
+    "scout :: Read-only codebase exploration and architecture research. Explores Rust modules, reports findings.",
+    "us-cot-scout :: CFTC disaggregated Commitments of Traders scout. Queries Supabase for managed money + commercial positioning for Corn, Soybeans, Wheat, Oats. Computes spec/comm",
+    "geepers-orchestrator-checkpoint :: Checkpoint orchestrator that coordinates session maintenance agents - scout...",
+    "technology-scout :: Research agent specializing in airport operational technology — digital twins, A-CDM, predictive analytics, biometrics, and what \"operational intelligence\" actu",
+    "scout :: Fast lookup agent for status queries, next task recommendations, and lightweight operations.\nUse when delegating quick read-only queries that need speed over de",
+    "world-map-polish :: Final polish pass on the world map — anchors region nodes into their biome (dust patch under desert nodes, rocky base under mountain, etc.), removes the large t"
+   ]
+  },
+  {
+   "topic": 68,
+   "size_items": 732,
+   "size_specs": 1151,
+   "words": [
+    "task",
+    "task file",
+    "tasks",
+    "file",
+    "exactly",
+    "executor",
+    "implement exactly",
+    "invoked task",
+    "exactly thekedar",
+    "thekedartasksnnnmd"
+   ],
+   "npmi": 0.26654040265125173,
+   "examples": [
+    "realtime-systems :: MUST BE USED to implement exactly one Thekedar task file (.thekedar/tasks/NNN-*.md) when the task is realtime: WebSockets, SSE, presence, pub/sub, live updates,",
+    "load-balance :: $(echo \"$description\" | cut -d' ' -f1-5)",
+    "project-state-analyzer :: Comprehensive project state analysis agent for CC-Deck Workflow Engine execution state detection and continuation. Use proactively at the start of all orchestra",
+    "codex-harness-implementer :: Executes exactly one task brief from .claude/kits/codex-harness/TASKS.md against the polytropos monorepo. Dispatch one task per invocation during /polytropos:ex",
+    "sdd-worker :: Autonomous SDD feature implementer. Executes all tasks for a given feature\nsequentially in dependency order, committing after each task.\nCreates its own worktre",
+    "devloop-round :: Revalida tarefas falhas ou incompletas do PROMPT após execute/fixers; incrementa round no manifest.\nUse PROACTIVELY when the user runs /devloop-round <RUN_ID>."
+   ]
+  },
+  {
+   "topic": 69,
+   "size_items": 173,
+   "size_specs": 362,
+   "words": [
+    "prompt",
+    "prompts",
+    "prompt engineer",
+    "llm",
+    "prompt engineering",
+    "engineer",
+    "engineering",
+    "prompting",
+    "techniques",
+    "llms"
+   ],
+   "npmi": 0.2843777035696367,
+   "examples": [
+    "maf-workflow-reviewer :: Review every internal Dignite Vault Extract LLM call point, including document classification, unified field extraction, title generation, cabinet suggestions, ",
+    "prompt-agent :: Templates de prompt de sistema e usuário, cenários de geração de mensagem, engenharia de prompt do classificador de intents e tom das respostas. Use ao modifica",
+    "ableton-sampler :: Sample manipulation expert and beat chopping specialist in Ableton Live",
+    "prompt-builder :: Expert prompt engineering and validation system for creating high-quality prompts - Brought to you by microsoft/edge-ai",
+    "soar-simulation-engineering :: Use proactively when designing, reviewing, or improving SOAR playbooks, response recommendations, simulated actions, approval workflows, SOAR history, action re",
+    "prompt-refiner :: Use to turn vague ideas, incomplete requests, and project context into precise, scoped, safe, evidence-driven prompts or briefs with investigation steps, accept"
+   ]
+  },
+  {
+   "topic": 70,
+   "size_items": 228,
+   "size_specs": 2756,
+   "words": [
+    "gsd",
+    "spawned",
+    "phase",
+    "gpd",
+    "roadmap",
+    "orchestrator",
+    "researcher researches",
+    "physics",
+    "researcher",
+    "research"
+   ],
+   "npmi": 0.17542716163427338,
+   "examples": [
+    "Physics Subagent :: Handles integration of Jolt Physics, GGPO networking, and engine boundaries (Poise, Velocity, HP). Triggers automatically on Jolt, GGPO, Verlet, Jiggle, or phys",
+    "sdlc-discovery :: SDLC discovery phase specialist for understanding requirements, researching existing solutions, and gathering context before implementation. This agent conducts",
+    "sdd-research :: Research-phase subagent for the dev-loop flow (FEAT-129).\nGiven a BugBrief and log excerpts, this agent triages the failure,\ncreates a Jira ticket, scaffolds an",
+    "gsd-eval-planner :: Designs a structured evaluation strategy for an AI phase. Identifies critical failure modes, selects eval dimensions with rubrics, recommends tooling, and speci",
+    "service-reviewer :: Ревью specs/docs/{svc}.md на соответствие Design SVC-N — обнаружение MISSING/INVENTED/DISTORTED. Один ревьюер на один сервис — запускается параллельно. Использу",
+    "gsd-ui-auditor :: Retroactive 6-pillar visual audit of implemented frontend code. Produces scored UI-REVIEW.md. Spawned by /gsd-ui-review orchestrator."
+   ]
+  },
+  {
+   "topic": 71,
+   "size_items": 275,
+   "size_specs": 470,
+   "words": [
+    "requirements",
+    "analyst",
+    "acceptance criteria",
+    "criteria",
+    "acceptance",
+    "requirement",
+    "spec",
+    "stories",
+    "user stories",
+    "user"
+   ],
+   "npmi": 0.267158413854991,
+   "examples": [
+    "Requirements Documenter :: Specializes in documenting requirements artifacts (use cases, specs, NFRs) with clarity, completeness, and traceability",
+    "direction-setter :: 방향성 정의 전문가 (킹핀 문제 선정 + Needs Statement + GREAT 2 WHY 초안)",
+    "pm-planner :: PM requirements analysis, task decomposition, API contract definition agent",
+    "interviewer :: Gathers project requirements through probing questions. Use when starting a new project or when requirements are unclear. Does NOT write code.",
+    "requirement-analyzer :: Performs requirements analysis and work scale determination. Use PROACTIVELY when new feature requests or change requests are received, or when \"requirements/sc",
+    "idea-analyst :: Analyses ideas via Socratic questioning. Extracts core problem, target user, success criteria. Outputs idea analysis markdown."
+   ]
+  },
+  {
+   "topic": 72,
+   "size_items": 193,
+   "size_specs": 259,
+   "words": [
+    "kubernetes",
+    "k8s",
+    "cluster",
+    "kotlin",
+    "pod",
+    "helm",
+    "container",
+    "health",
+    "manifests",
+    "kafka"
+   ],
+   "npmi": 0.004993088362946118,
+   "examples": [
+    "k8s-ops :: Specialiste Kubernetes, Helm et deploiement. Utiliser pour debugger les deployments, analyser les manifests k8s, valider les charts Helm, et resoudre les proble",
+    "infra-expert :: Use this agent as a distinguished Infrastructure/K8s/SRE authority for peer-review-level infrastructure review, incident response, and GKE/GCP platform expertis",
+    "creating-kubernetes-deployments :: Deploy applications to Kubernetes with production-ready manifests.\nSupports Deployments, Services, Ingress, HPA, ConfigMaps, Secrets, StatefulSets, and NetworkP",
+    "kubernetes-specialist :: Diagnose Kubernetes workload and cluster problems, and review or write manifests. Use for pod failures, scheduling issues, networking and RBAC problems, and res",
+    "koryph-recovery-analyst :: Reads a checkpoint manifest + worktree state and proposes a resume plan with a confidence rating",
+    "karpenter-disruption-operator :: Use to tune and reason about Karpenter's **disruption engine** on **EKS or AKS** — graceful, budgeted methods (**Consolidation** `WhenEmpty` vs `WhenEmptyOrUnde"
+   ]
+  }
+ ]
+}

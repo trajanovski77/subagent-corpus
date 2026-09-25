@@ -1,0 +1,38 @@
+{"id": "8df7cc916e85569c", "restriction": "partial", "evidence": "if you are on main, or the branch is wrong, STOP immediately and report — never write or commit anywhere", "where": "body"}
+{"id": "58457e79072c1980", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0f0aaac19f3280bc", "restriction": "none", "evidence": "", "where": ""}
+{"id": "499fb777eeeca871", "restriction": "full", "evidence": "Never modify source code — review only", "where": "body"}
+{"id": "cf36be3eedf5da51", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cbf36ef55814b51b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8e4975dee912b836", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5b99ee26e5b48e56", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a520c4c3380a51aa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "bdf262da45b79972", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ae47597eb56a8693", "restriction": "none", "evidence": "", "where": ""}
+{"id": "384eef219e8cd13c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "05805227c17072fa", "restriction": "none", "evidence": "", "where": ""}
+{"id": "08b488ede7e9e599", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ed5de83f44735627", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f68a888e97e5dab1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b3647685741e0034", "restriction": "none", "evidence": "", "where": ""}
+{"id": "908fbd803521958b", "restriction": "full", "evidence": "只读审查 (read-only review) 不修改代码 (do not modify code)", "where": "body"}
+{"id": "b2c3bb779ae32ff4", "restriction": "partial", "evidence": "Never write to `skills/`.", "where": "body"}
+{"id": "09f0443b6b38c2a8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "86742e2185839990", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7d8a38ccf3b910ef", "restriction": "none", "evidence": "", "where": ""}
+{"id": "53331bac551fac80", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8895cf473b3eb48b", "restriction": "full", "evidence": "You do not edit code — you have no write tools by design.", "where": "body"}
+{"id": "477f20df60043746", "restriction": "none", "evidence": "", "where": ""}
+{"id": "96a6bcf64916057b", "restriction": "full", "evidence": "You do not edit code — you have no write tools by design.", "where": "body"}
+{"id": "680e58f020f96151", "restriction": "none", "evidence": "", "where": ""}
+{"id": "30848c7d28b7b681", "restriction": "none", "evidence": "", "where": ""}
+{"id": "372a28ddbaf81b6a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4b348a0de96d812", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3e4e603aa7af4f44", "restriction": "full", "evidence": "This agent is **read-only** by default.", "where": "body"}
+{"id": "c38f16452faf4853", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d767f391733a7b42", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cf54dfe26d9cab30", "restriction": "full", "evidence": "Pure research, no code modifications.", "where": "both"}
+{"id": "d8931c006dcf0bf7", "restriction": "partial", "evidence": "Do NOT git commit unless the orchestrator explicitly tells you to.", "where": "body"}
+{"id": "1445f9cd31e27a14", "restriction": "none", "evidence": "", "where": ""}
+{"id": "75138f7ba1e42875", "restriction": "none", "evidence": "", "where": ""}
+{"id": "628cc4ca4bf7dd73", "restriction": "none", "evidence": "", "where": ""}

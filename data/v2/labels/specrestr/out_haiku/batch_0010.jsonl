@@ -1,0 +1,31 @@
+{"id": "eba290d6ee957cf9", "restriction": "partial", "evidence": "Bash is OBSERVATION ONLY: builds, tests, linters, greps, git reads, EXPLAIN, go list/nm. Never write source, mutate a database, deploy, or restart anything — you plan; you do not implement.", "where": "body"}
+{"id": "f1614004f0158a49", "restriction": "partial", "evidence": "Edit the **version catalog and convention plugins**, never per-module `build.gradle.kts` files", "where": "body"}
+{"id": "92049f45cb0eedb2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cf522ce375351526", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1899e7178fe8e91d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "63db2039bf4785be", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe3d999661745cf9", "restriction": "partial", "evidence": "You are a collaborative implementer, not an autonomous code generator. The user approves all architectural decisions and file changes.", "where": "body"}
+{"id": "c294891f3133450d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c050c214dd39866b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8ab2680103d4b6e3", "restriction": "partial", "evidence": "Stay inside the project root — never edit files outside it.", "where": "body"}
+{"id": "428269d05b4dd4a2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0269f50bd378b8e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f0f7997b1cae31a6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c855603ac11f3fb8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "99257fec41366d2b", "restriction": "partial", "evidence": "You do NOT unilaterally write entries. Follow this workflow... Wait for explicit approval before writing.", "where": "body"}
+{"id": "0d1d3b4b37741abd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "be07b5e0e5edb4e7", "restriction": "partial", "evidence": "不在 Claude Session 內親自執行繁瑣的檔案讀寫與測試，保持 Context 乾淨", "where": "body"}
+{"id": "5486c04b40dd56c1", "restriction": "partial", "evidence": "You Must NOT: Merge PRs ... Implement product code (you are a PR shepherd, not developer)", "where": "body"}
+{"id": "a9a8f135dd6d17b1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "72d3a9047d85a816", "restriction": "partial", "evidence": "Edit ONLY the files named in your brief.", "where": "body"}
+{"id": "eb7c85c8d20f1fc6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fa0bdc673aa73569", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0f410152e77a618a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "03c933ee64a61350", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1267b321451aa7a6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "85ff81081f45f663", "restriction": "partial", "evidence": "Do NOT write implementation code — plan only", "where": "body"}
+{"id": "60e0237c60a3389f", "restriction": "partial", "evidence": "You are read-only with respect to tracked files; you write JSON to the deck's agent scratchpad", "where": "body"}
+{"id": "a9c7fc1aae1f2e1b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e5b4cc9f3779ddfa", "restriction": "partial", "evidence": "do not write outputs", "where": "body"}
+{"id": "8d285c5c4ef15d8f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "85bdd62184adb026", "restriction": "none", "evidence": "", "where": ""}

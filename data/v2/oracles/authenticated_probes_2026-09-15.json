@@ -1,0 +1,27 @@
+{
+  "note": "Init-event observations from authenticated probes on 2026-09-15 (claude.ai OAuth, macOS arm64 native build) captured before the CLI login expired. Flags: -p, --output-format stream-json --verbose, --model haiku, --strict-mcp-config, --setting-sources project, --disable-slash-commands, --no-session-persistence. Processes were stopped after the init event.",
+  "build": "2.1.233",
+  "default_pool_authenticated": ["Artifact","Bash","CronCreate","CronDelete","CronList","DesignSync","Edit","EnterWorktree","ExitWorktree","ListAgents","Monitor","NotebookEdit","PushNotification","Read","RemoteTrigger","ReportFindings","ScheduleWakeup","SendMessage","Task","TaskCreate","TaskGet","TaskList","TaskOutput","TaskStop","TaskUpdate","ToolSearch","WebFetch","WebSearch","Workflow","Write"],
+  "default_pool_unauthenticated": ["Bash","CronCreate","CronDelete","CronList","DesignSync","Edit","EnterWorktree","ExitWorktree","NotebookEdit","Read","ReportFindings","ScheduleWakeup","SendMessage","Skill","Task","TaskOutput","TaskStop","ToolSearch","WebFetch","WebSearch","Workflow","Write"],
+  "default_pool_authenticated_build_2.1.270": "identical to 2.1.233",
+  "resolution_authenticated": {
+    "Read, my_bogus_tool, NotARealTool, mcp__fake__do_thing, TaskCreate, LSP, ListMcpResourcesTool, Bash(git diff:*)": ["Read","TaskCreate","Bash"],
+    "Grep": ["Grep"], "Glob": ["Glob"],
+    "Read, Grep, Glob": ["Read","Grep","Glob"],
+    "Read, Grep, Glob, Bash": ["Read","Bash"],
+    "Read, Grep, Glob, Bash(git diff:*)": ["Read","Bash"],
+    "Grep, Task": ["Task","Grep"],
+    "Read, Grep, Glob, Edit, Write": ["Read","Edit","Write","Grep","Glob"],
+    "LS": [], "MultiEdit": [], "TodoWrite": [], "AskUserQuestion": [], "EnterPlanMode": [],
+    "KillShell": ["TaskStop"], "BashOutput": ["TaskOutput"], "dispatch_agent": [],
+    "Skill": [], "PowerShell": [], "NotebookRead": [], "ListMcpResourcesTool": [], "LSP": [],
+    "Agent": ["Task"], "read, grep": [],
+    "All": [], "all": [], "\"\"": [], "\"*\"": "full pool (30)", "(omitted)": "full pool (30)"
+  },
+  "resolution_unauthenticated": {
+    "Read, my_bogus_tool, NotARealTool, mcp__fake__do_thing, TaskCreate, LSP, ListMcpResourcesTool, Bash(git diff:*)": ["Read","Bash"]
+  },
+  "env_gates_tested_no_effect": ["USE_BUILTIN_RIPGREP=0/1","CLAUDE_CODE_USE_NATIVE_FILE_SEARCH=0/1","CLAUDE_CODE_ENABLE_TASKS=1 (unauthenticated)","ENABLE_LSP_TOOL=1 (unauthenticated)"],
+  "env_gates_with_effect": {"ENABLE_TOOL_SEARCH=0": "removes ToolSearch"},
+  "skill_note": "Skill is absent because --disable-slash-commands was passed; it is present in the unauthenticated pool without that flag."
+}

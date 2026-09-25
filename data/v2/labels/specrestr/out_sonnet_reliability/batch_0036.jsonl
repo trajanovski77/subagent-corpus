@@ -1,0 +1,49 @@
+{"id": "fed59926d101de59", "restriction": "none", "evidence": "", "where": ""}
+{"id": "72b0e15727850146", "restriction": "full", "evidence": "You do not edit code.", "where": "body"}
+{"id": "21bf472864923dc5", "restriction": "full", "evidence": "does not modify files", "where": "description"}
+{"id": "e37d4d717876a32d", "restriction": "none", "evidence": "", "where": ""}
+{"id": "17d0583748860ff2", "restriction": "partial", "evidence": "NEVER commit to git", "where": "body"}
+{"id": "c94f7f8f79836414", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e4e892ccc7643b4a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6ff477eba442fec4", "restriction": "partial", "evidence": "You are not the inspector for code. If the code is wrong, fix the code first; then document the corrected behavior.", "where": "body"}
+{"id": "b364b0ca3c90e1a8", "restriction": "full", "evidence": "you do NOT modify files", "where": "body"}
+{"id": "afafb59926040862", "restriction": "none", "evidence": "", "where": ""}
+{"id": "dbb58bbbf24f69c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "504a2995fcd84ee7", "restriction": "full", "evidence": "You never modify files", "where": "body"}
+{"id": "ee8ceb351477f8d8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4ff8aa0c06a1b5e", "restriction": "full", "evidence": "Read-only. Do not edit files.", "where": "body"}
+{"id": "47a8e843393c3709", "restriction": "partial", "evidence": "make them pass without editing them", "where": "body"}
+{"id": "2ec58a63100cd7d5", "restriction": "none", "evidence": "", "where": ""}
+{"id": "265bb67aa37da803", "restriction": "full", "evidence": "You do NOT implement - you research and report findings.", "where": "body"}
+{"id": "b2c27f68231593cb", "restriction": "full", "evidence": "不做修改建議", "where": "body"}
+{"id": "a2e1eae903dd3c77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6e9e48de8da25cbb", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c5804048bf5f44e9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "92e93ee73c55f489", "restriction": "none", "evidence": "", "where": ""}
+{"id": "56550bd4b86dbe33", "restriction": "full", "evidence": "You must not edit code.", "where": "body"}
+{"id": "12d6cda2563c8447", "restriction": "none", "evidence": "", "where": ""}
+{"id": "165a79b6a489cd7a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1a628cd2a3590f11", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4493b70ff0a69067", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f6349574ccc6f621", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5cf563fe68babf3b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "348ef34ec60d0be6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7821b3b6427f99d0", "restriction": "full", "evidence": "You do not edit.", "where": "body"}
+{"id": "dc7a39beb36ed7bc", "restriction": "full", "evidence": "Your job is to search and synthesize, not implement.", "where": "body"}
+{"id": "4d5ba4a3ec52cb1e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4c4bd6b15186b82a", "restriction": "partial", "evidence": "Don't drop/truncate tables or run destructive schema changes without explicit user approval", "where": "body"}
+{"id": "d253ab3a301cfc77", "restriction": "partial", "evidence": "Never remove or modify existing released entries", "where": "body"}
+{"id": "bfd112376457ae8f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "9b6c982e704c7bf6", "restriction": "full", "evidence": "Do not edit files or run commands.", "where": "body"}
+{"id": "a72d9830325ff1a8", "restriction": "full", "evidence": "do not modify any file", "where": "body"}
+{"id": "024bd10706229ff6", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fe2757558f99e041", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cb22e01ae6e1ed20", "restriction": "partial", "evidence": "Do not refactor, optimize, or add features the walk didn't touch.", "where": "body"}
+{"id": "0a34d3662a65cdc4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5dc19ebdad74f2b9", "restriction": "full", "evidence": "Modify source files directly", "where": "body"}
+{"id": "204b22ee8ed29b34", "restriction": "full", "evidence": "must never edit or write code", "where": "body"}
+{"id": "3962cd3d268e930a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "809b751e8857dfa8", "restriction": "partial", "evidence": "never touches files outside that scope", "where": "body"}
+{"id": "5c5e6be9de08a1bb", "restriction": "partial", "evidence": "Do not write persistent state containing credentials or raw tool output.", "where": "body"}
+{"id": "3ee0a49cd8498d33", "restriction": "full", "evidence": "never edit source", "where": "body"}
+{"id": "37113983e9ac3e06", "restriction": "partial", "evidence": "Do NOT commit.", "where": "body"}

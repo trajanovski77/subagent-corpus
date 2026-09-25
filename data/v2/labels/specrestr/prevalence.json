@@ -1,0 +1,40 @@
+{
+ "n_labelled": 1508,
+ "n_sampled": 1508,
+ "full": {
+  "est": 0.1698,
+  "lo": 0.1505,
+  "hi": 0.189
+ },
+ "partial": {
+  "est": 0.1751,
+  "lo": 0.1558,
+  "hi": 0.1943
+ },
+ "any": {
+  "est": 0.3448,
+  "lo": 0.321,
+  "hi": 0.3687
+ },
+ "full_reaches_fs": {
+  "est": 0.7891,
+  "lo": 0.7373,
+  "hi": 0.8379
+ },
+ "full_holds_write_tool": {
+  "est": 0.2148,
+  "lo": 0.1667,
+  "hi": 0.2669
+ },
+ "full_implicit_grant": {
+  "est": 0.1523,
+  "lo": 0.109,
+  "hi": 0.1984
+ },
+ "full_shell_only": {
+  "est": 0.5742,
+  "lo": 0.5137,
+  "hi": 0.6342
+ },
+ "n_full": 256
+}

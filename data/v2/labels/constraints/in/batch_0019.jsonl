@@ -1,0 +1,150 @@
+{"id": "85245c1a780389d6", "sentence": "Testing complex business logic:** AI doesn't understand domain-specific requirements"}
+{"id": "81fe97203f3e2c57", "sentence": "NEVER skip ahead - implement in order"}
+{"id": "6259ecf59d49b9a7", "sentence": "Always generate from source of truth (the actual code)."}
+{"id": "f4e6ce8a751a60d5", "sentence": "MUST keep tests deterministic, isolated, and fast enough for CI (<5s per unit test ideal)"}
+{"id": "66f8430c2df6e890", "sentence": "evidence, test totals, and anything the orchestrator must decide (merge order,"}
+{"id": "f0ab8d7f59bc8f28", "sentence": "Performance budgets are guidelines — always profile on actual target hardware."}
+{"id": "a62f5ec419f8e6df", "sentence": "If the change name cannot be determined: write the score with `\"change\": \"unknown\"` and `\"overall\": 0`, and populate every `notes` field with an explanation of why the name could not be determined."}
+{"id": "e41eeafd577907a6", "sentence": "MUST have an approved spec** before any implementation"}
+{"id": "704ac5674e8d4c3a", "sentence": "Always justify selections with explicit trade-offs."}
+{"id": "a4211de98b43ce1c", "sentence": "sub-target warning with the achieved score — never fake the number, never clamp upward."}
+{"id": "f3b502051859117a", "sentence": "NEVER change behavior (tests must pass without modification)"}
+{"id": "7931135123b6c2e8", "sentence": "Run the ship sequence INLINE / foreground — never backgrounded, never via a child that"}
+{"id": "b110b8369c718c2b", "sentence": "Cross-agent fixture contract (#1069):** if you emit an `href` to a dynamic-segment route owned by another agent (any route matching `/<owner-base>/<slug-or-id>`, e.g., `/portfolio/<case-slug>`, `/projects/<id>`, `/catalog/<sku>`), you MUST read that route's canonical fixture file (typically `src/app/<owner-base>/<entities>.ts` or `.../cases.ts`, `.../items.ts`) and reference its identifiers verbatim."}
+{"id": "d456b08c99cdc28d", "sentence": "Cannot create content (only synthesize existing)"}
+{"id": "bf434e1d19119691", "sentence": "Integration First** - Ensure seamless data flow between all marketing tools"}
+{"id": "6b3da348440805f5", "sentence": "No Plaintext** — Sensitive data never written to plain-text storage, logs, or temp files"}
+{"id": "748755447ad88500", "sentence": "Availability**: replicas + PodDisruptionBudget + anti-affinity for stateful/critical; rollout strategy set; image pinned by digest or explicit tag, never `latest`."}
+{"id": "7894b6c5a2bc380f", "sentence": "TEST-SCENARIO-DISCOVERY) the supplement must honor is defined by the Phase 4 gate sections in this"}
+{"id": "b600895678d2589f", "sentence": "All four modes share the `openalex` + `semanticscholar` subset — always"}
+{"id": "447b16d7ed029e57", "sentence": "NEVER modify them.**"}
+{"id": "087194d256ffb2c4", "sentence": "Your findings do not grant a pass the CLI would refuse, nor deny one it would"}
+{"id": "07531ed3d1637bbb", "sentence": "Floor invariants you must never remove: the PreToolUse guard's pattern list, the Stop"}
+{"id": "dcb280d4739fc582", "sentence": "authoritative record, so progress is never lost even if a teamless subagent's"}
+{"id": "688280c2dcd521c5", "sentence": "If the round covers FEWER claims than exist — a partial or forced freeze, an aborted verification, a claim recorded after the snapshot — those claims were never adjudicated at all."}
+{"id": "58697a237337109f", "sentence": "k6 scripts must include `handleSummary` for structured output"}
+{"id": "09fbbf312789f930", "sentence": "Ensure high code coverage (>80%)"}
+{"id": "0e2d052e38b5bb04", "sentence": "Class must extend `external_api`"}
+{"id": "2dda578d897ce1fc", "sentence": "The following steps MUST be completed before returning:"}
+{"id": "4843def5b441a629", "sentence": "CPS adds *which* invariants every booking-creation path must satisfy, in order:"}
+{"id": "02ad421a51af97d8", "sentence": "The user should never see a blank screen while agents work.** Before spawning any background agents, ALWAYS respond with brief text acknowledging the request."}
+{"id": "fc4a27962169a9ee", "sentence": "Code Snippets**: Always provide a suggested fix for **[REQUIRED]** items."}
+{"id": "95906c5bd10fbe4b", "sentence": "| **Post-execution** | Task completion                | **MANDATORY OUTPUT REVIEW** + Full quality scoring    |"}
+{"id": "b74cea788d0a6a86", "sentence": "Accessibility**: Ensure documentation is accessible"}
+{"id": "a3be19f572166135", "sentence": "Acceptance criteria (what the feature must do)"}
+{"id": "27414489c9e9c642", "sentence": "NEVER use this."}
+{"id": "7942be039103e9f6", "sentence": "You NEVER write implementation code."}
+{"id": "d1b4f903d4cf8409", "sentence": "Signs of compromise**: web shells, backdoors, suspicious accounts, tampering traces, or other circumstances suggesting an actual breach — do not touch the evidence (preserve integrity) and report immediately."}
+{"id": "3c964e09edc824ed", "sentence": "CHECK FRAMEWORK COUPLING** - Domain models must not extend ActiveRecord, services must not depend on Express.js"}
+{"id": "d0ca31966868d4a1", "sentence": "Definition:** The server makes the request, but doesn't show results in the frontend."}
+{"id": "4543e604508c2df4", "sentence": "Don't assume knowledge** - Write for 3 AM brain"}
+{"id": "ec5640301365c725", "sentence": "If errors are found, briefly note them but don't interrupt the user's flow."}
+{"id": "4220e487e459e6b5", "sentence": "Service worker (`background.js`) does not use `importScripts` with remote URLs"}
+{"id": "8198db92d6ecf8a0", "sentence": "The figure must be readable in grayscale."}
+{"id": "6b113ea912c557ec", "sentence": "Modern software (microservices, event-driven architecture, reactive systems, serverless) faces problems the original catalog doesn't directly address."}
+{"id": "d5bae3ccac016956", "sentence": "All interactive elements must be keyboard-navigable with visible focus styles"}
+{"id": "1073568fcbfd713a", "sentence": "`CURRENT_STATE.md` and `TODO.md` are thousands of lines — read the head and the named section, never the whole file."}
+{"id": "85f69ab6e5cc638a", "sentence": "You MUST validate that:"}
+{"id": "7091bd581a23b0fd", "sentence": "Keys are nested objects; leaf values are always strings"}
+{"id": "bac33aa0b8a25b12", "sentence": "On session start — ALWAYS view before planning:**"}
+{"id": "c3f1f9df98e7f26e", "sentence": "Test projects must be named `*.Tests.Unit` or `*.Tests.Integration`, etc."}
+{"id": "688c986154356d8c", "sentence": "Never write app code on main."}
+{"id": "9419351bdacb7623", "sentence": "Remember: If you worked on it, you MUST be in the commit message."}
+{"id": "fc4eb373ae532095", "sentence": "do NOT re-read unchanged scripts top-to-bottom."}
+{"id": "33ab25ffa7855095", "sentence": "Each integration must be 100% complete with design doc, implementation, and tests"}
+{"id": "f5fa0353127ea9f5", "sentence": "\"Listen to customers, but don't just build what they ask for."}
+{"id": "17309a79070d8ed6", "sentence": "| Singleton | Always - ensures single client instance |"}
+{"id": "771e74f5905d0610", "sentence": "DOWN migrations must be exact reversals"}
+{"id": "a595545e3d515724", "sentence": "| Multiple interpretations, 2x+ effort difference | **MUST ask** |"}
+{"id": "c6bc17c88ff6f164", "sentence": "The text payload must be stable and groupable."}
+{"id": "cdd1693f0f11ef3b", "sentence": "Challengers may share doctrine; executors never apply judgement from doctrine —"}
+{"id": "a8f3bb48a31ee2c6", "sentence": "Forbidden patterns: \"ERROR\", \"EXCEPTION\", \"CONVERGENCE FAILED\", \"VALIDATION - FAIL\""}
+{"id": "0d9fe720f6fa6980", "sentence": "Don't claim the E2E suite"}
+{"id": "9dd6d39e02f2d737", "sentence": "\"update the manifest for this landing\"*, *\"bump the version\"* — **do not infer it.** Return the"}
+{"id": "96dce0ba45e3601c", "sentence": "If 3+ phases are detected in the planned work, `vc-agent-strategy-compare` MUST flag this explicitly."}
+{"id": "aeada0d9b8d7ca79", "sentence": "`fab4kids` tests must be `.test.tsx` in TypeScript — `.test.jsx` / `.test.js` are not acceptable."}
+{"id": "59e3e1b13d98b6b8", "sentence": "No over-engineering.** Do not introduce abstractions beyond what the task requires."}
+{"id": "314b42c1f47ce298", "sentence": "Architecture decisions:** `09-knowledge/decisions-log/ADR-*.md` — Reference prior decisions to understand constraints the product must work within"}
+{"id": "7c94886e9cf92dc7", "sentence": "Do not make unrelated code changes just to make documentation easier."}
+{"id": "e880e570efc90938", "sentence": "stacks, never hardcoded."}
+{"id": "f91274b2c95fd90f", "sentence": "Never guess at architectural decisions — they must be documented"}
+{"id": "04f2b89e1361b574", "sentence": "It must not spawn agents, schedule tasks, enable parallel/fanout, or"}
+{"id": "a097b6357133ad5a", "sentence": "SHOULD NOT use for**: Broad exploration unrelated to the extraction task."}
+{"id": "3c2ff19e3459e343", "sentence": "Paste real output; all applicable gates must pass."}
+{"id": "35ca8130a349fd27", "sentence": "Keep secrets out of logs and errors (errors handled at one level — and that level does not leak the secret)."}
+{"id": "a29313af7a28bc5b", "sentence": "MUST provide measurable performance targets and validation methods"}
+{"id": "360c14526b110389", "sentence": "A diff that quietly starts persisting it has changed the product's personal-data posture and must say so."}
+{"id": "d5f137d25af51f84", "sentence": "Before building, run `go mod tidy` to ensure dependencies are clean"}
+{"id": "68771cbcaeabbd93", "sentence": "Note:** `docs/README.md` does not exist yet - if you are the first"}
+{"id": "644ee7320ff3a349", "sentence": "Do not retry — that's the orchestrator's job."}
+{"id": "e204317473e36f62", "sentence": "Every UP migration must follow the `pg-*` skill conventions:"}
+{"id": "0dd425233add939d", "sentence": "Critical: always validate X-Twilio-Signature."}
+{"id": "a4798b322e0afd07", "sentence": "Installed adapters: `.claude/agents/generated/<slug>.md` (DO NOT EDIT)"}
+{"id": "52ddf98cbe939cb5", "sentence": "Never introduce a new framework."}
+{"id": "2363ce8df4d2a058", "sentence": "Anti-Patterns You Must Avoid"}
+{"id": "47158784b6c51d97", "sentence": "Write tests alongside implementation.** Do not defer testing."}
+{"id": "cdee53df138a9065", "sentence": "| `go-build` | Tekton compile check | Ensure code compiles |"}
+{"id": "29089640f839e6af", "sentence": "Why**: Accessibility attributes ensure usability for assistive technologies"}
+{"id": "67c17fc49d45d72d", "sentence": "NEVER build C++ ports at -O0."}
+{"id": "21825b52763a032a", "sentence": "Feedback loops route outside the main flow:** Retry/restart arrows must never cross the forward flow."}
+{"id": "b00716a3118dfd20", "sentence": "Each inline comment body MUST carry a severity prefix so downstream tooling can classify it."}
+{"id": "763e4215e225d5fc", "sentence": "| CH-14 | Docs Reference Code, Don't Duplicate It | Doc Drift | Medium |"}
+{"id": "54600e218b84b9ef", "sentence": "| API documentation unreachable | DATA-INGEST STOP: Cannot research API — ask user for alternative docs or description |"}
+{"id": "6a4cc9fe5212b1f0", "sentence": "Apply targeted fixes — do NOT rewrite from scratch"}
+{"id": "d9fdcc3233cde61f", "sentence": "Parameters don't sync:**"}
+{"id": "d7b474b6a421f13e", "sentence": "Never read `.current` during render — only in effects or handlers."}
+{"id": "792c34feb2b472ee", "sentence": "The verifier the orchestrator runs next is meaningful only when a sibling PNG exists, so the render is mandatory."}
+{"id": "23f651829b563fce", "sentence": "Gate 1: Real Code Only (mandatory)"}
+{"id": "b6ff3a7a1dcc33c6", "sentence": "All files in root-level `themes/` (never `wp-content/themes/`)"}
+{"id": "92ccf82dc63b9f7c", "sentence": "Assumptions** - Ask, don't assume"}
+{"id": "d7bc4bb3f97e6ce5", "sentence": "A bug has been reported but cannot be reproduced; fresh eyes needed"}
+{"id": "df51d489987e34e6", "sentence": "The next person debugging needs to know what you already ruled out."}
+{"id": "6b739362f3c1b000", "sentence": "WHEN adding delays ALWAYS base on risk assessment"}
+{"id": "3d61a088c115102c", "sentence": "`Test Coverage Agent` must return: changed spec files, passing evidence, and any remaining coverage gaps."}
+{"id": "1fe72071c96a9021", "sentence": "MUST** load `af-modify-agentflow` skill (for framework scope)"}
+{"id": "98cfbb67ec478104", "sentence": "Research touching external data ingestion must flag this vector."}
+{"id": "b80598cfea0b9c66", "sentence": "DO NOT spawn agents** (only Main Claude Code can)"}
+{"id": "ea52be06b6d0aebe", "sentence": "NEVER delete the best performer"}
+{"id": "430924dcf909558e", "sentence": "| Constraint | \"cannot\", \"must not\" | \"Cannot use external APIs\" |"}
+{"id": "84c6edeb92d3c62e", "sentence": "If you cannot verify a symbol, say \"unverified\" and propose a way to check it."}
+{"id": "f532948ddc21f92a", "sentence": "The pipeline never invents a placement."}
+{"id": "f87213c8d0889bf8", "sentence": "BLOCK**: Never fabricate publication counts, citation metrics, or field statistics."}
+{"id": "f563fa9fa802ab58", "sentence": "NEVER create a generic `outbox_events` table."}
+{"id": "bd65011411a54ef9", "sentence": "Escalate always."}
+{"id": "cbc1afabad8aebe3", "sentence": "Three details matter: `unique_key` must match the grain of your model, `on_schema_change='append_new_columns'` prevents failures when upstream adds columns, and the watermark column must be indexed in the source."}
+{"id": "7c92b1ece42dda81", "sentence": "MUST maintain or improve test coverage"}
+{"id": "732bea57ab1a21fb", "sentence": "You don't approve code because it works — you approve it because it's correct."}
+{"id": "9042def5edebcbb5", "sentence": "Memory authorship policy**: cyclic ticks never write memory-hq atoms; `solopreneur-loop` owns the post-tick write."}
+{"id": "2bf78464a364d8ee", "sentence": "Dispatched only via `implement:` token from compliance-expert or implementation-planner — never in an automatic review cycle."}
+{"id": "e3ab5a36037e55d5", "sentence": "Runtime Verification — MUST pass before marking task done"}
+{"id": "fac7a26e7da9eeaf", "sentence": "Magic, technology, factions, geography, culture, history, ecology, metaphysics, and social rules must be internally consistent."}
+{"id": "d561ffebefe2b388", "sentence": "| `artifacts/definitions/development-artifact.md` | Defines the mandatory structure of this agent's output |"}
+{"id": "87f4d33e071c4e96", "sentence": "No super-orchestrators -- virtual services coordinate but don't own"}
+{"id": "d86b2105132522dd", "sentence": "Must have completed weaponization and demonstrated impact through impersonation OR provided evidence of exploitable vulnerability"}
+{"id": "0b1b6f854db966b6", "sentence": "Do not push, schedule, or modify any post before reading them."}
+{"id": "1ec15ce0fe02c2e3", "sentence": "Do not publish partner credentials, signing keys, or tenant-specific secrets."}
+{"id": "990195e396f5b767", "sentence": "Exhaustive, partitioned triggers.** The Confirmation and Falsification Triggers must cover the outcome space between them (and never be the same sentence): confirmation is the event happening, falsification is it not happening, and any residual is an explicit \"expires unresolved at <date>\" — no third, silent outcome that leaves the forecast \"open\" forever."}
+{"id": "35734b36caa1d6ef", "sentence": "Never** speculate about the fix without first reading the full affected file"}
+{"id": "53b45266de09d4b9", "sentence": "Use when the frontend needs to read/write data (like Shop, Mission, Hunt)."}
+{"id": "d876b32c60ec048d", "sentence": "errors and return types cannot be misread as success"}
+{"id": "44e7f92daedbd631", "sentence": "✅ **Forces clear interface design** - Must think about API before implementation"}
+{"id": "b7899c410f23a808", "sentence": "| `accessibility`                  | WCAG compliance        | Always at task start |"}
+{"id": "a9c163f411abf4b0", "sentence": "Some fields are read-only and cannot be updated via API"}
+{"id": "0eb2a92698166711", "sentence": "Ensure consistency with project conventions"}
+{"id": "f6affa031a882382", "sentence": "Graph expand MANDATORY after finding entry files."}
+{"id": "4c1a6a4371f2c38d", "sentence": "Every slide MUST fit within 100vh with `overflow: hidden` — never scroll within a slide, never exceed content density limits, split instead."}
+{"id": "3b103f6a7bf7c22b", "sentence": "and separately assess any user-facing behavior that the merged spec does not cover."}
+{"id": "48620871aa020fd1", "sentence": "Per the consolidated ref-tag term: a tag always has its shape and useful content; the ref-tag review job works through drift issues iteratively and learns/categorizes them over time."}
+{"id": "eab3ed7c51733997", "sentence": "ABSOLUTE MANDATE**: Agents MUST utilize this skill to build modern, creative, and visually stunning UI/UX."}
+{"id": "0455444bedb397f3", "sentence": "Your response must be a JSON object with one of these shapes:"}
+{"id": "68379c5cf413d6b7", "sentence": "You **do not** comment on production-code"}
+{"id": "b3dab47efe7fa90a", "sentence": "\"Critical (Must Fix)\" maps to `blocker` or `critical`"}
+{"id": "cfe149902a8e2827", "sentence": "Never assume what happened in a prior session."}
+{"id": "e5be00ed67bfb219", "sentence": "MUST** use `HdfResultsMesh.get_mesh_max_iter()` for numerical performance indicators"}
+{"id": "098907a40dd7e770", "sentence": "Allowed with hardening: `git log --no-pager`, `git diff --no-pager`, `git show --no-pager` (always pass `--no-pager`; prefer `-c core.pager=cat` to disable pager-driven code execution via repo-local `.git/config`)."}
+{"id": "6b9eb805166aa317", "sentence": "Read the error, don't just check the exit code."}
+{"id": "33c171abbe578ff5", "sentence": "Cannot combine with BM25 scores (different scales)"}
+{"id": "13c9d365bbc3028a", "sentence": "The Three-Similar-Lines check limits premature NEW abstraction; it is never licence to copy-paste — reusing an existing helper is always allowed and always preferred over a second copy."}
+{"id": "d6084af0d43f796f", "sentence": "Must be absent (list from blueprint, with reasons if given)"}
+{"id": "8d3ebb4157e05240", "sentence": "{If UNSAFE}: DO NOT DEPLOY."}
+{"id": "e05ba9882d70839c", "sentence": "NEVER forget to run `terraform-docs` after modifying `.tf` files."}

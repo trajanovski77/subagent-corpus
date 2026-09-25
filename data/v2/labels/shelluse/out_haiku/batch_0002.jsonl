@@ -1,0 +1,44 @@
+{"id": "ae05e8335f6d2d8d", "shell_use": "change", "evidence": "gh issue create --title, gh project item-add, updateProjectV2ItemFieldValue"}
+{"id": "438eab9378805843", "shell_use": "none", "evidence": ""}
+{"id": "525786fcec2e60b5", "shell_use": "verify", "evidence": "npm audit, trivy"}
+{"id": "23e114cc27cc76e4", "shell_use": "verify", "evidence": "maid validate, maid test"}
+{"id": "e136b36c79204dfe", "shell_use": "inspect", "evidence": "grep -r import, find src/app/api"}
+{"id": "5e6e3ef14068505f", "shell_use": "none", "evidence": ""}
+{"id": "baeb731031d11928", "shell_use": "verify", "evidence": "npm test, npx jest, npm run test:e2e"}
+{"id": "f1eeee88940d50a4", "shell_use": "inspect", "evidence": "git diff --cached, git branch -r --contains"}
+{"id": "43876e30beb970aa", "shell_use": "inspect", "evidence": "find .planning/phases, Use Glob and Grep"}
+{"id": "b4ad0dc7f05e9ef0", "shell_use": "none", "evidence": ""}
+{"id": "feef81cabc7fd623", "shell_use": "inspect", "evidence": "grep -r, find src/app/api"}
+{"id": "0b418204f17cbeab", "shell_use": "none", "evidence": ""}
+{"id": "c9964b0cddcefb64", "shell_use": "verify", "evidence": "pytest, ruff, mypy, uv run pytest"}
+{"id": "cbb925500fd9476d", "shell_use": "inspect", "evidence": "oneiros cognition list, oneiros memory list"}
+{"id": "d4053fdc2d3c39ee", "shell_use": "none", "evidence": ""}
+{"id": "ffdd12fc71dd8c7d", "shell_use": "inspect", "evidence": "cd /c/gitRepo, python -c, GetCurrentWeatherToolHandler"}
+{"id": "1ca7dc1a3f20ba50", "shell_use": "none", "evidence": ""}
+{"id": "72336da621f8eb0a", "shell_use": "verify", "evidence": "Execute linter, Run type checker"}
+{"id": "ad5f29e9f42eb8da", "shell_use": "none", "evidence": ""}
+{"id": "e1b0e2d01f3d6465", "shell_use": "inspect", "evidence": "gh pr view, git fetch origin, git branch -r --contains"}
+{"id": "20fbcdaf8ba091e9", "shell_use": "none", "evidence": ""}
+{"id": "797908a8f72e2bff", "shell_use": "inspect", "evidence": "crucible search, grep"}
+{"id": "bd0ebb86ba698717", "shell_use": "verify", "evidence": "uv run hexdag validate"}
+{"id": "26f037d947e76f1b", "shell_use": "inspect", "evidence": "gh run list, gh run view, gh pr checks, grep"}
+{"id": "83039cdb534013c8", "shell_use": "inspect", "evidence": "Context7, WebFetch, WebSearch"}
+{"id": "1506d67f6ce8ca9f", "shell_use": "none", "evidence": ""}
+{"id": "dcf4b25ac151aab1", "shell_use": "inspect", "evidence": "git diff --name-only HEAD~1"}
+{"id": "15827a6d87b87138", "shell_use": "verify", "evidence": "yarn audit:critical"}
+{"id": "10e853255bb60db6", "shell_use": "none", "evidence": ""}
+{"id": "34d2c2b1a8d0c6e4", "shell_use": "inspect", "evidence": "gh pr view, gh pr diff, gh pr checks"}
+{"id": "2ac31543506a5fc2", "shell_use": "verify", "evidence": "make quality, uv run pytest"}
+{"id": "15a10b41628616d7", "shell_use": "verify", "evidence": "run lint, run tests"}
+{"id": "bbc5863352eadec0", "shell_use": "none", "evidence": ""}
+{"id": "27fe7221681e24a6", "shell_use": "change", "evidence": "Create pull requests, Merge PRs, Delete feature branch"}
+{"id": "a2d8e710547a96a1", "shell_use": "inspect", "evidence": "ls skills/, Bash for ls/git reads"}
+{"id": "05369e633b29075c", "shell_use": "inspect", "evidence": "ls, grep -rn"}
+{"id": "67978b2ac2b17404", "shell_use": "change", "evidence": "gh pr create, gh pr merge"}
+{"id": "2d35e724d09b6ea2", "shell_use": "inspect", "evidence": "grep -r, find src/app/api"}
+{"id": "9fb2ac5a5c219ac7", "shell_use": "change", "evidence": "rm -rf, pkill"}
+{"id": "110ed4bdaaaa6fd5", "shell_use": "inspect", "evidence": "nlm query notebook"}
+{"id": "f5b5305f47e69ac0", "shell_use": "change", "evidence": "npx mega-linter-runner --fix"}
+{"id": "0ee1e9872a5ef0ca", "shell_use": "change", "evidence": "applies labels via gh CLI"}
+{"id": "c063603cc8f9bb89", "shell_use": "inspect", "evidence": "find .planning/phases, Glob and Grep"}
+{"id": "cc40a8e31475011b", "shell_use": "inspect", "evidence": "kubectl get, kubectl describe, kubectl logs"}

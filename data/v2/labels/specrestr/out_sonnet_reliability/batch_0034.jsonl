@@ -1,0 +1,30 @@
+{"id": "277100240d3eb07e", "restriction": "partial", "evidence": "NEVER edit the test.", "where": "body"}
+{"id": "059f8a5d6ba79b9d", "restriction": "full", "evidence": "NO modifiques código: solo informa.", "where": "body"}
+{"id": "7049b2b725623f07", "restriction": "full", "evidence": "You do NOT edit code, commit, push, or fix anything - that is another agent's job.", "where": "both"}
+{"id": "00206d9bdbcf8c88", "restriction": "partial", "evidence": "Does not modify source insight fields beyond `status`, `idea_ref`, and `updated_at`", "where": "body"}
+{"id": "5e2ebd4c74bca2e2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "129fd016ebbc53f4", "restriction": "partial", "evidence": "Forbidden: File editing, code changes, quality checks, test execution", "where": "body"}
+{"id": "283fe229a8a94e5b", "restriction": "partial", "evidence": "`main` is READ-ONLY. Do not edit any repo file while on the `main` branch", "where": "body"}
+{"id": "9bfb273fe8c2479d", "restriction": "partial", "evidence": "You do not modify `packages/database/src/schema/`.", "where": "body"}
+{"id": "1f09c7155330b46c", "restriction": "full", "evidence": "restore the worktree to the state it was in before the review", "where": "body"}
+{"id": "b35d4e0f65e345ab", "restriction": "full", "evidence": "Read-only — never edits, approves, or merges.", "where": "both"}
+{"id": "fe8ce5e1448631af", "restriction": "full", "evidence": "Don't implement code yourself - Delegate to coding agents", "where": "body"}
+{"id": "db0cfa8d16d56db9", "restriction": "partial", "evidence": "Write roots: `artifacts/strategy/`, `.claude/agent-memory/consultant/`... Never tactical artifacts or code.", "where": "body"}
+{"id": "d9199791081f910b", "restriction": "partial", "evidence": "TEST applications, do not IMPLEMENT them", "where": "body"}
+{"id": "44d8d09292d5b0a8", "restriction": "full", "evidence": "You do NOT modify files — you only report findings.", "where": "both"}
+{"id": "7c50ec3c0f6fe4a0", "restriction": "none", "evidence": "", "where": ""}
+{"id": "66856ce5de1ef71b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4c3b8ffa46117e7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5f3c55a8c53f6161", "restriction": "full", "evidence": "Do not push, merge, or remove the worktree. Your output is a verdict, not an action.", "where": "both"}
+{"id": "0cce8344242c2934", "restriction": "full", "evidence": "YOUR ONLY JOB IS TO DOCUMENT AND EXPLAIN THE CODEBASE AS IT EXISTS TODAY", "where": "body"}
+{"id": "8789f6264a5e3cac", "restriction": "partial", "evidence": "Do not implement features. Write `docs/handoffs/<phase>-<task>-exam.md`.", "where": "body"}
+{"id": "2375e51c7d8e3064", "restriction": "none", "evidence": "", "where": ""}
+{"id": "ec87682272ab0735", "restriction": "partial", "evidence": "Do not push at all unless explicity asked.", "where": "body"}
+{"id": "019d84211472a5e8", "restriction": "none", "evidence": "", "where": ""}
+{"id": "41329ca037991424", "restriction": "none", "evidence": "", "where": ""}
+{"id": "0bbe450f96c35e65", "restriction": "full", "evidence": "You do not edit files. You do not push. You do not merge.", "where": "both"}
+{"id": "a08aba926bad1a77", "restriction": "partial", "evidence": "Protected Directories (NEVER place code here)", "where": "body"}
+{"id": "30911d752a190af4", "restriction": "full", "evidence": "Modify Plan files (you are read-only; data-planner makes changes)", "where": "body"}
+{"id": "7b2306801792225f", "restriction": "partial", "evidence": "Конфиги сборки не трогаешь: app.json, eas.json, plugins/**, scripts/**", "where": "body"}
+{"id": "eed312f9475ecc33", "restriction": "none", "evidence": "", "where": ""}
+{"id": "f3dc9ebaabe97c14", "restriction": "none", "evidence": "", "where": ""}

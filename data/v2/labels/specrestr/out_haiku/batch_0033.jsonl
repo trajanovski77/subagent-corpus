@@ -1,0 +1,40 @@
+{"id": "baa32f0cbb97ddbf", "restriction": "none", "evidence": "", "where": ""}
+{"id": "deac977821a51ec8", "restriction": "full", "evidence": "You are a read-only research agent for Minecraft mod development. You investigate APIs and regression root causes; you never implement fixes or generate implementation code.", "where": "body"}
+{"id": "4455dffe0fe8a807", "restriction": "partial", "evidence": "Do NOT touch `backend/` (backend), `frontend/` (frontend code), `docker-compose.yml`, `dockerfiles/`, `.circleci/`, or `scripts/`", "where": "body"}
+{"id": "3d3ad2faeb4517a4", "restriction": "none", "evidence": "", "where": ""}
+{"id": "6cf5fd763ea1fe15", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5701ad97545823c3", "restriction": "none", "evidence": "", "where": ""}
+{"id": "e81d61929d94a651", "restriction": "none", "evidence": "", "where": ""}
+{"id": "58b1e64066db8529", "restriction": "partial", "evidence": "Do not touch candidate intake or finance/Tripletex code — those are other experts.", "where": "body"}
+{"id": "759176d4ea6438d1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "70e7ec2b23d78e6e", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3fce419975b333f1", "restriction": "full", "evidence": "You review code. You do not change it — report findings and let the main thread decide.", "where": "body"}
+{"id": "d2b0f7c8e3ec6377", "restriction": "none", "evidence": "", "where": ""}
+{"id": "28e937d1af4187d9", "restriction": "none", "evidence": "", "where": ""}
+{"id": "789c3215e403bc88", "restriction": "none", "evidence": "", "where": ""}
+{"id": "536aed38b0c55146", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4cf1310289ff72ef", "restriction": "full", "evidence": "Do not edit files. You have no write tools by design.", "where": "body"}
+{"id": "939a58ff775d1473", "restriction": "full", "evidence": "Does not edit code.", "where": "description"}
+{"id": "4fb324573d304fd7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a58ead2d76fba9ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a8c4e456ecfb0964", "restriction": "partial", "evidence": "Never touch out-of-repo or pedagogical docs.", "where": "body"}
+{"id": "10ca1902f9cd7607", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1590dd93820941b2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "220ab520b2515c6f", "restriction": "partial", "evidence": "Default to read-only Codex review. Allow Codex file edits only when the user explicitly requested Codex implementation or refactoring.", "where": "body"}
+{"id": "35f566c13ac85b3c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4504068b5f41487c", "restriction": "partial", "evidence": "Does not write Dockerfiles or pipelines — that's DevOps. Does not write application code — that's the implementer agents.", "where": "body"}
+{"id": "1059e789b6b8d288", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4d164db91a12f981", "restriction": "full", "evidence": "Allowed writes: none in the repo.", "where": "body"}
+{"id": "3f5b8cb98a5d4974", "restriction": "none", "evidence": "", "where": ""}
+{"id": "585c54201dfc8497", "restriction": "full", "evidence": "You are read-only; you have no Bash, Edit, or Write tools.", "where": "body"}
+{"id": "9af0dc57e37d3815", "restriction": "none", "evidence": "", "where": ""}
+{"id": "414d09467c44e568", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d196018f291120cd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a307c8320d918b8b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "757e980e76656791", "restriction": "full", "evidence": "do not edit files", "where": "body"}
+{"id": "a86eaed9d2b0d8c7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "c3b38c30b1f742c7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b2f5bf2f78ee3860", "restriction": "partial", "evidence": "You NEVER write implementation code directly.", "where": "body"}
+{"id": "dea2f6aeb8e777ad", "restriction": "none", "evidence": "", "where": ""}
+{"id": "80dd354924347b6f", "restriction": "full", "evidence": "Read-only: do NOT modify any files — diagnosis only", "where": "body"}
+{"id": "0bad6656f65555f8", "restriction": "none", "evidence": "", "where": ""}

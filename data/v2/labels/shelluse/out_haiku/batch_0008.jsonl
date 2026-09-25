@@ -1,0 +1,44 @@
+{"id": "0aeb0d931587d102", "shell_use": "none", "evidence": ""}
+{"id": "a7f1cbf00924f16f", "shell_use": "inspect", "evidence": "If a GitHub issue is given, read it with `gh issue view`."}
+{"id": "8a87acc8df81258d", "shell_use": "inspect", "evidence": "Prefer scripts/vault_analyzer.py and scripts/vault_manifest.py"}
+{"id": "5ef2fb7092268630", "shell_use": "inspect", "evidence": "Run git diff to see recent changes"}
+{"id": "e21450ce6bf8799e", "shell_use": "none", "evidence": ""}
+{"id": "484e88a6179b89a1", "shell_use": "inspect", "evidence": "git diff --name-only main...HEAD"}
+{"id": "6a05805f50be229b", "shell_use": "none", "evidence": ""}
+{"id": "8e8e764c4eb945d7", "shell_use": "change", "evidence": "./wfweb -b -l /tmp/wfweb-uitest.log"}
+{"id": "544e0d37dab8aac4", "shell_use": "inspect", "evidence": "echo \"Reply with exactly: OK\" | gemini -p - 2>&1"}
+{"id": "055627d87c253ab0", "shell_use": "change", "evidence": "gh release download <tag> -R thisPointOn/kondi -D <tmp>"}
+{"id": "827932029836e4ac", "shell_use": "none", "evidence": ""}
+{"id": "2ee5153f0e102c6b", "shell_use": "verify", "evidence": "python3 -c \"import yaml, re, sys...\""}
+{"id": "8ba45eb417fc472b", "shell_use": "none", "evidence": ""}
+{"id": "f1be320b7e78274b", "shell_use": "verify", "evidence": "no shell commands explicitly stated"}
+{"id": "a72cb6a5600b126e", "shell_use": "verify", "evidence": "npm test"}
+{"id": "1802259a3c377b67", "shell_use": "none", "evidence": ""}
+{"id": "9273108f829b2e3f", "shell_use": "none", "evidence": ""}
+{"id": "08d6ffbf5c081ea2", "shell_use": "inspect", "evidence": "grep -r \"import.*$export_name\" \"$search_path\""}
+{"id": "5cf563fe68babf3b", "shell_use": "change", "evidence": "git add` + `git commit` 실행"}
+{"id": "fcdaa82e228f7516", "shell_use": "verify", "evidence": "./venv/bin/python BadZure.py plan --config generated.yml"}
+{"id": "015846d40506fc47", "shell_use": "change", "evidence": "git worktree add -b feat-<id>-<slug>"}
+{"id": "529e32efb05399fe", "shell_use": "none", "evidence": ""}
+{"id": "dfe51e53f63ca4a5", "shell_use": "none", "evidence": ""}
+{"id": "187671b3a754f63c", "shell_use": "none", "evidence": ""}
+{"id": "2ff637e5035eb57d", "shell_use": "verify", "evidence": "run `web:build`"}
+{"id": "789c3215e403bc88", "shell_use": "none", "evidence": ""}
+{"id": "3d0f4e4d628e71d6", "shell_use": "inspect", "evidence": "rg -n \"<name>\" --glob \"*.ts\""}
+{"id": "2f365b7f1b03bea5", "shell_use": "none", "evidence": ""}
+{"id": "1c2cce9a6a6c5343", "shell_use": "change", "evidence": "git merge --no-ff"}
+{"id": "94359b764d728b9f", "shell_use": "verify", "evidence": "govulncheck ./..."}
+{"id": "6c1cef24ba192713", "shell_use": "verify", "evidence": "mix test"}
+{"id": "f28c485969855f5a", "shell_use": "none", "evidence": ""}
+{"id": "401ddfa7e8bd82f4", "shell_use": "none", "evidence": ""}
+{"id": "6eaeef4bcf772273", "shell_use": "inspect", "evidence": "Run `git diff --staged` or `git diff`"}
+{"id": "1fa9d3b3b01c7d89", "shell_use": "none", "evidence": ""}
+{"id": "5a070d7008dd8ce1", "shell_use": "verify", "evidence": "pnpm --filter=use-mask-input test"}
+{"id": "86fba35ef01155bf", "shell_use": "none", "evidence": ""}
+{"id": "c7338ea7d12c77ee", "shell_use": "change", "evidence": "python3 .claude/hooks/merge-critic-reports.py"}
+{"id": "e9be38e42a8a61a8", "shell_use": "none", "evidence": ""}
+{"id": "f31d199ba639228e", "shell_use": "verify", "evidence": "read-only commands (the project's test runner)"}
+{"id": "14909dd6e23d2c9c", "shell_use": "change", "evidence": "gh issue view"}
+{"id": "1bb19285f911ea27", "shell_use": "none", "evidence": ""}
+{"id": "aa2d55fb012c9393", "shell_use": "none", "evidence": ""}
+{"id": "6319899c936c15af", "shell_use": "verify", "evidence": "Build scripts, tests, git operations"}

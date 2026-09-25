@@ -1,0 +1,27 @@
+{"id": "6a9527856d2058d1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "aa444c7674a9376a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "146c21a9cfa13776", "restriction": "partial", "evidence": "Preserve unrelated changes", "where": "body"}
+{"id": "ece7325c566e2c52", "restriction": "partial", "evidence": "Fix critical issues automatically, report recommendations", "where": "body"}
+{"id": "26a8193b2b649315", "restriction": "partial", "evidence": "proposals are data; application is a separate human-approved step", "where": "body"}
+{"id": "b8fe55ec07143486", "restriction": "none", "evidence": "", "where": ""}
+{"id": "094ca3cf0bd25d09", "restriction": "none", "evidence": "", "where": ""}
+{"id": "20d1913f319320c3", "restriction": "partial", "evidence": "Only touch frontend code, never backend files", "where": "body"}
+{"id": "fdcc5847ca3c0df4", "restriction": "full", "evidence": "Read-only — do not edit files.", "where": "body"}
+{"id": "40706459ede4a71c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "cf7f44d433ffa9ff", "restriction": "partial", "evidence": "You never modify repo source. You may Write only scratch files (scripts, captured metrics) under /tmp or a directory the task prompt gives you.", "where": "both"}
+{"id": "5ea5cd4bc6e8f580", "restriction": "full", "evidence": "Never modifies code.", "where": "both"}
+{"id": "1e63d355f8b94a5a", "restriction": "partial", "evidence": "Never make changes beyond the explicitly requested scope", "where": "body"}
+{"id": "abf16de6bd270bfb", "restriction": "partial", "evidence": "Has write access to source code only.", "where": "description"}
+{"id": "a13fca9e84a4965f", "restriction": "partial", "evidence": "You do not write or modify implementation code.", "where": "body"}
+{"id": "0c131848895cc7f2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4457ccb96b402f4d", "restriction": "full", "evidence": "Never write, edit, or modify any files", "where": "body"}
+{"id": "f2576204d8944721", "restriction": "none", "evidence": "", "where": ""}
+{"id": "7fb5a5bfa9e1f822", "restriction": "none", "evidence": "", "where": ""}
+{"id": "65e2a83ea2d3b94b", "restriction": "none", "evidence": "", "where": ""}
+{"id": "fd1f65138a68391f", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1605d2df3237ff39", "restriction": "full", "evidence": "Do NOT attempt to post comments, edit PRs, or perform any write operations.", "where": "body"}
+{"id": "7418c3fa775935c3", "restriction": "partial", "evidence": "Never amend commits; create new ones.", "where": "body"}
+{"id": "2ff967ca5630024b", "restriction": "partial", "evidence": "Do NOT remove `Y2k38CheckerMock` — it is needed for unit tests.", "where": "body"}
+{"id": "e458695af835098c", "restriction": "partial", "evidence": "Never modify it manually.", "where": "body"}
+{"id": "3566c43b7fe867e2", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8c11e8bf7cb42d47", "restriction": "none", "evidence": "", "where": ""}

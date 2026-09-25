@@ -1,0 +1,44 @@
+{
+ "TodoRead": {
+  "last_release_with_name": "1.0.43",
+  "last_date": "2025-07-03",
+  "first_release_without_name": "1.0.52",
+  "removal_date_upper": "2025-07-15"
+ },
+ "NotebookRead": {
+  "last_release_with_name": "1.0.67",
+  "last_date": "2025-08-01",
+  "first_release_without_name": "1.0.74",
+  "removal_date_upper": "2025-08-12"
+ },
+ "LS": {
+  "last_release_with_name": "1.0.89",
+  "last_date": "2025-08-22",
+  "first_release_without_name": "1.0.98",
+  "removal_date_upper": "2025-08-29"
+ },
+ "KillBash": {
+  "last_release_with_name": "1.0.108",
+  "last_date": "2025-09-05",
+  "first_release_without_name": "1.0.114",
+  "removal_date_upper": "2025-09-15"
+ },
+ "MultiEdit": {
+  "last_release_with_name": "1.0.128",
+  "last_date": "2025-09-27",
+  "first_release_without_name": "2.0.8",
+  "removal_date_upper": "2025-10-04"
+ },
+ "SlashCommand": {
+  "last_release_with_name": "2.0.68",
+  "last_date": "2025-12-12",
+  "first_release_without_name": "2.0.74",
+  "removal_date_upper": "2025-12-19"
+ },
+ "exit_plan_mode": {
+  "last_release_with_name": "1.0.52",
+  "last_date": "2025-07-15",
+  "first_release_without_name": "1.0.60",
+  "removal_date_upper": "2025-07-24"
+ }
+}

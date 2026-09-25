@@ -1,0 +1,33 @@
+{"id": "8498d7ff39ab8eca", "shell_use": "inspect", "evidence": "You MUST use the `Read` tool to load every file listed there before performing any other actions"}
+{"id": "f3cb8caa984e03e0", "shell_use": "inspect", "evidence": "output structured execution plans WITHOUT executing any code"}
+{"id": "da0fd43c83c5797e", "shell_use": "verify", "evidence": "Run the appropriate test command based on what was requested"}
+{"id": "5e8185aa367664f5", "shell_use": "verify", "evidence": "node --check <fichier>"}
+{"id": "1ff13143a0925d45", "shell_use": "change", "evidence": "Write to `_workspace/reviews/audit-YYYY-MM-DD.md`"}
+{"id": "5da7a2b2c29f84c1", "shell_use": "inspect", "evidence": "Read the file at the cited line and surrounding context"}
+{"id": "3fba072070069a58", "shell_use": "verify", "evidence": "npm run security:scan"}
+{"id": "0efeb917062f664a", "shell_use": "inspect", "evidence": "Run `cqs scout \"TASK_DESCRIPTION\" --json --tokens 500`"}
+{"id": "bd3bfa08a3bf7df6", "shell_use": "inspect", "evidence": "grep -r \"password\\|secret\\|api_key\\|apikey\""}
+{"id": "9c899cc93fb67163", "shell_use": "verify", "evidence": "`cargo test` result count"}
+{"id": "16b94d9dd8cca5a8", "shell_use": "inspect", "evidence": "You have Bash for data extraction — git log queries, file counting, timestamp analysis"}
+{"id": "73c10a94cfc0b759", "shell_use": "inspect", "evidence": "grep -r \"import.*$export_name\""}
+{"id": "a264cf59938b2ab0", "shell_use": "none", "evidence": ""}
+{"id": "d605dfe8e8d1870c", "shell_use": "inspect", "evidence": "Você revisa o batch atual"}
+{"id": "deeca0ccddab0462", "shell_use": "verify", "evidence": "Execute controlled security tests"}
+{"id": "ea684961df6271e4", "shell_use": "inspect", "evidence": "Read code carefully"}
+{"id": "55c2608dab748b43", "shell_use": "verify", "evidence": "Test SQLite encryption bypass"}
+{"id": "464742957303cdf0", "shell_use": "verify", "evidence": "You may run tests and linters (`cargo test -p dry-core`, `cargo test -p dry-cli`, `cargo clippy`)"}
+{"id": "088e831513149485", "shell_use": "inspect", "evidence": "Grep for hardcoded secrets, API keys, passwords in source"}
+{"id": "4a03c459649c23f8", "shell_use": "verify", "evidence": "make lint"}
+{"id": "0c2056aad19fe3ab", "shell_use": "inspect", "evidence": "Run `git log --oneline -20 <file>`"}
+{"id": "61b0f4778a7dfdb2", "shell_use": "change", "evidence": "pip install --quiet textstat"}
+{"id": "ea8316b1c6bf294d", "shell_use": "change", "evidence": "tạo nhánh/worktree cho mỗi việc"}
+{"id": "513457c881c43304", "shell_use": "verify", "evidence": "python scripts/judge-frames.py --video <clip> --out-dir <judge_dir>"}
+{"id": "b74e6168ec3deb84", "shell_use": "inspect", "evidence": "Grep for mitigation pattern in files"}
+{"id": "638c0a44ad42d03f", "shell_use": "verify", "evidence": "python3 .claude/skills/designing-operator-api/scripts/validate-api-types.py"}
+{"id": "b9bca43a9b917918", "shell_use": "inspect", "evidence": "Read tool to load every file listed there"}
+{"id": "f35816bd34a2aa86", "shell_use": "inspect", "evidence": "git diff --merge-base main --name-only"}
+{"id": "8c11e8bf7cb42d47", "shell_use": "inspect", "evidence": "read `.claude/rules/go-codestyle.md`"}
+{"id": "bdf2d12b1730bf97", "shell_use": "none", "evidence": ""}
+{"id": "2ed2d42737d89a51", "shell_use": "inspect", "evidence": "Use the `Read` tool to load every file listed"}
+{"id": "6da7d4cc59979d6d", "shell_use": "verify", "evidence": "pnpm check-types"}
+{"id": "fe5299190bf4a304", "shell_use": "inspect", "evidence": ""}

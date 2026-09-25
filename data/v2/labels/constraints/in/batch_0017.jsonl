@@ -1,0 +1,150 @@
+{"id": "34577fa8c2591d4f", "sentence": "DELIVERABLES YOU MUST PRODUCE"}
+{"id": "b854c5c301877fe1", "sentence": "Never present speculation as fact"}
+{"id": "305570bb33763d78", "sentence": "Priorities must be concrete directions, not generic statements."}
+{"id": "d2b2b3de9e153c79", "sentence": "`go-mod-tidy` — Ensure go.mod is tidy"}
+{"id": "d6585950e7b9fa38", "sentence": "Do not edit .gfx files."}
+{"id": "c61b3a98c6cf9d9a", "sentence": "If it doesn't exist, create it from template."}
+{"id": "ccb3b549a3e8abfb", "sentence": "You MUST delegate implementation to the appropriate specialist agent."}
+{"id": "debeb7ce08f58271", "sentence": "A tool that destroys or replaces upstream state must set `_DESTRUCTIVE = True`"}
+{"id": "878790dcc025876a", "sentence": "Must be present (list from blueprint)"}
+{"id": "8e7951d21ff5ed3a", "sentence": "The COO does not have opinions on direction."}
+{"id": "95617e5d15d31d91", "sentence": "Each test must be independent and idempotent"}
+{"id": "be1df2fb70235225", "sentence": "Never assume defaults** — Specify every property explicitly"}
+{"id": "97f9cd242c8e3c9e", "sentence": "Perform intensity-symmetry check on HSQC-confirmed aromatic CH peaks (Section 5, Intensity-Symmetry Check — MANDATORY for aromatic compounds)"}
+{"id": "dcbea133261dc485", "sentence": "Memory safety**: Operations must stay within 35GB budget"}
+{"id": "51ab6618d843b048", "sentence": "Always emit the `TEST_WRITER_STATUS:` line as the very last line of output."}
+{"id": "880e5b5642714d43", "sentence": "All subsequent file paths must be relative to that, or absolute paths inside it."}
+{"id": "a235aac195a3915e", "sentence": "Every deploy must have a rollback plan."}
+{"id": "30b2eeabe97a3ccc", "sentence": "DO NOT save to `docs/` folder** - that folder contains published documentation for the Gum docs site"}
+{"id": "880ec2d5b7f3f5ee", "sentence": "Task Agent:** Mandatory coder-executor for any custom scripting beyond single ad-hoc commands."}
+{"id": "6904ff36aa5f6e97", "sentence": "`apply_changes()` requires `sequence_by` column — always use a timestamp or monotonic ID"}
+{"id": "a240a2c6fd7e765a", "sentence": "Invariants** — what must hold on input, what is guaranteed on output."}
+{"id": "864373a8eadcab89", "sentence": "Don't break the release asset URL contract.** If docs link to"}
+{"id": "12b80d16cdab1c8c", "sentence": "Only add or update entries** — never remove what the intake-agent set"}
+{"id": "1a1a5f121894350a", "sentence": "Ensure `strategy.py` follows Python best practices and project code style."}
+{"id": "6d7bca156396a3b8", "sentence": "Don't ask users \"how much would you pay?\" — they'll lie"}
+{"id": "095337e1dfc991fd", "sentence": "Never assert that a package exists because the name is plausible.** Resolve it, or say you"}
+{"id": "5a63021d86469ad9", "sentence": "No guessing: Estimate if needed, but always state the assumption"}
+{"id": "b460640c4ad28150", "sentence": "Every value has an explicit no-data state (never a lying zero)."}
+{"id": "ee27f62bf1091411", "sentence": "Advisory only — findings inform but do not block PRs."}
+{"id": "7c1b794c0a4ae5e3", "sentence": "If video_editor.py does not support a specific operation, fall back to raw FFmpeg:"}
+{"id": "604a842fd0f11a7c", "sentence": "Step 3 storyboard → MUST call `Agent(subagent_type=\"wr2-storyboarder\", ...)`."}
+{"id": "0efb8cde5230bdee", "sentence": "Bash**: You don't run code (that's tester's job)"}
+{"id": "828c25057ce5d7a9", "sentence": "Diagnosis:** Acknowledge you don't recognize the pattern."}
+{"id": "81381a417386d228", "sentence": "Do not report partial work as done."}
+{"id": "f0ceb1df0614a1c3", "sentence": "SHA-256 hashing of high-entropy tokens is secure — do not call it suboptimal."}
+{"id": "1079af8bda89654d", "sentence": "Role-based routes must reject wrong roles explicitly"}
+{"id": "519e775aa948fcb7", "sentence": "Verifying that fixes don't introduce new vulnerabilities"}
+{"id": "eecab62ec3807a95", "sentence": "Correlation note:** flag any risks above that share a common underlying driver — they are NOT independent, and their joint materialisation (the correlated tail) is the real downside; do not present correlated risks as diversified."}
+{"id": "7df80060c70fee4d", "sentence": "Do NOT use for generic security review (no framework involved), GDPR/SOC2/HIPAA (out of bundled scope), or legal advice"}
+{"id": "4c274a334454d9b9", "sentence": "It does not choose infrastructure (vector DB, cache, queue) — those are outside scope"}
+{"id": "c9fde5012094f6b3", "sentence": "For EVERY task, you MUST call at least 1 agent using the `Agent` tool.**"}
+{"id": "d1da64b12daa9b01", "sentence": "You do not implement fixes yourself — you route and gate."}
+{"id": "c2f4c595b885f29b", "sentence": "Progressive disclosure — don't overwhelm upfront"}
+{"id": "7e0b17cde28109b6", "sentence": "Never invent PII."}
+{"id": "84c2159695ffea53", "sentence": "WHEN creating branches ALWAYS document decision criteria"}
+{"id": "0a38086ae1aed2bc", "sentence": "UI text cannot fit,"}
+{"id": "5c59ee3d1f18dd02", "sentence": "✅ Ensure ALL backend data concepts are represented in the UI"}
+{"id": "f730dd3b235159a4", "sentence": "Parallel steps must be truly independent — shared state or sequential logic disqualifies parallelization"}
+{"id": "392f235ba47ded90", "sentence": "Always read `config/test-suites.json` as source of truth** — the manifest is authoritative for suite definitions and selection groups."}
+{"id": "b146497057d4293f", "sentence": "`sysinfo::System::new_all()` is expensive and must not appear in synchronous hot"}
+{"id": "b25eea11797c32d3", "sentence": "Never trust LLM memory — verify via tools, git, file reads, MCP spec"}
+{"id": "41c0200ac1d6de28", "sentence": "Always consider: \"What if materials are out of stock?\""}
+{"id": "8f879c42f887cb5e", "sentence": "Need to switch data access technologies"}
+{"id": "cbeeec687d502b43", "sentence": "Every check must be green."}
+{"id": "859e5dfed5867235", "sentence": "All other crates MUST have `publish = false`."}
+{"id": "4ac37e0821a0c6d0", "sentence": "Don't silently diverge from the epic's design.** If implementing the issue as"}
+{"id": "c49c4301d769b353", "sentence": "Never assume — read first."}
+{"id": "3a9ca03cfcdb7363", "sentence": "For message-class produce the **exhaustive** catalog of the messages (mandatory section)."}
+{"id": "a6428188530614ba", "sentence": "If the element is missing or the action cannot be performed, the action and the journey fail."}
+{"id": "897716c87b23dfd2", "sentence": "Ensure memory safety and thread safety"}
+{"id": "3e02877f611597da", "sentence": "All sections in the template MUST be complete with real data gathered from primary sources."}
+{"id": "f735607ebdac9aa1", "sentence": "Move on to Q3 but do not add duplicate tests."}
+{"id": "63f16c87096b1162", "sentence": "You never decide go/no-go, never pick a confidence label as a verdict,"}
+{"id": "ebcefe4da26fe94c", "sentence": "Never add excluded files** - Files like `_sample-requirements.md` are intentionally removed"}
+{"id": "c6632258a8856042", "sentence": "Do not claim recoverability without a tested restore path when risk is high."}
+{"id": "61a6db81d57f3eb8", "sentence": "or never went."}
+{"id": "3fea6f65ce620ead", "sentence": "Key Stage 2 patterns you MUST follow:**"}
+{"id": "832b875dae75d0fe", "sentence": "ALWAYS** check `git diff --cached` before committing to verify staged content"}
+{"id": "9089968d277d6192", "sentence": "Required Components (ALWAYS use these)"}
+{"id": "d139720c88749216", "sentence": "Always save both the PBL report AND manually constructed factors:"}
+{"id": "e7b8e4c5b0ecd67c", "sentence": "English only**: All records and reports must be in English."}
+{"id": "66cf0aaea191ada5", "sentence": "Every ingestion MUST output:"}
+{"id": "1ec7bd475305081b", "sentence": "🔄 SESSION RESUMPTION PROTOCOL [MANDATORY - RUN FIRST]"}
+{"id": "f078d4ae2ff45a61", "sentence": "Two specialists re-raising the **same** §9 axis at different severities is noise, not conflict — collapse it to the owner's call, don't arbitrate it."}
+{"id": "2a3a440cc6c8a306", "sentence": "All ANCHOR and WARN tags MUST include a `@MX:REASON` sub-line."}
+{"id": "940018042573240d", "sentence": "ALWAYS** include \"specify your own\" option in recommendations"}
+{"id": "17ea60d6d75bc1f2", "sentence": "Cross-graph evidence uses linkage proxy infrastructure — NEVER text-only citations"}
+{"id": "3a03ddd31a60f47e", "sentence": "If they don't match: print `MISMATCH: #<N> is \"<title>\", not \"<description>\"."}
+{"id": "821b2dea843d8fcd", "sentence": "Server-side entry points (`+server.ts`, `+page.server.ts` actions) must validate input with Zod, Valibot, or similar before use"}
+{"id": "2a4738334f5dfde7", "sentence": "Run test — MUST PASS."}
+{"id": "efa5987303f539cf", "sentence": "Mission**: Verify quality gates, extract patterns, and ensure documentation is complete."}
+{"id": "a348436cf84a4346", "sentence": "Always uses `--dangerously-skip-permissions`."}
+{"id": "789a4c2c29b65d15", "sentence": "What must be watched after the decision."}
+{"id": "bfd4d2a983e9475a", "sentence": "Restructure the logic, don't refactor the indentation."}
+{"id": "4841400b83676803", "sentence": "You never shame the developer who committed a key — you fix the pipeline that let it through and make the secure path the default"}
+{"id": "16a3ea633744b61f", "sentence": "🔴 CRITICAL: If bot detection triggers, you MUST:**"}
+{"id": "6bf64c2d27b5f03f", "sentence": "Optional properties must have a purpose."}
+{"id": "e519b50a392b3ec7", "sentence": "`PostgresBrokenRepository` class — intentionally broken for demo purposes, do not scan it"}
+{"id": "86e92b4be114df64", "sentence": "P129]** Derive an error budget from the SLO and write a policy specifying the actions to take and who takes them when the budget is exhausted; getting that policy approved by the product manager, developers, and SREs tests whether the SLO is fit for purpose, and everyone must understand that lowering the SLO also lowers the number of situations to which SREs respond"}
+{"id": "e597ece5b07fefb6", "sentence": "The view from above doesn't make problems disappear — it right-sizes them."}
+{"id": "37a2a91794ef0c5c", "sentence": "Pre-flight (MUST, before any `twine upload`):**"}
+{"id": "96f340ed052fd138", "sentence": "No \"coast phase\" exists — when sail is deployed, thrust is always present"}
+{"id": "d49269cb4ca66f46", "sentence": "Use selectors to avoid re-rendering the full app on selection changes."}
+{"id": "8d1eb627646d1462", "sentence": "`roundness: {type:2}` on an arrow is FORBIDDEN."}
+{"id": "5b67ec9ceaf8f33d", "sentence": "If you cannot tag it, drop it."}
+{"id": "d274a136a826de94", "sentence": "Error handling evaluation**: Ensure comprehensive exception handling and edge case coverage"}
+{"id": "8cd12f88c4b7deca", "sentence": "NEVER make an agent reference file longer just to add comprehensiveness — longer is not better if it adds noise."}
+{"id": "8d8b7ffaf2b003ab", "sentence": "All keys are mandatory** — `colors.primary/secondary/surface/text/muted`, `typography.display/body/mono/scale`, `spacing.unit`, `radius.sm/md/lg`, `elevation.card/modal`:"}
+{"id": "b3d0395abe9af8c2", "sentence": "Baselines**: Always compare against baseline performance"}
+{"id": "a3dcf40c85143f9d", "sentence": "Always conclude with explicit confirmation of:"}
+{"id": "9a824cc3b2e9170e", "sentence": "Don't switch styles."}
+{"id": "37f90d69b10b887d", "sentence": "Do NOT describe how features will be implemented — only what the system must do"}
+{"id": "3886323ad86922dd", "sentence": "You **MUST NOT** execute requests."}
+{"id": "578cfa6ae8aa9629", "sentence": "I**: Clients don't depend on unused interfaces"}
+{"id": "27846aceb0bd1fac", "sentence": "Explain Your Reasoning:** Do not just provide code."}
+{"id": "31c8fe51d576d2ef", "sentence": "Projection idempotency**: Handlers must safely reprocess events without side effects"}
+{"id": "6373cde6e1d9e1f2", "sentence": "The upstream task MUST be a synthesist (or any agent emitting `outstanding_questions: [...]`)."}
+{"id": "85aa1247284d6fae", "sentence": "The story is always about absence and aftermath."}
+{"id": "6f66257a01d4f98d", "sentence": "Check first, always."}
+{"id": "cb7f4a3d9dfaf76c", "sentence": "\"Didn't find\" ≠ \"doesn't exist\""}
+{"id": "1ba67cc3ba8efb2b", "sentence": "Do not broaden into renderer/project-setting changes without approval."}
+{"id": "9bfd5ebaaa57bd35", "sentence": "Every piece of documentation should answer \"why would I care about this?\" before \"how do I use it?\" A reader who doesn't understand the problem won't retain the solution."}
+{"id": "2e0f285beb17e4d7", "sentence": "`references/test-gate-policy.md` — what may and may not run locally."}
+{"id": "b8ee773a8c9baa61", "sentence": "Acceptance criteria must be verifiable — \"user can log in\" not \"auth is implemented\"."}
+{"id": "826d062e38400142", "sentence": "NEVER use the Task tool to spawn sub-agents — you signal the orchestrator to dispatch"}
+{"id": "5647a6f2c14beed4", "sentence": "Extract Strategic Insights**: Don't just report numbers, interpret implications"}
+{"id": "9c32370abeb63ce7", "sentence": "The refusal MUST appear verbatim (grep-checkable) for stress tests and operator audit."}
+{"id": "75c86a0c8176f74d", "sentence": "Think in millennia — data must outlive every component that creates it"}
+{"id": "ba20356b7141f3a8", "sentence": "Register new routes in the router.** Verify that the new route does not shadow an existing route."}
+{"id": "4fc704f7cca70f9b", "sentence": "CAC guardrails**: Customer acquisition cost must stay below 1/3 of LTV"}
+{"id": "c83dd6cba9cc569e", "sentence": "Ensure backward compatibility with existing query implementations"}
+{"id": "e06153c6cbacfcce", "sentence": "Re-read failing files only as needed to explain root causes — do not silently fix unless the parent asks."}
+{"id": "27d44165f01a0697", "sentence": "Always fix canonical source first** (`kernel/realsense/d4xx.c`), then propagate to the build directory copy."}
+{"id": "acbba7161ef69135", "sentence": "You are the **team's consciousness about its own consciousness** — a meta-cognitive layer that ensures the team doesn't just execute, but continuously improves how it executes."}
+{"id": "278fa2b9b46768c3", "sentence": "Ensure `market-price-tracker` plugin is installed with `tracking-crypto-prices` skill configured."}
+{"id": "e58c08d835f7003e", "sentence": "A `CLAUDE.md` memory file must not trigger specific workflows (that's a command)."}
+{"id": "b7e1883a87e8a54b", "sentence": "Anti-Hallucination** — WebSearch returns empty → state \"No evidence found.\" NEVER fabricate sources, statistics, or file paths — why: invented evidence is worse than declared gaps."}
+{"id": "82bd2311978b2732", "sentence": "If specialists conflict and raw data cannot resolve the conflict: reduce confidence by 10–20 points."}
+{"id": "e0f5289e2261b234", "sentence": "Never use file paths as addresses â€” addresses are abstract identifiers"}
+{"id": "318b2fd8904518bc", "sentence": "Triage, don't plan**: Your thoughts are quick reads, not fix plans."}
+{"id": "a803df04304f90ee", "sentence": "Tests must be **fast** — flag slow tests and investigate performance issues"}
+{"id": "c5ea5960182b483c", "sentence": "Do NOT apply findings."}
+{"id": "0d1a759b9007f8ad", "sentence": "Each Section Must Include — ALL MANDATORY"}
+{"id": "f3de45662f3c64da", "sentence": "Never start everywhere."}
+{"id": "1b0457136f5a2edd", "sentence": "Optimistic UI rule: always use `onSettled` to refetch — never trust optimistic state as ground truth."}
+{"id": "876c138a4c03aca4", "sentence": "The tree encodes dependency direction.** Inner/domain packages must not"}
+{"id": "bbbcd3c7477012dc", "sentence": "Never skip load combination checks — use the full matrix per applicable code"}
+{"id": "6f8dfc7b691c7f66", "sentence": "Never produce: \"It depends on your priorities.\" Name the answer."}
+{"id": "53bbe7adc4e99522", "sentence": "Claims must be measurable; any uncommitted target carries \"NOT YET COMMITTED — target Qx\" label instead of a confident number."}
+{"id": "b6dc1db64ef610de", "sentence": "`TabsTrigger` must be inside `TabsList`.** Never render triggers directly in `Tabs`."}
+{"id": "beca37d10a3cdf60", "sentence": "Required fields**: `name` and `description` must be present"}
+{"id": "ebc235b47ab3f1a3", "sentence": "READ-ONLY ACCESS BY DESIGN.** You never modify code."}
+{"id": "7a7c501fe3928d69", "sentence": "ALWAYS use `loading.tsx` for async page data fetching"}
+{"id": "8208809b5c26206f", "sentence": "Always check `planningNotes` for explicit path overrides before defaulting to standard paths"}
+{"id": "b767f1fbabbeb924", "sentence": "You do not write product code yourself."}
+{"id": "ac5b9d385c1c1d1c", "sentence": "Always end with `Final decision: _pending_`"}
+{"id": "91e7e5e84f764fee", "sentence": "Every state must have at least one exit condition (no dead-end states)"}
+{"id": "0ed592bb4b5fda1e", "sentence": "WHEN finding dependencies ALWAYS trace them to their roots"}
+{"id": "5835230da89a1d50", "sentence": "MANDATORY IMPORTANT MUST ATTENTION** Plan ToDo Task to READ the following reference docs:"}
+{"id": "7bf30414cc7aa53d", "sentence": "Never proactively create tests beyond what Cipher 🔓 (Dev-Team Orchestrator) assigns"}
