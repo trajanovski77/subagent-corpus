@@ -1,0 +1,37 @@
+{
+  "seed": 20260923,
+  "sample_digest": "ce79c86ed1c7",
+  "R": {
+    "pool": "roles reliability sample with both Haiku and Sonnet labels",
+    "pool_size": 1490,
+    "pool_by_stratum": {
+      "mixed": 36,
+      "change": 701,
+      "inspect": 727,
+      "unclear": 26
+    },
+    "quota": {
+      "inspect": 75,
+      "change": 75,
+      "mixed": 30,
+      "unclear": 20
+    },
+    "stratum_field": "haiku.mode"
+  },
+  "S": {
+    "pool": "specifications with a Sonnet reliability label",
+    "pool_size": 188,
+    "pool_by_stratum": {
+      "full": 38,
+      "partial": 33,
+      "none": 117
+    },
+    "quota": {
+      "full": 27,
+      "partial": 27,
+      "none": 26
+    },
+    "stratum_field": "haiku.restriction",
+    "seed": 20260924
+  }
+}

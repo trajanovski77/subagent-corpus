@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:">
+<title>Subagent Coder v2</title>
+<style>
+:root{
+  --bg:#f7f7f5;--panel:#ffffff;--ink:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--accent:#2f5bd3;--accent-ink:#fff;
+  --sel:#e8eefc;--sel-line:#2f5bd3;--mark:#ffe58a;--warn:#b54708;--ok:#1f7a3f;--code:#f1f0ec;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#161615;--panel:#1f1f1d;--ink:#ecebe6;--muted:#9c9b94;--line:#34332f;--accent:#7d9cff;--accent-ink:#0f1115;
+    --sel:#23304f;--sel-line:#7d9cff;--mark:#6b5410;--warn:#f4a45b;--ok:#6fd08e;--code:#2a2a27;}
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 var(--sans);display:flex;flex-direction:column}
+button{font:inherit;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+kbd{font:600 11px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 4px;background:var(--code);color:var(--ink)}
+code{font-family:var(--mono);font-size:.92em;background:var(--code);padding:0 3px;border-radius:3px}
+header{display:flex;align-items:center;gap:12px;padding:8px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+header h1{font-size:15px;margin:0;font-weight:650}
+#prog{flex:1;min-width:180px;display:flex;align-items:center;gap:10px}
+#bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+#barfill{height:100%;width:0;background:var(--accent);transition:width .15s}
+#progtxt{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+#saved{font-size:12px;color:var(--muted);min-width:70px}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 380px;min-height:0}
+#left{display:flex;flex-direction:column;min-height:0;padding:14px 16px;gap:10px;overflow:auto}
+#right{border-left:1px solid var(--line);background:var(--panel);overflow:auto;padding:12px 14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:12px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.pill.done{border-color:var(--ok);color:var(--ok)}
+.name{font:650 18px var(--mono);margin:6px 0 8px;word-break:break-word}
+.desc{white-space:pre-wrap;word-break:break-word;font-size:15px}
+.fields{display:grid;gap:8px}
+.field{border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--panel)}
+.field.active{border-color:var(--sel-line);box-shadow:0 0 0 1px var(--sel-line)}
+.field h3{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);display:flex;gap:8px;align-items:center}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{display:inline-flex;gap:6px;align-items:center;padding:4px 9px;border-radius:6px}
+.opt.on{background:var(--sel);border-color:var(--sel-line);font-weight:600}
+#spec{flex:1;min-height:0;overflow:auto;margin:0;padding:12px 14px;font:13px/1.5 var(--mono);white-space:pre-wrap;word-break:break-word;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+#spec mark{background:var(--mark);color:inherit;border-radius:2px}
+textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px;resize:vertical;min-height:38px}
+.rolelist{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.rolelist li{display:grid;grid-template-columns:22px 70px 1fr;gap:6px;padding:4px 6px;border-radius:6px;cursor:pointer;border:1px solid transparent}
+.rolelist li:hover{border-color:var(--line)}
+.rolelist li.on{background:var(--sel);border-color:var(--sel-line)}
+.rolelist .c{font:600 12px var(--mono)}
+.rolelist kbd{align-self:start;text-align:center}
+.rolelist .d{font-size:12px;color:var(--muted)}
+#right h2{font-size:13px;margin:4px 0 8px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+#right table{border-collapse:collapse;font-size:12px;margin:6px 0}
+#right td,#right th{border:1px solid var(--line);padding:3px 5px;vertical-align:top;text-align:left}
+#right p,#right li{font-size:12.5px}
+.keys{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:10;padding:16px}
+.overlay.show{display:flex}
+.dialog{background:var(--panel);border-radius:12px;max-width:900px;width:100%;max-height:90vh;overflow:auto;padding:18px 22px;border:1px solid var(--line)}
+.dialog table{border-collapse:collapse;font-size:12.5px}
+.dialog td,.dialog th{border:1px solid var(--line);padding:4px 6px;vertical-align:top;text-align:left}
+#start input{font:600 20px var(--mono);text-transform:uppercase;width:120px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.warn{color:var(--warn)}
+.hidden{display:none!important}
+#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:6px 12px;border-radius:6px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20}
+#toast.show{opacity:.92}
+@media (max-width:900px){html,body{height:auto}main{display:block}#left{overflow:visible}#spec{flex:none;height:65vh}#right{border-left:0;border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Subagent coder <span id="who" class="pill"></span></h1>
+  <div id="prog"><div id="bar"><div id="barfill"></div></div><span id="progtxt"></span></div>
+  <span id="saved"></span>
+  <button id="btnUncoded" title="Jump to the first item you have not finished">First uncoded</button>
+  <button id="btnHelp" title="Keyboard shortcuts">Keys</button>
+  <button id="btnCodebook">Codebook</button>
+  <label><button id="btnImport" type="button">Load file</button><input id="fileImport" type="file" accept=".json,application/json" class="hidden"></label>
+  <button id="btnExport" class="primary">Export</button>
+</header>
+
+<main id="app" class="hidden">
+  <section id="left"></section>
+  <aside id="right"></aside>
+</main>
+
+<div id="start" class="overlay show">
+  <div class="dialog" style="max-width:560px">
+    <h2 style="margin-top:0">Human validation, v2</h2>
+    <p>Code every item <b>independently</b>, from the text only, following the codebook. Do not discuss items with the other coder until both files are exported.</p>
+    <p>Part R: 200 short (name, description) pairs: role, mode, read-only claim. Part S: 80 whole specifications: does the prose restrict the agent's own writes?</p>
+    <p>Your work is saved in this browser as you go. Use <b>Export</b> at the end (and whenever you pause) to download <code>human_&lt;initials&gt;.json</code>.</p>
+    <p><label>Your initials <input id="initials" maxlength="6" autocomplete="off" spellcheck="false"></label>
+      <button id="btnStart" class="primary">Start / resume</button></p>
+    <p style="font-size:12.5px;color:var(--muted)">Different browser or cleared storage? <button id="btnImport2" type="button">Load an exported file</button> to continue from it.</p>
+    <p id="startmsg" class="warn"></p>
+  </div>
+</div>
+
+<div id="help" class="overlay">
+  <div class="dialog" style="max-width:640px">
+    <h2 style="margin-top:0">Keyboard</h2>
+    <p><b>Part R.</b> Each item has three steps; the active step is outlined. Press a role letter (listed on the right), then the mode, then the read-only claim; the next item opens automatically.</p>
+    <ul>
+      <li>Role: the letter next to each code in the side panel (<kbd>i</kbd> IMPL, <kbd>r</kbd> REVIEW, <kbd>e</kbd> EXPLORE, ...)</li>
+      <li>Mode: <kbd>i</kbd> inspect, <kbd>c</kbd> change, <kbd>m</kbd> mixed, <kbd>u</kbd> unclear</li>
+      <li>Read-only claim: <kbd>y</kbd> yes, <kbd>n</kbd> no</li>
+      <li><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> jump to the role / mode / read-only step to correct it</li>
+    </ul>
+    <p><b>Part S.</b> <kbd>f</kbd> full, <kbd>p</kbd> partial, <kbd>n</kbd> none, then <kbd>Enter</kbd> for the next specification.</p>
+    <ul>
+      <li>Select text in the specification and press <kbd>e</kbd> to copy it into the evidence box (optional); <kbd>/</kbd> focuses the box, <kbd>Esc</kbd> leaves it</li>
+      <li><kbd>Space</kbd> / <kbd>Shift</kbd>+<kbd>Space</kbd> page down / up in the specification, <kbd>j</kbd> / <kbd>k</kbd> scroll a little</li>
+      <li><kbd>h</kbd> toggles the highlighting of restriction cue words (never, do not, read-only, only, ...). Highlighting is a reading aid only: a highlighted word is not by itself a restriction.</li>
+    </ul>
+    <p><b>Both parts.</b> <kbd>&larr;</kbd> previous item, <kbd>&rarr;</kbd> or <kbd>Enter</kbd> next item, <kbd>?</kbd> flag the item as unsure (you still give your best label), <kbd>Esc</kbd> closes this window.</p>
+    <p><button id="btnHelpClose" class="primary">Close</button></p>
+  </div>
+</div>
+
+<div id="codebook" class="overlay">
+  <div class="dialog">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Codebook</h2><button id="btnCbClose">Close (Esc)</button></div>
+    <div id="cbbody"></div>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script id="kitdata" type="application/json">__KIT_DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var KIT = JSON.parse(document.getElementById("kitdata").textContent);
+  var R = KIT.R, S = KIT.S, NR = R.length, NS = S.length, N = NR + NS;
+  var ROLES = KIT.roles;
+  var ROLE_BY_KEY = {};
+  ROLES.forEach(function (r) { ROLE_BY_KEY[r.key] = r.code; });
+  var MODES = [["inspect", "i"], ["change", "c"], ["mixed", "m"], ["unclear", "u"]];
+  var MODE_BY_KEY = { i: "inspect", c: "change", m: "mixed", u: "unclear" };
+  var RESTR = [["full", "f"], ["partial", "p"], ["none", "n"]];
+  var RESTR_BY_KEY = { f: "full", p: "partial", n: "none" };
+  var CUES = /\b(read[- ]?only|never|do not|don['’]t|must not|mustn['’]t|should not|shouldn['’]t|cannot|can['’]t|may not|not allowed|forbidden|prohibited|avoid|only|without (?:modifying|changing|editing|writing|touching)|ask (?:before|first|for permission)|no (?:changes|edits|modifications|writes|code changes))\b/gi;
+
+  var st = null;          // state
+  var phase = "role";     // R phase: role | mode | ro
+  var shownAt = 0;
+  var highlight = true;
+  var $ = function (id) { return document.getElementById(id); };
+
+  // ------------------------------------------------------------ storage
+  function key() { return "hv2:" + KIT.sample_digest + ":" + st.initials; }
+  function save() {
+    if (!st) return;
+    try { localStorage.setItem(key(), JSON.stringify(st)); $("saved").textContent = "saved " + new Date().toLocaleTimeString(); }
+    catch (e) { $("saved").innerHTML = '<span class="warn">not saved: export often</span>'; }
+  }
+  function load(initials) {
+    try { var s = localStorage.getItem("hv2:" + KIT.sample_digest + ":" + initials); return s ? JSON.parse(s) : null; }
+    catch (e) { return null; }
+  }
+  function fresh(initials) {
+    return { kit: KIT.kit, sample_digest: KIT.sample_digest, initials: initials, started: new Date().toISOString(),
+      pos: 0, R: {}, S: {} };
+  }
+  function toast(msg) { var t = $("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove("show"); }, 1600); }
+
+  // ------------------------------------------------------------ helpers
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function isR(p) { return p < NR; }
+  function item(p) { return isR(p) ? R[p] : S[p - NR]; }
+  function rec(p) {
+    var part = isR(p) ? st.R : st.S, id = item(p).id;
+    if (!part[id]) part[id] = { t_first: null, t_last: null, ms: 0, unsure: false };
+    return part[id];
+  }
+  function peek(p) { var part = isR(p) ? st.R : st.S; return part[item(p).id]; }
+  function doneR(r) { return !!r && r.role != null && r.mode != null && r.readonly_claim != null; }
+  function doneS(r) { return !!r && r.restriction != null; }
+  function done(p) { return isR(p) ? doneR(peek(p)) : doneS(peek(p)); }
+  function counts() {
+    var a = 0, b = 0, i;
+    for (i = 0; i < NR; i++) if (doneR(st.R[R[i].id])) a++;
+    for (i = 0; i < NS; i++) if (doneS(st.S[S[i].id])) b++;
+    return [a, b];
+  }
+  function touch(r) { var now = new Date().toISOString(); if (!r.t_first) r.t_first = now; r.t_last = now; }
+  function firstMissingPhase(r) { if (!r || r.role == null) return "role"; if (r.mode == null) return "mode"; if (r.readonly_claim == null) return "ro"; return "role"; }
+
+  function accumulate() {
+    if (!st || !shownAt) return;
+    var dt = Math.min(Date.now() - shownAt, 10 * 60 * 1000); // cap idle time per visit at 10 min
+    var r = peek(st.pos);
+    if (r || dt >= 1000) { r = rec(st.pos); r.ms += dt; }  // do not create records for items merely paged through
+    shownAt = Date.now();
+  }
+
+  // ------------------------------------------------------------ rendering
+  function renderProgress() {
+    var c = counts();
+    $("barfill").style.width = (100 * (c[0] + c[1]) / N).toFixed(1) + "%";
+    $("progtxt").textContent = "item " + (st.pos + 1) + " / " + N + "  ·  R " + c[0] + "/" + NR + "  ·  S " + c[1] + "/" + NS;
+  }
+
+  function optButtons(list, cur, field) {
+    return list.map(function (o) {
+      return '<button class="opt' + (cur === o[0] ? " on" : "") + '" data-f="' + field + '" data-v="' + o[0] + '"><kbd>' + o[1] + "</kbd>" + o[0] + "</button>";
+    }).join("");
+  }
+
+  function renderR() {
+    var it = item(st.pos), r = peek(st.pos) || {};
+    var roleName = r.role ? r.role : "—";
+    $("left").innerHTML =
+      '<div class="meta"><span class="pill">Part R · ' + (st.pos + 1) + " of " + NR + '</span><span class="pill' + (doneR(r) ? " done" : "") + '">' + (doneR(r) ? "coded" : "not coded") + "</span>" +
+      (r.unsure ? '<span class="pill warn">unsure</span>' : "") + '<span>id ' + esc(it.id) + "</span></div>" +
+      '<div class="card"><div class="name">' + esc(it.name || "(no name)") + '</div><div class="desc">' + (it.description ? esc(it.description) : '<i style="color:var(--muted)">(no description)</i>') + "</div></div>" +
+      '<div class="fields">' +
+      '<div class="field' + (phase === "role" ? " active" : "") + '" data-phase="role"><h3><kbd>1</kbd> Role <span style="text-transform:none;letter-spacing:0;color:var(--ink);font-weight:600">' + esc(roleName) + "</span> <span style=\"text-transform:none;letter-spacing:0\">(letters in the side panel)</span></h3></div>" +
+      '<div class="field' + (phase === "mode" ? " active" : "") + '" data-phase="mode"><h3><kbd>2</kbd> Mode: what fulfilling the stated purpose requires</h3><div class="opts">' + optButtons(MODES, r.mode, "mode") + "</div></div>" +
+      '<div class="field' + (phase === "ro" ? " active" : "") + '" data-phase="ro"><h3><kbd>3</kbd> Explicit read-only claim in name or description?</h3><div class="opts">' +
+      optButtons([["yes", "y"], ["no", "n"]], r.readonly_claim === true ? "yes" : r.readonly_claim === false ? "no" : null, "ro") + "</div></div>" +
+      "</div>" +
+      '<div class="keys"><span><kbd>&larr;</kbd> back</span><span><kbd>&rarr;</kbd> next</span><span><kbd>?</kbd> unsure</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> edit a step</span></div>';
+    $("right").innerHTML = '<h2>Role (press the letter)</h2><ul class="rolelist">' + ROLES.map(function (x) {
+      return '<li data-role="' + x.code + '" class="' + (r.role === x.code ? "on" : "") + '" title="' + esc(x.signals) + '"><kbd>' + x.key + '</kbd><span class="c">' + x.code + '</span><span class="d">' + esc(x.def) + "</span></li>";
+    }).join("") + '</ul><p class="keys" style="margin-top:10px">Hover a code for typical signals. Tie-breaking rules and the mode rules are in <b>Codebook</b>.</p>' +
+      '<h2 style="margin-top:14px">Mode</h2><p style="font-size:12.5px;margin:0"><b>inspect</b>: purpose can be fulfilled without creating, modifying or deleting files or running state-changing commands. <b>change</b>: requires writing files or side-effecting operations. <b>mixed</b>: explicitly combines both. Decide from what the agent is asked to <i>produce</i>, not from its role.</p>' +
+      '<h2 style="margin-top:14px">Read-only claim</h2><p style="font-size:12.5px;margin:0"><b>yes</b> only if the name or description explicitly says the agent is read-only, must not / does not modify, edit or write files, or makes no changes.</p>';
+  }
+
+  function specHtml(text) {
+    var out = esc(text);
+    if (highlight) out = out.replace(CUES, "<mark>$1</mark>");
+    return out;
+  }
+
+  function renderS() {
+    var k = st.pos - NR, it = item(st.pos), r = peek(st.pos) || {};
+    $("left").innerHTML =
+      '<div class="meta"><span class="pill">Part S · ' + (k + 1) + " of " + NS + '</span><span class="pill' + (doneS(r) ? " done" : "") + '">' + (doneS(r) ? "coded" : "not coded") + "</span>" +
+      (r.unsure ? '<span class="pill warn">unsure</span>' : "") + "<span>id " + esc(it.id) + "</span><span>" + it.text.length.toLocaleString() + " chars</span>" +
+      '<span><kbd>h</kbd> highlight ' + (highlight ? "on" : "off") + "</span></div>" +
+      '<pre id="spec" tabindex="0">' + specHtml(it.text) + "</pre>" +
+      '<div class="field active"><h3>Does the prose restrict the agent\'s own writes?</h3><div class="opts">' + optButtons(RESTR, r.restriction, "restriction") + "</div>" +
+      '<div style="margin-top:8px"><textarea id="evidence" placeholder="Optional evidence: shortest verbatim quote (select text above and press e, or / to type)">' + esc(r.evidence || "") + "</textarea></div></div>" +
+      '<div class="keys"><span><kbd>f</kbd><kbd>p</kbd><kbd>n</kbd> label</span><span><kbd>Enter</kbd> / <kbd>&rarr;</kbd> next</span><span><kbd>&larr;</kbd> back</span><span><kbd>Space</kbd> page</span><span><kbd>e</kbd> selection &rarr; evidence</span><span><kbd>?</kbd> unsure</span></div>';
+    $("right").innerHTML = "<h2>Codebook S (v" + esc(KIT.codebook_S_version) + ")</h2>" + KIT.codebook_S_html;
+    $("evidence").addEventListener("input", function (e) { var rr = rec(st.pos); rr.evidence = e.target.value; touchLight(rr); saveSoon(); });
+  }
+  function touchLight(r) { r.t_last = new Date().toISOString(); }
+  var saveTimer = null;
+  function saveSoon() { clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
+
+  var lastPos = -1;
+  function render() {
+    var old = $("spec"), top = (old && lastPos === st.pos) ? old.scrollTop : 0;
+    if (isR(st.pos)) renderR(); else renderS();
+    renderProgress();
+    var sp = $("spec"); if (sp) sp.scrollTop = top;
+    lastPos = st.pos;
+  }
+
+  // ------------------------------------------------------------ actions
+  function go(p) {
+    if (p < 0 || p >= N) { if (p >= N) toast("Last item. Export when you are done."); return; }
+    accumulate();
+    st.pos = p;
+    phase = isR(p) ? firstMissingPhase(peek(p)) : "role";
+    save();
+    render();
+  }
+  function setField(field, value) {
+    var r = rec(st.pos);
+    if (field === "role") { r.role = value; phase = r.mode == null ? "mode" : (r.readonly_claim == null ? "ro" : "mode"); }
+    else if (field === "mode") { r.mode = value; phase = "ro"; }
+    else if (field === "ro") { r.readonly_claim = value; }
+    else if (field === "restriction") { r.restriction = value; }
+    touch(r);
+    save();
+    if (field === "ro" && doneR(r)) { go(st.pos + 1); return; }
+    render();
+  }
+  function toggleUnsure() { var r = rec(st.pos); r.unsure = !r.unsure; touchLight(r); save(); render(); }
+  function firstUncoded() { for (var p = 0; p < N; p++) if (!done(p)) return p; return -1; }
+
+  function exportData() {
+    accumulate(); save();
+    var c = counts();
+    var out = {
+      kit: KIT.kit, sample_digest: KIT.sample_digest, codebook_R_version: KIT.codebook_R_version, codebook_S_version: KIT.codebook_S_version,
+      initials: st.initials, started: st.started, exported: new Date().toISOString(),
+      n_coded: { R: c[0], S: c[1] }, n_items: { R: NR, S: NS },
+      order: { R: R.map(function (x) { return x.id; }), S: S.map(function (x) { return x.id; }) },
+      labels: { R: {}, S: {} }
+    };
+    R.forEach(function (x) { var r = st.R[x.id]; if (r) out.labels.R[x.id] = { role: r.role == null ? null : r.role, mode: r.mode == null ? null : r.mode, readonly_claim: r.readonly_claim == null ? null : r.readonly_claim, unsure: !!r.unsure, t_first: r.t_first, t_last: r.t_last, ms: Math.round(r.ms || 0) }; });
+    S.forEach(function (x) { var r = st.S[x.id]; if (r) out.labels.S[x.id] = { restriction: r.restriction == null ? null : r.restriction, evidence: r.evidence || "", unsure: !!r.unsure, t_first: r.t_first, t_last: r.t_last, ms: Math.round(r.ms || 0) }; });
+    return out;
+  }
+  function download() {
+    if (!st) return;
+    var out = exportData();
+    var missing = (NR - out.n_coded.R) + (NS - out.n_coded.S);
+    if (missing > 0 && !confirm(missing + " items are not coded yet. Export a partial file anyway? (You can export again later.)")) return;
+    var blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "human_" + st.initials + ".json";
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    toast("Exported human_" + st.initials + ".json");
+  }
+  function importFile(file) {
+    var fr = new FileReader();
+    fr.onload = function () {
+      try {
+        var d = JSON.parse(fr.result);
+        if (d.sample_digest !== KIT.sample_digest) { alert("This file belongs to a different sample (" + d.sample_digest + ")."); return; }
+        if (st && st.initials !== d.initials && !confirm("File is for " + d.initials + ", you are " + st.initials + ". Load it as " + d.initials + "?")) return;
+        st = fresh(d.initials); st.started = d.started || st.started;
+        Object.keys(d.labels.R || {}).forEach(function (id) { st.R[id] = d.labels.R[id]; });
+        Object.keys(d.labels.S || {}).forEach(function (id) { st.S[id] = d.labels.S[id]; });
+        begin(true);
+        var p = firstUncoded(); go(p < 0 ? 0 : p);
+        toast("Loaded " + d.initials);
+      } catch (e) { alert("Could not read that file: " + e.message); }
+    };
+    fr.readAsText(file);
+  }
+
+  // ------------------------------------------------------------ start
+  function begin(skipGo) {
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+    $("start").classList.remove("show");
+    $("app").classList.remove("hidden");
+    $("who").textContent = st.initials;
+    shownAt = Date.now();
+    if (!skipGo) { phase = isR(st.pos) ? firstMissingPhase(peek(st.pos)) : "role"; render(); save(); }
+  }
+  function start() {
+    var ini = ($("initials").value || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+    if (!ini) { $("startmsg").textContent = "Please type your initials (letters or digits)."; return; }
+    st = load(ini) || fresh(ini);
+    begin(false);
+    if (st.pos > 0) toast("Resumed at item " + (st.pos + 1));
+  }
+  $("btnStart").addEventListener("click", start);
+  $("initials").addEventListener("keydown", function (e) { if (e.key === "Enter") start(); });
+  $("initials").focus();
+
+  // ------------------------------------------------------------ UI events
+  $("btnExport").addEventListener("click", download);
+  $("btnImport").addEventListener("click", function () { $("fileImport").click(); });
+  $("btnImport2").addEventListener("click", function () { $("fileImport").click(); });
+  $("fileImport").addEventListener("change", function (e) { if (e.target.files[0]) importFile(e.target.files[0]); e.target.value = ""; });
+  $("btnHelp").addEventListener("click", function () { $("help").classList.add("show"); });
+  $("btnHelpClose").addEventListener("click", function () { $("help").classList.remove("show"); });
+  $("btnCodebook").addEventListener("click", function () { openCodebook(); });
+  $("btnCbClose").addEventListener("click", function () { $("codebook").classList.remove("show"); });
+  $("btnUncoded").addEventListener("click", function () { if (!st) return; var p = firstUncoded(); if (p < 0) toast("Everything is coded. Export!"); else go(p); });
+  function openCodebook() {
+    $("cbbody").innerHTML = "<h2>Codebook R (v" + esc(KIT.codebook_R_version) + ")</h2>" + KIT.codebook_R_html + "<hr><h2>Codebook S (v" + esc(KIT.codebook_S_version) + ")</h2>" + KIT.codebook_S_html;
+    $("codebook").classList.add("show");
+  }
+  document.addEventListener("click", function (e) {
+    if (!st) return;
+    var b = e.target.closest("[data-f]");
+    if (b) {
+      var f = b.getAttribute("data-f"), v = b.getAttribute("data-v");
+      if (f === "ro") setField("ro", v === "yes"); else setField(f, v);
+      return;
+    }
+    var li = e.target.closest("[data-role]");
+    if (li) { setField("role", li.getAttribute("data-role")); return; }
+    var fld = e.target.closest(".field[data-phase]");
+    if (fld && isR(st.pos)) { phase = fld.getAttribute("data-phase"); render(); }
+  });
+  window.addEventListener("beforeunload", function () { accumulate(); save(); });
+  document.addEventListener("visibilitychange", function () { if (!st) return; if (document.hidden) { accumulate(); save(); shownAt = 0; } else shownAt = Date.now(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      $("help").classList.remove("show"); $("codebook").classList.remove("show");
+      if (document.activeElement && document.activeElement.tagName === "TEXTAREA") document.activeElement.blur();
+      return;
+    }
+    if (!st || $("start").classList.contains("show")) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = document.activeElement && document.activeElement.tagName;
+    if (tag === "TEXTAREA" || tag === "INPUT") return;
+    if ($("help").classList.contains("show") || $("codebook").classList.contains("show")) return;
+    var k = e.key;
+    var used = true;
+    if (k === "ArrowLeft" || k === "Backspace") go(st.pos - 1);
+    else if (k === "ArrowRight" || k === "Enter") go(st.pos + 1);
+    else if (k === "?") toggleUnsure();
+    else if (isR(st.pos)) {
+      var lk = k.toLowerCase();
+      if (k === "1") { phase = "role"; render(); }
+      else if (k === "2") { phase = "mode"; render(); }
+      else if (k === "3") { phase = "ro"; render(); }
+      else if (phase === "role" && ROLE_BY_KEY[lk]) setField("role", ROLE_BY_KEY[lk]);
+      else if (phase === "mode" && MODE_BY_KEY[lk]) setField("mode", MODE_BY_KEY[lk]);
+      else if (phase === "ro" && (lk === "y" || lk === "n")) setField("ro", lk === "y");
+      else used = false;
+    } else {
+      var sp = $("spec"), lk2 = k.toLowerCase();
+      if (RESTR_BY_KEY[lk2]) setField("restriction", RESTR_BY_KEY[lk2]);
+      else if (k === " ") sp.scrollBy(0, (e.shiftKey ? -1 : 1) * sp.clientHeight * 0.85);
+      else if (lk2 === "j") sp.scrollBy(0, 80);
+      else if (lk2 === "k") sp.scrollBy(0, -80);
+      else if (lk2 === "h") { highlight = !highlight; render(); }
+      else if (k === "/") $("evidence").focus();
+      else if (lk2 === "e") {
+        var sel = String(window.getSelection() || "").trim().replace(/\s+/g, " ");
+        if (!sel) toast("Select text in the specification first");
+        else { var r = rec(st.pos); r.evidence = sel.slice(0, 400); touchLight(r); save(); render(); toast("Evidence copied"); }
+      }
+      else used = false;
+    }
+    if (used) e.preventDefault();
+  });
+
+  // for automated tests only (no model labels are in this page)
+  window.__coder = { exportData: function () { return st ? exportData() : null; }, state: function () { return st; } };
+})();
+</script>
+</body>
+</html>

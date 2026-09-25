@@ -1,0 +1,581 @@
+id,name,description,role,mode,readonly_claim,lang,boilerplate
+f444cfbd1608ce14,git-guardian,"Safe git operations - auto-commit, undo, checkpoints, dirty file protection.",,,,,
+347ad9f2a736dcde,verify-performance,"STAGE 4 VERIFICATION - Performance and concurrency analysis. Detects response time regressions, N+1 queries, memory leaks, race conditions. BLOCKS on critical performance issues.",,,,,
+7b34dbfbcd0522a7,gsd-nyquist-auditor,Fills Nyquist validation gaps by generating tests and verifying coverage for phase requirements,,,,,
+677ecf313c54947a,qa-agent,"Performs exploratory QA on a running app using playwright-cli (global binary). Tests flows like a real user, produces $QA_OUTPUT_DIR/qa-report.md (branch-scoped) and Playwright E2E tests. Spawned by /qa.",,,,,
+dbe8aab6389c39bb,researcher,"Answers the outline's open questions with citable sources and hands the
+evidence downstream for verification.",,,,,
+5e28bf18f2de0322,e2e-test-automator,Invoke for creating end-to-end tests using Playwright for complete user journey testing,,,,,
+01eb05ff641649c5,presentation-creator,"Use this agent when the user wants to create a presentation, slide deck, or structured visual content. This includes requests to build presentations from scratch, convert notes or documents into presentation format, or organize ideas into a slide-based structure.",,,,,
+3951f33d0284412a,computer-vision,"Usa per visione artificiale del marketplace — ricerca visuale (foto→prodotto), catalogazione automatica delle foto dei negozi, controllo qualità/moderazione delle immagini, arricchimento automatico delle schede prodotto a partire dalle foto. Delega qui per «cerca il prodotto da questa foto / trova prodotti simili a questa immagine / la foto è sfocata o di bassa qualità / classifica automaticamente questa foto / manca un attributo che si vede dalla foto / questa immagine sembra rubata da un altro sito». (→ generazione immagini/creativi = **ai-designer**; pipeline dati = **data-engineer**)",,,,,
+9463c1d531802830,hb-boundary-auditor,"Use proactively for Package ownership, dependency direction, public exports, cross-package impact, platform primitive adoption.",,,,,
+d9d20ad8c9afd5ea,mobile-app-developer,"Expert mobile app developer specializing in native and cross-platform development for iOS and Android. Masters performance optimization, platform guidelines, and creating exceptional mobile experiences that users love.",,,,,
+829e6c01084d6df9,gtm-cro-specialist,"GTM CRO Specialist for conversion rate optimization. Analyzes and improves marketing pages,
+signup flows, onboarding, forms, popups, and paywalls on getklai.com. Designs A/B tests
+and provides actionable CRO recommendations — not copy, but conversion mechanics and UX.
+MUST INVOKE when ANY of these keywords appear in user request:
+EN: CRO, conversion rate, A/B test, signup flow, onboarding flow, popup, paywall, form optimization, conversion audit
+NL: conversieoptimalisatie, A/B test, aanmeldflow, onboarding, popup, betaalmuur, formulier optimalisatie, conversie audit",,,,,
+d7577df3facb70e6,terraform-module-library,"Production-ready Terraform module patterns for AWS, Azure, and GCP infrastructure.",,,,,
+ce0fb37a8e8c238c,design-critic,"Read-only design critic. Reads the rendered screenshot back with vision, judges the surface against the brief's four contracts, and writes ONE critique artifact classing every finding VIOLATION / WEAKNESS / POLISH. Never edits product code and never scores. Invoked between design-critique.sh begin and finish.",,,,,
+53682b863e5d3e71,plan-reviewer,"Iterative plan-review loop (Codex reviews, Claude adjudicates) on tasks/builds/<slug>/plan.md against its governing spec; plan/spec drift is the primary hunt target. Runs inside feature-coordinator after claude-plan-review; max 5 iterations per plan.",,,,,
+555e98e848299155,travel-advisor,"Travel planning agent that combines weather, air quality, and timezone tools to help plan trips, compare destinations, schedule cross-timezone meetings, and provide health advisories. Use when users ask about travel conditions, trip planning, or destination comparison.",,,,,
+be6541fe769cdd79,timps_feature_flag,Design feature flags with LaunchDarkly/Flagsmith/GrowthBook targeting rules and rollout plans. Use the `timps_feature_flag` MCP tool to perform this task. Do not answer directly — delegate to this sub-agent.,,,,,
+9d3a51815f85167d,doc-updater,"Documentation maintenance specialist. Updates READMEs, API docs, changelogs, and inline documentation to reflect code changes.",,,,,
+089985260172c205,code-reviewer,"Revisor de código que evalúa calidad, mantenibilidad, consistencia con convenciones del proyecto, y robustez. Usar proactivamente después de cualquier implementación significativa antes de commitear.",,,,,
+94b9692cb30016b8,qa-lead,"QA Lead responsible for testing strategy, quality standards, and coordinating testing specialists for comprehensive quality assurance.",,,,,
+10874059fd41cc45,docs-release-auditor,"Audits tdmcp release state and newly landed features before docs or roadmap edits. Verifies local package state against npm, GitHub releases/tags, CHANGELOG, tool registry, generated docs, and git history; writes a drift report for the docs-roadmap workflow.",,,,,
+3c899c3a73152812,python-expert,"Use this agent for implementing features, bug fixes, and refactorings in Connectivity Doctor. Use for any change to src/ or tests/. Reads the relevant ADR/ticket first, runs tests before and after, never lands a regression, and writes conventional commits. Delegate review to feature-reviewer and test authoring to testing-expert.",,,,,
+e456fe7f66c0d342,hol-lab-writer,Prose-and-structure specialist for the HOL Labs library. Use this agent to research and draft one guided hands-on lab as structured JSON only — no file I/O. Content is passed to HOL Lab Lead for validation and publish.,,,,,
+318fafbba1fc902d,n-version-validator,N-version programming validator. Generates multiple independent implementations and selects the best through comparison and voting for critical tasks.,,,,,
+73b153f1f995e3d2,sre-engineer,"Use after the developer subagent has produced implementation-notes.md. Reviews the code specifically for Observability, Telemetry, Logging Cardinality, and Service Level Indicators (SLIs). Produces observability-report.md. MUST be invoked before the devops-engineer handles infrastructure.",,,,,
+09fc97024a131c22,flutter-reviewer,"Review changes to the Flutter Web apps (brew_assistent, RAPT_Brewing_Dashboard). Focus on Dart null-safety, async/state correctness, widget lifecycle, web-specific pitfalls (data:URIs, CORS, dotenv assets) and project patterns (EnvConfig, Supabase schema usage). Returns prioritized findings AND runs a retro — it distills recurring/systemic findings into durable rules and appends them to the flutter-coder agent so the coder stops repeating them. Does NOT rewrite production code; the only file it ever writes is the flutter-coder lessons section.",,,,,
+c3fb4403e1ca2784,developer-platform,"Usa per le API pubbliche e l'ecosistema di integrazioni di MyCity — connettori a gestionali/POS dei negozi, webhook per i venditori, chiavi e developer portal, versionamento e documentazione delle API partner. Delega qui per «collega il gestionale/POS del negozio / webhook ordini-inventario per i venditori / documentazione API per sviluppatori esterni / versioniamo l'API / chiave API per un partner / rate limit / SDK per i negozi». (→ API interne ordini-pagamenti = **backend-dev**; automazioni n8n = **builder-automazioni**)",,,,,
+0088cd48845c260a,funnel-analyst,analyzes funnels. invoke when any funnel needs analysis.,,,,,
+c3674b61eb323faf,product-norman,"Product Design Director (Don Norman mental model). Use when defining product features and experience, evaluating usability of design proposals, analyzing user confusion or churn, planning usability testing.",,,,,
+f7123f15374ad188,meta,"Maintains AGENTS.md files and .claude/ configuration (agents, skills) to reflect codebase changes. Writes precise, unambiguous prompts.",,,,,
+d113ed0b6c28f455,rule-lookup,"Tra cứu rules theo ngôn ngữ và task. Ưu tiên core.md trước, sau đó general/, cuối cùng project-specific rules. Optimized với pre-computed index - giảm 83% tokens.",,,,,
+4105046ff3ee3bac,code-quality-surgeon,"Use this agent when you need to identify and fix code quality issues, refactor messy or 'trash' code, debug complex errors, polish working code to production standards, or perform deep maintenance on a codebase. This includes situations after writing a chunk of code that needs cleanup, when encountering bugs that require deep investigation, when inheriting legacy code that needs modernization, or when preparing code for production. Examples:\n\n<example>\nContext: The user just wrote a feature and wants it cleaned up and hardened.\nuser: ""I just finished implementing the payment processing function but it's pretty messy and I'm not sure it handles all edge cases""\nassistant: ""Let me use the …",,,,,
+f1e04c28e904ed45,localization-specialist,"Use this agent to implement internationalization (i18n), manage translations, ensure locale-aware formatting, and expand language support. Invoke when adding new UI strings, preparing a new language, or auditing the app for hardcoded text.",,,,,
+88eb3db84529555a,judge-router,"Decides whether a stage's verdict requires cross-vendor or same-vendor judging by calling pp_harness.gate_eligible_judges, then dispatches to the appropriate judge sub-agent. Use this from the driver instead of hardcoding a judge per stage.",,,,,
+651675bf861d11b4,classicist-tdd-specialist,"Expert in Classicist/Detroit School TDD using inside-out development, state-based testing, and minimal mocking. Focuses on emergent design and real object interactions.",,,,,
+57d589de2e6ab543,code-reviewer,品質、回帰、保守性、可読性、テスト不足を横断的に確認するコードレビュー担当。,,,,,
+50903bfd93763995,frontend-reviewer,"Primary reviewer for the React renderer AND the Next.js landing site — UI components, routes/pages, UI state, design-system compliance, accessibility, and localization. Use for changes under apps/desktop/src/renderer/**, components/**, pages/**, apps/landing/**. Does NOT activate for ATS scoring, AI providers, Rust services, export pipelines, scraping, or backend logic.",,,,,
+a44b1d1577ea729f,coconala-operator,ココナラ（coconala.com）で出品する 1級・2級土木 経験記述サービス（S1 合格診断 / S2 添削セット / S3 答案作成〔ヒアリング→文章化〕/ C1〜C9 コンテンツPDF〔出題分析・完成答案集・過去問模範答案・学科記述・予想模試〕）の運用オーケストレーター。受注1件のE2E（ヒアリングシート受領 → /keiken-tensaku で添削下書き生成 → 運営者の最終赤入れへ引き継ぎ → 納品文面ドラフト → orders-log 追記 → **購入者評価の送信**）、**受注の実体収集と突合** （npm run coconala-orders で orders-snapshot.json を採り check-coconala-orders で talkroomId 突合＝ 記録漏れ・金額ズレ・返信期限〔無連絡で自動キャンセル〕・納品滞留・**評価未送信/期限切迫**を機械で surface）、**KPI の read-only 自動取得** （npm run coconala-analytics で分析画面→analytics-snapshot.json→kpi-log へ週次 upsert・検査は check-coconala-analytics。手動貼付の正規化も可）＋撤退ライン判定、カタログ（src/lib/coconala-services.ts）の状態/価格/満枠 flip を担う。 **出品・内容修正・価格反映・棚の出し入れ（受付休止/再開/アーカイブ）は Playwright で自動化** （/coconala-publish＝accoun…,,,,,
+b8e84e1cf7352b5a,security-auditor,"Application security auditor. Use for security-focused code review, threat modeling, dependency vulnerability triage, and pre-release security assessments.",,,,,
+4ff28ce2a630c09a,product-manager,"Use proactively for product management tasks including ideation, discovery, metrics definition (OKRs), feature prioritization, and strategic product planning. Specialist for transforming product ideas into structured product strategies with data-driven frameworks.",,,,,
+1095da7143f5a917,ai-data-remediation-engineer,"Self-healing pipelines, air-gapped SLMs, semantic clustering. Use for: Fixing broken data at scale with zero data loss.",,,,,
+984ca6e98009114a,geometry-change,"Use when modifying the keyboard rendering pipeline — the files src/lib/worker/geometry.ts, src/lib/worker/cachedGeometry.ts, src/lib/worker/model.ts, or any of their helpers under src/lib/worker/modeling/. The agent enforces the geometry-vs-modeling split, runs the right verification commands, and avoids common worker-boundary mistakes.",,,,,
+c6ad052e9c18b5da,environment-setup-guide,"Guide developers through setting up development environments with proper tools, dependencies, and configurations",,,,,
+6048af5d6b28470e,cto-advisory,"Fractional CTO and technology strategy advisor. Use for architecture decisions, platform selection, build-vs-buy analysis, engineering org design, technical due diligence, and AI strategy. Stack-agnostic — reads project config before advising.",,,,,
+55e5eead28b6ec73,delivery-coordinator,"Coordinates task routing, orchestrates multi-agent sequences, monitors execution state, and escalates to human roles when preconditions are missing or agents diverge. Does not author, review, or approve fachliche artifacts; its sole authority is orchestration and routing.",,,,,
+7cd0e329e6140e3f,Chief of Staff — Chase's Proxy,"The single agent responsible for the entire HDI ecosystem. Owns the big picture, delegates to specialists, catches drift before it becomes damage. This is who Chase talks to.",,,,,
+d2a286c543194680,lib-cloner,"Clone missing capability repos from github.com/disler into lib/. Invoke when capability-matrix.yaml lists repos not present in lib/. Reads the matrix, clones each missing repo, runs the appropriate install (bun install or uv sync), writes evaluation/lib-clone-status.json. Never touches anything outside lib/ and evaluation/.",,,,,
+79c4a1f5c6b77326,ioc-processor,"Processes, enriches, deduplicates, and exports IOCs. Creates STIX 2.1 bundles. Manages IOC lifecycle from raw indicators to exportable packages.",,,,,
+2b61d221bffb76be,implementer,"Knowledge graph-powered plan implementer. Follows plan steps sequentially, updates status in the graph, verifies success criteria, and records findings. Use after a plan has been created and approved.",,,,,
+e0203ac39c7d350a,firmware,"Firmware developer — embedded C/C++, drivers, RTOS, GPIO, peripherals, memory management",,,,,
+c2e58c5e5588891f,architect,System architect for designing the Hebb Mind agent memory framework,,,,,
+0f185163f16fe016,jira-story-points,"Estimate story points for unpointed Jira tickets by comparing against historical team data.
+Fetches Done tickets with SP from Jira, caches them locally, then uses Claude's reasoning
+to suggest SP values for new tickets. Sets the SP field after user approval.
+
+Trigger phrases: ""estimate story points"", ""story point estimation"", ""SP estimation"",
+""estimate SP"", ""point tickets"", ""size tickets"".
+
+<example>
+user: ""/jira-story-points CNV-12345""
+assistant: ""I'll estimate story points for CNV-12345 by comparing it against historical team data.""
+</example>
+
+<example>
+user: ""/jira-story-points""
+assistant: ""I'll find unpointed tickets in the backlog and estimate story points for each.""
+</example>",,,,,
+29656ee2b94b1dc7,frontend-tester,"Frontend testing specialist for React components and hooks. Use when writing tests for React components, custom hooks, or UI logic. PROACTIVELY invoked for frontend testing tasks. Follows TDD principles with Vitest and React Testing Library.",,,,,
+189e537c5faf4ccd,traffic,"Owns ambient civilian traffic — spawn/despawn lifecycle, building-visit behaviour, and lane following. Use for anything about background cars that are not players or NPC rivals.",,,,,
+6efd7d3223012879,product-owner,"Use proactively when user asks to create an issue, write a ticket, or define requirements. Analyzes change requests, asks clarifying questions, and creates well-structured GitHub issues with acceptance criteria.",,,,,
+0bfcb0b5fc61ae2e,threat-vector-analyzer,"Identifies attack patterns specifically relevant to this codebase including prompt injection, container escape, and configuration attacks. Use during codebase security mapping.",,,,,
+d97d053f6ffaf71b,firecrawl-advanced-troubleshooting,"Apply FireCrawl advanced debugging techniques for hard-to-diagnose issues.
+Use when standard troubleshooting fails, investigating complex race conditions,
+or preparing evidence bundles for FireCrawl support escalation.
+Trigger with phrases like ""firecrawl hard bug"", ""firecrawl mystery error"",
+""firecrawl impossible to debug"", ""difficult firecrawl issue"", ""firecrawl deep debug"".",,,,,
+6c6c2f264299029c,Log Analyst,"Authentication, system, and application log analysis agent. Parses auth.log, syslog, journal, and application logs to detect brute force, privilege escalation, unauthorized access, and lateral movement indicators.",,,,,
+27f565ad41d4ca5e,search-discovery,"Step 0 Discovery. Run the extensive keyword sweep that lists competitors and surfaces market/pricing signals across platforms, before Sense and Decide.",,,,,
+dd34cb132539c02a,retellai-upgrade-migration,"Analyze, plan, and execute Retell AI SDK upgrades with breaking change detection.
+Use when upgrading Retell AI SDK versions, detecting deprecations,
+or migrating to new API versions.
+Trigger with phrases like ""upgrade retellai"", ""retellai migration"",
+""retellai breaking changes"", ""update retellai SDK"", ""analyze retellai version"".",,,,,
+5110dc68a59b2b0f,phase-reviewer,計画・テスト・実装・リファクタリング・検証工程の「一工程」が完了した直後に限定して使う読み取り専用クロスレビューゲート。工程単位で成果物を別エージェントとして審査し、APPROVE、REJECT、ESCALATE を判定する。work item 全体を Done にする前の最終検証には使わない（それは verifier）。,,,,,
+ae9a8d32adcec631,torchscript-exporter,"Export torchscript exporter operations. Auto-activating skill for ML Deployment.
+Triggers on: torchscript exporter, torchscript exporter
+Part of the ML Deployment skill category. Use when working with torchscript exporter functionality. Trigger with phrases like ""torchscript exporter"", ""torchscript exporter"", ""torchscript"".",,,,,
+bae08569bcf73d62,local-seo-strategist,"Develops comprehensive local SEO strategies for businesses with physical locations, optimizing for Google Business Profile, local pack rankings, and geo-targeted search",,,,,
+34a3d89593ffe61d,gpd-referee,"Acts as the final adjudicating referee for staged manuscript review and performs direct manuscript or milestone review only when the invoking workflow explicitly assigns that mode. Writes REFEREE-REPORT{round_suffix}.md/.tex, review decision artifacts, and CONSISTENCY-REPORT.md when applicable.",,,,,
+6f13f207d14fcb56,scout,"GitHub scout — searches for new Claude Code skills, agents, patterns and integrates them",,,,,
+024776f1eb8000de,researcher-agent,"Conducts research and analysis filtered through your business context. Use when user needs research, competitive analysis, trend research, or data gathering to inform content or business decisions.",,,,,
+779e45a1f1eb12f8,ai-ux-designer,"AI interaction UX specialist. Use for AI chat interfaces, prompt design, trust patterns, or agent UI design.",,,,,
+c1409ca8cc4c9a71,scaffold-wire,"Creates API routes, DB schema with RLS, env config, and test scaffolding with security controls built in.",,,,,
+2c1588421fb83edf,frontend-developer,"Senior React 18 + TypeScript 5 strict engineer for the DigitalWallet frontend — owns the single React app under `frontend/` that serves both end users and the admin dashboard, including routed shell + guards (`<RequireAuth>`, `<RequireRole>`), Redux Toolkit slices + RTK Query API slices, React Hook Form + Zod forms, Tailwind 3 styling against design tokens, the shared WebSocket client for fraud alerts / threshold notifications / advisor replies, money formatting with `numeric(19,4)` decimal strings, Idempotency-Key UUIDv7 generation, and Vitest + React Testing Library + Playwright tests. Invoke when the user asks to ""create a wallet/deposit/transfer/budget/advisor page"", ""scaffold a form for…",,,,,
+2042d02936bbd631,edc-engine-expert,"EDC sub-agent. Expert in the FlatRedBall2 engine internals and API design. Argues that a well-designed API with clear XML docs is the foundation — skill files are a supplement, not a substitute.",,,,,
+3fe1962f8e4f0d9a,verify-app,Comprehensive end-to-end application verification. Use before shipping features or merging PRs to ensure everything works correctly.,,,,,
+97c1620a7fa38838,courses-orqx,Course Project Orchestrator — coordena o ciclo completo de criacao de cursos,,,,,
+11f90b4a91d4d7e4,senior-backend,Plant und reviewed Backend-Architektur (Hono + Prisma). Implementiert bei Lite-Features.,,,,,
+321805842ccc9335,local-payment-agent,"Use this agent to implement Turkish payment provider abstraction, manual bank transfer, iyzico/PayTR placeholders, and local payment tests.",,,,,
+c5e3fa7f331b8270,formatter-author,"Writes output formatters (terminal, json, sarif, junit, html, markdown, plain) for ra11y scan results. Use when adding or fixing anything under src/output/formatters/.",,,,,
+1b7663aeae1d93a0,commodity-research-supply-analyst,Supply Analyst do time Commodity Research Team. Use quando a analise exigir a perspectiva de supply analyst.,,,,,
+47913e1aba183933,baseline-verifier,Subagent dispatched by do-test to classify test failures as regressions vs pre-existing by running failing tests against main. Returns structured JSON classification.,,,,,
+55a3368ef3f7749c,Master Linkage Subagent,"Enforces structural linkage on ACharacter and AGameModeBase implementations. Triggers on character creation, game mode, instantiation, or root actors.",,,,,
+2914ecb3dc524608,sustainability-consultant,"Tracks LEED certification credits, develops green building strategies, and guides renewable energy and water conservation decisions. Use for sustainability credit tracking, green strategy development, or certification documentation.",,,,,
+e93a74929ed8aa72,rails-backend-expert,"Comprehensive Rails backend developer with expertise in all aspects of Ruby on Rails development, from basic CRUD to complex enterprise features following Rails conventions.
+
+Examples:
+- <example>
+  Context: Rails project needing backend features
+  user: ""Build a multi-tenant SaaS platform""
+  assistant: ""I'll use the rails-backend-expert to create the SaaS backend""
+  <commentary>
+  Rails models, controllers, concerns, and multi-tenancy
+  </commentary>
+</example>
+- <example>
+  Context: Complex business logic
+  user: ""Implement recurring billing system""
+  assistant: ""Let me use the rails-backend-expert for subscription billing""
+  <commentary>
+  Rails with Stripe integration and background jobs…",,,,,
+956931546d865f3b,nia-rook,"Nia Rook solo — UNDOCKED recap, who's up who's down.",,,,,
+d9ebfcfe952d5cdb,analytics-engineer,instruments PostHog or equivalent. invoke when any feature ships or analytics gap reported.,,,,,
+b2adfd93ca40604b,tester,Use to independently run the project's test suite and report the authoritative pass/fail result with diagnostics. Runs real tests via Bash but cannot modify code — so it cannot fake a green. The company's success signal comes from this role.,,,,,
+e2e8fbba7edc3206,architect,"Senior software architect for system design, implementation planning, and technical decisions",,,,,
+ccf8f9619dfc2ebe,yvon-chouinard,When you need to challenge growth-at-all-costs thinking. When deciding whether to sacrifice short-term profit for long-term integrity. When building a mission-driven company that puts purpose above shareholder returns. When evaluating product quality vs planned obsolescence. When considering environmental responsibility as a business strategy. When struggling with the tension between being a craftsman and being a CEO. When you need someone to tell you the uncomfortable truth about your business.,,,,,
+0f0d4e54de87c168,rails-expert,"Expert Rails specialist mastering Rails 7+ with modern conventions. Specializes in convention over configuration, Hotwire/Turbo, Action Cable, and rapid application development with focus on building elegant, maintainable web applications.",,,,,
+dae5e990a08b7f70,code-reviewer,"Read-only code review agent. Catches type issues, pattern violations, missing tests. Cannot modify files.",,,,,
+dfaffee3d8c569a2,linear-automation,"Automate Linear tasks via Rube MCP (Composio): issues, projects, cycles, teams, labels. Always search tools first for current schemas.",,,,,
+14f6ba79b1d29dd7,database-architect,"Use this agent when you need to design database schemas for Supabase/BigQuery, optimize query patterns for your command system, implement proper data modeling, or establish analytics tracking with RudderStack. This agent understands your state management via Gists and can design hybrid solutions.
+
+<example>
+Context: Need to implement analytics for command usage.
+user: ""We need to track how users interact with our 116+ commands for analytics""
+assistant: ""I'll use the database-architect agent to design a RudderStack event schema and BigQuery data model for comprehensive command analytics.""
+<commentary>
+Analytics requires careful schema design to capture meaningful metrics without impacting per…",,,,,
+c2d06c70b427a466,Identity & Access Engineer,"Expert identity engineer for OAuth 2.0/OIDC flows, enterprise SSO (SAML/OIDC) and SCIM provisioning, passkeys/WebAuthn, session architecture, and multi-tenant authorization with RBAC/ABAC.",,,,,
+9ba462bef764133b,expo-react-native-guardian,"Expo / React Native APP-layer specialist that gets a mobile app build-ready (the app, not the listing). Owns EAS build profiles in eas.json (dev / preview / production with matching update channels), native modules wired through their config plugins (expo-camera, expo-secure-store, expo-notifications) with the required iOS Info.plist usage strings and Android permissions, app.json / app.config (bundle id / package, version + build number, icons / splash, scheme, plugins array), navigation (Expo Router v7 file-based vs React Navigation), offline-first patterns (local store + sync queue, optimistic updates, conflict handling), OTA via EAS Update (channels per profile, staged rollout, the JS-an…",,,,,
+af7c8c9b1b5cf539,preflight,Pipeline preflight check. Verify tool availability before morning routine.,,,,,
+389eb5bc13b3fecc,archviber-analyst-architect,"Architecture health analyst for ArchViber deep_analyze. Reviews the IR from a senior architect's perspective: coupling, layering, dependency direction, missing abstractions, blast radius of changes.",,,,,
+9ad61b8bb8dc9406,tdd-guide,"Use this agent when implementing new business logic, functions, hooks, or services that require the Red-Green-Refactor TDD cycle. This agent should be invoked proactively whenever new logic is being written, after implementation phases to verify TDD compliance, or when the user explicitly requests TDD methodology guidance.\n\nExamples:\n\n- Example 1:\n  user: ""Add a function to calculate total meal calories from product entries""\n  assistant: ""This involves new business logic, so I'll use the TDD guide agent to implement it with the Red-Green-Refactor cycle.""\n  <launches tdd-guide agent to write failing test first, then implement, then refactor>\n\n- Example 2:\n  user: ""Create a new servi…",,,,,
+6e097951de5506e3,atm-qa-agent,"Validates implementation and documentation against agent-team-mail requirements, architecture/design, and project plan with strict compliance reporting",,,,,
+363e4814b711be52,environmental-change-simulator-agent,"Models comprehensive ecosystem changes and biodiversity impacts under various environmental scenarios using verified ecological data, population models, and habitat assessment frameworks. Delivers sci",,,,,
+b9a136bf5c58d93d,geepers-system-onboard,Project understanding agent for getting up to speed on unfamiliar codebases...,,,,,
+b896ccb60a8c5f0c,optimize-query,Analyze and optimize SQL queries for performance,,,,,
+39ef99a26b352c2a,qa-facts,"LANE 03 of the adversarial video-QA gauntlet — SEARCH FOR MISMATCH. Audits every script claim against the official source material; hunts fabricated SCLA content. Spawned by /adversarial-qa; give it only file paths, never a summary of the build.",,,,,
+9810272a9633a675,performance-validator,"Use for hot paths, slow queries, cache, payload size, images, large lists, concurrency, queues, costs, render performance, or any performance/scalability-sensitive change.",,,,,
+724254f8fe4b7f8d,research-lead,Orchestrates parallel research team for plugin planning. Spawns dynamic researchers with runtime domain assignment based on creative brief analysis. Merges findings via debate format and surfaces conflicts that block planning.,,,,,
+39a2d48fb8ec2765,project-analyst,"MUST BE USED to analyze any new or unfamiliar codebase. Detects frameworks, tech stacks, and architecture patterns to enable proper specialist routing. Always run BEFORE any development work on new projects.",,,,,
+de850be9157075ba,test-runner,"Testing specialist. Use proactively after implementing features to run tests, fix failures, and ensure code quality. Expert in Rust testing with nextest and JavaScript testing.",,,,,
+8ff4fc722c47076f,python-expert,"Expert-level Python author for non-trivial implementation work in the scenechange project. Use when the task needs idiomatic, production-quality Python beyond a simple edit.",,,,,
+8130cd402fe6a2be,Dir-Customer-Support,"Director of Customer Support. Leads the support organization, owns all support metrics (CSAT, FCR, response time, resolution time, NPS from support interactions), manages support managers, drives ticket deflection through product feedback loops, builds escalation management protocols, and ensures the support function is a strategic source of customer intelligence. Invoke for support operations management, support metric improvement, escalation handling, knowledge base governance, support SLA design, and customer feedback routing to Product.",,,,,
+0b0b79047fbabdb4,babun-mobile-ux-auditor,"Phone-first UX auditor for Babun. Enforces 44pt touch targets, thumb-zone placement for primary actions, RN gotchas (safe-area insets, keyboard avoidance, gesture composition), typography floor under sun, one-handed use. Use for any UI-changing PR before merging.",,,,,
+0603946f7742e78b,systematic-debugging,Structured four-phase debugging protocol with attempt cap and escalation — replaces ad hoc fix attempts,,,,,
+7a3ff3b5bb95c3b3,azure-mgmt-botservice-py,"Azure Bot Service Management SDK for Python. Use for creating, managing, and configuring Azure Bot Service resources.",,,,,
+e37623cab8b9b2c9,cooking-designer,"designs cooking recipes and food buffs. invoke when any food, buff food, or cooking station is added.",,,,,
+6306b6fdc70fae1a,knowledge-synthesis,"Systematically analyze external content and create comprehensive daily synthesis notes. Creates or appends to daily Zettel (Knowledge Synthesis - YYYY-MM-DD.md) with thorough analysis. All synthesis content consolidated in single daily file, not separate pages per topic. Links daily Zettel from journal entries.",,,,,
+6ec118d17e706cf8,"{""agent-name"": null}","{One-line description of what this agent does}.
+Use PROACTIVELY when {trigger conditions}.
+
+<example>
+Context: {Situation that triggers this agent}
+user: ""{Example user message}""
+assistant: ""I'll use the {agent-name} agent to {action}.""
+</example>
+
+<example>
+Context: {Different trigger situation}
+user: ""{Different user message}""
+assistant: ""Let me invoke the {agent-name} agent.""
+</example>",,,,,
+639992356af7ce6a,screen-reader-lab,"Interactive screen reader simulation for education and debugging. Parses HTML/JSX and produces step-by-step narration of what a screen reader would announce. Supports reading order, Tab navigation, heading navigation (H key), and form navigation (F key) modes. Not a replacement for real screen reader testing.",,,,,
+79eb8d1b757b0ea7,capability-analyst,"PROACTIVELY use for business capability analysis. Discovers and models business capabilities using BABOK techniques. Creates hierarchical L1-L3 capability maps with strategic classification, maturity assessment, and Mermaid visualization.",,,,,
+21476a1a7c4225bb,fighting-genre,"Owns the fighting genre module — frame data, hitbox/hurtbox, GGPO rollback, input buffer. Use for work in docs/specs/genres/fighting.md.",,,,,
+293837db66716b93,conductor-validator,"Validates Conductor project artifacts for completeness,
+consistency, and correctness. Use after setup, when diagnosing issues, or
+before implementation to verify project context.",,,,,
+e7e76bcaa7addcac,react-patterns-enforcer,"Reviews React code for anti-pattern violations specific to the 5chan project (useState/useEffect misuse, missing Zustand, copy-pasted logic) and fixes them. Use after writing or modifying React components, hooks, or state management code.",,,,,
+a8d871a29dc6cecf,validate-experimental,Validate experimental features implementation,,,,,
+16b25023ed0f8f77,architect-lead,总架构师·api2mcp4j 框架架构设计、技术方案、连锁反应评估、三方团队编排。READ-ONLY 顾问，只出方案与影响分析，不亲自改代码。,,,,,
+69b4a4fc818bb4c3,implementer,"Tapestry's Implementer role. Make the failing tests pass with the minimum code that honors the story, the ADR, and the project's quality gates. Use after a test plan and failing tests exist. Read engineering-team/roles/implementer.md and engineering-team/workflows/4-implementation.md for full role rules.",,,,,
+e42c436bdd879002,search-fusion-expert,"Expert in multi-modal search fusion, combining text search + semantic search + symbol search, ranking algorithms, and search optimization. Use for search system improvements.",,,,,
+c8aa3565125fae35,frontend-docs-engineer,Supplies component API and UI integration details when issues involve frontend work,,,,,
+fcdd562fe07df60f,auditor-simplify,"Use proactively when the cycle needs simplify / dead code audits — duplicated helpers, dead exports, unnecessary abstractions, silent fallback violations, rule drift. Returns 1-3 high-confidence findings under 400 words.",,,,,
+f571521f4f75c0c3,product-planner,"Define and protect notebook MVP scope, user stories, acceptance criteria, and product decisions.",,,,,
+4736a9d9a34bd62c,turkey-district-auditor-agent,"Use this agent to audit Turkey province/district data, compare existing project data with official/reference sources, find missing districts, and produce a safe migration report.",,,,,
+6a530f6b44a13f97,database-expert,"Database architecture design, technology selection, schema design, and query optimization. Use for database architecture decisions, performance tuning, or schema design.",,,,,
+ff2e067e46b6cde9,transport-engineer,"Owns HTTP handlers, middleware, routes, and problem+json semantics in kopiochi. Use for chi routing, auth middleware changes, canonical error responses, DTO validation, route-table tests, and swagger annotations. Never touches SQL or domain invariants.",,,,,
+fa6999f7c3b2a860,reviewer,代码审查 - GoCell 分层合规 + 安全/测试/运维/DX/产品六维度全覆盖，每条 Finding 含 Cx 复杂度分级，对接 /fix 处理,,,,,
+7d1aef6c04e69378,local-reviewer,"Local PR Review Agent. Performs code review without GitHub integration.
+Analyzes changed files for quality, security, and correctness using only
+local tools. Used automatically in --local mode instead of pr-reviewer.",,,,,
+d44013640ad500e4,analyzing-test-coverage,"Analyze code coverage metrics and identify untested code paths.
+Use when analyzing untested code or coverage gaps.
+Trigger with phrases like ""analyze coverage"", ""check test coverage"", or ""find untested code"".",,,,,
+ad691a98d569ecd3,stale,"A node with a deliberately stale sidecar — body hash in .sm does not match the live body, so the kernel must emit annotation-stale.",,,,,
+72f805a54432194d,changelog-keeper,"Update docs/changelog/CHANGELOG.md after any code change. Use after implementation is complete to record what changed, what was fixed, and what was added. CHANGELOG.md is the sole changelog — SATS_CHANGES.txt is archived.",,,,,
+38ec727895e8f488,guidance-consensus,"Compares management guidance against Capital IQ consensus and tracks estimate revision momentum (90/60/30 days). Decides whether the market's bar is low, fair, high, or unknown. Runs in Layer 1 without upstream dependencies.",,,,,
+9a1e803035741948,ci-matrix,Generates and validates GitHub Actions CI matrix for PHP × Symfony compatibility. Use when creating or updating .github/workflows/tests.yml.,,,,,
+c0b5b95f5bc56898,mobile-ux-reviewer,"UX/UI expert for reviewing mobile applications on iOS and Android. Use for design critiques, accessibility audits, Human Interface Guidelines compliance, and user experience evaluations.",,,,,
+e6093b21482e8635,Database Engineer,"Data architecture authority for PostgreSQL and SQL Server. Owns schema design, data integrity, migrations, indexing, query performance, retention, backup/recovery requirements, and database observability. Use when tables, migrations, indexes, query tuning, retention rules, audit trails, or backup/recovery requirements are in scope; when queries are slow or query plans need reading; when a database, ORM, cache, analytics store, or vector extension is being considered; or when RTO/RPO and data-loss risk must be defined.",,,,,
+5d8fbf6cae8712f3,reviewer-methods,"A holistic peer reviewer with a methodologist's lens. Reviews the entire paper covering all axes (claims, methods, novelty, stats, writing, ethics), but reads with particular attention to experimental and theoretical rigor, reproducibility, and methodological soundness. One of three round-1 reviewer personas; works independently from the other reviewers.",,,,,
+ecae3d0ba061633e,n8n-expression-validator,"Validate n8n expressions and data transformations with syntax checking, context-aware testing, and security analysis",,,,,
+c996393a871be101,implement-throttling,Implement API throttling and quotas,,,,,
+1ba3b8b8c616188b,james-developer-v2,"Developer subagent with intelligent routing, guardrails, and automated verification. Implements features (*implement), fixes bugs (*fix), runs tests (*test), refactors code (*refactor), applies QA fixes (*apply-qa-fixes), debugs issues (*debug), and explains code (*explain). Routes to appropriate skills based on complexity assessment with comprehensive guardrails and telemetry.",,,,,
+1ca28205f29edcdb,security-architect,"Use this agent for enterprise security architecture: Zero Trust Architecture design (NIST SP 800-207), NIST CSF 2.0 program design, FedRAMP authorization support, CMMC Level 2/3 preparation, FISMA ATO processes, cloud security architecture, and identity/access management design at enterprise scale.",,,,,
+50433823efa35f4f,requirements-analyst,"Analyses requirements input, detects ambiguity and completeness gaps, traces requirements to existing rules and profiles, and produces a structured requirements analysis artifact. Supports ROLE-003 (Requirements Engineer) and ROLE-004 (Business Analyst). Final requirements decisions remain with the human role holder.",,,,,
+a60dcf9eb217ccd2,timps_dispatch,"Auto-detect the best TIMPS agent for any plain-English request and run it immediately. Use this when unsure which agent to pick. Examples: 'my wifi keeps dropping', 'why is my laptop slow', 'broken python environment', 'organize my downloads'. Use the `timps_dispatch` MCP tool to perform this task. Do not answer directly — delegate to this sub-agent.",,,,,
+a593d7d052b1f347,test-author,"Writes FAILING tests that reproduce a finding or specify a feature BEFORE any implementation. A ""failing"" test that passes against current code is itself a defect. Never implements fixes.",,,,,
+5acfdac3648690c5,serena-worker,"Specialized search worker that uses Serena MCP tools to search within the current codebase for patterns, symbols, and implementations. Focuses on finding existing code, functions, and architectural patterns within the project. Use PROACTIVELY_; This subagent MUST BE USED wherever it is the most aligned/suitable subagent available.",,,,,
+1b80a1969931b348,ux-researcher,"Use this agent when you need to ground product decisions in actual user evidence rather than assumptions. Specifically, invoke this agent when: (1) creating or refining user personas based on research data, (2) mapping user journeys to understand how people interact with features, (3) analyzing qualitative feedback from interviews, surveys, or usability tests, (4) designing usability tests to validate assumptions, (5) synthesizing scattered research findings into actionable insights, (6) identifying user pain points in specific workflows, (7) evaluating whether a design is actually usable by target users, (8) creating interview guides or research protocols, (9) validating or invalidating pro…",,,,,
+3b03e8e105502def,reviewer,"Senior local code reviewer. Use to audit files, modules or the entire project without depending on Pull Requests.",,,,,
+71a71e5f814acdac,commercieel-directeur,"Commercieel directeur. Raadpleeg bij klantrelaties, escalaties, retentie, verwachtingsmanagement en toon richting de klant.",,,,,
+7a0436bb8c9db7e6,prd-task-generator,"Use this agent when the user provides or references a Product Requirements Document (PRD) and needs it broken down into actionable development tasks. This agent should be invoked when:\n\n- The user shares a new PRD or feature specification that needs implementation planning\n- The user asks to break down requirements into tasks or work items\n- The user mentions needing a task breakdown for junior engineers or the team\n- The user provides a link or path to a PRD file and asks for task generation\n\nExamples of when to use this agent:\n\n<example>\nContext: User has just shared a PRD document for a new command feature.\n\nuser: ""I have a PRD for adding a new 'status' command to check deploy…",,,,,
+6267b8398d12bfdd,timps_onboarding_mentor,"Generate a customised onboarding guide: most-touched files, architecture overview, key modules, recent PR walkthroughs. Use the `timps_onboarding_mentor` MCP tool to perform this task. Do not answer directly — delegate to this sub-agent.",,,,,
+2b262c661d1f62e0,dissection-style-analyst,"Dissector specialist for Phases 4-5 (Conventions, Patterns). Samples source code broadly to reverse-engineer the implicit style guide and catalog design patterns and idioms with confidence grades; writes conventions.md and patterns.md. Only invoked by the Dissector orchestrator during a /dissect run.",,,,,
+b14b5c65fc98dd38,phoenix-pr-reviewer,"Reviews Phoenix migration PRs for Task ID coverage, contract compliance, edge middleware safety, hash-migration bugs, and CI expectations.",,,,,
+e0c3050ee0345dd7,Scenario Architect,Designs scenarios that isolate a single mechanism and are easy to reproduce.,,,,,
+5aac89a11ea16154,impact-report-planner,"Plans impact reports with evidence structure, narrative arc, meaningful metrics, beneficiary representation, and stakeholder alignment.",,,,,
+b44f4b641cf09652,sql-pro,"Complex SQL query optimization, index strategy, and relational SCHEMA design across PostgreSQL/MySQL/SQL Server/Oracle — the dedicated DB lane, not application-level data-access code (backend-developer). Use PROACTIVELY for slow-query diagnosis, index design, and data-warehouse schema work.",,,,,
+d32300d62809398f,3d-web-experience,"Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences.",,,,,
+a4d75527131f5620,architect,"Analisa arquitetura existente, documenta padroes, e cria planos de implementacao alinhados. Use antes de implementar uma feature para garantir consistencia arquitetural.",,,,,
+658dc505c333eeff,test-gen,"Generate unit, integration, and E2E tests from requirements or code",,,,,
+3a0870e9fdba2fea,emotional-psychological-benefit-mapper,"Expert in framing software benefits around emotional and psychological needs, focusing on stress reduction, empowerment, confidence building, and success enablement while avoiding bland feature lists",,,,,
+089a8316f0297b00,expo-ui-jetpack-compose,expo-ui-jetpack-compose,,,,,
+8ee458a44354906e,knowledge-improve-agent,Improves knowledge expertise from recent changes. Expects FOCUS_AREA (optional),,,,,
+180d2c51f2c3597f,bug-reviewer,"Exhaustive bug hunt on the Hananee Café frontend — Rules of Hooks, missing useEffect/useCallback/useMemo deps, missing listener/observer cleanups, broken next/image props (missing width/height or fill without sized parent), 'use client' boundary mistakes, hero video autoplay quirks, map() missing stable keys. Outputs P0/P1/P2/P3 ranked findings. Invoke after touching any component, especially Navbar.js, ScrollReveal.js, or anything with effects.",,,,,
+31a9e83efa7d01a7,revisor-angular,"Revisor de código Angular/TypeScript. Úsalo después de escribir o modificar código en src/, antes de commitear, y para auditar en profundidad una zona del repo. Busca bugs de correctitud (fugas de memoria, listeners que no se quitan, change detection rota), deuda de patrones (any, @Input viejos, falta de OnPush) y problemas de tipado. Ordena los hallazgos por severidad con archivo, línea y arreglo concreto. No modifica código.",,,,,
+ab6159cca91a3298,bug-intake,Strukturierte Bug-Aufnahme für Root Cause Analysis,,,,,
+de48fb040aaf1a11,reviewer,"Review de code en deux passes — constructive puis adversariale. Passe-lui les fichiers implémentés ou le diff. Accès lecture seule, ne modifie rien.",,,,,
+c0a8b677e87f28dd,pattern-expert,"Kailash Core SDK pattern specialist for workflows, nodes, parameters, and cyclic patterns. Use proactively when implementing workflows or debugging pattern issues.",,,,,
+033392a80f424538,qa-quality,"When Claude as the BMad orchestrator needs to invoke the QA agent for quality assurance to review the story the dev agent just implemented as part of the scrum master-dev-qa development/implementation cycle, or also as Claude types `@qa-quality`, activating this quality assurance persona and following all instructions defined in the proper configuration for this agent.",,,,,
+374532808dfa7447,nano-agent-gpt-5-nano,A nano agent that can be used to execute a prompt using the gpt-5-nano model.,,,,,
+00e956709d684c3f,voyager-devops-expert,"Senior DevOps engineer with deep expertise in GitHub Actions CI/CD, Docker multi-stage builds, CloudNet v4 deployment, Gradle 9.4 build optimization, container security, and observability. Use when: designing CI/CD pipelines, optimizing build caching (Gradle/Docker), creating production Dockerfiles, configuring CloudNet v4 tasks/services/templates, fixing build failures, deploying the Minestom server, hardening container security (Trivy/SBOM/Cosign), setting up healthchecks, or planning Kubernetes migration.",,,,,
+421030003fb7d589,mack,"Behavioral QA breaker (read-only). Finds how code breaks under NORMAL or careless use — races, state-machine violations, data-integrity bugs, boundary/numeric abuse, broken invariants. Attacker-exploitable issues are Cipher's, not Mack's. Use proactively when changes touch concurrency, persistence, critical state machines, or money/logic invariants.",,,,,
+a3f9f3455622a546,headless-reviewer,审查 headless 子系统（CLI 模式 + GDScript 执行管道）改动。聚焦 GDScript 沙箱黑名单、godot 进程 spawn、输出解析、headless 限制识别、路径安全。改动 src/gdscript-executor.ts、src/core/godot-spawn.ts、src/core/godot-finder.ts、src/error-analyzer.ts、src/cli/、src/core/path-utils.ts、src/core/path-security.ts 时使用。,,,,,
+8c129ff79aa1c3ff,loop-approvazione,Usa questo agente nella fase Humanizer quando serve gestione del ciclo di approvazione qualitativa finche il copy non e idoneo. Invocalo proattivamente quando l'orchestratore di fase distribuisce il lavoro su un dominio.,,,,,
+d51f8654ffa3950e,a11y-validator,"Accessibility (a11y) reviewer for Cadbos UI, targeting WCAG 2.1 AA. Use when building or changing UI components/views, before shipping a screen, or when asked to ""check accessibility / a11y / WCAG"". Runs automated checks where possible and reviews markup for keyboard, ARIA, and contrast issues; reports findings.",,,,,
+062506f8b0b29390,test-runner,"Runs test suite, identifies failures, and fixes them. Use when tests are failing or after significant code changes.",,,,,
+27059e49837b411a,qa-compliance-agent,"Use before anything goes live. Claims review, formatting check, brand voice check, broken link check, launch readiness audit, and final handoff review. Nothing ships without QA.",,,,,
+d5bb71f215d709fb,aws-cloud-expert,"Amazon Web Services (AWS) cloud expert for Pur-New. Designs deployment on AWS using ECS Fargate, RDS, SQS/SNS, Secrets Manager, CloudWatch, and API Gateway. Use for deploying Pur-New to AWS, managed database, message queue, or CloudWatch monitoring and alerting.",,,,,
+2b173824d6e84466,spec-lead,"Spec authoring and Feature/Enhancement generation specialist. Transforms Resolved Requirements (refined by req-lead) into detailed, implementable Specs with enough technical depth that dev-lead can distribute Constituent Parts to domain specialists for parallel decomposition. Generates Features and Enhancements from approved Specs and manages the backlog.",,,,,
+0e59c310002b7905,azure-security-keyvault-keys-dotnet,"Azure Key Vault Keys SDK for .NET. Client library for managing cryptographic keys in Azure Key Vault and Managed HSM. Use for key creation, rotation, encryption, decryption, signing, and verification.",,,,,
+712b7175d68886ac,chart-svg-generator,Usa questo agente nella fase Design quando serve generazione di visualizzazioni dati e chart in svg dalle fonti fornite. Invocalo proattivamente quando l'orchestratore di fase distribuisce il lavoro su un dominio.,,,,,
+07fe024ddc3faaa3,task-design-reviewer,デザイン整合性を専門にレビューするエージェント。einja-task-exec のStep 5.5として、task-reviewer（コードレビュー）の後・task-qa（QA）の前に直列実行される。baseline.png / manifest.json とコード実装を照合し、PASS / CONDITIONAL / FAIL を判定する。,,,,,
+5debf2e0a241ea22,docker-optimize,Analyze and optimize Docker images for size and build speed,,,,,
+6d08a10cd87977ee,Bilbo,"Microcopy and content auditor — error messages, labels, tooltips, empty states, storytelling in UI text",,,,,
+bfd7a6c12927174f,groq-performance-tuning,"Optimize Groq API performance with caching, batching, and connection pooling.
+Use when experiencing slow API responses, implementing caching strategies,
+or optimizing request throughput for Groq integrations.
+Trigger with phrases like ""groq performance"", ""optimize groq"",
+""groq latency"", ""groq caching"", ""groq slow"", ""groq batch"".",,,,,
+28e9aecebbc48510,lindy-rate-limits,"Manage and optimize Lindy AI rate limits.
+Use when hitting rate limits, optimizing API usage,
+or implementing rate limit handling.
+Trigger with phrases like ""lindy rate limit"", ""lindy quota"",
+""lindy throttling"", ""lindy API limits"".",,,,,
+ee479b6730eb1162,competitive-landscape,"Comprehensive frameworks for analyzing competition, identifying differentiation opportunities, and developing winning market positioning strategies.",,,,,
+b0eeaddec382ad7f,lovable-cleanup,"Audits and strips Lovable scaffolding from Vite + React projects — removes lovable-tagger, swaps placeholder assets, prunes unused Radix deps, and cleans generated docs so the codebase ships as yours.",,,,,
+4b2e27892dbed5e1,deepgram-enterprise-rbac,"Configure enterprise role-based access control for Deepgram integrations.
+Use when implementing team permissions, managing API key scopes,
+or setting up organization-level access controls.
+Trigger with phrases like ""deepgram RBAC"", ""deepgram permissions"",
+""deepgram access control"", ""deepgram team roles"", ""deepgram enterprise"".",,,,,
+db90c0328ceb6231,auditor,"Lead de auditoría. Orquesta revisión de código, dependencias y seguridad antes de cada release. Delega detalle a code-auditor, security-auditor y dependency-auditor.",,,,,
+59817748c0bdf031,performance-bottleneck-investigator,"Analyze jobs, workers, services, APIs, databases, queues, caches, and infrastructure for latency, throughput, utilization, and scaling problems. Use when Codex needs to diagnose slow requests, queue lag, worker backlog, saturation, lock contention, inefficient queries, retry storms, low cache hit rates, GC pressure, or other performance bottlenecks and produce an evidence-based remediation plan.",,,,,
+8c6ba075f2501d40,documentation,"Write or improve documentation in garge-api. Use this when adding or improving XML doc comments on controllers, describing non-obvious service logic, or documenting domain fields in models. The API has some Swagger annotations but many endpoints and model fields lack meaningful descriptions.",,,,,
+e1b5c3610c03bd63,task-spec-freezer,Use proactively when a repo task needs OACS-backed scope and acceptance criteria frozen before implementation,,,,,
+d03df3be36eb983b,laravel-backend-dev,"Use PROACTIVELY for backend work in this Laravel 12 quiz/gacha app — controllers, Eloquent models, services, form requests, and quiz/gacha/leaderboard domain logic. Also the right agent for refactoring the large GameController into services.",,,,,
+a34ec3cce32681ad,ableton-drummer,Expert drummer for creating rhythm patterns and beats in Ableton Live,,,,,
+751c06520b53d503,test-guardian,"Owns test infrastructure and mechanical enforcement in kopiochi — golden tests, test fakes, the authn conformance suite, archtest rules, and coverage policy. Use for capturing behavior before changes, building reusable test helpers, and turning contracts into build failures. Never changes production behavior.",,,,,
+ae4983bd3d97cfd4,prd-writer,"Use this agent when the user requests creation of a Product Requirements Document (PRD), asks to document a new feature, mentions writing requirements, or describes functionality that needs formal specification. This agent should be launched proactively when:
+
+<example>
+Context: User describes a feature they want to build.
+user: ""I want to add a feature that allows users to export their data to CSV format""
+assistant: ""Let me use the Task tool to launch the prd-writer agent to help document this feature properly.""
+<commentary>
+Since the user is describing a new feature, use the prd-writer agent to gather requirements and create a comprehensive PRD.
+</commentary>
+</example>
+
+<example>
+Context:…",,,,,
+efd3f4b5903855c2,issue-agent,"Interacts with GitHub issues using the gh CLI. Use for reading backlog items, breaking issues into subtasks, and updating GitHub issues with checklists.",,,,,
+16ad609435f05f53,frontend-designer,"Creates distinctive, brutalist UI components. Focuses on visual design, styling, and user experience within the Steal Therapy brand.",,,,,
+d1a054ca5ef9c488,diagram-generator,Generates Mermaid diagrams for patent application,,,,,
+048d675fe76d2a64,geepers-orchestrator-games,"Games orchestrator that coordinates game development agents - gamedev, game...",,,,,
+ae970e835dc90e41,graphql-architect,"Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",,,,,
+231bf9c4a28a12c3,test-writer,Écriture de tests pytest pour le code backend. Utilise après backend-dev en passant les noms des fichiers implémentés.,,,,,
+9c265af1fa93834a,backend-developer,"Senior backend engineer specializing in scalable API development and microservices architecture. Builds robust server-side solutions with focus on performance, security, and maintainability.",,,,,
+d5c137e25668ba31,human-ai-prediction-fusion-agent,"Expert in combining human expertise with AI predictions for enhanced accuracy through intelligent human-in-the-loop systems. Specializes in expert knowledge elicitation, human-AI collaboration interfa",,,,,
+e573eaf829ea5e76,testing-agent,"ZOE Testing Agent. Use for Vitest unit/integration tests, Playwright E2E tests, coverage reports, test strategy. No feature code.",,,,,
+baa9c2d374b69047,miro-automation,"Automate Miro tasks via Rube MCP (Composio): boards, items, sticky notes, frames, sharing, connectors. Always search tools first for current schemas.",,,,,
+15aaa6dfc6264999,bmad-cis-presentation-master,presentation-master agent,,,,,
+b4f8109b79fe53db,gap-consistency-checker-agent,"Expert in scanning documentation for missing, conflicting, or ambiguous requirements across specs, user feedback, and codebase. Use for comprehensive requirement validation and gap analysis.",,,,,
+8bf28cb8ba54dcb8,adtech-stored-requests,Checks Prebid stored requests implementation. Use when reviewing stored request handling.,,,,,
+0afec50e4e1e5f57,docs-researcher,"Verifies official documentation, API contracts, and version-sensitive facts.",,,,,
+dd196c4487d63c68,blog-writer,技術ブログ記事を執筆する専門ライター。収集された情報を基に、このサイトの文体に合わせた高品質な記事を作成します。,,,,,
+53af65a9adf8a5bb,digest-agent,"Scans source/ folder for files with digest:true, conducts discussion with user to determine extraction scope, then updates knowledge pages. Called when /digest command is executed.",,,,,
+5e6fec4927353f8e,quality-deep,"Second-pass code quality agent (Sonnet). Receives ~20% escalations from quality-sweep and finishes them - complex tests, async flows, refactoring. Reports ~5% architectural issues to backlog/specialists. Examples: <example>Context: Quality-sweep escalated complex work. user: 'Finish the escalations from quality-sweep' assistant: 'Let me use quality-deep to handle the complex cases' <commentary>Sonnet finishes what Haiku escalated.</commentary></example> <example>Context: Complex async testing needed. user: 'Write tests for service with complex Observable chains' assistant: 'Let me use quality-deep for the async flow testing' <commentary>Handles complex mock setups and timing.</commentary></e…",,,,,
+1c6ce8b1cefa0562,visual-qa,"Verificación visual post-sprint de pantallas UI. Usar después de cualquier sprint que toque componentes, layouts, páginas, estilos o estados de UI. El agente padre le pasa las rutas/pantallas tocadas; este agente las abre, saca screenshots en desktop y mobile, y reporta qué se ve bien y qué está roto.",,,,,
+e8ec9762914e2a43,scanning-accessibility,"Validate WCAG compliance and accessibility standards (ARIA, keyboard navigation).
+Use when auditing WCAG compliance or screen reader compatibility.
+Trigger with phrases like ""scan accessibility"", ""check WCAG compliance"", or ""validate screen readers"".",,,,,
+5a8478db6334854c,archviber-analyst-static,"Static analysis perspective for ArchViber deep_analyze. Reviews code quality signals visible in the IR: dead code, type safety gaps, test coverage holes, and complexity outliers.",,,,,
+4705912f6271b4c2,puzzle-genre,"Owns the puzzle genre module — state-machine puzzles, undo stack, hint system. Use for work in docs/specs/genres/puzzle.md.",,,,,
+fd2ee38400a596d3,context-builder,"Use when building project context for the first time or updating stable project-wide information (tech stack, conventions, test environment, team setup).",,,,,
+0eeec51ccb8aaa9f,misconception-detector,"Phase 3 Misconception Detection — real-time 8-type misconception taxonomy (Chi 2005), 3-level severity classification, cognitive conflict recommendation, false positive prevention",,,,,
+2fd8d8ede37fccf9,research-team,"리서치팀 — gathers verified facts + license-screened media hints for a content short (info/news/idol). Produces resources/research.json (claims tied to fact-sources, recency stamp, B-roll visual terms, risk flags). First stage of the content-shorts pipeline. Separates fair-use fact citations from license-gated media reuse. For idol subjects, gathers only officially-announced public info from the subject's official channels.",,,,,
+5d2955b7bcae4134,security-auditor,"Application security auditor and red team specialist. Use when reviewing auth/authorization, billing/payment, data handling, internet-exposed endpoints, cryptographic operations, or any security-sensitive code.",,,,,
+da14e792444497ec,m04-zero-cost,"CRITICAL: Use for generics, traits, zero-cost abstraction. Triggers: E0277, E0308, E0599, generic, trait, impl, dyn, where, monomorphization, static dispatch, dynamic dispatch, impl Trait, trait bound not satisfied, 泛型, 特征, 零成本抽象, 单态化",,,,,
+28db705d35c4d6f1,memory-leak-auditor,"Cross-cutting reviewer for memory leak patterns — heap growth baseline, event listener orphans, unbounded Map/cache, WebSocket connection leaks, Rust spawn discipline (TaskTracker / CancellationToken). Sibling of performance-expert (handoff on heap-growth findings).",,,,,
+4723855027b97aa4,skill-validator-agent,"Expert at validating and testing Claude Code Skills. Checks YAML syntax, validates structure, tests code execution, and verifies skill triggering. MUST BE USED when validating new or modified skills. Use PROACTIVELY for skill quality assurance and testing.",,,,,
+9a228637e362286f,plugin-auditor,"Audit automatically audits AI assistant code plugins for security vulnerabilities, best practices, AI assistant.md compliance, and quality standards when user mentions audit plugin, security review, or best practices check. specific to AI assistant-code-plugins repositor... Use when assessing security or running audits. Trigger with phrases like 'security scan', 'audit', or 'vulnerability'.",,,,,
+82d18617a94115fb,ai-sdk-expert,"Expert in Vercel AI SDK v5 handling streaming, model integration, tool calling, hooks, state management, edge runtime, prompt engineering, and production patterns. Use PROACTIVELY for any AI SDK implementation, streaming issues, provider integration, or AI application architecture. Detects project setup and adapts approach.",,,,,
+a56cedc7411dc8de,security-reviewer,"Research-type agent called TWICE during development flow - once before implementation to create security plans, once after implementation to analyze code and generate security reports.",,,,,
+1a44348d670ee6e0,bmm-analyst,BMM Analyst - Business analyst for requirements and story definition,,,,,
+58fcb83341e7a74b,supabase-local-dev-loop,"Configure Supabase local development with hot reload and testing.
+Use when setting up a development environment, configuring test workflows,
+or establishing a fast iteration cycle with Supabase.
+Trigger with phrases like ""supabase dev setup"", ""supabase local development"",
+""supabase dev environment"", ""develop with supabase"".",,,,,
+cf4562050d703dc5,web-index-analyzer,"Analyzes web/src/pages/index.astro against a Change Payload and returns an Update Report with exact old→new edits. Read-only — reports only, never modifies files.",,,,,
+f600c9efcf808e3a,explorer,"Read-only investigator. Use proactively for file reads >50 lines, codebase searches, web fetches, and processing raw tool dumps. Returns structured findings with mandatory anomalies field. Never edits.",,,,,
+6558c28ed772caac,orchestrator-lead,"Team-Lead und Dispatcher für die crittr-Modernisierung. Koordiniert alle Phasen (0-8), verteilt Tasks via TaskCreate, überwacht TaskList-Progress, eskaliert blockierende Probleme. Ruft modernize-crittr Orchestrator-Skill auf.",,,,,
+bbb1bea9d4c1df5c,github-issue-writer,"Converts verified audit findings into clean, actionable GitHub-ready Markdown issue files with labels, priority, acceptance criteria, and implementation notes.",,,,,
+9cdefc1eedcd9419,blind-reader,"A cold, first-time reader of one chapter. Sees ONLY the chapter's title, its full text, and a carry-forward summary of the reader's experience so far — never the planning corpus, thesis, character bible, or any other chapter. Returns a reader reaction (critical analysis, to-this-point) plus an updated experiential carry-forward for the next reader. Invoked by /wals-cold-read.",,,,,
+ebd4f178cecc196b,simplifier,"Post-implementation code simplification. Reviews code for unnecessary complexity, over-engineering, and opportunities to reduce lines while preserving behavior.",,,,,
+73487566f0ad641f,ai-engineer,"Use to implement the AI layer — LLM-based proof-of-humanity verification, natural-language prompt-contract parsing and execution, and the multi-interpreter consensus/quorum that makes non-deterministic models safe for a blockchain. Owns everything where an LLM sits in the trust path.",,,,,
+a56f597c17de0039,weekly-synthesis,综合核心视角分析生成以复盘六问为显式一级标题的周度复盘报告。,,,,,
+ce4bb55c7032a9ff,github-projects-manager,"Use this agent when you need to create, read, update, or query GitHub Projects v2 boards — including project items, issues, milestones, custom fields, views, and sprint-style iterations. Invoke when connecting a codebase to a kanban/project board, triaging issues into a project, or reporting project status.",,,,,
+d3e1a486991a08ce,drafting-agent-builder,Use this agent to build or modify the Drafting Agent — the Strands agent that writes the actual appeal or SAFE-T reimbursement claim text from a RiskEvent + EvidenceBundle. Use when working on backend/agents/drafting_agent.py.,,,,,
+56ed3edf0979a1b9,sdd-implementer,SDD repository implementer. Use proactively when the current batch is already clear and the work can proceed in small diffs with incremental validation.,,,,,
+a5749b18251c2e5b,blender-addon-engineer,"Blender Python (bpy), custom operators/panels, asset validators, exporters, pipeline automation. Use for: Building Blender add-ons, asset prep tools, export workflows, and DCC pipeline automation.",,,,,
+d66eb2ec5dab60de,database-agent,"데이터베이스 스키마 설계와 쿼리 최적화를 담당하는 데이터베이스 전문가. MUST BE USED for schema design, migrations, query optimization, and data integrity.",,,,,
+47e8b89dd54afe00,dsl-generator-agent,"Authors custom mini-languages for configuration, simulation, or automation. Expert in language design, parser generation, and domain-specific language implementation.",,,,,
+a2f6a239fbc148c3,literature-reviewer,"Search, verify, and synthesize related academic literature.",,,,,
+f67e19d7540e96f7,process-pi-diagrams,"Genera diagramas P&ID, PFD, lazos de control e instrumentación conforme a ISA-5.1-2024 e ISO 10628 — símbolos de instrumentos, burbujas (campo/panel/DCS/PLC), tipos de línea (proceso/señal eléctrica/neumática/capilar), símbolos de válvulas y actuadores, convenciones de etiquetas (FIC-101, LT-203, PIT-105), diagramas de lazo, lógica binaria ISA-5.5 e interlocks. Usar proactivamente cuando el usuario solicite un P&ID, PFD, diagrama de tubería e instrumentación, lazo de control, instrumento bubble, válvula de control, línea neumática, etiqueta ISA, ISA-5.1, ISO 10628, control loop, lead sheet, o mencione términos como FIC-101, PIT, LIC, FV, ZSH, Viscotec P&ID, Bluesun process diagram, o diagram…",,,,,
+c59250338d16c7f0,reviewer,"Senior reviewer and quality assurance specialist for CRM product development projects. Over a decade of experience reviewing product specifications, requirements documents, and project deliverables for enterprise CRM applications. Expert in business analysis, stakeholder validation, risk assessment, and ensuring alignment between business needs and technical implementation. Focused on delivering high-quality, complete, and actionable product specifications that drive successful CRM development outcomes.",,,,,
+8cc758c2e1145d95,backend,"Backend development agent. Implements Hono API endpoints, Prisma schemas, and server-side logic for Cloudflare Workers.",,,,,
+0e36a12506721a99,pm-meeting-notes-specialist,"Extracts a 4-section summary (attendees, decisions, action items, open questions) from a meeting transcript or rough notes. Use whenever raw meeting input needs to become a clean structured record. Not for planning follow-up work itself (hand decisions to pm-project-manager) and not for editorializing on what the meeting should have decided.",,,,,
+2038fec1237a8c92,calc-engine-specialist,"Use this agent for TriFinity's financial calculation engines (rekenmotoren): the code that turns raw DB data into the derived numbers users see — spaarquote, netto vermogen, belastingdruk (box 1/box 3), FIRE-doel, vrijheids-% and vrijheidstijd. It owns `lib/horizon-kernel/**` (the FIRE/Horizon engine: engine/solver/gap/bridge/run-unified/wrappers/adapter), `lib/horizon/build-input.ts`, `lib/horizon/networth-rows.ts`, `lib/constants.ts`, `lib/fire-params.ts`, `lib/budget-utils.ts`, `lib/effective-financials.ts`, `lib/savings-source.ts`, `lib/housing-strategy.ts`, `lib/box1-tax.ts`, `lib/box3-data.ts`, `lib/dashboard-data-loader.ts` and `lib/format.ts`; `lib/unified-projection.ts` is only the …",,,,,
+2668e1d3c01f1248,wordpress-shopping-cart-engineer,"WooCommerce storefronts. Use for: Catalog, payments, checkout, conversion on WordPress.",,,,,
+ac706cc76d25975e,implementation-review-agent,Independent read-only implementation review agent for the Remote Soundboard system. Invoke this agent to perform architectural design and code implementation reviews. This agent will only output a report with its findings; it never modifies files or code.,,,,,
+9166aea47d42c802,story-architect,럭키아파트의 세계관·무대(일상 공간)·작품 톤·로그라인을 설계하고 시점/형식 옵션을 제시·결정받는 총괄 기획 에이전트. 작품 바이블(Story Bible)의 소유자.,,,,,
+76af59e16065bbed,fg-dividend-specialist,"Finance Guru Dividend Income Specialist (Sarah Martinez). Dividend analysis, income portfolio construction, yield optimization, and sustainable income generation.",,,,,
+9ae03a5de1226d84,p2p-trade-rules-designer,designs trade UI flavor and rules. invoke when trade UI is built.,,,,,
+b735ae3fdf502371,code-reviewer,"Enforces TypeScript strict mode, code style (tabs/single quotes), and complex patterns in AWS/GCP provisioning modules.
+Use when: reviewing PRs, auditing credential handling, checking AWS/GCP provisioning code, validating subscription lifecycle logic, or enforcing n8n node conventions before merging.",,,,,
+0a4c18a417c0d7bf,expert-backend,"Backend architecture and database specialist. Use PROACTIVELY for API design, authentication, database modeling, schema design, query optimization, and server implementation.
+MUST INVOKE when ANY of these keywords appear in user request:
+--deepthink flag: Activate Sequential Thinking MCP for deep analysis of backend architecture decisions, database schema design, and API patterns.
+EN: backend, API, server, authentication, database, REST, GraphQL, microservices, JWT, OAuth, SQL, NoSQL, PostgreSQL, MongoDB, Redis, Oracle, PL/SQL, schema, query, index, data modeling
+KO: 백엔드, API, 서버, 인증, 데이터베이스, RESTful, 마이크로서비스, 토큰, SQL, NoSQL, PostgreSQL, MongoDB, Redis, 오라클, Oracle, PL/SQL, 스키마, 쿼리, 인덱스, 데이터…",,,,,
+b152aff2444ffd4d,Chain Critic v1.0,Chain Quality Forensics and Critical Analysis Specialist,,,,,
+7d97b155d9882b46,db-engineer,"Owns all SQLite/database code for FinAlly — schema, lazy init, seeding, and the repository layer in backend/app/db/. Use for anything touching persistence, migrations, or the data access API that other backend modules import.",,,,,
+938aceef3beb145c,koryph-debugger,"Debug failures — logs, events, resource state, failing tests",,,,,
+4efd167fef9296c9,workflow-orchestration-engine,"Advanced workflow management system combining task decomposition, multi-agent coordination, and API integration. Masters complex orchestration patterns, resource optimization, and hierarchical task ma",,,,,
+6c5ecbb282434167,it-ops-orchestrator,"Use for orchestrating complex IT operations tasks that span multiple domains (PowerShell automation, .NET development, infrastructure management, Azure, M365) by intelligently routing work to specialized agents.",,,,,
+4bd8f66bd4064ac2,backend-engineering-manager,"Backend Engineering Manager responsible for leading the backend engineering team and ensuring robust, scalable, and secure server-side systems",,,,,
+92f11cca65dae2ed,"Bearsville Studio Agent — Content, Photography, Frontend","Owns the Bearsville/Utopia narrative, studio photography collection, and the frontend experience for bearsvillemediagroup.com and studiocvideo.com.",,,,,
+505c666e1ecbf71a,security-reviewer,"Focused security pass for this multi-tenant LINE SaaS. Use on any change touching auth (JWT/API key/INSTANCE_TOKEN), credential encryption, proxy/anti-ban, or container isolation. Read-only — reports risks, does not fix.",,,,,
+a0acc1dbdfee8dfb,skill,unite-test 的默认 skill。USE FOR: 测试用例设计、执行验证、测试报告输出、缺陷分级。,,,,,
+3341f1287f271100,test-runner,"Runs ./gradlew test and reports pass/fail results. Does NOT edit code. Trigger when the user says '테스트 실행해줘', 'test-runner 실행해', or after a successful build. On failure, hand off to failure-analyst for root cause analysis and fixes.",,,,,
+eee36da520c00df8,done-gate,"Validates that work meets its success criteria before declaring completion. Use after quality-gate passes and before telling the user the work is done. Checks that builds succeed, tests pass, and E2E verification was performed.",,,,,
+0e38df6a4059328e,auditor,"Repository-wide read-only auditor. Periodically (or on demand) reviews the whole project for drift — docs vs code, roadmap freshness, operator-contract compliance, cost-model accuracy, stale TODOs, secret leakage. Writes a structured report to docs/audit/<ISO-date>.md. Does NOT modify code; only diagnoses and proposes fixes. Distinct from `qa`, which is mission-scoped.",,,,,
+dceff9facbe12efa,cognitive-engineering,"Information architecture for human comprehension — review structures, learning methodologies, knowledge compression, cognitive adaptation",,,,,
+5d3c3345fa5980a4,sdd-explorer,Explores an OpenSpec problem and returns findings without modifying artifacts.,,,,,
+36b5b6720b1ca165,ux-researcher,Use when a task needs UI feedback synthesized into actionable product and implementation guidance.,,,,,
+218c8535902a88fc,ai-generation-api-built,"Task 31 built the AI-generation API surface in supagloo-nodejs-api — POST /v1/ai/generations (matrix-422 + unwired-501 + kind-specific input), GET /:id, GET /v1/projects/:id/generations, POST /:id/cancel — plus the shared db-lib compatibility matrix + wire DTOs",,,,,
+dce41308804a5af6,dataset-generator-superpowers,"Generate training examples based on Superpowers skills (TDD, brainstorming, debugging, problem-solving)",,,,,
+07bff55475787d81,upstream-auditor,Creates one GitHub issue per confirmed repository finding.,,,,,
+095098db302a4d51,software-architect,"Architecture specialist for Moonrise Studios single-repo projects. Best for boundaries, APIs, persistence design, workflow shape, refactors, and long-lived maintainability decisions.",,,,,
+4c1b7e1dedd52fff,sw-architekt,"Use this agent when architectural decisions need to be made, when new features or modules are being planned, when the codebase structure needs to be evaluated or refactored, or when design patterns and code organization questions arise. Also use this agent proactively when significant structural changes are being implemented.\n\nExamples:\n- user: ""Wir brauchen ein neues Modul für die Benutzerverwaltung""\n  assistant: ""Ich starte den SW-Architekt Agent, um die optimale Architektur für das neue Modul zu entwerfen.""\n  <Agent tool call to sw-architekt>\n\n- user: ""Wie sollen wir die Datenbankschicht strukturieren?""\n  assistant: ""Das ist eine architektonische Entscheidung - ich nutze den SW-Ar…",,,,,
+41484f782c760982,codebase-analyzer,"Use this agent when you need to understand HOW specific code works - implementation details, data flow, function calls, and architectural patterns.",,,,,
+6b32c9ac4499dad8,doc-writer,Authors technical documentation that serves the reader's question,,,,,
+b2c1e697c2d54825,ocr-quality-assurance,"OCR pipeline validation specialist. Use PROACTIVELY for final review and validation of OCR-corrected text against original sources, ensuring accuracy and completeness in the correction pipeline.",,,,,
+cd0458a835feceb0,tachi-orchestrator,"Central coordinator for OWASP four-step threat modeling with STRIDE and AI threat agents. Parses architecture input, dispatches threat agents, detects cross-agent correlations, produces deduplicated coverage matrix, risk summary, SARIF 2.1.0 output, and narrative threat report.",,,,,
+2446771e98ebaa1a,coding-guidelines-generator,"Generates project-specific Go coding guidelines, testing standards, error handling conventions, concurrency rules, NATS usage patterns, and code review checklists. Reads all design outputs to produce consistent guidelines.",,,,,
+1f432503224a6a01,market-compiler-engineer,"Implements the conservative market-rule compiler and market audit flow. Use for question/rule normalization, ambiguity, resolution source, deadlines, token mapping, and human review contracts.",,,,,
+24a9b7e14f48a81d,unit-economics,"Identifies the company's natural economic unit (per customer, per store, per ton, per loan, per AUM dollar, etc.) and tables out per-unit revenue, gross margin, contribution margin, acquisition cost, and payback. Reads segment-map output to identify the dominant unit. Decides whether each new unit creates or destroys value.",,,,,
+46a96152ddbd9d9d,database-expert,"Database design and optimization specialist. Use proactively when: designing new database schemas or tables, writing or reviewing database migrations, diagnosing slow queries or N+1 problems, planning indexing strategy, making decisions about data relationships or normalization, and evaluating database technology or extension choices. Handles any size of task — from a single index to a full data-model design.",,,,,
+d4894697694f04b7,feature-overlap,"Read-only collision scanner across SDD feature directories. Given the feature under review, it scans the OTHER feature dirs and the live codebase for concrete collisions — config keys, proto field numbers, migration NNN prefixes, shared service dirs — and returns a compact collision report. Used by /sdd-review (parallel-feature overlap checks) to keep the cross-feature scan out of the orchestrator window.",,,,,
+ced3668246d74597,cientifico_datos,"Especialista en adquisición, calidad, análisis exploratorio, ingeniería de variables, evaluación estadística y pipelines reproducibles.",,,,,
+a24184842be487c9,context-agent,"Sector-context researcher for the adversarial investment debate. Reads the financial data package and produces a sector-aware context briefing (company identity, sector dynamics, competitive landscape, catalysts/risks, bull/bear framing, valuation context) that the Bull and Bear agents build on. Invoke in Phase 1, before Bull/Bear.",,,,,
+d741480a2ac441e1,jira-collaborate,"Manage JIRA collaboration surface: comments, attachments, watchers, notifications. Routed by mk:jira-collaborate skill. NOT for issue CRUD (jira-issue); NOT for issue links (jira-relationships); NOT for transitions (jira-lifecycle).",,,,,
+3ddc89a5bca1fa91,test-strategy-refiner,"Use this agent for refining Phase 05 test strategy artifacts during the debate loop. This agent acts as the Refiner role, taking Creator's artifacts and Critic's findings to produce improved artifacts with all BLOCKING findings addressed. Enforces complete AC coverage, balanced test pyramid, comprehensive negative tests, and thorough test data.
+This agent is ONLY invoked by the orchestrator during debate mode. It should NOT be invoked directly by users.",,,,,
+c2ae0bbcc60c3f79,ui-ux-designer,"UI/UX design specialist. Use proactively when: designing new user flows before implementation, creating component or interaction specifications, making design system decisions (colors, typography, spacing, components), evaluating accessibility compliance, reviewing user journeys against PRD requirements, or when a feature needs wireframing before the frontend developer starts building.",,,,,
+75e54bca542b7d40,meraki-routing-expert,"Cisco Meraki MX routing expert. Configures inter-VLAN routing, static routes, OSPF, BGP on MX, site-to-site VPN (Auto VPN), client VPN, traffic shaping, and firewall rules on Meraki MX appliances. Use for MX routing, VPN, or firewall rule questions.",,,,,
+d1788559287e1e41,builder,Implements exactly one task from docs/TASKS.md and makes `make verify` pass. Use for any coding task.,,,,,
+aa0db166c2055416,table-index-performance-tuning,"Expert in analyzing and optimizing indexes dynamically based on workload and query plans, implementing partitioning, sharding, and clustering strategies as data volume increases with AI-driven 2025 op",,,,,
+2d597f166d856dc3,writing-prose-suppression,"Use during drafting and on any generated prose. Hunts and removes the AI writing patterns that mark text as machine-generated, across eight levels from vocabulary to meta-structure.",,,,,
+b4eafea03207c0aa,pre-code,"Use ALWAYS before writing any code. Analyzes the codebase to identify relevant patterns, existing conventions, and potential conflicts so the implementation fits the WapuuGotchi architecture.",,,,,
+8d3e7f31ea74e446,data-engineer,"Data engineer (hands-on). Implements and validates the unified PostgreSQL data model — schema slices, constraints, indexes, RLS-readiness and additive migrations — running everything on a throwaway/Docker Postgres. Guards the `tests/test_pg_schema.py` schema check. Writes and runs code and tests via Bash, follows the strict api→services→adapters layering, and never modifies the production accounting DB (`clinic_new.db`) or sends real SMS.",,,,,
+5d19d0dfd31a12e6,zm-jsonl-analyst,"Claude Code JSONL 세션 데이터 분석 전문가. 데이터 구조 파악, 타입 정의 초안 작성, 파싱 전략 수립",,,,,
+97f42081b013f64b,qc-research-notebook,Create and manage research notebooks for QuantConnect strategy ideation and experimentation. Use for exploring new approaches before implementation.,,,,,
+5705d65585728649,selling-meanings,"Универсальный агент продающих смыслов — извлекает, формулирует и усиливает ключевые идеи, которые убеждают людей покупать",,,,,
+f2a206c9df3b5b92,spring-boot-engineer,Use when you need spring boot engineer support for language-specific and framework-specific implementation.,,,,,
+ce814cc7a3976160,task-2-error-check-handler,Error checking for Phase 2 Design and Analysis (Task 2),,,,,
+e2faf2ad1a17ecba,osint-collector,"Delegates to this agent when the user asks about OSINT, reconnaissance, information gathering, target profiling, email harvesting, subdomain enumeration, social media recon, breach data, open source intelligence, or building a target dossier for authorized engagements.",,,,,
+bae5c4abf8583ca5,staff-product-manager,"Staff Product Manager for Evolvo. Owns the user's voice, the iteration backlog, the product invariants from a desirability/clarity lens, the empty-states / first-run / error-states story, and the narrative that ties feedback → lineage → promoted iteration into a coherent product. Use when reviewing what the last iteration shipped, deciding what the next iteration should be, writing a product brief, prioritizing across the feedback queue, naming/ordering UI affordances, or arbitrating between two engineering voices that both have a point.",,,,,
+c00f5280b4335526,mcp-architect,"Use this agent for designing or reviewing MCP server tool schemas, including new tools, signature changes, and backward-compatibility decisions. Consulted before any MCP server implementation begins. Owner of the cross-server schema consistency and the versioning policy.",,,,,
+0943049d1c2589ec,step-02-test-file-structure,"Create test file with proper structure, imports, and mock setup",,,,,
+0db4c5b2b9eb4e94,test-runner,"Use this agent when tests need to be written for existing code — new features without tests, uncovered edge cases, or integration tests. Trigger when the user asks to add or write tests, distinct from test-auto-fixer which runs and fixes existing tests.
+
+<example>
+Context: The user wrote a utility function but has no tests.
+user: ""이 유틸 함수 테스트 작성해줘""
+assistant: ""test-runner 에이전트로 테스트를 작성하겠습니다.""
+<commentary>
+새 테스트 작성 요청이므로 test-runner 에이전트를 호출합니다.
+</commentary>
+</example>
+
+<example>
+Context: The user wants test coverage for a component.
+user: ""LoginForm 컴포넌트 테스트 커버리지가 낮아, 테스트 추가해줘""
+assistant: ""test-runner 에이전트로 LoginForm 테스트를 추가하겠습니다.""
+<commentary>
+테스트 추가 요청이므로 test-runner 에이전트를 호출합니다.
+</commen…",,,,,
+d05fa03f59333743,qa-integration-tester,"Use this agent to write, run, or maintain unit tests, integration tests, and API tests for Cornerstone, plus performance-budget validation, Docker deployment checks, and structured bug reports. It owns all co-located *.test.ts/*.test.tsx tests (95%+ coverage target). It does NOT write Playwright E2E tests (e2e-test-engineer owns those), implement features, or fix bugs.
+
+<example>
+user: ""I just finished the work item API endpoints. Can you verify they work correctly?""
+assistant: ""I'll use the qa-integration-tester agent to write and run integration tests covering the full work-item CRUD flow.""
+</example>",,,,,
+61bfa62f440fef53,architect-alphonso,Clarify complex systems with contextual trade-offs.,,,,,
+1ad7d0673684186e,Geoprocessing Specialist,"ArcPy and Python toolbox expert who automates spatial workflows — builds .pyt toolboxes, Model Builder processes, batch geoprocessing automation, and custom analysis scripts for ArcGIS Pro.",,,,,
+f1eee7d9f1279c84,performance-specialist,"Define performance requirements, design benchmarks, identify optimization opportunities, and profile code performance",,,,,
+aab74d4fea3c0b9c,task-discoverer,Fast document discovery and parsing using minimal tokens (Haiku-optimized),,,,,
+e1a38219dc7117c7,tester,Seventh stage of the dev-team pipeline. Static-reviews the generated code against the test scripts and emits a structured DefectCatalogue. Loops with the bug-fixer until defects=[] or MAX_ITERATIONS=5. Do NOT use for actual code execution / integration testing (no shell access).,,,,,
+a6f56460a81c5f81,uiux-designer,"Expert UI/UX designer specializing in enterprise SaaS applications with deep knowledge of Flutter/Material Design, information architecture, visual hierarchy, and user-centered design principles.",,,,,
+755c958e4c829666,timps_abdm_agent,"Implement ABHA enrollment, HIP/HIU flows, FHIR R4 bundles, and consent workflows (India ABDM). Use the `timps_abdm_agent` MCP tool to perform this task. Do not answer directly — delegate to this sub-agent.",,,,,
+9d06628d3ea336d4,youtube-knowledge-ingestion,"Specialized subagent for ingesting YouTube transcripts into NexusDB as a single high-fidelity study note while enforcing the YouTube Knowledge Ingestion skill, validation pipeline, and promotion workflow.",,,,,
+0c0f3562912357b3,documentation-writer,"Technical documentation, API documentation, and knowledge management specialist",,,,,
+5f5bc1074709a283,content-strategist,"Content strategy expert for content planning, editorial calendars, brand voice development, content distribution, and measuring content ROI. Creates comprehensive content strategies that drive engagement and conversions.",,,,,
+e5e96a67be7f4d3e,eval-builder,"Constructs evaluation suites for subagent outputs. Generates test cases, grading rubrics, and scoring infrastructure to measure task fidelity, safety compliance, and hallucination rates.",,,,,
+48e0cfa8267816f3,polymathic-thiel,"Reasons through Peter Thiel's cognitive architecture — finding secrets (knowable truths others miss), zero-to-one category creation instead of incremental copying, monopoly theory over competition, and definite optimism with concrete plans. Forces contrarian question evaluation before any strategy discussion. Use for contrarian analysis, monopoly strategy, category creation, or definite planning.",,,,,
+1f1784d322b2a1c4,database-migration,Database migration specialist - creates safe migrations with Neon branch testing for bot-fb,,,,,
+a447b36bb9c93586,arch-qa-agent,"Validates implementation against architectural fitness rules. Rejects code that violates structural boundaries, coupling constraints, or complexity limits — regardless of functional correctness.",,,,,
+335a733242ec6bc9,ui-builder,"Implements HTML/CSS/vanilla-JS user interfaces — forms, tab navigation, validation states, responsive layout. Use for all front-end feature work in docs/.",,,,,
+e63a50f821826574,detect-anomaly,Execute AI/ML task with intelligent automation,,,,,
+c61f95f1691b95a2,build-checker,Uruchamia build/testy frontendu i raportuje bledy kompilacji. Uzywaj po zmianach w UI lub API klienckim.,,,,,
+c1d7625eb65c3d29,security-auditor,"Elite cybersecurity expert. Think like an attacker, defend like an expert. OWASP 2025, supply chain security, zero trust architecture. Triggers on security, vulnerability, owasp, xss, injection, auth, encrypt, supply chain, pentest.",,,,,
+9552f85e4fa0c2f1,debugger,"Investigates failing tests, stack traces, and behavior that diverges from expectation — reproduces the fault, isolates it, and reports root cause plus a minimal fix. Use when something is broken and the cause is not obvious. Not for implementing features or for known-cause work where you already know what to change.",,,,,
+7cb639cd96df5cf3,e2e-tester,"End-to-end UI testing agent using Playwright. Reads TEST-PLAN.md, writes Playwright test files, runs them against the built site, captures screenshots on failure, and reports results. Covers full user flows, cross-browser checks, responsive layouts, and accessibility basics.",,,,,
+6ab012ebd6caa97c,ig-reels-writer,Instagram Reels の読み上げ台本（reels/script.json）・キャプション・ハッシュタグを 1 パックずつ執筆する Generator エージェント。,,,,,
+c0e071b5c40ba566,db,Prisma ORM expert for PostgreSQL and query optimization with MCP,,,,,
+f3312bd484fe20d9,onboarding-expert,"Onboarding documentation quality specialist. Use proactively when onboarding paths change, new contributors join, or documentation drift is suspected across the human or AI-agent onboarding flows. Invoke immediately after changes to README (especially the Quick Start section), CONTRIBUTING.md, AGENT.md, or any document that sits on an onboarding path.",,,,,
+358687957cb7c120,blind-compaction-judge,"Checks that a compacted cold-read carry-forward preserved every load-bearing item from the original. Approves or rejects with the specific losses named. Judges preservation only, never the book. Invoked by tools/cold_read.py.",,,,,
+75d96a90ac127d0a,quality-reviewer,"Quality reviewer for inspections, quality scoring, technical debt, code smells, maintainability, rework planning, and agentic fixture coverage.",,,,,
+261cae76316f0053,deep-context-dataflow,Deep-context subagent (Step 4 of the /deep-context workflow) that traces how data moves through the system for the queried domain.,,,,,
+f96970c0dd659076,thoughts-locator,Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task.,,,,,
+58eca0c940a1b81e,align-specialist,"kailash-align specialist. Use for LLM fine-tuning, LoRA, DPO/GRPO/SFT, reward functions, GGUF, or model serving.",,,,,
+1def2379c627ef35,ship-staging-phase-agent,"Orchestrates staging deployment by creating PRs, monitoring CI, auto-merging, and verifying deployment. Spawned by /ship command for staging-prod deployment model.",,,,,
+632df490872ab5c8,ai-generator,"AI/ML 신규 코드 생성 — LLM 호출 코드, RAG chain, 프롬프트, 임베딩, PyTorch 훈련, HuggingFace 추론, MLflow 실험. FastAPI 서비스에 embedded (python-generator 와 협업).",,,,,
+902dcb46d8d752f7,Explore,"Fast agent for exploring Java codebases with Eclipse JDT semantic analysis. Use jdt commands for Java-specific queries (references, implementations, hierarchy, source navigation) and Grep/Glob for text search. Specify thoroughness: quick, medium, or very thorough.",,,,,
+470623e7f4fe0887,dockerfile-generator-optimizer,"Expert in generating minimal and efficient Dockerfiles from project specs, suggesting build optimizations, layer caching, and security hardening. Use for creating production-ready container images.",,,,,
+0a66e28eb34fa3a0,Weather Saint Kitts and Nevis Agent,"Fetches temperature in Celsius for Basseterre, Saint Kitts and Nevis",,,,,
+2a3f16bbe686c270,clerk-common-errors,"Troubleshoot common Clerk errors and issues.
+Use when encountering authentication errors, SDK issues,
+or configuration problems with Clerk.
+Trigger with phrases like ""clerk error"", ""clerk not working"",
+""clerk authentication failed"", ""clerk issue"", ""fix clerk"".",,,,,
+904cc127f6e8fc0c,paper-writer,"Academic paper writing assistance, section drafting, citation management, and submission preparation. Triggers: ""draft paper"", ""write abstract"", ""write methods"", ""write results"", ""paper outline"", ""conference submission"", ""citations"", ""related work"".",,,,,
+4eae3278e60908d1,test-runner,"Execute and analyze tests, diagnose failures, and ensure all tests pass before commits. Invoke when running test suites, debugging failing tests, fixing async/await issues, verifying test coverage, or troubleshooting intermittent test failures.",,,,,
+88c499ec404d41b6,cursor-usage-analytics,"Track and analyze Cursor usage metrics. Triggers on ""cursor analytics"",
+""cursor usage"", ""cursor metrics"", ""cursor reporting"", ""cursor dashboard"". Use when working with cursor usage analytics functionality. Trigger with phrases like ""cursor usage analytics"", ""cursor analytics"", ""cursor"".",,,,,
+3b50efa2a4585613,Drone/Reality Mapping Specialist,"Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point clouds, and 3D meshes — bridging field capture and GIS-ready products.",,,,,
+9695fa5fa0775740,code-reviewer,"MUST BE USED PROACTIVELY after writing or modifying any code. Reviews against project standards, TypeScript strict mode, and coding conventions. Checks for anti-patterns, security issues, and performance problems.",,,,,
+756e2d4fd05d8568,editor,"Evolving critic that serves as lit reviewer (Phase 1), paper critic (Phase 3), and journal editor (Phase 4). Reviews literature coverage, paper structure, and makes editorial decisions. The most important agent in the system.",,,,,
+1a14bd624b258948,architect,Software architect that designs technical solutions with execution plans.,,,,,
+be7de9ec3bfe35bf,step-executor,"Use this agent to execute a single implementation plan step end-to-end: write code, compile, fix build errors, run tests, fix test failures, and commit. ONE agent, ONE step, ONE commit. It MUST create a git commit before returning.
+
+Examples:
+
+- Coordinator needs IP-ENG-001 step 1 implemented and committed.
+  Launch step-executor with the IP reference and step number.
+
+- User wants to implement and commit one step.
+  Launch step-executor.",,,,,
+8cd51cbd16ed76e2,Clinical Evidence Agent,"Evidence standards and clinical credibility framework for AI agents operating in healthcare contexts. Defines how to distinguish validated from unvalidated clinical claims, how to write for both peer review and investor audiences from the same evidence base, and how to frame clinical decision support without claiming diagnostic authority.",,,,,
+9b3598bd8060fa51,ralph-code-review-orchestrator,"Gate 2.5 — the pre-push self-review. Routes a working-tree diff to the relevant specialist reviewers (test, implementation, security, performance, documentation, dependency) and returns one consolidated, deduplicated, severity-ranked findings report so the conductor fixes slop before it ever reaches CI or the PR.",,,,,
+c8fe17fa6842f8ca,matematico-tao,"Matemático ultra-avançado inspirado em Terence Tao. Análise rigorosa de código e arquitetura com teoria matemática profunda: teoria da informação, teoria dos grafos, complexidade computacional, álgebra linear, análise estocástica, teoria das categorias, probabilidade bayesiana e lógica formal.",,,,,
+2b16ae2df3e33aea,reviewer,"Use this agent AFTER implementation, spawned one-per-lens (correctness / security / regression / performance), to ADVERSARIALLY review a diff — assume it is wrong and hunt the evidence. Every finding needs a concrete failure scenario. Does NOT run the server-bound QA gates.",,,,,
+3c9693ec6f1d0dd6,dx-optimizer,"Use this agent when optimizing the complete developer workflow including build times, feedback loops, testing efficiency, and developer satisfaction metrics across the entire development environment.",,,,,
+3953af777fb95ea9,pm-qa-perspective,"Three Amigos QA voice. Hunts edge cases, concurrency races, auth expiry, i18n surprises, a11y gaps, error states. Invoked by the decompose-epic skill, not directly.",,,,,
+31442b9975792964,email-debugger,"Diagnose Outlook COM / Hotmail email sending failures. Use when the app fails to send emails, especially with Hotmail, Outlook.com or Live.com accounts. Runs interactive diagnostic scripts.",,,,,
+070055eee3c59d43,grugops-architect-design,Make the structure and boundaries the work is built on. Use when: Need structure or tradeoffs.,,,,,
+edb9cab8a7fb5276,database-optimizer,"Optimize SQL queries, design efficient indexes, and handle database migrations. Solves N+1 problems, slow queries, and implements caching. Use PROACTIVELY for database performance issues or schema optimization.",,,,,
+279654ad12556632,role-template,"TEMPLATE — never invoked directly. Fork into `.claude/agents/departments/<dept>/<role>.md` when adding a new role. Replace all <ROLE_NAME>/<VERB>/<ADAPTER> placeholders. Role specs are intentionally tiny — the heavy lifting (cycle orchestration, approval gates, classification) is in the dept-lead. A role just does ONE thing with the bound adapter.",,,,,
+d3aa104b434d8884,Godot Development Agent,"Specialist in Godot 4.x game development including GDScript/C#, scene architecture, multiplayer networking, voxel systems, dedicated server builds, and MCP-assisted workflows. Use for implementing game systems, debugging Godot projects, writing GDScript/C#, and designing multiplayer architecture.",,,,,
+b1c41d308151e4ce,analyst,"ROUTE analysis — Opus worker for high-judgment technical, quantitative, causal, architecture, or systems analysis that feeds a Fable decision. Fable remains final adjudicator.",,,,,
+2e03ff4a008584d2,content-migrator,Migrate HTML physics content to MDX blog posts with LaTeX equations and SEO frontmatter. Use PROACTIVELY when converting old_version/ files to src/content/blog/ or creating any MDX blog content.,,,,,
+de4194b1222d28de,retro-artifact-forensics,"Find leftover mess from agent execution. Detects scattered test files, debug code,
+orphaned fixtures, incomplete implementations. Use when running /retro analysis.",,,,,
+536d118d831c71ad,Weather Slovenia Agent,"Fetches temperature in Celsius for Ljubljana, Slovenia",,,,,
+5da52da327b602c6,best-practice-reviewer,"External best-practice reviewer for the spec workflow. Invoked by spec-conductor during design review and final verification. It researches whether the design's and implementation's technical choices align with current, authoritative external best practices — using MCP documentation servers first (AWS docs/IaC/Strands/AgentCore) and targeted web research as fallback — and flags misalignments, deprecated APIs, and known pitfalls as A/B/C/D findings with citations. Complements the standards-reviewer (which checks the project's own rules). It does not edit specs or code.",,,,,
+5c5b7f05428ced09,context-generator,Generates comprehensive task context files,,,,,
+f28f251ad7cc9cab,patrick-lencioni,When teams are dysfunctional and trust has eroded. When meetings are painful and unproductive. When leaders struggle with accountability or commitment. When organizational health is suffering despite strategic clarity. When hiring for culture fit. When diagnosing why talented teams underperform. When a leader needs to examine their own motives.,,,,,
+7bd97595699d3745,sns-archive-auditor,content/sns 配下の SNS バイナリ（reels の wav/mp4 等）を R2 へ退避する前に、各パックを「ローカル削除して安全か」で分類する Evaluator エージェント。SoT（slide-data.json / script.txt / caption.txt）が無傷で再生成可能か、投稿済み・制作中かを判定し、OFFLOAD / ARCHIVE_KEEP / KEEP_LOCAL / BLOCK の4区分＋根拠＋confidence＋親が実行すべき正確な `npm run upload-sns-r2` コマンドを返す。audit-only（アップロード・削除はしない）。データ消失を構造的に防ぐため「迷ったら KEEP/BLOCK」。Bash 不可で親が dry-run/R2 検証結果を渡す。,,,,,
+f8f67ef83e5f7ba2,Graphic Designer,"Creates visual assets including ads, social graphics, infographics, and presentation designs",,,,,
+3e392be4ad44193d,backend-developer,"Use this agent for work on services, database layer, migrations, Capacitor plugin integration, and business logic in the ERPLibre mobile app. Invoke for database schema changes, new migrations, service methods, or Capacitor API integration.",,,,,
+9b9a14b9df1980da,wiki-onboarding,"Generate two complementary onboarding documents that together give any engineer — from newcomer to principal — a complete understanding of a codebase. Use when user asks for onboarding docs or getting-started guides, user runs /deep-wiki, or user wants to help new team members understand a codebase.",,,,,
+f2ca5e4520cd8b17,repo-audit-framework,"Framework layer analyst for repo-audit. Invoked by the repo-audit skill with a path to a framework layer XML slice. Extracts primary framework, rendering strategy, API style, routing pattern, and key libraries. Returns a JSON layer object. Only invoke when repo-audit skill dispatches this agent.",,,,,
+6fae128b70b56b2a,habit-logic-debugger,"Complex habit tracking algorithm specialist for streak calculations, bonus conversion, completion logic, and edge case debugging. USE PROACTIVELY for streak calculation bugs, bonus conversion issues, and habit completion logic errors.",,,,,
+fa6cab76862b4d67,build-graphql-server,Build a GraphQL server with schema-first design,,,,,
+dfb48dca4e86f17f,doc-unified-generator,"Unified documentation generator with book-like structure capabilities. Consolidates README, Getting Started, API, Architecture, Changelog, Audit, and Module documentation into a single powerful agent with mode-based operation.",,,,,
+1ff0637b5cb16c80,vector-pr-reviewer,"Use this agent when a pull request is opened, updated, or ready for review. This agent performs thorough PR analysis and automatically escalates to deeper scrutiny for high-stakes changes.\n\n<example>\nContext: A developer has just opened a PR that modifies the search ranking algorithm.\nuser: ""Hey, can you review PR #847? It changes how we score search results.""\nassistant: ""I'll launch the Vector PR Reviewer agent to analyze this PR.""\n<commentary>\nThe PR touches core search/scoring logic, which is an escalation trigger. Vector will detect this and apply Opus-level scrutiny automatically.\n</commentary>\n</example>\n\n<example>\nContext: A developer submits a small UI fix PR.\nuser: ""PR …",,,,,
+4a7deb234b41b7ab,kubernetes,"Creates and manages Kubernetes manifests, Kustomize overlays, and Helm charts.",,,,,
+69c4558b80d582f7,docs-sync-auditor,"Verifies canonical documentation is in sync with a code/behavior change - runs scripts/docs_sync_check.sh, checks Status/Last-updated headers, and cross-references the canonical doc priority list (DOCUMENTATION.md, docs/CURRENT_STATE.md, REMAINING_WORK_TRACKING.md, milestone plan, risk register, docs/DOCUMENT_STATUS_INDEX.md). Can apply small doc fixes directly (header fields, broken links, stale status lines). Use after a change lands, before considering a run finalized.",,,,,
+e95c50f49ec63ecf,perf.planner,"Specialist in producing TDD-driven implementation plans from specifications and constitutions. Expert in ordering implementation steps to maximize test-driven development flow: write failing test, implement minimal code, refactor for performance. Generates step-by-step plans with test-to-step mappings, component build order, and expected performance improvements per step. USE FOR: creating TDD implementation plans from specs, ordering implementation steps for test-driven development, mapping tests to implementation phases, generating build orders for performance-first coding, planning incremental implementation with expected performance gains. DO NOT USE FOR: writing the actual specification…",,,,,
+9a83d4dc3c109733,gsc-page-analyst,"Full diagnostic for a single URL combining indexing status, search performance, Core Web Vitals, and query breakdown. Use when asked to analyze a specific page, diagnose why a URL is underperforming, or get a complete page report. Aussi déclenché en français par ""analyse cette page"", ""diagnostic complet de cette URL"", ""pourquoi cette page ne ranke pas"", ""qu'est-ce qui cloche sur cette page"", ""cette page marche pas"", ""audit de cette page"".",,,,,
+23a494f006da5d21,pix-debugging-agent,"Use for autonomous PIX GPU capture analysis, DXR performance debugging, ReSTIR validation, and buffer inspection",,,,,
+477560f4aed6cf1c,specialist-market-analyst,Market Analyst specialist for Agora debate sessions. Invoked sequentially per round by agora-run-debate.,,,,,
+bb9f57288d612fab,code-reviewer,"Review changes for correctness, risk, and maintainability without editing code.",,,,,
+90a29b6e203eac51,epub-chapter-extractor,"Extracts a single chapter from an EPUB book using the ebook-mcp server and saves it to a markdown file. Call once per chapter with the epub path, chapter ID, and output path. Use for batch processing EPUB books chapter by chapter.",,,,,
+f62e0b1f00621cee,excel-pivot-wizard,"Create advanced Excel pivot tables with calculated fields and slicers.
+Use when building data summaries or creating interactive dashboards.
+Trigger with phrases like 'excel pivot', 'create pivot table', 'data summary'.",,,,,
+f1ee2d7a17d08dd7,Physics Reviewer,Review physics correctness of analysis code and results. Read-only — does not execute or edit.,,,,,
+c36bb7c3bd83f871,linux-expert,"Linux systems expert for Pur-New. Covers Ubuntu/Debian/RHEL, systemd service management, bash scripting, filesystem management, SSH, iptables/nftables, cron, package management (apt/yum/dnf), performance tuning, and running Pur-New on Linux servers. Use for Linux server setup, systemd service configuration, bash automation, or deploying Pur-New on Linux.",,,,,
+4d615f79aaafb061,investigator,"Debugging and issue investigation specialist. Use when encountering errors, test failures, unexpected behavior, or when something ""doesn't work"". Focus on root causes.",,,,,
+265fe6cbeaf97641,api-client-generator,"Generate api client generator operations. Auto-activating skill for API Integration.
+Triggers on: api client generator, api client generator
+Part of the API Integration skill category. Use when working with APIs or building integrations. Trigger with phrases like ""api client generator"", ""api generator"", ""api"".",,,,,
+b7e2883ba8a16b18,researcher-bm25-free-haiku,"Use this agent when the user asks a question that requires searching the document corpus. Examples:
+
+- User: ""What are the rules for combat?""
+  Assistant: ""Let me use the researcher agent to look that up in the document corpus.""
+  <Agent tool call to researcher-bm25-free-haiku>
+
+- User: ""How does the magic system work?""
+  Assistant: ""I'll use the researcher agent to find the relevant rules.""
+  <Agent tool call to researcher-bm25-free-haiku>
+
+- User: ""What are the stats of a creature?""
+  Assistant: ""Let me search the documents using the researcher agent.""
+  <Agent tool call to researcher-bm25-free-haiku>",,,,,
+1dbbde753dc481c0,meeting-notes-specialist,"Structured meeting summaries. Use for: Extracting decisions, action items, open questions.",,,,,
+fa5d389b7a99b27d,database-specialist,Database design and optimization specialist,,,,,
+bdd9d6d30b296331,ship-agent,"Feature archival and lessons learned specialist (Phase 4).
+Use PROACTIVELY when build is complete and feature is ready to archive.
+
+Example 1 — Build is complete, ready to archive:
+user: ""Ship the user authentication feature""
+assistant: ""I'll use the ship-agent to archive and capture lessons learned.""
+
+Example 2 — Feature needs to be documented as complete:
+user: ""Archive the completed auth feature""
+assistant: ""Let me invoke the ship-agent to finalize and document.""",,,,,
+80fb4690c9e8d7ab,qa-test-generator,"Generate Playwright E2E test from requirements, code context, and test matrix. Writes ONLY to evidence/ directory.",,,,,
+fe11abe08c76e5e2,curador-de-contexto,"Use this agent at the start of a domain mission (to fetch the product context pack from claude-os) and at the end of any mission that produced durable domain knowledge (to propose an update via MR). The pack lives in the claude-os repo (GitLab) and holds stable product facts — glossary, systems/vendors map, personas, metrics with owners, structural decisions. Returns the relevant context for the mission, or the MR proposal with what changed and why.",,,,,
+f8b1e16adc550d4d,geometry-parser,"Parses and modifies HEC-RAS plain text geometry files (.g##) using ras_commander.geom
+subpackage (9 modules). Handles 1D cross sections, storage areas, lateral structures,
+SA/2D connections, inline weirs, bridges, culverts, and 2D Manning's n land cover tables.
+Use when parsing geometry files, extracting cross section data, modifying station-elevation
+profiles, reading bridge/culvert geometry, updating Manning's roughness values, or working
+with storage area elevation-volume curves. Keywords: geometry file, .g##, cross section,
+XS data, Manning's n, bridge, culvert, inline weir, lateral structure, storage area,
+connection, 2D land cover, parse geometry, modify XS, bank stations, fixed-width …",,,,,
+3da41ccc07239eb2,engine-dev,"Implements the engine internals in src/ — store schema, indexer, chunker, embedder, embedding provider, search. Owns phases 0–1 (provider interface, thread ceiling, dropping scope columns, per-batch commit, batch slicing). Delegate here for anything touching how .md becomes vectors in SQLite.",,,,,
+aaf99ffbf7a66ad8,repo-docs-guardian,"Use this agent when documentation, data dictionaries, or schema definitions in the repository need to be reviewed, updated, or validated for consistency. This includes after schema changes, after adding new data fields, or when ensuring the data dictionary accurately reflects the current JSON schema.\n\nExamples:\n\n- user: ""I just added a new field to the wave schema, can you make sure everything is consistent?""\n  assistant: ""Let me use the repo-docs-guardian agent to check that the data dictionary and all documentation reflect the schema change.""\n\n- user: ""Review the docs in this repo""\n  assistant: ""I'll launch the repo-docs-guardian agent to audit the documentation and data dictionary…",,,,,
+835c21192b47af47,tester,Agente de testes que cria e executa testes Pest. Use para garantir cobertura de testes antes de finalizar uma feature.,,,,,
+0add379d8408abd3,tracking-token-launches,"Track new token launches across DEXes with risk analysis and contract verification.
+Use when discovering new token launches, monitoring IDOs, or analyzing token contracts.
+Trigger with phrases like ""track launches"", ""find new tokens"", ""new pairs on uniswap"",
+""token risk analysis"", or ""monitor IDOs"".",,,,,
+67d19cd8e35d1812,reviewer,"Use this agent to review code changes across web or backend for correctness, security, and convention adherence before committing or opening a PR. Returns findings grouped by severity.",,,,,
+f82b15d73ac20741,worker-agent,범용 작업 수행 에이전트. Skill에서 위임받은 작업을 실행합니다.,,,,,
+ecb82fac1ca13077,invoices-ksef-agent,"Use for invoices, numbering, settlement state and KSeF path.",,,,,
