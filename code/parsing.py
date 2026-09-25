@@ -141,7 +141,7 @@ def parse_specification(repo: str, path: str, raw: str) -> dict:
         return rec
 
     for key in ("name", "description", "model", "permissionMode", "maxTurns",
-                "memory", "background", "isolation", "color", "effort"):
+                "memory", "background", "isolation", "color", "effort", "initialPrompt"):
         if key in fm:
             rec[key] = fm[key]
     rec["tools_raw"] = fm.get("tools")
@@ -152,6 +152,26 @@ def parse_specification(repo: str, path: str, raw: str) -> dict:
     rec["has_hooks"] = bool(fm.get("hooks"))
     rec["fm_keys"] = sorted(str(k) for k in fm.keys())
     return rec
+
+
+def split_frontmatter(raw: str) -> tuple[str | None, str]:
+    """Return (frontmatter text or None, body). The body is what the tool uses as the system prompt."""
+    m = FRONTMATTER.match(raw)
+    if not m:
+        return None, raw
+    return m.group(1), raw[m.end():]
+
+
+def locate(path: str) -> dict:
+    """Where a file sits relative to its ``.claude/agents`` directory.
+
+    ``config_root`` is the directory holding ``.claude/`` ("" for the repository root). Claude Code loads
+    project agents from the ``.claude/agents`` directory of the directory it is started in, so two files
+    with the same name under *different* roots never compete; under the same root they do.
+    """
+    root, _, rel = path.rpartition(".claude/agents/")
+    return {"config_root": root.rstrip("/"), "rel_path": rel, "nested": "/" in rel,
+            "root_is_repo_root": root == ""}
 
 
 def is_specification(rec: dict) -> bool:

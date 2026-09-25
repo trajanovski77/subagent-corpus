@@ -43,7 +43,7 @@ import parsing  # noqa: E402
 DEFAULT_VOCAB = Path(__file__).resolve().parent.parent / "data" / "tool_vocab.json"
 NEAR_MISS = parsing.NEAR_MISS_FIELDS | {"tool"}
 MODEL_OK = re.compile(r"^(opus|sonnet|haiku|fable|inherit|claude-)", re.I)
-SHELLS = {"Bash", "PowerShell"}
+SHELLS = {"Bash", "PowerShell", "Monitor"}
 
 
 def lint_dir(root: Path, vocabulary: set[str]) -> list[tuple[str, str, str, str]]:
