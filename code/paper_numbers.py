@@ -569,11 +569,10 @@ def main() -> None:
     rl = V2 / "labels" / "roles" / "items.jsonl"
     if rl.exists():
         m["nRoleItems"] = num(sum(1 for _ in open(rl)))
-    sheet = ROOT / "annotation" / "human_roles" / "sheet_annotator_A.csv"
-    if sheet.exists():   # the blank two-annotator kit fixes the human validation sample size.
-        import csv       # descriptions contain newlines, so count parsed rows, not lines
-        with sheet.open(newline="") as fh:
-            m["nHumanSample"] = num(sum(1 for _ in csv.DictReader(fh)))
+    kit_meta = ROOT / "annotation" / "human_v2" / "sample_meta.json"
+    if kit_meta.exists():   # the human validation kit fixes the sample size (all four parts)
+        km = json.loads(kit_meta.read_text())
+        m["nHumanSample"] = num(sum(sum(km[p]["quota"].values()) for p in ("R", "S", "B", "P") if p in km))
     rel = V2 / "labels" / "roles" / "agreement.json"
     if rel.exists():
         a = json.loads(rel.read_text())

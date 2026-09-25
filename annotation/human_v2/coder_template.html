@@ -28,7 +28,8 @@ header h1{font-size:15px;margin:0;font-weight:650}
 #prog{flex:1;min-width:180px;display:flex;align-items:center;gap:10px}
 #bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
 #barfill{height:100%;width:0;background:var(--accent);transition:width .15s}
-#progtxt{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+#progtxt{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap;font-size:12.5px;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+#bar{min-width:40px}
 #saved{font-size:12px;color:var(--muted);min-width:70px}
 main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 380px;min-height:0}
 #left{display:flex;flex-direction:column;min-height:0;padding:14px 16px;gap:10px;overflow:auto}
@@ -71,6 +72,9 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
 .hidden{display:none!important}
 #toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:6px 12px;border-radius:6px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20}
 #toast.show{opacity:.92}
+.rmeta{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px;font-size:12.5px;margin-top:6px}
+.rmeta dt{color:var(--muted)}.rmeta dd{margin:0;word-break:break-word}
+
 @media (max-width:900px){html,body{height:auto}main{display:block}#left{overflow:visible}#spec{flex:none;height:65vh}#right{border-left:0;border-top:1px solid var(--line)}}
 </style>
 </head>
@@ -92,10 +96,15 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
 </main>
 
 <div id="start" class="overlay show">
-  <div class="dialog" style="max-width:560px">
+  <div class="dialog" style="max-width:600px">
     <h2 style="margin-top:0">Human validation, v2</h2>
-    <p>Code every item <b>independently</b>, from the text only, following the codebook. Do not discuss items with the other coder until both files are exported.</p>
-    <p>Part R: 200 short (name, description) pairs: role, mode, read-only claim. Part S: 80 whole specifications: does the prose restrict the agent's own writes?</p>
+    <p>Code every item <b>independently</b>, from the text only, following the codebook. Do not discuss items with the other coder, and do not use AI tools, until both files are exported.</p>
+    <ul>
+      <li><b>Part R</b>, 200 short (name, description) pairs: role, mode, read-only claim. About 30&ndash;40 min.</li>
+      <li><b>Part S</b>, 80 whole specifications: does the prose restrict the agent's own writes? About 40&ndash;60 min.</li>
+      <li><b>Part B</b>, 60 whole specifications: what does the text ask the agent to use a shell for? About 35&ndash;50 min.</li>
+      <li><b>Part P</b>, 60 repositories (metadata and README): what is the repository primarily? About 35&ndash;50 min.</li>
+    </ul>
     <p>Your work is saved in this browser as you go. Use <b>Export</b> at the end (and whenever you pause) to download <code>human_&lt;initials&gt;.json</code>.</p>
     <p><label>Your initials <input id="initials" maxlength="6" autocomplete="off" spellcheck="false"></label>
       <button id="btnStart" class="primary">Start / resume</button></p>
@@ -105,7 +114,7 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
 </div>
 
 <div id="help" class="overlay">
-  <div class="dialog" style="max-width:640px">
+  <div class="dialog" style="max-width:660px">
     <h2 style="margin-top:0">Keyboard</h2>
     <p><b>Part R.</b> Each item has three steps; the active step is outlined. Press a role letter (listed on the right), then the mode, then the read-only claim; the next item opens automatically.</p>
     <ul>
@@ -114,13 +123,16 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
       <li>Read-only claim: <kbd>y</kbd> yes, <kbd>n</kbd> no</li>
       <li><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> jump to the role / mode / read-only step to correct it</li>
     </ul>
-    <p><b>Part S.</b> <kbd>f</kbd> full, <kbd>p</kbd> partial, <kbd>n</kbd> none, then <kbd>Enter</kbd> for the next specification.</p>
+    <p><b>Part S.</b> <kbd>f</kbd> full, <kbd>p</kbd> partial, <kbd>n</kbd> none, then <kbd>Enter</kbd>.</p>
+    <p><b>Part B.</b> <kbd>c</kbd> change, <kbd>v</kbd> verify, <kbd>i</kbd> inspect, <kbd>n</kbd> none, then <kbd>Enter</kbd>.</p>
+    <p><b>Parts S and B.</b></p>
     <ul>
       <li>Select text in the specification and press <kbd>e</kbd> to copy it into the evidence box (optional); <kbd>/</kbd> focuses the box, <kbd>Esc</kbd> leaves it</li>
-      <li><kbd>Space</kbd> / <kbd>Shift</kbd>+<kbd>Space</kbd> page down / up in the specification, <kbd>j</kbd> / <kbd>k</kbd> scroll a little</li>
-      <li><kbd>h</kbd> toggles the highlighting of restriction cue words (never, do not, read-only, only, ...). Highlighting is a reading aid only: a highlighted word is not by itself a restriction.</li>
+      <li><kbd>Space</kbd> / <kbd>Shift</kbd>+<kbd>Space</kbd> page down / up, <kbd>j</kbd> / <kbd>k</kbd> scroll a little</li>
+      <li><kbd>h</kbd> toggles highlighting of cue words (restriction words in S, command words in B). Highlighting is a reading aid only: a highlighted word does not decide the label.</li>
     </ul>
-    <p><b>Both parts.</b> <kbd>&larr;</kbd> previous item, <kbd>&rarr;</kbd> or <kbd>Enter</kbd> next item, <kbd>?</kbd> flag the item as unsure (you still give your best label), <kbd>Esc</kbd> closes this window.</p>
+    <p><b>Part P.</b> <kbd>e</kbd> ENGINEERED, <kbd>t</kbd> TEMPLATE_COLLECTION, <kbd>l</kbd> TUTORIAL_LEARNING, <kbd>p</kbd> PERSONAL_CONFIG, <kbd>d</kbd> DEMO_EXPERIMENT, <kbd>s</kbd> NON_SOFTWARE, <kbd>u</kbd> UNCLEAR, then <kbd>Enter</kbd>. <kbd>Space</kbd> pages through the README.</p>
+    <p><b>Everywhere.</b> <kbd>&larr;</kbd> previous item, <kbd>&rarr;</kbd> or <kbd>Enter</kbd> next item, <kbd>?</kbd> flag the item as unsure (you still give your best label), <kbd>Esc</kbd> closes this window.</p>
     <p><button id="btnHelpClose" class="primary">Close</button></p>
   </div>
 </div>
@@ -138,15 +150,31 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
 (function () {
   "use strict";
   var KIT = JSON.parse(document.getElementById("kitdata").textContent);
-  var R = KIT.R, S = KIT.S, NR = R.length, NS = S.length, N = NR + NS;
   var ROLES = KIT.roles;
   var ROLE_BY_KEY = {};
   ROLES.forEach(function (r) { ROLE_BY_KEY[r.key] = r.code; });
   var MODES = [["inspect", "i"], ["change", "c"], ["mixed", "m"], ["unclear", "u"]];
   var MODE_BY_KEY = { i: "inspect", c: "change", m: "mixed", u: "unclear" };
-  var RESTR = [["full", "f"], ["partial", "p"], ["none", "n"]];
-  var RESTR_BY_KEY = { f: "full", p: "partial", n: "none" };
-  var CUES = /\b(read[- ]?only|never|do not|don['’]t|must not|mustn['’]t|should not|shouldn['’]t|cannot|can['’]t|may not|not allowed|forbidden|prohibited|avoid|only|without (?:modifying|changing|editing|writing|touching)|ask (?:before|first|for permission)|no (?:changes|edits|modifications|writes|code changes))\b/gi;
+  var CUES_S = /\b(read[- ]?only|never|do not|don['\u2019]t|must not|mustn['\u2019]t|should not|shouldn['\u2019]t|cannot|can['\u2019]t|may not|not allowed|forbidden|prohibited|avoid|only|without (?:modifying|changing|editing|writing|touching)|ask (?:before|first|for permission)|no (?:changes|edits|modifications|writes|code changes))\b/gi;
+  var CUES_B = /\b(run|runs|running|execute|executes|bash|shell|terminal|command|commands|script|scripts|npm|npx|pnpm|yarn|pip|pytest|cargo|make|git|gh|docker|kubectl|build|install|commit|deploy|lint|tsc)\b/gi;
+
+  // The four parts, in coding order. "spec" and "repo" parts take one label from opts.
+  var PARTS = [
+    { k: "R", type: "role", items: KIT.R, title: "Codebook R", ver: KIT.codebook_R_version, cb: KIT.codebook_R_html },
+    { k: "S", type: "spec", items: KIT.S, field: "restriction", evidence: true, cues: CUES_S,
+      q: "Does the prose restrict the agent's own writes?",
+      opts: [["full", "f"], ["partial", "p"], ["none", "n"]], title: "Codebook S", ver: KIT.codebook_S_version, cb: KIT.codebook_S_html },
+    { k: "B", type: "spec", items: KIT.B, field: "shell_use", evidence: true, cues: CUES_B,
+      q: "The most state-changing shell use the text asks for or clearly implies (change > verify > inspect > none)",
+      opts: [["change", "c"], ["verify", "v"], ["inspect", "i"], ["none", "n"]], title: "Codebook B", ver: KIT.codebook_B_version, cb: KIT.codebook_B_html },
+    { k: "P", type: "repo", items: KIT.P, field: "category", evidence: false,
+      q: "What is this repository primarily?",
+      opts: [["ENGINEERED", "e"], ["TEMPLATE_COLLECTION", "t"], ["TUTORIAL_LEARNING", "l"], ["PERSONAL_CONFIG", "p"],
+             ["DEMO_EXPERIMENT", "d"], ["NON_SOFTWARE", "s"], ["UNCLEAR", "u"]], title: "Codebook P", ver: KIT.codebook_P_version, cb: KIT.codebook_P_html }
+  ];
+  var N = 0;
+  PARTS.forEach(function (P) { P.start = N; P.n = P.items.length; N += P.n;
+    P.byKey = {}; (P.opts || []).forEach(function (o) { P.byKey[o[1]] = o[0]; }); });
 
   var st = null;          // state
   var phase = "role";     // R phase: role | mode | ro
@@ -166,31 +194,31 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
     catch (e) { return null; }
   }
   function fresh(initials) {
-    return { kit: KIT.kit, sample_digest: KIT.sample_digest, initials: initials, started: new Date().toISOString(),
-      pos: 0, R: {}, S: {} };
+    var s = { kit: KIT.kit, sample_digest: KIT.sample_digest, initials: initials, started: new Date().toISOString(), pos: 0 };
+    PARTS.forEach(function (P) { s[P.k] = {}; });
+    return s;
   }
   function toast(msg) { var t = $("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove("show"); }, 1600); }
 
   // ------------------------------------------------------------ helpers
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function isR(p) { return p < NR; }
-  function item(p) { return isR(p) ? R[p] : S[p - NR]; }
+  function partOf(p) { for (var i = PARTS.length - 1; i >= 0; i--) if (p >= PARTS[i].start) return PARTS[i]; return PARTS[0]; }
+  function isR(p) { return partOf(p).k === "R"; }
+  function item(p) { var P = partOf(p); return P.items[p - P.start]; }
   function rec(p) {
-    var part = isR(p) ? st.R : st.S, id = item(p).id;
+    var P = partOf(p), part = st[P.k], id = item(p).id;
     if (!part[id]) part[id] = { t_first: null, t_last: null, ms: 0, unsure: false };
     return part[id];
   }
-  function peek(p) { var part = isR(p) ? st.R : st.S; return part[item(p).id]; }
+  function peek(p) { return st[partOf(p).k][item(p).id]; }
   function doneR(r) { return !!r && r.role != null && r.mode != null && r.readonly_claim != null; }
-  function doneS(r) { return !!r && r.restriction != null; }
-  function done(p) { return isR(p) ? doneR(peek(p)) : doneS(peek(p)); }
+  function doneIn(P, r) { return P.k === "R" ? doneR(r) : (!!r && r[P.field] != null); }
+  function done(p) { return doneIn(partOf(p), peek(p)); }
   function counts() {
-    var a = 0, b = 0, i;
-    for (i = 0; i < NR; i++) if (doneR(st.R[R[i].id])) a++;
-    for (i = 0; i < NS; i++) if (doneS(st.S[S[i].id])) b++;
-    return [a, b];
+    return PARTS.map(function (P) { var c = 0; P.items.forEach(function (x) { if (doneIn(P, st[P.k][x.id])) c++; }); return c; });
   }
   function touch(r) { var now = new Date().toISOString(); if (!r.t_first) r.t_first = now; r.t_last = now; }
+  function touchLight(r) { r.t_last = new Date().toISOString(); }
   function firstMissingPhase(r) { if (!r || r.role == null) return "role"; if (r.mode == null) return "mode"; if (r.readonly_claim == null) return "ro"; return "role"; }
 
   function accumulate() {
@@ -203,9 +231,9 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
 
   // ------------------------------------------------------------ rendering
   function renderProgress() {
-    var c = counts();
-    $("barfill").style.width = (100 * (c[0] + c[1]) / N).toFixed(1) + "%";
-    $("progtxt").textContent = "item " + (st.pos + 1) + " / " + N + "  ·  R " + c[0] + "/" + NR + "  ·  S " + c[1] + "/" + NS;
+    var c = counts(), tot = c.reduce(function (a, b) { return a + b; }, 0);
+    $("barfill").style.width = (100 * tot / N).toFixed(1) + "%";
+    $("progtxt").textContent = "item " + (st.pos + 1) + " / " + N + PARTS.map(function (P, i) { return "  \u00b7  " + P.k + " " + c[i] + "/" + P.n; }).join("");
   }
 
   function optButtons(list, cur, field) {
@@ -213,13 +241,15 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
       return '<button class="opt' + (cur === o[0] ? " on" : "") + '" data-f="' + field + '" data-v="' + o[0] + '"><kbd>' + o[1] + "</kbd>" + o[0] + "</button>";
     }).join("");
   }
+  function metaLine(P, it, r, extra) {
+    return '<div class="meta"><span class="pill">Part ' + P.k + " \u00b7 " + (st.pos - P.start + 1) + " of " + P.n + '</span><span class="pill' + (doneIn(P, r) ? " done" : "") + '">' + (doneIn(P, r) ? "coded" : "not coded") + "</span>" +
+      (r.unsure ? '<span class="pill warn">unsure</span>' : "") + "<span>id " + esc(it.id) + "</span>" + (extra || "") + "</div>";
+  }
 
   function renderR() {
-    var it = item(st.pos), r = peek(st.pos) || {};
-    var roleName = r.role ? r.role : "—";
-    $("left").innerHTML =
-      '<div class="meta"><span class="pill">Part R · ' + (st.pos + 1) + " of " + NR + '</span><span class="pill' + (doneR(r) ? " done" : "") + '">' + (doneR(r) ? "coded" : "not coded") + "</span>" +
-      (r.unsure ? '<span class="pill warn">unsure</span>' : "") + '<span>id ' + esc(it.id) + "</span></div>" +
+    var P = partOf(st.pos), it = item(st.pos), r = peek(st.pos) || {};
+    var roleName = r.role ? r.role : "\u2014";
+    $("left").innerHTML = metaLine(P, it, r) +
       '<div class="card"><div class="name">' + esc(it.name || "(no name)") + '</div><div class="desc">' + (it.description ? esc(it.description) : '<i style="color:var(--muted)">(no description)</i>') + "</div></div>" +
       '<div class="fields">' +
       '<div class="field' + (phase === "role" ? " active" : "") + '" data-phase="role"><h3><kbd>1</kbd> Role <span style="text-transform:none;letter-spacing:0;color:var(--ink);font-weight:600">' + esc(roleName) + "</span> <span style=\"text-transform:none;letter-spacing:0\">(letters in the side panel)</span></h3></div>" +
@@ -235,33 +265,46 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
       '<h2 style="margin-top:14px">Read-only claim</h2><p style="font-size:12.5px;margin:0"><b>yes</b> only if the name or description explicitly says the agent is read-only, must not / does not modify, edit or write files, or makes no changes.</p>';
   }
 
-  function specHtml(text) {
+  function textHtml(text, cues) {
     var out = esc(text);
-    if (highlight) out = out.replace(CUES, "<mark>$1</mark>");
+    if (highlight && cues) out = out.replace(cues, "<mark>$1</mark>");
     return out;
   }
+  function choiceField(P, r) {
+    return '<div class="field active"><h3>' + esc(P.q) + '</h3><div class="opts">' + optButtons(P.opts, r[P.field], P.field) + "</div>" +
+      (P.evidence ? '<div style="margin-top:8px"><textarea id="evidence" placeholder="Optional evidence: shortest verbatim quote (select text above and press e, or / to type)">' + esc(r.evidence || "") + "</textarea></div>" : "") + "</div>";
+  }
+  function sidePanel(P) { $("right").innerHTML = "<h2>" + P.title + " (v" + esc(P.ver) + ")</h2>" + P.cb; }
 
-  function renderS() {
-    var k = st.pos - NR, it = item(st.pos), r = peek(st.pos) || {};
-    $("left").innerHTML =
-      '<div class="meta"><span class="pill">Part S · ' + (k + 1) + " of " + NS + '</span><span class="pill' + (doneS(r) ? " done" : "") + '">' + (doneS(r) ? "coded" : "not coded") + "</span>" +
-      (r.unsure ? '<span class="pill warn">unsure</span>' : "") + "<span>id " + esc(it.id) + "</span><span>" + it.text.length.toLocaleString() + " chars</span>" +
-      '<span><kbd>h</kbd> highlight ' + (highlight ? "on" : "off") + "</span></div>" +
-      '<pre id="spec" tabindex="0">' + specHtml(it.text) + "</pre>" +
-      '<div class="field active"><h3>Does the prose restrict the agent\'s own writes?</h3><div class="opts">' + optButtons(RESTR, r.restriction, "restriction") + "</div>" +
-      '<div style="margin-top:8px"><textarea id="evidence" placeholder="Optional evidence: shortest verbatim quote (select text above and press e, or / to type)">' + esc(r.evidence || "") + "</textarea></div></div>" +
-      '<div class="keys"><span><kbd>f</kbd><kbd>p</kbd><kbd>n</kbd> label</span><span><kbd>Enter</kbd> / <kbd>&rarr;</kbd> next</span><span><kbd>&larr;</kbd> back</span><span><kbd>Space</kbd> page</span><span><kbd>e</kbd> selection &rarr; evidence</span><span><kbd>?</kbd> unsure</span></div>';
-    $("right").innerHTML = "<h2>Codebook S (v" + esc(KIT.codebook_S_version) + ")</h2>" + KIT.codebook_S_html;
+  function renderSpec() {
+    var P = partOf(st.pos), it = item(st.pos), r = peek(st.pos) || {};
+    $("left").innerHTML = metaLine(P, it, r, "<span>" + it.text.length.toLocaleString() + " chars</span><span><kbd>h</kbd> highlight " + (highlight ? "on" : "off") + "</span>") +
+      '<pre id="spec" tabindex="0">' + textHtml(it.text, P.cues) + "</pre>" + choiceField(P, r) +
+      '<div class="keys"><span>' + P.opts.map(function (o) { return "<kbd>" + o[1] + "</kbd>"; }).join("") + ' label</span><span><kbd>Enter</kbd> / <kbd>&rarr;</kbd> next</span><span><kbd>&larr;</kbd> back</span><span><kbd>Space</kbd> page</span><span><kbd>e</kbd> selection &rarr; evidence</span><span><kbd>?</kbd> unsure</span></div>';
+    sidePanel(P);
     $("evidence").addEventListener("input", function (e) { var rr = rec(st.pos); rr.evidence = e.target.value; touchLight(rr); saveSoon(); });
   }
-  function touchLight(r) { r.t_last = new Date().toISOString(); }
+
+  function renderRepo() {
+    var P = partOf(st.pos), it = item(st.pos), r = peek(st.pos) || {};
+    var list = function (v) { return v && v.length ? esc(v.join(", ")) : '<i style="color:var(--muted)">none</i>'; };
+    var dl = [["Description", it.description ? esc(it.description) : '<i style="color:var(--muted)">none</i>'], ["Topics", list(it.topics)],
+      ["Languages", list(it.languages)], ["Commits before snapshot", esc(it.commits_to_snapshot)], ["Contributors", esc(it.contributors)],
+      ["Created", esc(String(it.created || "").slice(0, 10))], ["Stars", esc(it.stars)], ["Template repository", it.is_template ? "yes" : "no"]];
+    $("left").innerHTML = metaLine(P, it, r) +
+      '<div class="card"><div class="name">' + esc(it.repo) + '</div><dl class="rmeta">' + dl.map(function (d) { return "<dt>" + d[0] + "</dt><dd>" + d[1] + "</dd>"; }).join("") + "</dl></div>" +
+      '<pre id="spec" tabindex="0">' + (it.readme ? esc(it.readme) : "(no README)") + "</pre>" + choiceField(P, r) +
+      '<div class="keys"><span>' + P.opts.map(function (o) { return "<kbd>" + o[1] + "</kbd>"; }).join("") + ' label</span><span><kbd>Enter</kbd> / <kbd>&rarr;</kbd> next</span><span><kbd>&larr;</kbd> back</span><span><kbd>Space</kbd> page</span><span><kbd>?</kbd> unsure</span></div>';
+    sidePanel(P);
+  }
   var saveTimer = null;
   function saveSoon() { clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
 
   var lastPos = -1;
   function render() {
     var old = $("spec"), top = (old && lastPos === st.pos) ? old.scrollTop : 0;
-    if (isR(st.pos)) renderR(); else renderS();
+    var t = partOf(st.pos).type;
+    if (t === "role") renderR(); else if (t === "spec") renderSpec(); else renderRepo();
     renderProgress();
     var sp = $("spec"); if (sp) sp.scrollTop = top;
     lastPos = st.pos;
@@ -271,17 +314,19 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
   function go(p) {
     if (p < 0 || p >= N) { if (p >= N) toast("Last item. Export when you are done."); return; }
     accumulate();
+    var from = partOf(st.pos).k;
     st.pos = p;
     phase = isR(p) ? firstMissingPhase(peek(p)) : "role";
     save();
     render();
+    if (partOf(p).k !== from && p > 0) toast("Part " + partOf(p).k + ": " + partOf(p).title + " is in the side panel");
   }
   function setField(field, value) {
     var r = rec(st.pos);
     if (field === "role") { r.role = value; phase = r.mode == null ? "mode" : (r.readonly_claim == null ? "ro" : "mode"); }
     else if (field === "mode") { r.mode = value; phase = "ro"; }
     else if (field === "ro") { r.readonly_claim = value; }
-    else if (field === "restriction") { r.restriction = value; }
+    else { r[field] = value; }
     touch(r);
     save();
     if (field === "ro" && doneR(r)) { go(st.pos + 1); return; }
@@ -294,20 +339,29 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
     accumulate(); save();
     var c = counts();
     var out = {
-      kit: KIT.kit, sample_digest: KIT.sample_digest, codebook_R_version: KIT.codebook_R_version, codebook_S_version: KIT.codebook_S_version,
+      kit: KIT.kit, sample_digest: KIT.sample_digest,
       initials: st.initials, started: st.started, exported: new Date().toISOString(),
-      n_coded: { R: c[0], S: c[1] }, n_items: { R: NR, S: NS },
-      order: { R: R.map(function (x) { return x.id; }), S: S.map(function (x) { return x.id; }) },
-      labels: { R: {}, S: {} }
+      n_coded: {}, n_items: {}, order: {}, labels: {}
     };
-    R.forEach(function (x) { var r = st.R[x.id]; if (r) out.labels.R[x.id] = { role: r.role == null ? null : r.role, mode: r.mode == null ? null : r.mode, readonly_claim: r.readonly_claim == null ? null : r.readonly_claim, unsure: !!r.unsure, t_first: r.t_first, t_last: r.t_last, ms: Math.round(r.ms || 0) }; });
-    S.forEach(function (x) { var r = st.S[x.id]; if (r) out.labels.S[x.id] = { restriction: r.restriction == null ? null : r.restriction, evidence: r.evidence || "", unsure: !!r.unsure, t_first: r.t_first, t_last: r.t_last, ms: Math.round(r.ms || 0) }; });
+    PARTS.forEach(function (P, i) {
+      out["codebook_" + P.k + "_version"] = P.ver;
+      out.n_coded[P.k] = c[i]; out.n_items[P.k] = P.n;
+      out.order[P.k] = P.items.map(function (x) { return x.id; });
+      out.labels[P.k] = {};
+      P.items.forEach(function (x) {
+        var r = st[P.k][x.id]; if (!r) return;
+        var o = { unsure: !!r.unsure, t_first: r.t_first, t_last: r.t_last, ms: Math.round(r.ms || 0) };
+        if (P.k === "R") { o.role = r.role == null ? null : r.role; o.mode = r.mode == null ? null : r.mode; o.readonly_claim = r.readonly_claim == null ? null : r.readonly_claim; }
+        else { o[P.field] = r[P.field] == null ? null : r[P.field]; if (P.evidence) o.evidence = r.evidence || ""; }
+        out.labels[P.k][x.id] = o;
+      });
+    });
     return out;
   }
   function download() {
     if (!st) return;
     var out = exportData();
-    var missing = (NR - out.n_coded.R) + (NS - out.n_coded.S);
+    var missing = N - PARTS.reduce(function (a, P) { return a + out.n_coded[P.k]; }, 0);
     if (missing > 0 && !confirm(missing + " items are not coded yet. Export a partial file anyway? (You can export again later.)")) return;
     var blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
     var a = document.createElement("a");
@@ -325,8 +379,7 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
         if (d.sample_digest !== KIT.sample_digest) { alert("This file belongs to a different sample (" + d.sample_digest + ")."); return; }
         if (st && st.initials !== d.initials && !confirm("File is for " + d.initials + ", you are " + st.initials + ". Load it as " + d.initials + "?")) return;
         st = fresh(d.initials); st.started = d.started || st.started;
-        Object.keys(d.labels.R || {}).forEach(function (id) { st.R[id] = d.labels.R[id]; });
-        Object.keys(d.labels.S || {}).forEach(function (id) { st.S[id] = d.labels.S[id]; });
+        PARTS.forEach(function (P) { var L = (d.labels || {})[P.k] || {}; Object.keys(L).forEach(function (id) { st[P.k][id] = L[id]; }); });
         begin(true);
         var p = firstUncoded(); go(p < 0 ? 0 : p);
         toast("Loaded " + d.initials);
@@ -348,6 +401,7 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
     var ini = ($("initials").value || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
     if (!ini) { $("startmsg").textContent = "Please type your initials (letters or digits)."; return; }
     st = load(ini) || fresh(ini);
+    PARTS.forEach(function (P) { if (!st[P.k]) st[P.k] = {}; });
     begin(false);
     if (st.pos > 0) toast("Resumed at item " + (st.pos + 1));
   }
@@ -366,7 +420,7 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
   $("btnCbClose").addEventListener("click", function () { $("codebook").classList.remove("show"); });
   $("btnUncoded").addEventListener("click", function () { if (!st) return; var p = firstUncoded(); if (p < 0) toast("Everything is coded. Export!"); else go(p); });
   function openCodebook() {
-    $("cbbody").innerHTML = "<h2>Codebook R (v" + esc(KIT.codebook_R_version) + ")</h2>" + KIT.codebook_R_html + "<hr><h2>Codebook S (v" + esc(KIT.codebook_S_version) + ")</h2>" + KIT.codebook_S_html;
+    $("cbbody").innerHTML = PARTS.map(function (P) { return "<h2>" + P.title + " (v" + esc(P.ver) + ")</h2>" + P.cb; }).join("<hr>");
     $("codebook").classList.add("show");
   }
   document.addEventListener("click", function (e) {
@@ -396,13 +450,12 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
     var tag = document.activeElement && document.activeElement.tagName;
     if (tag === "TEXTAREA" || tag === "INPUT") return;
     if ($("help").classList.contains("show") || $("codebook").classList.contains("show")) return;
-    var k = e.key;
+    var k = e.key, lk = k.toLowerCase(), P = partOf(st.pos);
     var used = true;
     if (k === "ArrowLeft" || k === "Backspace") go(st.pos - 1);
     else if (k === "ArrowRight" || k === "Enter") go(st.pos + 1);
     else if (k === "?") toggleUnsure();
-    else if (isR(st.pos)) {
-      var lk = k.toLowerCase();
+    else if (P.type === "role") {
       if (k === "1") { phase = "role"; render(); }
       else if (k === "2") { phase = "mode"; render(); }
       else if (k === "3") { phase = "ro"; render(); }
@@ -411,14 +464,14 @@ textarea{width:100%;font:12px var(--mono);color:var(--ink);background:var(--bg);
       else if (phase === "ro" && (lk === "y" || lk === "n")) setField("ro", lk === "y");
       else used = false;
     } else {
-      var sp = $("spec"), lk2 = k.toLowerCase();
-      if (RESTR_BY_KEY[lk2]) setField("restriction", RESTR_BY_KEY[lk2]);
+      var sp = $("spec");
+      if (P.byKey[lk]) setField(P.field, P.byKey[lk]);
       else if (k === " ") sp.scrollBy(0, (e.shiftKey ? -1 : 1) * sp.clientHeight * 0.85);
-      else if (lk2 === "j") sp.scrollBy(0, 80);
-      else if (lk2 === "k") sp.scrollBy(0, -80);
-      else if (lk2 === "h") { highlight = !highlight; render(); }
-      else if (k === "/") $("evidence").focus();
-      else if (lk2 === "e") {
+      else if (lk === "j") sp.scrollBy(0, 80);
+      else if (lk === "k") sp.scrollBy(0, -80);
+      else if (P.type === "spec" && lk === "h") { highlight = !highlight; render(); }
+      else if (P.evidence && k === "/") $("evidence").focus();
+      else if (P.evidence && lk === "e") {
         var sel = String(window.getSelection() || "").trim().replace(/\s+/g, " ");
         if (!sel) toast("Select text in the specification first");
         else { var r = rec(st.pos); r.evidence = sel.slice(0, 400); touchLight(r); save(); render(); toast("Evidence copied"); }

@@ -1,6 +1,6 @@
 {
   "seed": 20260923,
-  "sample_digest": "ce79c86ed1c7",
+  "sample_digest": "431f5f635aae",
   "R": {
     "pool": "roles reliability sample with both Haiku and Sonnet labels",
     "pool_size": 1490,
@@ -33,5 +33,47 @@
     },
     "stratum_field": "haiku.restriction",
     "seed": 20260924
+  },
+  "B": {
+    "pool": "codebook-B specifications (one per E2 repository with a dominated withholding)",
+    "pool_size": 749,
+    "pool_by_stratum": {
+      "verify": 201,
+      "inspect": 240,
+      "change": 81,
+      "none": 227
+    },
+    "quota": {
+      "change": 15,
+      "verify": 15,
+      "inspect": 15,
+      "none": 15
+    },
+    "stratum_field": "haiku.shell_use",
+    "seed": 20260925
+  },
+  "P": {
+    "pool": "E1 repositories with a README batch item",
+    "pool_size": 1839,
+    "pool_by_stratum": {
+      "ENGINEERED": 1497,
+      "TEMPLATE_COLLECTION": 116,
+      "NON_SOFTWARE": 34,
+      "TUTORIAL_LEARNING": 22,
+      "UNCLEAR": 82,
+      "DEMO_EXPERIMENT": 31,
+      "PERSONAL_CONFIG": 57
+    },
+    "quota": {
+      "ENGINEERED": 30,
+      "TEMPLATE_COLLECTION": 8,
+      "UNCLEAR": 6,
+      "PERSONAL_CONFIG": 5,
+      "NON_SOFTWARE": 4,
+      "DEMO_EXPERIMENT": 4,
+      "TUTORIAL_LEARNING": 3
+    },
+    "stratum_field": "haiku.category",
+    "seed": 20260926
   }
 }

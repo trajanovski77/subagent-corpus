@@ -73,8 +73,8 @@ resolves on Windows but not here.
 
 ## Curation: which repositories count
 
-Mining public GitHub without a screen measures personal scratch repositories. We apply a
-**pre-registered** engineered-project filter (`annotation/engineered_filter_protocol.md`,
+Mining public GitHub without a screen measures personal scratch repositories. We apply an
+engineered-project filter, **fixed in a written protocol before any outcome was joined** (`annotation/engineered_filter_protocol.md`,
 `code/curation.py`) in two stages: a metadata screen (not a fork/archive/template/mirror; at least 50
 commits; at least 3 active months; a commit within six months of the snapshot; at least 10 kB of
 source) and a README classification against a published codebook. Every headline quantity is reported
@@ -90,8 +90,9 @@ annotated by language models
 against published codebooks (`annotation/codebook_*.md`), one item at a time, with the model seeing
 only the codebook and the item. Batches, validation, merging, agreement and the human kit are all in
 `code/llm_labels.py`. A bulk rater labels everything; a second model re-labels a stratified
-reliability sample; Krippendorff's α is reported per field; and a blank two-annotator kit
-(`annotation/human_roles/`) is provided for human validation. Item identity is
+reliability sample; Krippendorff's α is reported per field; and a two-coder human validation kit
+(`annotation/human_v2/`: 200 role items, 80 codebook-S and 60 codebook-B specifications, 60 README
+classifications; offline coding page, agreement script `code/human_agreement.py`) validates the model labels. Item identity is
 `sha1(name + "\n" + description)`, so byte-identical specifications across repositories are labelled
 once and share the label.
 

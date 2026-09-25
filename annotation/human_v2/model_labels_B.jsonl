@@ -1,0 +1,60 @@
+{"id": "ae05e8335f6d2d8d", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "gh issue create --title, gh project item-add, updateProjectV2ItemFieldValue"}, "sonnet": null}
+{"id": "c278c2a62a26a88d", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "Create the `design/edc/` directory if it does not exist. Save the file"}, "sonnet": null}
+{"id": "e75b3922b70de70b", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "Run all tests: npm test pytest go test ./...; Check API responses: curl -s http://localhost:PORT/api/endpoint"}, "sonnet": null}
+{"id": "e7c314a1b14207e2", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "2eca9c8f3356771d", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "npm run lint:fix && npm run build to confirm clean state"}, "sonnet": null}
+{"id": "814e9dc90e47f4e7", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "2f365b7f1b03bea5", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "c5f09a9d523d151b", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "flutter analyze to check"}, "sonnet": null}
+{"id": "dfaa202540f1d7ed", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "The full diff (`git diff <base>...HEAD`)"}, "sonnet": null}
+{"id": "0aeb0d931587d102", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "c9e084853a64b2bd", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "git status, git remote -v, gh repo view --json"}, "sonnet": null}
+{"id": "70ee98f65e8c954d", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "write an `.ics`"}, "sonnet": null}
+{"id": "21ba1fcd9a986bb8", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "8f4e5cda30baf661", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Use grep/file checks, not running the app. Goal is structural verification"}, "sonnet": null}
+{"id": "c9222b9e97b2709a", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "`pnpm exec changeset`"}, "sonnet": null}
+{"id": "934d639ac3a2f72a", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "bash .claude/scripts/integration_tests/cleanup_screenshots.sh"}, "sonnet": null}
+{"id": "52999bc10495f8f5", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "Resolve Blockers: Rebase conflicts - git rebase origin/dev; Dependency issues - yarn install"}, "sonnet": null}
+{"id": "7145d5daee6c5605", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "`python3 tools/validate_tokens.py --json`"}, "sonnet": null}
+{"id": "82593b26d0539307", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "`git branch --show-current` and GitHub MCP tools to fetch and analyze PR comments"}, "sonnet": null}
+{"id": "4f972fc71a3f21cf", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "cd frontend && node -e to re-run and verify data"}, "sonnet": null}
+{"id": "525786fcec2e60b5", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "npm audit, trivy"}, "sonnet": null}
+{"id": "ca298359de94cb78", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Use Bash only for read-only inspection (`git diff`, `git log`, grep-style checks)"}, "sonnet": {"shell_use": "inspect", "evidence": "Use Bash only for read-only inspection (`git diff`, `git log`, grep-style checks)."}}
+{"id": "5f6e5251bc935889", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "install deps from its pyproject/requirements — filter install output"}, "sonnet": null}
+{"id": "2b65d57838d58327", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "./scripts/verify/verify.sh, bash scripts/ci/"}, "sonnet": null}
+{"id": "e0bb1f15d20c4a40", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "yamllint .tekton/*.yaml; make docker-build; prek run --all-files; make go-check; gitleaks detect"}, "sonnet": null}
+{"id": "ca0ea51783bb0b2a", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "0375404cd9446431", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "Captures before/after screenshots via Playwright and diffs them"}, "sonnet": null}
+{"id": "e3fe4c6d0c56bbb3", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "git diff main...HEAD -- helm/library/*/Chart.yaml"}, "sonnet": null}
+{"id": "fdf70220651eca22", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "680e58f020f96151", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "git push, git revert --no-edit"}, "sonnet": null}
+{"id": "7c9c41c89e44959c", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "git diff HEAD~1 HEAD  # View changes; git log -1 --stat"}, "sonnet": null}
+{"id": "2a0b7ec6bfe106e8", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "e0bc1f7cd7c0d501", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "Write backfilled spans to telemetry files"}, "sonnet": null}
+{"id": "64879ef2d2a16f8a", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "cc9635163e0c5dfb", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "Executes tests, static analysis, and security tools"}, "sonnet": null}
+{"id": "ab76c154f41554e6", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "Optional `dotnet build src/Beutl.Engine.SourceGenerators/Beutl.Engine.SourceGenerators.csproj` for verification"}, "sonnet": null}
+{"id": "0113806f24f2cdf8", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "railway up --service smartats-linkedin-scraper --path-as-root --detach scripts/playwright-linkedin"}, "sonnet": null}
+{"id": "c98f9df7eabce0ce", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "`python3 scripts/lint.py --all`"}, "sonnet": null}
+{"id": "4d164db91a12f981", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "exercises the brief's acceptance criteria end-to-end"}, "sonnet": null}
+{"id": "f567727f49104347", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "grep -rn or git log"}, "sonnet": null}
+{"id": "1adb8845270cc39b", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": {"shell_use": "none", "evidence": ""}}
+{"id": "1ff13143a0925d45", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "Write to `_workspace/reviews/audit-YYYY-MM-DD.md`"}, "sonnet": {"shell_use": "inspect", "evidence": "Do NOT run destructive bash."}}
+{"id": "4244ef16010644b5", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Diff pendente: `git diff --cached`"}, "sonnet": null}
+{"id": "e67d971725c17e28", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "git add, git commit, git tag, git push"}, "sonnet": null}
+{"id": "5ef2fb7092268630", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Run git diff to see recent changes"}, "sonnet": null}
+{"id": "bd333524f56b6a96", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Use Grep for searching code"}, "sonnet": null}
+{"id": "7acd08239a1bfaaa", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Changed files: `git diff --name-only HEAD`"}, "sonnet": null}
+{"id": "c8236d4ceb0ded9e", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "git tag v<version>; git push origin v<version>; gh release create"}, "sonnet": null}
+{"id": "2d5d1ff7821549b2", "stratum": "change", "haiku": {"shell_use": "change", "evidence": "Create a tmux session for this test run, Create GitHub Issues for bugs found"}, "sonnet": null}
+{"id": "8967f31656ebcc3b", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "35453eac5190e3c6", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "npm audit"}, "sonnet": null}
+{"id": "4ebaf3c87535d4f7", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": {"shell_use": "none", "evidence": ""}}
+{"id": "9f7f806b2244c448", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "qmd query or grep for wikilinks"}, "sonnet": null}
+{"id": "9c5a66965899f125", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "python <SKILLS>/smefit-runcard/scripts/validate_runcard.py"}, "sonnet": null}
+{"id": "f8a423fcc76b2f74", "stratum": "inspect", "haiku": {"shell_use": "inspect", "evidence": "Reviews code against security documentation without running commands or making changes"}, "sonnet": null}
+{"id": "03490652010d8a7c", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "`pnpm typecheck`"}, "sonnet": null}
+{"id": "187671b3a754f63c", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "fb0228662ef888c4", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": null}
+{"id": "4de367004bd38f6a", "stratum": "none", "haiku": {"shell_use": "none", "evidence": ""}, "sonnet": {"shell_use": "inspect", "evidence": "git diff <base>...HEAD"}}
+{"id": "45ce7dd54739c4c8", "stratum": "verify", "haiku": {"shell_use": "verify", "evidence": "Run `npm test` and read the relevant test files"}, "sonnet": null}

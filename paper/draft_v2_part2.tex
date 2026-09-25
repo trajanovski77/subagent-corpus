@@ -183,8 +183,11 @@ different batch compositions, and Krippendorff's $\alpha$ is reported with the t
 \citet{krippendorff2018content}. Sonnet also labelled 400 role items (under R v1.0) and 450 constraint sentences during
 the pilot; these pilot items keep Sonnet's labels, and Haiku labels every other item. Codebook P was applied by Haiku
 alone, a deviation from the protocol, which named Sonnet as primary rater and planned a second-rater sample; README
-agreement is to be estimated from the human sample. \authornote{Human validation: two authors independently annotate the 400-item role sample and the
-200-repository README sample in \code{annotation/human\_*}; report human--human and human--model $\alpha$ here.}
+agreement is estimated from the human sample. For human validation, two authors independently code a sample of
+\nHumanSample{} items with the codebooks and texts the models saw (\code{annotation/human\_v2}): 200 role items
+(codebook R), 80 specifications under codebook S, 60 under codebook B and 60 repositories under codebook P, each
+stratified by the primary rater's label. \authornote{Report human--human and consensus--model $\alpha$ per codebook
+here, from \code{code/human\_agreement.py}.}
 
 %% ---------------------------------------------------------------------------
 \subsection{Language analysis of descriptions and bodies}

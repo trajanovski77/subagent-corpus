@@ -41,7 +41,7 @@ well, in **0.0%**.
 |---|---|
 | [`paper/`](paper/) | `main_v2.tex` (Springer `svjour3`), the section drafts it includes, `refs_v2.bib`, `numbers.tex` (generated — no number is typed by hand), and the vector figures |
 | [`data/v2/`](data/v2/) | the corpus, oracle output, NLP features, annotation labels and the joined `spec_table.jsonl.gz`, with its own [README](data/README.md) |
-| [`annotation/`](annotation/) | the pre-registered engineered-project protocol and the five codebooks (R roles, P READMEs, C constraints, S spec restriction, K completion claims), plus the blank two-annotator human kit |
+| [`annotation/`](annotation/) | the engineered-project protocol (fixed before outcomes were joined) and the six codebooks (R roles, P READMEs, C constraints, S spec restriction, B shell use, K completion claims), plus the two-coder human validation kit (`human_v2/`) |
 | [`code/`](code/) | see below |
 | [`METHOD.md`](METHOD.md) | how the corpus was collected and the biases the design carries |
 
@@ -54,7 +54,7 @@ well, in **0.0%**.
 | `repometa_v2.py` | repository metadata, commit history, branch protection, rulesets, CODEOWNERS |
 | `oracles_v2.py` | the executable oracles: resolution, admission, settings, name probes, release history |
 | `drift.py` | when each removed tool name disappeared, and when each file was first committed |
-| `curation.py` | the pre-registered engineered-project screen → ALL / E1 / E2 / E3 |
+| `curation.py` | the engineered-project screen → ALL / E1 / E2 / E3 |
 | `llm_labels.py` | annotation batches, validation, merging, Krippendorff's α, the human kit |
 | `nlp.py` | directive-sentence extraction, constraint classification, topic model |
 | `experiment.py`, `experiment_subagent.py` | the 5 × 6 × 3 × 30 execution experiment and its scorers |
@@ -107,7 +107,7 @@ role contrasts are paired within repository. `code/stats.py` is the only place t
 
 **Roles are annotated, not pattern-matched.** Keyword matching reached only about 65% in preliminary
 work, so roles, modes and prose restrictions are annotated by language models against published codebooks,
-with a second rater on a reliability sample and a blank kit for human validation. Non-differential
+with a second rater on a reliability sample and a two-coder human validation kit. Non-differential
 misclassification pulls group rates toward the corpus mean and manufactures a null, so this mattered.
 
 ## Oracles
