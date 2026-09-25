@@ -1,0 +1,20 @@
+{"id": "1adb8845270cc39b", "shell_use": "none", "evidence": ""}
+{"id": "1ff13143a0925d45", "shell_use": "change", "evidence": "ALWAYS write your output to `_workspace/reviews/`, not stdout dumps."}
+{"id": "4244ef16010644b5", "shell_use": "inspect", "evidence": "Diff pendente: `git diff --cached`"}
+{"id": "e67d971725c17e28", "shell_use": "change", "evidence": "Executes the deterministic bash phases of harness-release — preflight, version bump, commit/tag, push."}
+{"id": "5ef2fb7092268630", "shell_use": "inspect", "evidence": "Run git diff to see recent changes"}
+{"id": "bd333524f56b6a96", "shell_use": "none", "evidence": ""}
+{"id": "7acd08239a1bfaaa", "shell_use": "inspect", "evidence": "Changed files: `git diff --name-only HEAD` (or use the diff passed in)."}
+{"id": "c8236d4ceb0ded9e", "shell_use": "change", "evidence": "タグプッシュ: `git push origin v<バージョン>`"}
+{"id": "2d5d1ff7821549b2", "shell_use": "change", "evidence": "gh issue create --title \"[<style>] <one-line summary>\""}
+{"id": "8967f31656ebcc3b", "shell_use": "inspect", "evidence": "search: `grep -r \"MethodName\" app/`"}
+{"id": "35453eac5190e3c6", "shell_use": "inspect", "evidence": "Run `npm audit` for known CVEs"}
+{"id": "4ebaf3c87535d4f7", "shell_use": "none", "evidence": ""}
+{"id": "9f7f806b2244c448", "shell_use": "inspect", "evidence": "`qmd query \"<topic>\" --json -n 15` — find all related notes"}
+{"id": "9c5a66965899f125", "shell_use": "verify", "evidence": "`Bash` for running `validate_runcard.py` / `smefit_db.py`, running a bounded/cheap repro"}
+{"id": "f8a423fcc76b2f74", "shell_use": "none", "evidence": ""}
+{"id": "03490652010d8a7c", "shell_use": "verify", "evidence": "run `pnpm typecheck` to catch type errors"}
+{"id": "187671b3a754f63c", "shell_use": "none", "evidence": ""}
+{"id": "fb0228662ef888c4", "shell_use": "none", "evidence": ""}
+{"id": "4de367004bd38f6a", "shell_use": "inspect", "evidence": "run `git -C <worktree> -c core.quotePath=false status --porcelain --untracked-files=all`"}
+{"id": "45ce7dd54739c4c8", "shell_use": "verify", "evidence": "Run `npm test` and read the relevant test files to ground your review in actual behavior."}

@@ -10,6 +10,7 @@ unfinished value cannot silently reach the PDF.
 from __future__ import annotations
 
 import collections
+import glob
 import gzip
 import json
 import re
@@ -573,6 +574,32 @@ def main() -> None:
     if kit_meta.exists():   # the human validation kit fixes the sample size (all four parts)
         km = json.loads(kit_meta.read_text())
         m["nHumanSample"] = num(sum(sum(km[p]["quota"].values()) for p in ("R", "S", "B", "P") if p in km))
+    # third MODEL rater (Opus) on the human-validation sample: code/third_rater_agreement.py (not human validation)
+    opa = V2 / "labels" / "validation_opus" / "agreement.json"
+    if opa.exists():
+        oa = json.loads(opa.read_text())
+        def oalpha(field, a, b):
+            r = next(x for x in oa["fields"][field] if x["a"] == a and x["b"] == b)
+            return f"$\\alpha={r['alpha']:.2f}$"
+        for key, field, a, b in (("OpusRoleHaiku", "role", "opus", "haiku"), ("OpusRoleSonnet", "role", "opus", "sonnet"),
+                                 ("OpusModeHaiku", "mode", "opus", "haiku"), ("OpusModeSonnet", "mode", "opus", "sonnet"),
+                                 ("KitModeHaikuSonnet", "mode", "haiku", "sonnet"),
+                                 ("OpusRestrHaiku", "restriction_binary", "opus", "haiku"),
+                                 ("OpusShellHaiku", "shell_use", "opus", "haiku"),
+                                 ("OpusShellChangeHaiku", "shell_change", "opus", "haiku"),
+                                 ("OpusEngHaiku", "engineered", "opus", "haiku")):
+            m[f"alpha{key}"] = oalpha(field, a, b)
+        m["nOpusItems"] = num(sum(c["labelled"] for c in oa["coverage"].values()))
+        opl = {}
+        for f in sorted(glob.glob(str(V2 / "labels" / "validation_opus" / "P" / "out" / "batch_*.jsonl"))):
+            for line in open(f):
+                if line.strip():
+                    r = json.loads(line)
+                    opl[r["id"]] = r["category"]
+        kp = [json.loads(l) for l in open(ROOT / "annotation" / "human_v2" / "model_labels_P.jsonl") if l.strip()]
+        m["nEngOpusOnly"] = num(sum(1 for r in kp if r["haiku"]["category"] != "ENGINEERED" and opl.get(r["id"]) == "ENGINEERED"))
+        m["nEngHaikuOnly"] = num(sum(1 for r in kp if r["haiku"]["category"] == "ENGINEERED" and opl.get(r["id"]) not in (None, "ENGINEERED")))
+        m["nEngKit"] = num(len(kp))
     rel = V2 / "labels" / "roles" / "agreement.json"
     if rel.exists():
         a = json.loads(rel.read_text())

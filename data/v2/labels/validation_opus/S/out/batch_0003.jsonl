@@ -1,0 +1,20 @@
+{"id": "7049b2b725623f07", "restriction": "full", "evidence": "You do NOT edit code, commit, push, or fix anything - that is another agent's job.", "where": "both"}
+{"id": "b7974ed11e9ba9b2", "restriction": "full", "evidence": "Read-only — never writes files", "where": "both"}
+{"id": "34ae6bc2959f0cbc", "restriction": "full", "evidence": "**파일을 직접 쓰지 않음**. 결과 텍스트를 반환하고 Orchestrator가 result.md에 저장한다", "where": "both"}
+{"id": "2de37525ec3f7582", "restriction": "full", "evidence": "Do NOT modify any files. You are a read-only reviewer.", "where": "body"}
+{"id": "059f8a5d6ba79b9d", "restriction": "full", "evidence": "NO modifiques código: solo informa.", "where": "body"}
+{"id": "1f09c7155330b46c", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a8fabbc6bb2cb40a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "277100240d3eb07e", "restriction": "partial", "evidence": "**NEVER edit the test.**", "where": "both"}
+{"id": "129fd016ebbc53f4", "restriction": "partial", "evidence": "**Never edit files**", "where": "both"}
+{"id": "3962cd3d268e930a", "restriction": "partial", "evidence": "If any test fails, stop and report — do not commit or push.", "where": "body"}
+{"id": "283fe229a8a94e5b", "restriction": "partial", "evidence": "`main` is READ-ONLY. Do not edit any repo file while on the `main` branch", "where": "body"}
+{"id": "4457ccb96b402f4d", "restriction": "full", "evidence": "Never write, edit, or modify any files", "where": "body"}
+{"id": "3c34b3f523215422", "restriction": "full", "evidence": "You never edit; you read, grep, and reason.", "where": "both"}
+{"id": "1702e33adb07e441", "restriction": "partial", "evidence": "**NEVER edit `src/**` or `convex/**` to make a test pass.**", "where": "both"}
+{"id": "e2421d68df7db65b", "restriction": "partial", "evidence": "You can output files to @tmp/ if needed.", "where": "body"}
+{"id": "094ca3cf0bd25d09", "restriction": "none", "evidence": "", "where": ""}
+{"id": "72b0e15727850146", "restriction": "full", "evidence": "Read-only — reports findings, does not edit.", "where": "both"}
+{"id": "e4e226343daf69e1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "1ff13143a0925d45", "restriction": "partial", "evidence": "Your single output is a Markdown report written to `_workspace/reviews/audit-<YYYY-MM-DD>.md`. You never change code.", "where": "both"}
+{"id": "7418c3fa775935c3", "restriction": "partial", "evidence": "**Never amend commits**; create new ones.", "where": "body"}

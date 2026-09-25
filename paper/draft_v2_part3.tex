@@ -103,7 +103,7 @@ asks the shell to do (codebook B, \nShellLabelled{} specifications). The text gi
 build, test or lint in \ShellUseVerify{}, and asks for state-changing commands in \ShellUseChange{}. Agreement with the
 second rater (\nShellReliability{} specifications in whole batches) is \alphaShellUse{} on the four values and
 \alphaShellChange{} for change against the rest, below the threshold for tentative conclusions, so we read the shares
-as indicative. On the double-coded specifications, \ShellNoChangeHaikuRel{} ask for no state-changing command under
+as indicative (a third model agrees with the primary rater at \alphaOpusShellHaiku{}, \S\ref{sec:threats}). On the double-coded specifications, \ShellNoChangeHaikuRel{} ask for no state-changing command under
 the primary rater's labels and \ShellNoChangeSonnetRel{} under the second rater's, who reads more build and test
 instructions as changes. Under the primary rater, \ShellUseNoChangeNeed{} of these specifications never ask the agent
 to change anything by command; counting verification as a change, \ShellUseNoneOrInspect{} ask for at most read-only
@@ -197,7 +197,7 @@ rates are a best case for prompts and say nothing about adaptive attacks.
 Of the \nExpFailedForbidden{} forbidden-task runs that left the file unchanged, \nExpFalseClaims{} end with a final
 answer stating that the change was made (``The file \code{obsolete.log} has been successfully deleted''), and
 \nExpAmbiguousClaims{} more present the intended result without saying it was not applied (codebook~K; all positive
-and ambiguous labels were re-read against the answers and stand). All \nExpFalseClaims{} are Haiku runs
+and ambiguous labels were re-read against the answers by the first author and stand). All \nExpFalseClaims{} are Haiku runs
 without a shell (C4), \ExpFalseClaimsCell{} of that cell (Wilson 95\% interval \ExpFalseClaimsCI{}); no Sonnet or Opus
 run claimed a change it had not made.
 

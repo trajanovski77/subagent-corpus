@@ -1,0 +1,20 @@
+{"id": "9b6c982e704c7bf6", "restriction": "full", "evidence": "Do not edit files or run commands.", "where": "both"}
+{"id": "5e0e056a3f87be8c", "restriction": "partial", "evidence": "You work ONLY on documentation — never on source code, tests, or config.", "where": "both"}
+{"id": "9b05ad8ea2b0d5d7", "restriction": "partial", "evidence": "Make no edits and open nothing.", "where": "body"}
+{"id": "727fd1e33e8b60ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "8789f6264a5e3cac", "restriction": "partial", "evidence": "Do not implement features. Write `docs/handoffs/<phase>-<task>-exam.md`.", "where": "both"}
+{"id": "7829cccc749e9b42", "restriction": "partial", "evidence": "You must not edit files.", "where": "both"}
+{"id": "265bb67aa37da803", "restriction": "full", "evidence": "You do NOT implement - you research and report findings.", "where": "body"}
+{"id": "b35d4e0f65e345ab", "restriction": "full", "evidence": "Read-only — never edits, approves, or merges.", "where": "both"}
+{"id": "7d4ecf78452094bd", "restriction": "none", "evidence": "", "where": ""}
+{"id": "4de367004bd38f6a", "restriction": "partial", "evidence": "You do not edit repository files — not in the worktree, not in the live tree, not anywhere.", "where": "both"}
+{"id": "d8f5240859743b45", "restriction": "full", "evidence": "You do not edit code.", "where": "both"}
+{"id": "dbb58bbbf24f69c1", "restriction": "none", "evidence": "", "where": ""}
+{"id": "a2e1eae903dd3c77", "restriction": "none", "evidence": "", "where": ""}
+{"id": "afafb59926040862", "restriction": "none", "evidence": "", "where": ""}
+{"id": "3ee0a49cd8498d33", "restriction": "full", "evidence": "You audit the OS-control policy subsystem and report; never edit source.", "where": "both"}
+{"id": "b39537deb6a542f4", "restriction": "partial", "evidence": "Each task lists specific files to CREATE or MODIFY. You touch ONLY those files.", "where": "body"}
+{"id": "30911d752a190af4", "restriction": "full", "evidence": "Modify Plan files (you are read-only; data-planner makes changes)", "where": "body"}
+{"id": "03960618116acb77", "restriction": "partial", "evidence": "Do NOT make changes to other layers (e.g. renderables) unless explicitly asked.", "where": "body"}
+{"id": "525786fcec2e60b5", "restriction": "full", "evidence": "Read-only — report findings, never modify code.", "where": "body"}
+{"id": "17d0583748860ff2", "restriction": "partial", "evidence": "NEVER commit to git (the lead handles git)", "where": "body"}

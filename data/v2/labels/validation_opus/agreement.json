@@ -1,0 +1,257 @@
+{
+ "what": "third MODEL rater (Claude Opus via the spec-labeler agent), NOT human validation",
+ "sample_digest": "431f5f635aae",
+ "coverage": {
+  "R": {
+   "labelled": 200,
+   "items": 200,
+   "missing": []
+  },
+  "S": {
+   "labelled": 80,
+   "items": 80,
+   "missing": []
+  },
+  "B": {
+   "labelled": 60,
+   "items": 60,
+   "missing": []
+  },
+  "P": {
+   "labelled": 60,
+   "items": 60,
+   "missing": []
+  }
+ },
+ "fields": {
+  "role": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 200,
+    "alpha": 0.6012840168646991,
+    "raw": 0.635,
+    "raw_weighted": 0.6379463087248322
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.8677402870046822,
+    "raw": 0.88,
+    "raw_weighted": 0.8911946308724832
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.6601642992554331,
+    "raw": 0.69,
+    "raw_weighted": 0.6855436241610737
+   }
+  ],
+  "mode": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 200,
+    "alpha": 0.48155634158665994,
+    "raw": 0.64,
+    "raw_weighted": 0.6954228187919463
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.6719769077589199,
+    "raw": 0.775,
+    "raw_weighted": 0.8014407158836688
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.4720573371313057,
+    "raw": 0.64,
+    "raw_weighted": 0.6893557046979865
+   }
+  ],
+  "mode_binary": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 200,
+    "alpha": 0.4679140063040491,
+    "raw": 0.67,
+    "raw_weighted": 0.7111901565995524
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.70209460004843,
+    "raw": 0.815,
+    "raw_weighted": 0.841387024608501
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.5141341219448552,
+    "raw": 0.72,
+    "raw_weighted": 0.7405145413870245
+   }
+  ],
+  "readonly_claim": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 200,
+    "alpha": 0.40932642487046633,
+    "raw": 0.96,
+    "raw_weighted": 0.9538881431767338
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.9067539144659967,
+    "raw": 0.995,
+    "raw_weighted": 0.9934944071588366
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 200,
+    "alpha": 0.3781818181818182,
+    "raw": 0.955,
+    "raw_weighted": 0.9473825503355704
+   }
+  ],
+  "restriction": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 80,
+    "alpha": 0.7188494636331486,
+    "raw": 0.8125,
+    "raw_weighted": 0.7764972419227739
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 80,
+    "alpha": 0.8119011002011121,
+    "raw": 0.875,
+    "raw_weighted": 0.8787431048069345
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 80,
+    "alpha": 0.7567090395480226,
+    "raw": 0.8375,
+    "raw_weighted": 0.8108747044917258
+   }
+  ],
+  "restriction_binary": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 80,
+    "alpha": 0.8301282051282052,
+    "raw": 0.925,
+    "raw_weighted": 0.9570527974783294
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 80,
+    "alpha": 0.7849898580121704,
+    "raw": 0.9,
+    "raw_weighted": 0.9266154452324664
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 80,
+    "alpha": 0.841,
+    "raw": 0.925,
+    "raw_weighted": 0.9435579196217494
+   }
+  ],
+  "shell_use": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 60,
+    "alpha": 0.7344244002231728,
+    "raw": 0.8,
+    "raw_weighted": 0.757543391188251
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 5,
+    "alpha": 0.6896551724137931,
+    "raw": 0.8,
+    "raw_weighted": 0.9191616766467066
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 5,
+    "alpha": 0.3793103448275862,
+    "raw": 0.6,
+    "raw_weighted": 0.6926147704590818
+   }
+  ],
+  "shell_change": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 60,
+    "alpha": 0.8,
+    "raw": 0.9166666666666666,
+    "raw_weighted": 0.9001335113484646
+   },
+   {
+    "a": "opus",
+    "b": "sonnet",
+    "n": 5,
+    "alpha": 0.0,
+    "raw": 0.8,
+    "raw_weighted": 0.9191616766467066
+   },
+   {
+    "a": "haiku",
+    "b": "sonnet",
+    "n": 5,
+    "alpha": 0.0,
+    "raw": 0.8,
+    "raw_weighted": 0.9191616766467066
+   }
+  ],
+  "category": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 60,
+    "alpha": 0.5013618269432223,
+    "raw": 0.6666666666666666,
+    "raw_weighted": 0.7650625339858619
+   }
+  ],
+  "engineered": [
+   {
+    "a": "opus",
+    "b": "haiku",
+    "n": 60,
+    "alpha": 0.4657687991021324,
+    "raw": 0.7333333333333333,
+    "raw_weighted": 0.7895595432300163
+   }
+  ]
+ },
+ "note": "alpha = Krippendorff nominal; raw_weighted re-weights items to the pool each part was drawn from"
+}

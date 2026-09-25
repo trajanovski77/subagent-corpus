@@ -1,0 +1,20 @@
+{"id": "525786fcec2e60b5", "shell_use": "verify", "evidence": "dependency CVEs (npm audit, trivy)"}
+{"id": "ca298359de94cb78", "shell_use": "inspect", "evidence": "Use Bash only for read-only inspection (`git diff`, `git log`, grep-style checks)."}
+{"id": "5f6e5251bc935889", "shell_use": "change", "evidence": "Ensure a venv exists in the service dir (`python -m venv .venv` if missing),"}
+{"id": "2b65d57838d58327", "shell_use": "verify", "evidence": "bash scripts/ci/runtime-reliability.sh ci     # Full runtime suite including AX lane"}
+{"id": "e0bb1f15d20c4a40", "shell_use": "verify", "evidence": "# Reproduce locally\nmake go-test"}
+{"id": "ca0ea51783bb0b2a", "shell_use": "none", "evidence": ""}
+{"id": "0375404cd9446431", "shell_use": "none", "evidence": ""}
+{"id": "e3fe4c6d0c56bbb3", "shell_use": "inspect", "evidence": "Locally with full history, `git diff` against the base is fine."}
+{"id": "fdf70220651eca22", "shell_use": "none", "evidence": ""}
+{"id": "680e58f020f96151", "shell_use": "change", "evidence": "auto-revert with `git revert --no-edit <sha>` and push the revert."}
+{"id": "7c9c41c89e44959c", "shell_use": "inspect", "evidence": "git diff HEAD~1 HEAD  # View changes"}
+{"id": "2a0b7ec6bfe106e8", "shell_use": "none", "evidence": ""}
+{"id": "e0bc1f7cd7c0d501", "shell_use": "change", "evidence": "**Run backfill**: execute the script in dry-run first, review output, then `--write`"}
+{"id": "64879ef2d2a16f8a", "shell_use": "none", "evidence": ""}
+{"id": "cc9635163e0c5dfb", "shell_use": "change", "evidence": "Executes tests, static analysis, and security tools. Asks user for permission before installing missing dependencies."}
+{"id": "ab76c154f41554e6", "shell_use": "verify", "evidence": "If needed, run `dotnet build src/Beutl.Engine.SourceGenerators/Beutl.Engine.SourceGenerators.csproj`."}
+{"id": "0113806f24f2cdf8", "shell_use": "change", "evidence": "railway up \\\n  --service smartats-linkedin-scraper"}
+{"id": "c98f9df7eabce0ce", "shell_use": "change", "evidence": "python3 scripts/lint.py --all 1>/tmp/agent_lint.log 2>&1; echo LINT_EXIT=$?"}
+{"id": "4d164db91a12f981", "shell_use": "verify", "evidence": "`scripts/run-tests.sh` green (watchdog wrapper only —"}
+{"id": "f567727f49104347", "shell_use": "change", "evidence": "mkdir -p \"$state_dir\" && date -u '+%Y-%m-%d' > \"$since_file\""}

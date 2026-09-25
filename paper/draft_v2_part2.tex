@@ -186,7 +186,9 @@ alone, a deviation from the protocol, which named Sonnet as primary rater and pl
 agreement is estimated from the human sample. For human validation, two authors independently code a sample of
 \nHumanSample{} items with the codebooks and texts the models saw (\code{annotation/human\_v2}): 200 role items
 (codebook R), 80 specifications under codebook S, 60 under codebook B and 60 repositories under codebook P, each
-stratified by the primary rater's label. \authornote{Report human--human and consensus--model $\alpha$ per codebook
+stratified by the primary rater's label. As a separate, model-only check, Claude Opus~5.5 (\code{claude-opus-5-5})
+labelled the same \nOpusItems{} items blind, through the same agent, codebooks and texts; it is reported as a third
+rater (\S\ref{sec:threats}), not as validation. \authornote{Report human--human and consensus--model $\alpha$ per codebook
 here, from \code{code/human\_agreement.py}.}
 
 %% ---------------------------------------------------------------------------

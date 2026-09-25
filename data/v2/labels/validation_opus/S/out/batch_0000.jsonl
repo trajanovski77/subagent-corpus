@@ -1,0 +1,20 @@
+{"id": "a72d9830325ff1a8", "restriction": "full", "evidence": "do not modify any file — you review code, you never rewrite it.", "where": "body"}
+{"id": "40f19d70421755e0", "restriction": "partial", "evidence": "Apart from writing that one `outcome.md`, you do not write code, write tests, or modify anything.", "where": "body"}
+{"id": "fe8ce5e1448631af", "restriction": "partial", "evidence": "**Don't implement code yourself** - Delegate to coding agents", "where": "body"}
+{"id": "3da8e914b09ab5ed", "restriction": "none", "evidence": "", "where": ""}
+{"id": "5dc19ebdad74f2b9", "restriction": "partial", "evidence": "Modify source files directly", "where": "body"}
+{"id": "0bbe450f96c35e65", "restriction": "full", "evidence": "Read-only — cannot edit files, push, merge, or restart services.", "where": "both"}
+{"id": "d9199791081f910b", "restriction": "partial", "evidence": "TEST applications, do not IMPLEMENT them", "where": "body"}
+{"id": "467c8845c1036ea1", "restriction": "full", "evidence": "You do NOT write code", "where": "both"}
+{"id": "1e63d355f8b94a5a", "restriction": "partial", "evidence": "Never make changes beyond the explicitly requested scope", "where": "body"}
+{"id": "b41839284dacb1a2", "restriction": "partial", "evidence": "Do NOT edit the files themselves — only `INDEX.md`", "where": "body"}
+{"id": "d4c3b8ffa46117e7", "restriction": "none", "evidence": "", "where": ""}
+{"id": "d4ff8aa0c06a1b5e", "restriction": "full", "evidence": "**Read-only.** Do not edit files.", "where": "body"}
+{"id": "7b2306801792225f", "restriction": "partial", "evidence": "**Конфиги сборки не трогаешь**: `app.json`, `eas.json`, `plugins/**`, `scripts/**`", "where": "body"}
+{"id": "a08aba926bad1a77", "restriction": "partial", "evidence": "`.zen/` - Submodule, NEVER modify", "where": "body"}
+{"id": "fbb71553d6fb482d", "restriction": "partial", "evidence": "Don't edit anything in `target/` — it's generated.", "where": "body"}
+{"id": "e4e892ccc7643b4a", "restriction": "none", "evidence": "", "where": ""}
+{"id": "b6239bad0b946740", "restriction": "partial", "evidence": "NEVER write into `public/` directly", "where": "body"}
+{"id": "44d8d09292d5b0a8", "restriction": "full", "evidence": "You do NOT modify files — you only report findings.", "where": "both"}
+{"id": "a13fca9e84a4965f", "restriction": "partial", "evidence": "You do not write or modify implementation code.", "where": "body"}
+{"id": "5f3c55a8c53f6161", "restriction": "full", "evidence": "It JUDGES ONLY - it never pushes, never rebuilds, never commits, and never removes the worktree it is judging.", "where": "both"}

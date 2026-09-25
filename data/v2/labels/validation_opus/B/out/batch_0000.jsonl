@@ -1,0 +1,20 @@
+{"id": "ae05e8335f6d2d8d", "shell_use": "change", "evidence": "gh project item-add 1 --owner sakho13 --url {Issue URL}"}
+{"id": "c278c2a62a26a88d", "shell_use": "change", "evidence": "Create the `design/edc/` directory if it does not exist."}
+{"id": "e75b3922b70de70b", "shell_use": "verify", "evidence": "Run automated tests if available"}
+{"id": "e7c314a1b14207e2", "shell_use": "verify", "evidence": "Run `go build ./...` to ensure compilation."}
+{"id": "2eca9c8f3356771d", "shell_use": "change", "evidence": "Run `npm run lint:fix && npm run build` to confirm clean state"}
+{"id": "814e9dc90e47f4e7", "shell_use": "none", "evidence": ""}
+{"id": "2f365b7f1b03bea5", "shell_use": "none", "evidence": ""}
+{"id": "c5f09a9d523d151b", "shell_use": "verify", "evidence": "run `flutter analyze` to check"}
+{"id": "dfaa202540f1d7ed", "shell_use": "none", "evidence": ""}
+{"id": "0aeb0d931587d102", "shell_use": "none", "evidence": ""}
+{"id": "c9e084853a64b2bd", "shell_use": "change", "evidence": "Write to scratchpad"}
+{"id": "70ee98f65e8c954d", "shell_use": "change", "evidence": "Running the offline rescore, which only rewrites the gitignored `data/candidates.json`, is fine."}
+{"id": "21ba1fcd9a986bb8", "shell_use": "none", "evidence": ""}
+{"id": "8f4e5cda30baf661", "shell_use": "change", "evidence": "Create `.planning/phases/{phase_dir}/{phase}-VERIFICATION.md` with:"}
+{"id": "c9222b9e97b2709a", "shell_use": "change", "evidence": "Run `pnpm exec changeset` and follow the interactive prompt."}
+{"id": "934d639ac3a2f72a", "shell_use": "change", "evidence": "bash .claude/scripts/integration_tests/cleanup_screenshots.sh <absolute_path>"}
+{"id": "52999bc10495f8f5", "shell_use": "change", "evidence": "git rebase origin/dev"}
+{"id": "7145d5daee6c5605", "shell_use": "verify", "evidence": "Run `scripts/check_drift.sh`"}
+{"id": "82593b26d0539307", "shell_use": "inspect", "evidence": "Run `git branch --show-current` via Bash to get the current branch name."}
+{"id": "4f972fc71a3f21cf", "shell_use": "verify", "evidence": "Bashでnodeを走らせて数え直す。"}
