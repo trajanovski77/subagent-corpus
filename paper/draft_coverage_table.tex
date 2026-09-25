@@ -1,0 +1,25 @@
+\begin{table}[t]
+\caption{Reconstruction coverage. Files were fetched by git blob identifier and verified by recomputing the object
+hash, so a recovered file is the snapshot's byte content rather than a later state of the path.}
+\label{tab:coverage}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{7.0cm}r@{}}
+\toprule
+\textbf{Stage} & \textbf{Count} \\
+\midrule
+Repositories in the discovery frame & \nFrame{} \\
+Agent-definition files inventoried & \nInventoryFiles{} \\
+Files recovered and hash-verified & \nFilesOk{} \\
+Files unavailable (repository inaccessible or object missing) & \nFilesUnavailable{} (\pctUnavailable{}) \\
+\midrule
+Subagent specifications in the corpus & \nSpecsAll{} \\
+Repositories contributing at least one specification & \nReposAll{} \\
+Engineered repositories (E2) / their specifications & \nReposEng{} / \nSpecsEng{} \\
+\midrule
+Distinct \code{tools}/\code{disallowedTools} combinations probed by the resolver oracle & \nDistinctGrants{} \\
+Distinct tool names probed individually & \nDistinctNames{} \\
+Configuration roots probed by the census oracle & \nRootsCensus{} \\
+Released versions probed for the tool pool & \nReleasesHistory{} \\
+\bottomrule
+\end{tabular}
+\end{table}

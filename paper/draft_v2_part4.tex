@@ -1,0 +1,113 @@
+%% ============================================================================================
+%% DRAFT v2, part 4: Discussion and implications.
+%% ============================================================================================
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Withholding permission is not withholding authority}
+\label{sec:disc-leastpriv}
+
+Specifications meant to inspect are given file-writing tools far less often than those meant to change code, and the
+gap survives every curation cut and is paired within repositories. Whether written or copied, these grants withhold
+\code{Write} from reviewers. But the withholding applies to permissions, and a tool allowlist enumerates permissions,
+not authority. Because a shell carries the process's ambient file-system authority \citep{miller2003capability},
+removing the file-writing tools $W=\{\code{Write},\code{Edit},\code{NotebookEdit}\}$ from a grant $T$ that retains an
+unsandboxed \code{Bash} leaves its authority over files unchanged, $A(T \setminus W) = A(T)$, whenever shell commands run without per-command
+approval. In that context the set $\{\code{Read}, \code{Grep}, \code{Glob}, \code{Bash}\}$ looks like a reader and acts
+like a read--write agent; in \code{default} mode the user's approval of each command stands between the two.
+
+A retained shell is not always a mistake. Some write-withholding specifications ask for builds and tests, and a
+minority ask for state-changing commands, but most need at most read-only commands or none (\S\ref{sec:res-rq3}). For those, the shell adds authority the text never asks for; for the rest, the problem is that
+the tool list offers no way to grant part of a shell's reach.
+
+\paragraph{Why the abstraction invites the error.}
+\emph{Objects at different levels.} Lampson's access matrix treats each object as an independent column whose rights
+are granted separately \citep{lampson1974protection}; the \code{tools} field mixes resource operations (\code{Read},
+\code{Write}, \code{Edit}) with an interpreter (\code{Bash}) that can perform any of them.
+\emph{Direct paths are guarded, indirect paths are not.} Tools tend to guard the obvious interface and miss indirect
+routes to the same resource \citep[\S4.2]{garfinkel2003traps}; file-editing deny rules do not cover subprocesses that
+write files indirectly \citep{AnthropicPermissionsDoc}.
+\emph{Fail-safe defaults are inverted.} Omitting \code{tools} grants everything, so the least deliberate configuration
+is the most privileged one, contrary to basing access on permission rather than exclusion
+\citep{saltzer1975protection}; \RQtwoImplicitEng{} of specifications omit the field.
+\emph{The resolver steers delegates to the shell.} It removes \code{Grep} and \code{Glob} whenever \code{Bash}
+resolves, which moves routine search onto the shell, and leaves \code{Write} and \code{Edit} in place without a
+warning.
+
+\subsection{An agent-configuration security smell}
+\label{sec:disc-smell}
+
+Coarse settings that defeat finer controls beside them recur in configuration security (\S\ref{sec:rw-smells});
+Table~\ref{tab:smells} places our pattern in that family. We name \textbf{unscoped shell in a restricted role} as a candidate security smell: a
+specification that withholds file-writing tools while granting a shell without a command scope. It maps to CWE-250
+(execution with unnecessary privileges) and to CWE-653 (improper isolation or compartmentalisation), because the file
+tools were separated from the grant while one tool that spans them was not \citep{cwe250,cwe653}. It matters only
+where shell commands run without per-command approval and without a sandbox (\S\ref{sec:capmodel}). The linter
+released with this paper reports the specification-level pattern; it does not consult permission modes, settings or
+hooks, and neither the smell nor the linter's precision has been validated with practitioners.
+
+\input{draft_smells_table}
+
+\subsection{Prompts are interpreted, grants are enforced}
+\label{sec:disc-prompts}
+
+That an agent with a shell can write when asked and commands are approved automatically is expected, and the
+mechanism check confirms it. Three results matter more for practice. First, in the realistic inspection configuration
+the prompt restriction worked for Sonnet and Opus and left Haiku completing \ExpCthreeHaiku{} of the changes it
+forbids. A restriction that holds or fails with the
+model is a property of the model, not of the configuration, and \RQfiveNoModelPooled{} of specifications (pooled;
+repository mean \RQfiveNoModel{}) do not name the model that will read them. Second, the channels fail differently: a
+missing tool produces an error the parent can see, an unheeded prompt a completed change, and Haiku's false claims
+show that the delegate's report is not a reliable record either. Third, on one fixture with explicitly report-only tasks, no agent
+changed files under any grant. For such tasks, the risk of a dominated withholding lies less in delegates acting
+unasked than in a grant that does not refuse a change when one is requested. Our requests came from the parent;
+whether content the delegate reads can produce such a request \citep{debenedetti2024agentdojo} we did not test. The
+enforcement-channel fields of a specification (\code{tools}, \code{disallowedTools}, \code{permissionMode},
+\code{hooks}, \code{isolation}) are the only ones that do not depend on the model agreeing, and a prompt restriction
+that holds for some models is not a security control.
+
+Two trust boundaries lie outside our measurements. A delegate's answer returns to a parent that usually holds more
+authority, so restricting the delegate does not stop content it reads from reaching the parent; Haiku's false
+completion claims are a benign case of a parent receiving unreliable output. And a delegate that can write files, by
+a tool or through a shell, can edit agent specifications, settings or git hooks and so widen grants in later
+sessions.
+
+\citet{Yan2026DoNotDeny} found that few security rules in context files have an enforced counterpart; we find the
+same gap inside one artifact: when a specification's text makes the agent read-only, its grant can usually still reach
+the file system (\RQfourFullReaches{}).
+
+\subsection{Specifications as maintained artifacts}
+\label{sec:disc-drift}
+
+Most files naming a removed tool were committed after the removal (\S\ref{sec:res-rq6}); the names disappeared between
+\DriftRemovalWindow{}, and \RQsixDriftInSnapshotYear{} of these files were first committed in 2026. Stale names thus
+enter at authoring time, which is consistent with the reuse we measure and with copy-based reuse of skills and editor
+rules \citep{Destefanis2026GitSkills,Jiang2026CursorRules}. Revalidation alone does not address this; a resolver that
+reports what it dropped does.
+
+\subsection{Implications}
+\label{sec:disc-implications}
+
+\paragraph{For practitioners.} Omitting \code{tools} grants everything. An agent that holds an unscoped shell is not
+read-only, whatever its prompt says, unless each shell command needs approval or runs in a sandbox. Where the text asks
+only to read, restrict the shell with Bash deny rules in settings, which the documentation says apply to
+subagents \citep{AnthropicSubagentsDoc}, but such rules match command text and can be bypassed \citep{Chen2026Denylist}. A command pattern in
+a subagent's \code{tools} field is not a restriction: in our test it granted the whole shell (\S\ref{sec:res-rq3}).
+Where the restriction must hold, or the text asks to build or
+test, use a sandbox or a writable scratch directory. Do not treat a prompt restriction as a security control; if one matters, pin the model and
+test it. Check that tool names resolve on the release you run and that every \code{name} in an agent directory is
+unique. The linter released with this paper reports all of these and exits non-zero on dominated withholdings,
+ignored files and duplicate names.
+
+\paragraph{For tool builders.} \emph{Report what was dropped}: the settings layer warns about a deny rule that matches
+no tool, while the frontmatter resolver says nothing about a discarded name, a name collision or a file it does not
+load. \emph{Warn on dominated withholding}: a specification that withholds file-writing tools and grants an unscoped
+shell may not be what its author intended. \emph{Make read-only an execution-environment property}, enforced where every subprocess is covered, by a sandbox
+or capability mode \citep{watson2010capsicum}. \emph{Make grants typed and attenuable}: a shell grant should carry a
+file-system and network scope \citep{moore2014shill}, and policies should inspect arguments rather than tool names
+\citep{shi2025progent}, outside the model \citep{debenedetti2025defeating}. Where a narrow tool
+can replace the shell, ship the narrow tool \citep{beurerkellner2025design}.
+
+\paragraph{For researchers.} Measure the effective configuration by executing its consumer, and test behavioural
+claims by repeated execution, including tasks that do not ask for the behaviour.

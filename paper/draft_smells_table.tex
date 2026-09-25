@@ -1,0 +1,17 @@
+\begin{table}[t]
+\caption{Coarse or over-broad grants that defeat least privilege or finer controls beside them. The last row is the
+pattern measured in this paper.}
+\label{tab:smells}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{5.1cm}>{\raggedright\arraybackslash}p{2.5cm}@{}}
+\toprule
+\textbf{Coarse grant} & \textbf{What it defeats} & \textbf{Source} \\
+\midrule
+\code{privileged: true} in a Kubernetes security context & every other access control in the same security context & \citet{rahman2023security} \\
+default read--write \code{GITHUB\_TOKEN} & the read-only needs of nearly all workflows & \citet{koishybayev2022characterizing} \\
+admin account as the default user & a default least-privileged account (CWE-250) & \citet{rahman2019seven} \\
+\code{pledge} with \code{exec} and no \code{execpromises} & every promise, for the child process & \citet{openbsd_pledge} \\
+\textbf{unscoped \code{Bash} in a subagent tool list} & \textbf{the withholding of \code{Write}, \code{Edit} and \code{NotebookEdit} in the same list, when shell commands run without approval and without a sandbox} & \textbf{this paper} \\
+\bottomrule
+\end{tabular}
+\end{table}

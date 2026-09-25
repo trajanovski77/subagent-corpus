@@ -1,0 +1,216 @@
+%% ============================================================================================
+%% DRAFT v2, part 1: Introduction, Background, Related Work.  Numbers are macros from numbers.tex.
+%% ============================================================================================
+
+\section{Introduction}
+\label{sec:intro}
+
+Agentic coding tools such as Claude Code, GitHub Copilot, Cursor, Gemini CLI and Codex run an \emph{agent loop}: a
+language model plans, calls tools, observes the results and continues until a goal is met
+\citep{Galster2026Harness,he2025lmase}. What the model sees and may do is assembled by the tool's harness from files
+that developers commit alongside their code; Galster et al.\ catalogue eight such configuration mechanisms across five
+tools \citep{Galster2026Configuring,Galster2026Harness}. One of them, the \emph{subagent}, turns configuration into
+organisation. A subagent is a named delegate: a Markdown file whose YAML frontmatter declares when the parent agent
+should hand it work (\code{description}), which tools it may call (\code{tools}) and which model runs it, and whose
+body becomes its system prompt \citep{AnthropicSubagentsDoc}. The parent delegates a task, the subagent works in its
+own context window, and only its result comes back \citep{hua2025contextengineering2,Liu2026DiveClaudeCode}. Each
+file therefore combines two kinds of control: a role description that a model interprets, and a tool allowlist that
+the runtime enforces.
+
+\paragraph{Permission and authority.}
+The allowlist invites a least-privilege reading \citep{saltzer1975protection}: a reviewer that is not given
+\code{Write} cannot write. That reading conflates two things that capability security keeps apart. A
+\emph{permission} is the right to invoke a tool directly; \emph{authority} is everything the agent can cause,
+including through programs it launches \citep[\S8.1]{miller2006robust}. A shell is such a program. An agent granted
+\code{Read} and \code{Bash} but not \code{Write} lacks the permission to write files and, wherever its shell commands
+run without per-command approval and without a sandbox, keeps the authority to do so. The vendor's documentation
+acknowledges the mechanism: its file-editing deny rules do not cover subprocesses that write files indirectly
+\citep{AnthropicPermissionsDoc}. How often specifications withhold file tools while keeping
+a shell, whether their text needs that shell, and how agents behave under each combination are empirical questions.
+
+\paragraph{The research gap.}
+Adoption studies count configuration artifacts across repositories and tools
+\citep{Galster2026Harness,Galster2026Dataset,mohsenimofidi2026context,robbes2026agentic}; content studies characterise
+what developers write in context files and editor rules \citep{Chatlatanagulchai2026AgentREADMEs,Jiang2026CursorRules};
+security studies examine denylists, skills, MCP servers and the security rules written into context files
+\citep{Chen2026Denylist,Liu2026SkillsInTheWild,Hasan2026MCP,Yan2026DoNotDeny}. The adoption studies count subagents
+as one mechanism among eight, reporting 450 subagents in 131 repositories \citep{Galster2026Harness} and 997 subagent
+files in 273 repositories \citep{Galster2026Dataset}, but none analyses what they grant; a static defect scan of
+agent configurations does not resolve subagents' tool grants \citep{Kapner2026ScanningHarness}. No study
+has measured, at scale, (i) what subagent specifications grant once the runtime has resolved them, (ii) how often a
+withholding coexists with a retained capability that subsumes it, (iii) whether restrictions stated in prose agree
+with the enforced grant, or (iv) how agents behave, over repeated runs, under each combination. Our contribution is
+this measurement and the method that makes it possible, not the mechanism, which follows from what a shell is.
+
+\paragraph{Approach.}
+We study \nSpecsEng{} specifications in \nReposEng{} engineered GitHub repositories, reconstructed at a snapshot by git
+object identifier. Instead of parsing the \code{tools} field, we use \emph{executable oracles}: by analogy with test
+oracles, which decide whether an observed behaviour is acceptable \citep[Def.~2.4]{barr2015oracle}, an executable
+oracle for a configuration artifact obtains a property of the artifact by running the program that consumes it and
+reading what that program reports, rather than by re-implementing its semantics from documentation. Our oracles start
+the coding tool without a credential and read which agents it loaded and which tools each resolves to. We add LLM
+annotation of what the specifications say and a controlled experiment of what agents do.
+
+\paragraph{Findings in brief.}
+In the average engineered repository \RQthreeIncoherentEng{} of explicit grants that withhold every file-writing tool
+keep an unscoped shell. Specifications meant to inspect (a model-annotated label) hold file-writing tools
+\RQtwoRoleGapWrite{} less often than those meant to change code, but the gap shrinks to \RQtwoRoleGapAuthority{} once
+the shell is counted. That a shell permits a requested change when commands are approved automatically is expected,
+and our mechanism check confirms it (\ExpCtwoRate{} under the most common inspection grant and a neutral prompt).
+Three results are less obvious. A prompt restriction on the same grant, the realistic inspection configuration, holds
+for Sonnet and Opus but not reliably for Haiku. In a small report-only extension, no agent changed a file it was not
+asked to change. And the text of most write-withholding specifications that keep a shell gives no reason to change
+anything by command. We also observed that Haiku without a shell sometimes reports a change it did not make.
+
+\paragraph{Research questions.}
+\begin{description}\itemsep1pt
+  \item[RQ1 (Delegation structure)] How many subagents do engineered repositories define, for which roles, and how
+        much of the population is reused? (\S\ref{sec:res-rq1})
+  \item[RQ2 (Capability grants)] How much capability do specifications grant, explicitly or by inheritance, and does
+        the effective grant track the delegate's intended mode of work? (\S\ref{sec:res-rq2})
+  \item[RQ3 (Coherence of restrictions)] When a specification withholds file-writing tools, does it retain a shell
+        that subsumes them, and does its text need that shell? (\S\ref{sec:res-rq3})
+  \item[RQ4 (Prose versus enforcement)] Which constraints do developers write in natural language, and does the
+        enforced grant agree with them? (\S\ref{sec:res-rq4})
+  \item[RQ5 (Behaviour under repeated execution)] How do tool grants and prompt restrictions constrain agents across
+        tasks and models, and do agents change files they were not asked to change? (\S\ref{sec:res-rq5})
+  \item[RQ6 (Silent defects and drift)] Which specifications does the runtime silently discard, mis-resolve or shadow,
+        and do unresolvable tool names reflect runtime evolution or stale sources? (\S\ref{sec:res-rq6})
+  \item[RQ7 (Governance context)] Are agent grants associated with the repository's other access controls?
+        (\S\ref{sec:res-rq7})
+\end{description}
+
+\paragraph{Contributions.}
+(1) A snapshot-exact corpus of \nSpecsAll{} subagent specifications from \nReposAll{} repositories, every recovered
+file verified against its hash, curated to \nSpecsEng{} specifications in \nReposEng{} engineered repositories.
+(2) Executable oracles that make the coding tool report what it loads and grants.
+(3) Model annotations, with published codebooks, of every specification's role and intended mode, of the write
+restriction a specification's text states, and of what the text asks a retained shell to do. (4) The measurement of \emph{dominated withholding}: explicit grants that omit every
+file-writing tool but keep an unscoped shell, which leaves the withholding without effect wherever shell commands run
+without approval and without a sandbox. (5) A controlled experiment of
+\nExpRuns{} scored delegations, and an extension of \nOverRuns{} report-only delegations, separating what a grant
+permits from what agents do. (6) A candidate security smell for agent configuration, guidance for frameworks and a
+linter.
+
+%% --------------------------------------------------------------------------------------------
+\section{Background}
+\label{sec:background}
+
+\subsection{Delegation, context isolation and the two channels}
+\label{sec:bg-mas}
+\label{sec:bg-context}
+Multi-agent systems route work between agents whose \emph{profiles} define their role \citep[\S2.3]{he2025lmase}.
+MetaGPT and ChatDev fix each role's goal, tools and constraints in prompts
+\citep[\S3.1]{hong2024metagpt}\citep[\S3.1]{qian-etal-2024-chatdev}; in production, a lead agent spawns workers that
+each receive an objective, tools and task boundaries \citep{anthropic2025multiagentresearch}, and each delegate starts
+from a fresh context window with its own system prompt and tool set \citep[\S5.3.2]{hua2025contextengineering2}. A
+subagent specification is the practitioner's version of an agent profile, and it acts along two channels. The \emph{interpretive channel} (context files, rules, a subagent's description and body) is text loaded
+into the model's context, which the model may or may not follow \citep{AnthropicMemoryDoc}. The \emph{enforcement
+channel} (tool allowlists, permission rules, hooks, sandboxes) is applied by the harness regardless of what the model
+intends \citep{AnthropicPermissionsDoc}.
+
+\subsection{Configuration mechanisms across agentic coding tools}
+\label{sec:bg-mechanisms}
+Table~\ref{tab:mechanisms} summarises the mechanisms that frame our study. Context files dominate adoption, appearing
+in 90.6\% of configured repositories, while skills and subagents are adopted far more shallowly
+\citep[\S6.1--6.3]{Galster2026Harness}. Subagent formats have converged: Claude Code reads \code{.claude/agents/*.md}
+\citep{AnthropicSubagentsDoc}, Copilot \code{.github/agents} \citep{GitHubCreateCustomAgentsDoc,GitHubCustomAgentsDoc},
+Codex \code{.codex/agents} \citep{OpenAICodexSubagentsDoc}, and Cursor its own directory and also \code{.claude/agents}
+\citep{CursorSubagentsDoc}, so a file in our corpus may be consumed by more than one tool.
+
+\begin{table}[t]
+\caption{Configuration mechanisms relevant to subagents, by the channel through which they alter agent behaviour.
+Sources: vendor documentation accessed 15 September 2026 and \citet{Galster2026Harness}.}
+\label{tab:mechanisms}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{6.9cm}@{}}
+\toprule
+\textbf{Mechanism} & \textbf{Channel} & \textbf{How it alters behaviour at run time} \\
+\midrule
+Context files & interpretive & loaded into the context at session start; \code{AGENTS.md} read by Codex, Copilot, Cursor; \code{CLAUDE.md} by Claude Code \\
+Rules & interpretive & included at the start of the context when their globs or description match (Cursor, Claude Code \code{.claude/rules}) \\
+Skills, commands & interpretive & instructions loaded on invocation or when the model selects them \\
+\textbf{Subagents} & \textbf{both} & body and description are interpreted; the tool allowlist, model and permission fields are applied by the harness \\
+Settings & enforcement & permission rules evaluated deny, then ask, then allow, outside the model \\
+Hooks & enforcement & scripts at lifecycle events that can block a tool call \\
+MCP servers & enforcement & external tools added to the pool when the server is configured \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The Claude Code subagent artifact}
+\label{sec:bg-artifact}
+A subagent is a Markdown file under \code{.claude/agents/} of a project or of the user's home directory whose
+frontmatter must declare \code{name} and \code{description} \citep{AnthropicSubagentsDoc}. Table~\ref{tab:schema}
+lists the fields and, where we could, the semantics we observed by execution on the pinned build; the remaining rows
+rest on the documentation. Two properties carry the study. \textbf{Omission is inheritance}: a specification without
+\code{tools} receives every tool available to subagents, so omitting the field is the most permissive choice.
+\textbf{Resolution is not the list}: the runtime maps names to tools with aliases, drops names it does not resolve
+without any diagnostic in its start-up output, and, on the builds we probed, drops \code{Grep} and \code{Glob} whenever
+\code{Bash} is granted.
+
+\input{draft_schema_table}
+
+\subsection{Protection, least privilege and capability lists}
+\label{sec:bg-protection}
+Saltzer and Schroeder define least privilege as running every program with the minimum privileges its job requires,
+and fail-safe defaults as basing access on permission rather than exclusion \citep[\S I-A-3]{saltzer1975protection}.
+Lampson's access matrix records the rights each domain holds over each object, and a capability list, such as a
+subagent's allowlist, is one row of it \citep{lampson1974protection}. Systems whose subjects exercise authority without
+selecting it hold \emph{ambient authority}, which capability systems remove
+\citep{miller2003capability,watson2010capsicum}; a shell carries the process's ambient file-system authority. About a third of 940 Android applications were over-privileged because developers misunderstood what permissions
+imply \citep{felt2011android}, and the permission specification had to be extracted from the platform because its
+documentation was incomplete \citep{au2012pscout}; for the same reason our labels come from executing the tool.
+
+%% --------------------------------------------------------------------------------------------
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Empirical studies of agent configuration.}
+\label{sec:rw-config}
+Galster et al.\ study the adoption of eight configuration mechanisms in 2,853 engineered repositories and release a
+dataset of 4,738 configured repositories \citep{Galster2026Configuring,Galster2026Harness,Galster2026Dataset}; they
+count 450 subagents in 131 repositories \citep[\S6.3]{Galster2026Harness}, and 997 in 273 repositories in the larger
+dataset \citep{Galster2026Dataset}, but do not analyse their content beyond noting that none use the persistent-memory field. Mohsenimofidi et al.\ find context files in 5\%
+of 10,000 popular, mature repositories and describe instruction styles ranging from descriptive and prescriptive to
+prohibitive \citep{mohsenimofidi2026context}. Context files rarely mention security \citep{Chatlatanagulchai2026AgentREADMEs}, and Cursor rules show substantial
+copying across repositories \citep{Jiang2026CursorRules}. Skills are copied at scale without a registry
+\citep{Destefanis2026GitSkills}, and a scanner flagged at least one vulnerability pattern in about a quarter (26.1\%) of
+31,132 marketplace skills \citep{Liu2026SkillsInTheWild}. Closest to our questions, Kapner et al.\ scan 3,171
+repositories for supply-chain defects in agent configurations with rules decided from the files' bytes
+\citep{Kapner2026ScanningHarness}. The subagent defect they confirm is a file without a description, which the tool skips;
+their closest security class is a scoped-looking pre-approval such as \code{Bash(python:*)} that permits arbitrary
+execution (3.1\% of setups). They do not resolve tool grants or relate them to a delegate's purpose or text. Yan finds
+that only 4--16\% of security rules written in \code{CLAUDE.md} files have a matching built-in control
+\citep{Yan2026DoNotDeny}. Relative to these studies, we obtain the effective grant by running its consumer, measure how
+often a withholding is subsumed by a retained shell, compare the grant with the specification's intended mode and
+prose, and test behaviour by repeated execution.
+
+\paragraph{Agent permissions and the limits of prompt constraints.}
+\label{sec:rw-security}
+Chen and Lin show that, depending on the file-system operation, 69.0--98.6\% of real command denylists for terminal
+coding agents that target that operation overlook at least one working bypass \citep{Chen2026Denylist}; they study
+denylists only, not allowlists or subagent tool grants. On benign tasks built to invite out-of-scope actions, removing the
+authorised-scope declaration from the prompt raises Claude Code's rate of over-eager actions from 0.0\% to 17.1\% on
+paired scenarios, and the framework's permission gating dominates effect size \citep{qu2026overeager}. Tool filtering fails against prompt injection whenever the permitted tools suffice for the attack
+\citep{debenedetti2024agentdojo}, which motivates enforcing policy outside the model
+\citep{debenedetti2025defeating,shi2025progent} and replacing shells with narrow tools \citep{beurerkellner2025design}.
+Models trained to respect an instruction hierarchy obey it only partially under conflict and strong attacks
+\citep{wallace2024hierarchy,geng2026controlillusion}.
+
+\paragraph{Configuration errors and security smells.}
+\label{sec:rw-smells}
+Infrastructure-as-code research names recurring insecure configuration patterns as security
+smells, each with a stated rationale and a CWE mapping \citep{rahman2019seven,rahman2021security}, and a Kubernetes
+study observes that a privileged security context makes every other access control in that security context obsolete
+\citep[\S2.3]{rahman2023security}. In CI, almost all workflows ran with over-privileged tokens because the permissions
+field was rarely set \citep{koishybayev2022characterizing}. The pattern we study is the agent-configuration analogue: a
+coarse grant (an unscoped shell) that can void a fine-grained withholding in the same policy.
+
+\paragraph{Mining and annotation methodology.}
+\label{sec:rw-method}
+Most GitHub repositories are personal, inactive or not software development
+\citep{kalliamvakou2016promises}; engineered projects have been separated by dimension scores
+\citep{munaiah2017curating} and by LLM classification of READMEs \citep{Galster2026Dataset}. We follow the ACM SIGSOFT
+Empirical Standards \citep{ralph2021empirical} and the guidelines for studies that use LLMs, which require exact model
+versions, published prompts, repeated runs and validation against humans \citep{baltes2026guidelines,ahmed2025llms}.

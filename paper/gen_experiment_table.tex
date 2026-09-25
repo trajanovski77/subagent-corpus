@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Experiment outcomes: runs in which the task's objective held afterwards (T2--T5 verified on the file
+system, T1 and T6 from the reported value), out of scored runs. T2--T5 (create, modify, delete, run a file-writing
+script) are forbidden by the prompts of C1 and C3; T1 (read a value) and T6 (run a script and report its output)
+are permitted everywhere, and T6 needs a shell. C2 and C3 resolve to \code{Read, Bash}, because the resolver
+drops \code{Grep} and \code{Glob} next to \code{Bash}.}
+\label{tab:experiment}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{T2--T5, by model}} & \multicolumn{2}{c}{\textbf{all models}} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-7}
+\textbf{Config.} & \textbf{Grant and prompt} & \textbf{Haiku} & \textbf{Sonnet} & \textbf{Opus} & \textbf{T1} & \textbf{T6} \\
+\midrule
+C0 & no \code{tools}, neutral prompt & 115/120 & 112/119 & 116/120 & 88/88 & 90/90 \\
+C1 & no \code{tools}, prompt forbids writes & 54/120 & 2/120 & 0/118 & 89/89 & 89/89 \\
+C2 & \code{Read, Grep, Glob, Bash} & 119/119 & 120/120 & 120/120 & 90/90 & 90/90 \\
+C3 & C2 grant + C1 prompt & 41/120 & 0/119 & 0/120 & 90/90 & 90/90 \\
+C4 & \code{Read, Grep, Glob} & 0/120 & 0/120 & 0/120 & 90/90 & 0/89 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[t]
+\caption{Threats from mining GitHub that bear on this study: perils of \citet{kalliamvakou2016promises} (Roman
+numerals give their number) and threats specific to code-search discovery (marked $\dagger$,
+\citealp{GitHubSearchAPIDoc}), what each would do to our conclusions, and the mitigation applied.}
+\label{tab:perils}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{4.3cm}@{}}
+\toprule
+\textbf{Peril} & \textbf{Threat to this study} & \textbf{Mitigation} \\
+\midrule
+Personal or inactive repositories (III, V) & Prevalences would describe scratch repositories &
+Screen fixed in a written protocol before outcomes were joined; four nested populations
+(\S\ref{sec:curation}) \\
+Not software projects (IV) & Tutorials, dotfiles and prompt collections counted as engineering practice &
+Stage~B excludes every repository not classified as engineered \\
+A repository is not a project (I) & Mono-repositories inflate team size & Repository is the unit of analysis \\
+Activity is uneven (II) & Repositories with many specifications dominate pooled statistics & Prevalences are means of
+within-repository proportions unless labelled pooled \\
+Forks and branches not indexed ($\dagger$) & The frame misses copies and non-default-branch work & Stated as a
+limitation \\
+Search incomplete and unstable ($\dagger$) & All bands truncated; the frame is about \pctFrameOfRerun{} of the
+repositories found, chosen by an undocumented ranking & Size-banded queries, re-run the same day (covers
+\pctRerunOverlap{} of the frame); results describe the frame; shares checked by repository size \\
+Repositories change (XIII) & Later edits contaminate a ``snapshot'' & Files fetched by blob identifier, verified by hash \\
+Duplication ($\dagger$, this study) & Repositories are not independent & One-copy-per-hash sensitivity analysis
+(\S\ref{sec:threats}) \\
+Not only on GitHub (VI) & Mirrors carry stale or partial state & Mirrors excluded (A1) \\
+Pull requests, users (VIII, IX, XI) & Merge- or user-activity measures mislead & Not applicable (commit-based activity) \\
+\bottomrule
+\end{tabular}
+\end{table}
