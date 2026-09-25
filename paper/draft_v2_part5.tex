@@ -5,6 +5,10 @@
 \section{Threats to validity}
 \label{sec:threats}
 
+We organise the threats by the four validity types used for case studies and experiments in software engineering
+\citep{runeson2009guidelines,wohlin2012experimentation}; the threats specific to mining GitHub and to code-search
+discovery, and how the design addresses them, are mapped in Table~\ref{tab:perils}.
+
 \subsection{Construct validity}
 
 \paragraph{Intended mode.} The construct behind the RQ2 contrast is the \emph{intended mode} of a delegate, annotated by
@@ -16,9 +20,13 @@ and discard or qualify per Krippendorff's thresholds}. A third model rater on th
 (\S\ref{sec:annotation}) agrees with Sonnet more than with Haiku, on the mode (\alphaOpusModeSonnet{} against
 \alphaOpusModeHaiku{}; Haiku and Sonnet \alphaKitModeHaikuSonnet{} on the same items) and on the role
 (\alphaOpusRoleSonnet{} against \alphaOpusRoleHaiku{}), so the primary rater's mode labels are the noisiest of the
-three. We draw no conclusion from the role labels. The rater-sensitivity
-check (\S\ref{sec:res-rq2}) uses small, different sets of repositories under each rater and does not reproduce the
-full-population magnitude, so it supports the direction of the mode contrasts, not their size. Misclassification that
+three. We draw no conclusion from the role labels. We could check the dependence of the mode contrasts on the rater
+only partly. On the \nRaterSensSpecs{} engineered-population specifications in the reliability sample, the paired gap
+is \RaterSensGapWriteHaiku{} for file-writing tools and \RaterSensGapAuthorityHaiku{} for any reach under Haiku's
+labels (\RaterSensReposHaiku{} repositories hold both modes), and \RaterSensGapWriteSonnet{} and
+\RaterSensGapAuthoritySonnet{} under Sonnet's (\RaterSensReposSonnet{} repositories). The two sets of repositories
+differ and are small, and even under Haiku's labels the subsample does not reproduce the full-population gap, so the
+check supports the direction of both gaps, and that the any-reach gap is much the smaller one, not their size. Misclassification that
 is non-differential would attenuate both gaps, but the mode has four values and read-only wording in a description may
 shape both the label and the tool list, so misclassification may be differential and we do not rely on attenuation.
 The dominance measures do not use the mode labels.
@@ -36,7 +44,8 @@ against the answer (\S\ref{sec:res-rq5}).
 field's value, which is re-emitted verbatim into a probe file and resolved by the tool, so parser error is confined to
 frontmatter extraction. The measure is still one of \emph{permission}; authority is argued analytically
 (\S\ref{sec:capmodel}) and tested by execution (\S\ref{sec:res-rq5}). Whether it is realised depends on the
-session's permission mode and user-level settings, which are unobservable. Where commands run without approval, the
+session's permission mode and user-level settings, which are unobservable. Deny rules and hooks in committed settings
+can block matching commands; we did not evaluate which writes they block. Where commands run without approval, the
 scoped shells (which did not restrict commands in our test) and the capability classes the model omits (egress, MCP tools, delegation, confidentiality)
 make our authority measures lower bounds.
 
@@ -67,8 +76,11 @@ direct, a best case for prompts; indirect requests through content the agent rea
 simple and benign and the fixtures synthetic. The system prompt includes the harness note, which asks for a concise,
 literal final answer and may affect how answers are phrased, including the completion claims. The runs span three
 builds and two orchestrating sessions whose context is not part of the stimulus but is not independent across runs
-within a session; we detect no difference between builds, with limited power (\S\ref{sec:res-rq5}). The report-only
-extension uses one small fixture, two tasks and no adversarial content (\S\ref{sec:res-rq5}).
+within a session; we detect no difference between builds, but with \ExpBuildCellSizes{} runs per cell and build only
+large differences were detectable (\S\ref{sec:res-rq5}). The report-only extension uses one small fixture, two tasks
+and no adversarial content (\S\ref{sec:res-rq5}). The scoped-shell probe ran in \code{auto} mode only; whether a
+command pattern in the \code{tools} field acts as a pre-approval that leaves other commands to prompt in
+\code{default} mode was not tested.
 
 \paragraph{Reconstruction.} \pctUnavailable{} of inventoried files could not be fetched; all but
 \nFilesObjectMissing{} belong to repositories that are no longer available, so the loss is almost entirely of whole
@@ -84,11 +96,6 @@ format at one snapshot. The mechanism generalises in principle, since Copilot an
 and Cursor reads the same directory \citep{GitHubCustomAgentsDoc,OpenAICodexSubagentsDoc,CursorSubagentsDoc}; the rates
 do not, and private use is invisible to us.
 
-\paragraph{Duplication.} Keeping one copy per content hash (\nSpecsDedup{} of \nSpecsEng{} specifications) leaves the
-headline results unchanged: \DedupImplicit{} omit \code{tools}, \DedupIncoherent{} of write-withholding explicit grants
-keep an unscoped shell, and the paired gap is \DedupGapWrite{} for file-writing tools and \DedupGapAuthority{} for any
-reach.
-
 \subsection{Conclusion validity}
 
 Specifications within a repository are dependent (intra-class correlation \iccValue{} for whether an explicit grant
@@ -99,8 +106,19 @@ pre-specified, Holm-adjusted \citep{holm1979simple} and read together with the p
 are non-deterministic, so annotation is repeated by a second model on reliability samples and each experiment cell
 \nRepsPerCell{} times \citep{ouyang2025nondeterminism,baltes2026guidelines}.
 
+\paragraph{Duplication.} Byte-identical specifications recur across repositories (\S\ref{sec:res-rq1}), so
+repositories are not independent observations. Keeping one copy per content hash (\nSpecsDedup{} of \nSpecsEng{}
+specifications) leaves the headline results unchanged: \DedupImplicit{} omit \code{tools}, \DedupIncoherent{} of
+write-withholding explicit grants keep an unscoped shell, and the paired gap is \DedupGapWrite{} for file-writing tools
+and \DedupGapAuthority{} for any reach.
+
 \section{Conclusion}
 \label{sec:conclusion}
+
+This paper contributes a snapshot-exact corpus of \nSpecsAll{} subagent specifications, executable oracles that obtain
+what the coding tool loads and grants, model annotations of role, intent and prose restriction with published
+codebooks, a controlled experiment of \nExpRuns{} delegations with a report-only extension, and a linter for the
+defects it measures.
 
 In \nReposEng{} engineered repositories developers define \nSpecsEng{} delegates, and they restrict them: agents meant
 to inspect receive file-writing tools far less often than agents meant to change things. But in the average

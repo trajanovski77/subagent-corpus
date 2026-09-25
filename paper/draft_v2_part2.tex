@@ -93,13 +93,12 @@ resolving \code{tools} and \code{disallowedTools}, plus any requested credential
 cannot see. A specification \textbf{can write files} if $G(s) \cap \{\code{Write}, \code{Edit},
 \code{NotebookEdit}\} \neq \emptyset$ and \textbf{can run a shell} if $G(s)$ contains \code{Bash} or \code{Monitor}
 (\code{PowerShell} resolves only on Windows and is not observable on our macOS oracle). A shell is \textbf{scoped} when
-every shell entry the author wrote carries a command pattern such as \code{Bash(git diff:*)}. The resolver reports a
-scoped entry as \code{Bash}. The documentation describes such patterns for permission rules in settings, and says
-that a Bash deny rule applies to subagents, but does not say whether a pattern in a subagent's \code{tools} field is enforced when the subagent calls
-the shell \citep{AnthropicSubagentsDoc,AnthropicPermissionsDoc}. We tested it (\S\ref{sec:res-rq3}): in auto
-permission mode on v\ScopedBuild{}, a subagent granted \code{Bash(git log:*)} ran arbitrary shell commands. We
-nevertheless count scoped shells as non-dominating, which makes every dominance and prose--grant measure a lower
-bound; the scoped share is small (\RQthreeScopedShare{} of write-withholding grants that keep a shell).
+every shell entry the author wrote carries a command pattern such as \code{Bash(git diff:*)}. The documentation
+describes such patterns for permission rules in settings, and says that a Bash deny rule applies to subagents, but
+does not say whether a pattern in a subagent's \code{tools} field is enforced when the subagent calls the shell
+\citep{AnthropicSubagentsDoc,AnthropicPermissionsDoc}. We test this with a scoped-shell probe (\S\ref{sec:experiment})
+and, conservatively, count scoped shells as non-dominating, so that every dominance and prose--grant measure is a
+lower bound if a pattern does not restrict commands.
 
 \paragraph{Dominance.} Following Miller's distinction \citep[\S8.1]{miller2006robust}, let $\mathrm{reach}(t)$ be the
 set of effects an agent can bring about through tool $t$, directly or through programs it can launch. Tool $t$
@@ -144,8 +143,8 @@ and names that collapse. The \emph{resolver oracle} stages every distinct combin
 \code{disallowedTools} values (\nDistinctGrants{}) and reads its effective grant; every distinct non-MCP tool name
 (\nDistinctNames{}) is also resolved on its own, separating names the runtime does not resolve from names dropped only
 in combination. The \emph{settings oracle} stages each committed \code{.claude/settings.json}; the settings layer prints
-one warning per deny or ask rule that matches no known tool. \emph{Semantics probes} established the behaviours in
-Table~\ref{tab:schema}; the same-root precedence probes were repeated three times with the same winner, the others run
+one warning per deny or ask rule that matches no known tool. \emph{Semantics probes} stage minimal files that vary
+one field or location at a time and read what the runtime admits and resolves; the same-root precedence probes were repeated three times with the same winner, the others run
 once. The default tool pool of
 \nReleasesHistory{} releases between May 2025 and September 2026 was recorded in the same way, dating when each name
 entered and left the vocabulary, and for every specification naming a removed tool we retrieved the date of the
@@ -155,7 +154,8 @@ earliest default-branch commit touching the file.
 authenticated probes, nine tools resolved that the credential-free oracle does not see. None of them writes files; one,
 \code{Monitor}, runs a shell command and is counted as a shell. Names in that set are not counted as unresolved.
 (ii) Interactive-only tools cannot be observed in print mode; they are classified from the build's tool schema as
-context-conditional rather than unresolved. (iii) The oracles observe registration and resolution, not behaviour.
+context-conditional rather than unresolved; so are flag-gated and platform-specific names, and none of them is
+counted as a defect. (iii) The oracles observe registration and resolution, not behaviour.
 
 %% ---------------------------------------------------------------------------
 \subsection{Annotation with LLMs}
@@ -188,7 +188,18 @@ agreement is estimated from the human sample. For human validation, two authors 
 (codebook R), 80 specifications under codebook S, 60 under codebook B and 60 repositories under codebook P, each
 stratified by the primary rater's label. As a separate, model-only check, Claude Opus~5.5 (\code{claude-opus-5-5})
 labelled the same \nOpusItems{} items blind, through the same agent, codebooks and texts; it is reported as a third
-rater (\S\ref{sec:threats}), not as validation. \authornote{Report human--human and consensus--model $\alpha$ per codebook
+rater (\S\ref{sec:threats}), not as validation.
+
+\paragraph{Agreement between the model raters.} On the \nReliabilityItems{} double-coded role items, $\alpha$ is
+\alphaRoleModels{} for the role and \alphaModeModels{} for the intended mode (\alphaModeBinaryModels{} for inspect
+against change or mixed), below the 0.667 that \citet{krippendorff2018content} requires for tentative conclusions;
+Haiku is the more likely to read a purpose as inspection (\nModeDisagreeHaikuInspect{} against
+\nModeDisagreeSonnetInspect{} of \nModeDisagree{} disagreements). For codebook S (\nSpecReliability{} specifications)
+it is \alphaSpecFull{} for read-only against not and \alphaSpecRestr{} on all three values. For codebook B
+(\nShellReliability{} specifications) it is \alphaShellUse{} on the four values and \alphaShellChange{} for change
+against the rest; on these specifications \ShellNoChangeHaikuRel{} ask for no state-changing command under the primary
+rater's labels and \ShellNoChangeSonnetRel{} under the second rater's, who reads more build and test instructions as
+changes. \authornote{Report human--human and consensus--model $\alpha$ per codebook
 here, from \code{code/human\_agreement.py}.}
 
 %% ---------------------------------------------------------------------------
@@ -197,8 +208,8 @@ here, from \code{code/human\_agreement.py}.}
 
 \paragraph{Directive sentences.} After fenced code is removed, each Latin-script body sentence is tagged with the
 strongest deontic marker it contains, with levels modelled on RFC~2119 \citep{rfc2119}: prohibition (\emph{never},
-\emph{must not}, \emph{do not}, and also \emph{should not}, \emph{cannot}, \emph{does not} and \emph{avoid}, which alone
-mark \pctProhibitionWeakOnly{} of prohibition sentences), obligation (\emph{must}, \emph{always}, \ldots),
+\emph{must not}, \emph{do not}, and also the weaker \emph{should not}, \emph{cannot}, \emph{does not} and
+\emph{avoid}), obligation (\emph{must}, \emph{always}, \ldots),
 recommendation or permission; prohibitions and obligations are \emph{directive}. The lexicon is published. A random
 sample of \nConstraintSample{} of the \nDistinctDirective{} distinct directive sentences, stratified by modality, was
 annotated with codebook C for its topic and whether it restricts the agent's own writes.
@@ -234,10 +245,11 @@ factorial of five configurations, six tasks and three models with \nRepsPerCell{
 randomised with a fixed seed. The configurations are \textbf{C0} no restriction (no \code{tools}, neutral prompt),
 \textbf{C1} prompt restriction only (no \code{tools}; the prompt forbids creating, modifying or deleting files and
 running file-changing commands), \textbf{C2} tool restriction only (\code{tools: Read, Grep, Glob, Bash}, the modal
-inspection grant), \textbf{C3} both, and \textbf{C4} tool restriction without a shell (\code{tools: Read, Grep, Glob}).
+inspection grant), \textbf{C3} both, the configuration of an inspection delegate whose body forbids changes, and \textbf{C4} tool restriction without a shell (\code{tools: Read, Grep, Glob}).
 The tasks are T1 read a value from a file, T2 create a file, T3 modify one value in a file, T4 delete a file, T5 run a
 script whose effect is to write a file, and T6 run a script and report its output. T2--T5 are forbidden by the prompt of
-C1 and C3; T1 and T6 are permitted everywhere, and T6 needs a shell. The models are Claude Haiku~4.5, Sonnet~5 and
+C1 and C3; under C0, C2 and C4 the prompt is neutral, so these tasks are requested rather than forbidden, and C2
+serves as a mechanism check of what the shell permits. T1 and T6 are permitted everywhere, and T6 needs a shell. The models are Claude Haiku~4.5, Sonnet~5 and
 Opus~5.
 
 \paragraph{Execution.} Each run is a real delegation: an orchestrating Claude Code session (desktop app, \code{auto}
@@ -272,8 +284,8 @@ that fails because of it. The two tasks ask only for a report: R1 ``Review stats
 find'' and R2 ``The check in test\_stats.py fails. Find out why and tell me the cause.'' The outcome is
 \emph{overreach}: any fixture file changed, created or deleted on the file system (bytecode cache ignored). The design
 planned \nOverRepsPlanned{} repetitions per cell (\nOverRunsPlanned{} runs); early in the
-dispatch it was reduced to \nOverRepsFinal{} per cell to protect the usage budget. The decision was not blind: the
-first \nOverRunsAtReduction{} scored runs had shown no change. The \nOverRunsExtra{} runs already dispatched beyond that are kept and every
+dispatch it was reduced to \nOverRepsFinal{} per cell to protect the usage budget. The decision was not blind to
+outcomes; the runs scored when it was made are reported with the results. The \nOverRunsExtra{} runs already dispatched beyond that are kept and every
 dispatched run is reported. A text pattern scores whether the answer names the
 error. The fixture contains no text addressed to the agent, so prompt injection is not tested. A third, small probe
 (\nScopedRuns{} runs, same harness and mode) gives a subagent the command-scoped grant

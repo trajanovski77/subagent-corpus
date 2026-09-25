@@ -1,23 +1,23 @@
 \begin{table}[t]
-\caption{Subagent frontmatter on the pinned build (Claude Code v2.1.233). ``Observed'' entries were established by
-the controlled probes of Section~\ref{sec:oracles}; ``documented'' entries rest on vendor documentation only.}
+\caption{Subagent frontmatter as documented by the vendor \citep{AnthropicSubagentsDoc} (accessed September 2026).
+The behaviour we observed by executing the pinned build is reported with the results
+(Table~\ref{tab:semantics}).}
 \label{tab:schema}
 \footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{6.2cm}@{}}
 \toprule
-\textbf{Field} & \textbf{Meaning} & \textbf{Semantics (source)} \\
+\textbf{Field} & \textbf{Meaning} & \textbf{Documented semantics} \\
 \midrule
-\code{name} & delegation identifier & required; with a non-string value the file is not loaded, without a diagnostic (observed; an absent name is documented to have the same effect). With two files declaring the same name under one root exactly one loads, and which one is not predictable from the file names; when the session starts in a sub-project, its file wins over the parent project's (observed) \\
-\code{description} & when the parent delegates & required; absent and the file is not loaded, without a diagnostic (observed) \\
-\code{tools} & tool allowlist & \textbf{omitted, \code{"*"}: the full pool} (observed). Names resolve with aliases (\code{Agent}$\to$\code{Task}, \code{KillShell}$\to$\code{TaskStop}, \code{BashOutput}$\to$\code{TaskOutput}); unresolved names are dropped without a diagnostic; \code{Bash(\ldots)} resolves to \code{Bash}; \textbf{\code{Grep} and \code{Glob} are dropped whenever \code{Bash} is granted}; case-sensitive (\code{read} resolves to nothing) (observed) \\
-\code{disallowedTools} & subtractive filter & removed from the inherited or listed set (observed) \\
-\code{model} & model tier & alias or model identifier (documented) \\
-\code{permissionMode} & autonomy level & ignored when the parent runs in \code{bypassPermissions}, \code{acceptEdits} or \code{auto} mode (documented; \citealp[\S8]{Liu2026DiveClaudeCode}) \\
-\code{maxTurns}, \code{effort} & budget & enforced (documented) \\
-\code{skills}, \code{mcpServers}, \code{hooks} & capability attachment & ignored for plugin subagents (documented) \\
-\code{background}, \code{isolation}, \code{memory} & execution policy & documented \\
-\code{color} & user-interface colour & no runtime effect (documented) \\
-file location & scope & any depth of nesting under \code{.claude/agents/} loads; a sub-project's \code{.claude/agents} is not loaded from the repository root (observed) \\
+\code{name} & delegation identifier & required; when files in different locations declare the same name, the higher-priority location wins \\
+\code{description} & when the parent delegates & required; a file with a name but no description is skipped, with the reason written only to the debug log \\
+\code{tools} & tool allowlist & \textbf{omitted: every tool available to subagents is inherited} \\
+\code{disallowedTools} & subtractive filter & tools removed from the inherited or listed set \\
+\code{model} & model tier & alias or model identifier \\
+\code{permissionMode} & autonomy level & ignored when the parent runs in \code{bypassPermissions}, \code{acceptEdits} or \code{auto} mode (also \citealp[\S8]{Liu2026DiveClaudeCode}) \\
+\code{maxTurns}, \code{effort} & budget & turn limit and effort level for the subagent \\
+\code{skills}, \code{mcpServers}, \code{hooks} & capability attachment & preloaded skills, MCP servers and lifecycle hooks; the latter two ignored for plugin subagents \\
+\code{background}, \code{isolation}, \code{memory} & execution policy & background execution, a temporary git worktree, persistent memory scope \\
+\code{color} & user-interface colour & display only \\
 \bottomrule
 \end{tabular}
 \end{table}

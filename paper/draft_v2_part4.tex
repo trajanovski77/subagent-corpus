@@ -2,7 +2,7 @@
 %% DRAFT v2, part 4: Discussion and implications.
 %% ============================================================================================
 
-\section{Discussion}
+\section{Discussion and Implications}
 \label{sec:discussion}
 
 \subsection{Withholding permission is not withholding authority}
@@ -10,7 +10,10 @@
 
 Specifications meant to inspect are given file-writing tools far less often than those meant to change code, and the
 gap survives every curation cut and is paired within repositories. Whether written or copied, these grants withhold
-\code{Write} from reviewers. But the withholding applies to permissions, and a tool allowlist enumerates permissions,
+\code{Write} from reviewers: least privilege is being applied in a setting where nothing compels it. Once the shell is
+counted, however, the gap shrinks from \RQtwoRoleGapWrite{} to \RQtwoRoleGapAuthority{} (\S\ref{sec:res-rq2}), so most
+of the difference concerns which tool names appear in a list, not what the delegate can reach. The withholding applies
+to permissions, and a tool allowlist enumerates permissions,
 not authority. Because a shell carries the process's ambient file-system authority \citep{miller2003capability},
 removing the file-writing tools $W=\{\code{Write},\code{Edit},\code{NotebookEdit}\}$ from a grant $T$ that retains an
 unsandboxed \code{Bash} leaves its authority over files unchanged, $A(T \setminus W) = A(T)$, whenever shell commands run without per-command
@@ -18,8 +21,26 @@ approval. In that context the set $\{\code{Read}, \code{Grep}, \code{Glob}, \cod
 like a read--write agent; in \code{default} mode the user's approval of each command stands between the two.
 
 A retained shell is not always a mistake. Some write-withholding specifications ask for builds and tests, and a
-minority ask for state-changing commands, but most need at most read-only commands or none (\S\ref{sec:res-rq3}). For those, the shell adds authority the text never asks for; for the rest, the problem is that
-the tool list offers no way to grant part of a shell's reach.
+minority ask for state-changing commands, but most need at most read-only commands or none (\S\ref{sec:res-rq3}). For
+those, the shell adds authority the text never asks for; for the rest, the problem is that the tool list offers no way
+to grant part of a shell's reach. The same limitation leaves the residual inspect--change gap without a normative
+baseline: codebook R counts a delegate that runs tests or analyses and only reports as inspection, so some inspect-mode
+delegates need a shell, and the tool vocabulary has no partial shell to grant them. For delegates whose text asks only
+to read, a shell limited to read-only commands would provide what the text asks for, but a command pattern in the
+\code{tools} field did not provide that limit in our probe (\S\ref{sec:res-rq3}). The documented mechanism is a Bash
+deny rule in settings, which applies to subagents \citep{AnthropicSubagentsDoc}, and such rules match command text: the
+documentation's own example shows a \code{git log} rule matching \code{git log --output=<file>}, which writes a file
+\citep{AnthropicPermissionsDoc}. Verification is a genuine need, and test runners execute repository code and write
+caches and build outputs, so a verify-type shell needs a sandbox or a writable scratch directory rather than a command
+pattern.
+
+\paragraph{Existing access controls do not carry over.}
+Repositories that protect their default branch have slightly more dominated withholding, not less
+(\S\ref{sec:res-rq7}), and settings that deny writes or shells and scoped CI tokens show no clear difference. The
+outcome counts all specifications, so it also rises with how often a repository withholds file tools at all, and the
+evidence is observational, with many uncontrolled differences between repositories; the small positive difference
+should not be read as an effect. It does show that conventional access-control discipline does not go with fewer
+dominated withholdings.
 
 \paragraph{Why the abstraction invites the error.}
 \emph{Objects at different levels.} Lampson's access matrix treats each object as an independent column whose rights
@@ -32,8 +53,8 @@ write files indirectly \citep{AnthropicPermissionsDoc}.
 is the most privileged one, contrary to basing access on permission rather than exclusion
 \citep{saltzer1975protection}; \RQtwoImplicitEng{} of specifications omit the field.
 \emph{The resolver steers delegates to the shell.} It removes \code{Grep} and \code{Glob} whenever \code{Bash}
-resolves, which moves routine search onto the shell, and leaves \code{Write} and \code{Edit} in place without a
-warning.
+resolves, for no documented reason we know of, which moves routine search onto the shell, and leaves \code{Write} and
+\code{Edit} in place without a warning.
 
 \subsection{An agent-configuration security smell}
 \label{sec:disc-smell}
@@ -55,17 +76,26 @@ hooks, and neither the smell nor the linter's precision has been validated with 
 That an agent with a shell can write when asked and commands are approved automatically is expected, and the
 mechanism check confirms it. Three results matter more for practice. First, in the realistic inspection configuration
 the prompt restriction worked for Sonnet and Opus and left Haiku completing \ExpCthreeHaiku{} of the changes it
-forbids. A restriction that holds or fails with the
-model is a property of the model, not of the configuration, and \RQfiveNoModelPooled{} of specifications (pooled;
+forbids. The restriction was one explicit wording, stronger than most real restrictions, against direct requests, so
+these rates are a best case for prompts and say nothing about adaptive attacks. A restriction that holds or fails with
+the model is a property of the model, not of the configuration, and \RQfiveNoModelPooled{} of specifications (pooled;
 repository mean \RQfiveNoModel{}) do not name the model that will read them. Second, the channels fail differently: a
 missing tool produces an error the parent can see, an unheeded prompt a completed change, and Haiku's false claims
 show that the delegate's report is not a reliable record either. Third, on one fixture with explicitly report-only tasks, no agent
-changed files under any grant. For such tasks, the risk of a dominated withholding lies less in delegates acting
+changed files under any grant. This bounds the per-configuration rate of unrequested changes only for benign,
+explicitly report-only tasks (one small fixture, two tasks, \nOverRepsFinal{} repetitions per cell, no adversarial
+content), not for ambiguous requests such as ``fix if needed'', longer sessions or prompt injection. It agrees with
+\citet{qu2026overeager}, who observe no over-eager actions by Claude Code when the prompt declares the authorised scope
+and 17.1\% when that declaration is removed from scenarios built to invite such actions; our tasks state their scope
+(``tell me''). For such tasks, the risk of a dominated withholding lies less in delegates acting
 unasked than in a grant that does not refuse a change when one is requested. Our requests came from the parent;
 whether content the delegate reads can produce such a request \citep{debenedetti2024agentdojo} we did not test. The
 enforcement-channel fields of a specification (\code{tools}, \code{disallowedTools}, \code{permissionMode},
 \code{hooks}, \code{isolation}) are the only ones that do not depend on the model agreeing, and a prompt restriction
-that holds for some models is not a security control.
+that holds for some models is not a security control. Nor does either channel contain a delegate's side effects: the
+runs that wrote outside their fixture directory, by running a script from the wrong directory or by ``deleting'' a file
+into the user's Trash (\S\ref{sec:res-rq5}), were prevented neither by the grant nor by the prompt; only a sandbox
+confining writes to the fixture could have.
 
 Two trust boundaries lie outside our measurements. A delegate's answer returns to a parent that usually holds more
 authority, so restricting the delegate does not stop content it reads from reaching the parent; Haiku's false
@@ -75,16 +105,20 @@ sessions.
 
 \citet{Yan2026DoNotDeny} found that few security rules in context files have an enforced counterpart; we find the
 same gap inside one artifact: when a specification's text makes the agent read-only, its grant can usually still reach
-the file system (\RQfourFullReaches{}).
+the file system (\RQfourFullReaches{}). The restriction is stated in the interpretive channel and only partly carried
+into the enforced one.
 
 \subsection{Specifications as maintained artifacts}
 \label{sec:disc-drift}
 
-Most files naming a removed tool were committed after the removal (\S\ref{sec:res-rq6}); the names disappeared between
-\DriftRemovalWindow{}, and \RQsixDriftInSnapshotYear{} of these files were first committed in 2026. Stale names thus
-enter at authoring time, which is consistent with the reuse we measure and with copy-based reuse of skills and editor
-rules \citep{Destefanis2026GitSkills,Jiang2026CursorRules}. Revalidation alone does not address this; a resolver that
-reports what it dropped does.
+Most files naming a removed tool were committed after the removal (\S\ref{sec:res-rq6}), so they were already
+unresolvable on current builds when committed rather than overtaken by the runtime later; users of older builds may
+still resolve them. Because most of the corpus was itself committed after these removals, the share dates the
+staleness, not its source. Stale names thus enter at authoring time, which is consistent with the reuse we measure
+(\S\ref{sec:res-rq1}) and with copy-based reuse of skills and editor rules
+\citep{Destefanis2026GitSkills,Jiang2026CursorRules}. The feedback is asymmetric: the settings layer warns about a deny
+rule that matches no tool, while the subagent resolver says nothing about a dropped name, a collision or a file it
+does not load. Revalidation alone does not address this; a resolver that reports what it dropped does.
 
 \subsection{Implications}
 \label{sec:disc-implications}
@@ -107,7 +141,19 @@ shell may not be what its author intended. \emph{Make read-only an execution-env
 or capability mode \citep{watson2010capsicum}. \emph{Make grants typed and attenuable}: a shell grant should carry a
 file-system and network scope \citep{moore2014shill}, and policies should inspect arguments rather than tool names
 \citep{shi2025progent}, outside the model \citep{debenedetti2025defeating}. Where a narrow tool
-can replace the shell, ship the narrow tool \citep{beurerkellner2025design}.
+can replace the shell, ship the narrow tool \citep{beurerkellner2025design}. The common principle is to separate the
+interpreter from the resource operations: file-system, network and process authority should be properties of the
+execution environment a delegate runs in, not names in a list that sits beside an interpreter able to exercise them
+all.
 
-\paragraph{For researchers.} Measure the effective configuration by executing its consumer, and test behavioural
-claims by repeated execution, including tasks that do not ask for the behaviour.
+\paragraph{For researchers.} \emph{Measure the effective configuration by executing its consumer.} Resolution
+depends on the build (\nRemovedNames{} names that earlier releases accepted no longer resolve), and parsing the files
+would have missed the dropped search tools, the silently discarded names and the shadowed files; pin the build and
+release the oracle with the data. \emph{Report permission and authority separately}, and explicit grants separately
+from inheritance, since the two measures lead to different conclusions (\S\ref{sec:res-rq2}). \emph{Test behavioural
+claims by repeated execution and per model}, including tasks that do not ask for the behaviour: a single run shows
+what is possible, not how often it happens, and prompt compliance differed by model. \emph{Treat intent as a construct
+to validate, not a label to trust}: agreement between model raters was lowest on the intended mode, the construct
+least privilege is judged against, so studies of over-privilege need human-validated intent. Open questions include
+behaviour under other permission modes and under prompt injection, the same measurements in other harnesses, and
+whether warnings change what developers write; the corpus and oracles are released for longitudinal replication.
