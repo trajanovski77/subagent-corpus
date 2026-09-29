@@ -18,9 +18,10 @@ paper/*.fdb_latexmk
 data/agents.jsonl
 data/trees.jsonl
 
-# Intermediate fetch state of a collection run (880 MB); the archived corpus lives in data/v2 and on Zenodo
+# Intermediate fetch state of a collection run (880 MB)
 data/work/
 paper/main_v2.pdf
+overleaf-manuscript.zip
 
-# Specification bodies (163 MB) exceed GitHub's 100 MB file limit; archived on Zenodo
+# Specification bodies (163 MB) exceed GitHub's 100 MB file limit
 data/v2/bodies.jsonl.gz

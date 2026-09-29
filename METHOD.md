@@ -137,9 +137,9 @@ for an effect of the grant.
 
 - The collection scripts are **idempotent and resumable**: re-running continues from what is on disk.
 - Runtime is dominated by rate limits, not compute. A full collection is a few hours.
-- Numbers will not reproduce *exactly* on a later run, because the population grows. The snapshot used
-  in the paper is the one archived in `data/`, and it is snapshot-exact by construction: every file is
-  the blob that was there, verified by hash.
+- Numbers will not reproduce *exactly* on a later collection run, because the population grows. The
+  metadata and derived tables for the paper's snapshot are in `data/`; full specification bodies are
+  not included in the GitHub repository. Collected files were verified against their git blob hashes.
 - Bootstrap seeds are fixed. `code/paper_numbers.py` emits every quantity the manuscript quotes, and a
   quantity it cannot compute becomes a visible `\textbf{??}` rather than a stale number.
 - Tool behaviour reported in the paper was observed on Claude Code v2.1.233 (macOS arm64 native). The

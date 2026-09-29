@@ -2,14 +2,15 @@
 
 Snapshot collected 27–28 August 2026, reconstructed **by git blob identifier and verified by hash**,
 so each file is the blob that was at that path in that snapshot rather than a later state of the path.
-Gzipped JSON Lines. Every number in the paper is reproducible from these files plus `../code/`.
+Gzipped JSON Lines. The derived tables support recalculating the reported numbers with `../code/`.
+Regenerating text features from the original bodies requires files not included in this GitHub repository.
 
 ## The v2 corpus (`v2/`)
 
 | File | Lines | What it is |
 |---|---:|---|
 | `v2/agents.jsonl.gz` | 94,899 | one record per inventoried `.claude/agents/**.md` file: repo, path, blob id, bytes, recovery status, parsed frontmatter, parse-error flag. **Includes the files that could not be recovered**, marked as such, so the loss is countable |
-| `v2/bodies.jsonl.gz` | 69,316 | the full body text of every specification (163 MB — ships via Zenodo, not GitHub) |
+| `v2/bodies.jsonl.gz` | 69,316 | full specification bodies (163 MB; not included in this GitHub repository) |
 | `v2/governance.jsonl.gz` | 4,078 | per repository: `settings.json` permission rules, hooks, MCP servers, CI workflow permissions |
 | `v2/engineered.jsonl.gz` | 4,128 | the curation ladder per repository: each screen's outcome and the E1/E2/E3 flags |
 | `v2/spec_table.jsonl.gz` | 69,316 | **the analysis table**: every specification joined with its resolved grant, annotation labels, text features, curation flags. This is what `analysis_v2.py` and `figures_v2.py` read |

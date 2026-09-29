@@ -3,9 +3,7 @@ message: >-
   If you use this corpus, the oracles or the analysis code, please cite the paper
   below (preferred-citation) and this repository.
 type: dataset
-title: "subagent-corpus: 50,011 subagent specifications from 3,008 public repositories, with oracles, analysis and linter"
-version: 1.0.0
-date-released: 2026-08-28
+title: "subagent-corpus: specification metadata and analysis from 4,128 public repositories"
 repository-code: https://github.com/trajanovski77/subagent-corpus
 license:
   - MIT
@@ -35,7 +33,6 @@ authors:
     affiliation: Faculty of Computer Science and Engineering, Ss. Cyril and Methodius University in Skopje
 preferred-citation:
   type: article
-  status: submitted
   title: "Specifying the Machine Team: An Empirical Study of Subagent Definitions in Agentic Software Development"
   year: 2026
   authors:
@@ -49,4 +46,3 @@ preferred-citation:
       given-names: Ivan
     - family-names: Gjorgjevikj
       given-names: Dejan
-  notes: Manuscript under review.

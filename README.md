@@ -3,20 +3,18 @@
 Corpus, executable oracles, annotation, analysis, execution experiment and linter for
 
 > **Specifying the Machine Team: An Empirical Study of Subagent Definitions in Agentic Software
-> Development** — Stefan Trajanovski, Marko Petrov, Ema Pandilova, Ivan Chorbev, Dejan Gjorgjevikj
-> (manuscript under review).
+> Development** — Stefan Trajanovski, Marko Petrov, Ema Pandilova, Ivan Chorbev, Dejan Gjorgjevikj.
 
 Agentic coding tools let a developer define *subagents*: named delegates with their own
 instructions, an explicit list of the tools they may use, a model, and a level of autonomy. A subagent
 definition is therefore not a prompt but a specification of a machine teammate, and a repository's
 agent directory is a small organisational chart for non-human labour, checked into version control.
 
-This repository holds **69,316 such specifications from 4,128 public GitHub repositories**
-(snapshot of 27–28 August 2026), reconstructed *by git blob identifier and verified by hash* so the
-corpus is the snapshot rather than a later state of those paths. It also holds the code that collected
-them, the oracles that make the tool grade its own specifications, the annotation codebooks and label
-sets, the execution experiment, the analysis behind every number in the paper, and a linter that
-prints the warnings the tool does not.
+This repository holds metadata and derived analysis for **69,316 specifications from 4,128 public
+GitHub repositories** (snapshot of 27–28 August 2026). The files were reconstructed by git blob
+identifier and verified by hash. It also holds the collection code, executable oracles, annotation
+codebooks and labels, experiment records, analysis, and linter. Full specification bodies are not in
+this GitHub repository.
 
 ## The finding
 
@@ -40,7 +38,7 @@ well, in **0.0%**.
 | Path | Contents |
 |---|---|
 | [`paper/`](paper/) | `main_v2.tex` (Springer `svjour3`), the section drafts it includes, `refs_v2.bib`, `numbers.tex` (generated — no number is typed by hand), and the vector figures |
-| [`data/v2/`](data/v2/) | the corpus, oracle output, NLP features, annotation labels and the joined `spec_table.jsonl.gz`, with its own [README](data/README.md) |
+| [`data/v2/`](data/v2/) | corpus metadata, oracle output, NLP features, annotation labels and the joined `spec_table.jsonl.gz`, with its own [README](data/README.md) |
 | [`annotation/`](annotation/) | the engineered-project protocol (fixed before outcomes were joined) and the six codebooks (R roles, P READMEs, C constraints, S spec restriction, B shell use, K completion claims), plus the two-coder human validation kit (`human_v2/`) |
 | [`code/`](code/) | see below |
 | [`METHOD.md`](METHOD.md) | how the corpus was collected and the biases the design carries |
@@ -137,12 +135,13 @@ See [`CITATION.cff`](CITATION.cff). Until the paper appears:
   title  = {Specifying the Machine Team: An Empirical Study of Subagent Definitions
             in Agentic Software Development},
   year   = {2026},
-  note   = {Manuscript under review. Corpus and code: \url{https://github.com/trajanovski77/subagent-corpus}},
+  note   = {Corpus and code: \url{https://github.com/trajanovski77/subagent-corpus}},
 }
 ```
 
 ## Licence
 
-Code is released under the [MIT licence](LICENSE); the corpus under
-[CC BY 4.0](data/LICENSE). `paper/svjour3.cls`, `paper/svglov3.clo` and `paper/spbasic.bst` are
+Code is released under the [MIT licence](LICENSE); licensing for project-produced data and
+third-party source text is described in [data/LICENSE](data/LICENSE). `paper/svjour3.cls`,
+`paper/svglov3.clo` and `paper/spbasic.bst` are
 Springer's SVJour3 macro package (© Springer), included so the folder compiles as-is.

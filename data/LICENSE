@@ -1,7 +1,9 @@
-The corpus in this directory (agents.jsonl.gz, trees.jsonl.gz, repometa.jsonl.gz,
-oracle_agents.jsonl.gz, repos.txt, tool_vocab.json, results_final.txt, figsummary.json) is
-licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
-Attribution: cite the paper named in ../CITATION.cff. The code in ../code is MIT-licensed.
+Original metadata, annotations, and derived analyses produced by this project in this directory
+are licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+Source files, README text, configuration content, and other material copied from third-party
+repositories are not relicensed by this notice; their original rights and licences remain in effect.
+Attribution for the project-produced material: cite the paper named in ../CITATION.cff.
+The code in ../code is MIT-licensed.
 
 Attribution 4.0 International
 
@@ -398,4 +400,3 @@ the avoidance of doubt, this paragraph does not form part of the
 public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
-
